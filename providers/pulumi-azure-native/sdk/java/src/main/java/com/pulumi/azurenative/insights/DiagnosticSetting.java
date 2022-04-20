@@ -62,14 +62,14 @@ public class DiagnosticSetting extends com.pulumi.resources.CustomResource {
         return this.eventHubName;
     }
     /**
-     * A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: <normalized service identity>_<normalized category name>. Possible values are: Dedicated and null (null is default.)
+     * A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: &lt;normalized service identity&gt;_&lt;normalized category name&gt;. Possible values are: Dedicated and null (null is default.)
      * 
      */
     @Export(name="logAnalyticsDestinationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsDestinationType;
 
     /**
-     * @return A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: <normalized service identity>_<normalized category name>. Possible values are: Dedicated and null (null is default.)
+     * @return A string indicating whether the export to Log Analytics should use the default destination type, i.e. AzureDiagnostics, or use a destination type constructed as follows: &lt;normalized service identity&gt;_&lt;normalized category name&gt;. Possible values are: Dedicated and null (null is default.)
      * 
      */
     public Output</* @Nullable */ String> logAnalyticsDestinationType() {

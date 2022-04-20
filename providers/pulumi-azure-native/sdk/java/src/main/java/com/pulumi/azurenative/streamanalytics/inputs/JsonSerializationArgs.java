@@ -34,7 +34,7 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.
+     * This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are &#39;lineSeparated&#39; indicating the output will be formatted by having each JSON object separated by a new line and &#39;array&#39; indicating the output will be formatted as an array of JSON objects. Default value is &#39;lineSeparated&#39; if left null.
      * 
      */
     @Import(name="format")
@@ -46,7 +46,7 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Json'.
+     * Expected value is &#39;Json&#39;.
      * 
      */
     @Import(name="type", required=true)

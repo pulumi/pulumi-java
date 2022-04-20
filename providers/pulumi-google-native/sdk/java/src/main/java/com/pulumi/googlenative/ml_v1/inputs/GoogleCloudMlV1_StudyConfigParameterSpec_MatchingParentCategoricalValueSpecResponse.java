@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse();
 
     /**
-     * Matches values of the parent parameter with type 'CATEGORICAL'. All values must exist in `categorical_value_spec` of parent parameter.
+     * Matches values of the parent parameter with type &#39;CATEGORICAL&#39;. All values must exist in `categorical_value_spec` of parent parameter.
      * 
      */
     @Import(name="values", required=true)

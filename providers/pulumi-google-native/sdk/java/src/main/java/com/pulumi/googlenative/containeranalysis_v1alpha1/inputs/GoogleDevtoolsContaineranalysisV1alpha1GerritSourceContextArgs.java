@@ -32,7 +32,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     }
 
     /**
-     * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
+     * The full project name within the host. Projects may be nested, so &#34;project/subproject&#34; is a valid project name. The &#34;repo name&#34; is the hostURI/project.
      * 
      */
     @Import(name="gerritProject")

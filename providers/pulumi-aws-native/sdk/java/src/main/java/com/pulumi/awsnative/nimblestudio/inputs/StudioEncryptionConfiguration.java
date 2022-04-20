@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Configuration of the encryption method that is used for the studio.</p>
+ * &lt;p&gt;Configuration of the encryption method that is used for the studio.&lt;/p&gt;
  * 
  */
 public final class StudioEncryptionConfiguration extends com.pulumi.resources.InvokeArgs {
@@ -20,7 +20,7 @@ public final class StudioEncryptionConfiguration extends com.pulumi.resources.In
     public static final StudioEncryptionConfiguration Empty = new StudioEncryptionConfiguration();
 
     /**
-     * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
+     * &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
      * 
      */
     @Import(name="keyArn")

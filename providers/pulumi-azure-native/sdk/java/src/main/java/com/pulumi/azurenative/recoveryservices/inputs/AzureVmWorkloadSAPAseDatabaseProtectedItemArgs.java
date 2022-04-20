@@ -252,7 +252,7 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemArgs extends com.pu
 
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSAPAseDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSAPAseDatabase&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

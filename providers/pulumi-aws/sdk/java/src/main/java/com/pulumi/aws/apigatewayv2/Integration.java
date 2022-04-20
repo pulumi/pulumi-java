@@ -120,14 +120,14 @@ public class Integration extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
+     * The integration&#39;s HTTP method. Must be specified if `integration_type` is not `MOCK`.
      * 
      */
     @Export(name="integrationMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> integrationMethod;
 
     /**
-     * @return The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
+     * @return The integration&#39;s HTTP method. Must be specified if `integration_type` is not `MOCK`.
      * 
      */
     public Output</* @Nullable */ String> integrationMethod() {

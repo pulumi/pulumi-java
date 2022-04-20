@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSetOutputColumn {
     /**
-     * <p>A description for a column.</p>
+     * &lt;p&gt;A description for a column.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     /**
-     * <p>A display name for the dataset.</p>
+     * &lt;p&gt;A display name for the dataset.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
@@ -35,14 +35,14 @@ public final class DataSetOutputColumn {
     }
 
     /**
-     * <p>A description for a column.</p>
+     * &lt;p&gt;A description for a column.&lt;/p&gt;
      * 
     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * <p>A display name for the dataset.</p>
+     * &lt;p&gt;A display name for the dataset.&lt;/p&gt;
      * 
     */
     public Optional<String> name() {

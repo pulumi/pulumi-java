@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         CommentsEnabled("COMMENTS_ENABLED"),
         /**
-         * Enforce that repository owners or collaborators must comment on external contributors' Pull Requests before builds are triggered.
+         * Enforce that repository owners or collaborators must comment on external contributors&#39; Pull Requests before builds are triggered.
          * 
          */
         CommentsEnabledForExternalContributorsOnly("COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY");

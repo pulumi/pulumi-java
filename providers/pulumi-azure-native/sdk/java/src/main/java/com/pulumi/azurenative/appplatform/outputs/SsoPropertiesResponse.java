@@ -28,7 +28,7 @@ public final class SsoPropertiesResponse {
      */
     private final @Nullable String issuerUri;
     /**
-     * It defines the specific actions applications can be allowed to do on a user's behalf
+     * It defines the specific actions applications can be allowed to do on a user&#39;s behalf
      * 
      */
     private final @Nullable List<String> scope;
@@ -67,7 +67,7 @@ public final class SsoPropertiesResponse {
         return Optional.ofNullable(this.issuerUri);
     }
     /**
-     * It defines the specific actions applications can be allowed to do on a user's behalf
+     * It defines the specific actions applications can be allowed to do on a user&#39;s behalf
      * 
     */
     public List<String> scope() {

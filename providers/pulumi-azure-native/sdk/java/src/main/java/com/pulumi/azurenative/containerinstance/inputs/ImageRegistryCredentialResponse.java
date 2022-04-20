@@ -30,7 +30,7 @@ public final class ImageRegistryCredentialResponse extends com.pulumi.resources.
     }
 
     /**
-     * The Docker image registry server without a protocol such as "http" and "https".
+     * The Docker image registry server without a protocol such as &#34;http&#34; and &#34;https&#34;.
      * 
      */
     @Import(name="server", required=true)

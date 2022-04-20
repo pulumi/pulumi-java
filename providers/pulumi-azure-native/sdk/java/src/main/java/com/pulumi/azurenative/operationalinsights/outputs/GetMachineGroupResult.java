@@ -41,7 +41,7 @@ public final class GetMachineGroupResult {
     private final String id;
     /**
      * Additional resource type qualifier.
-     * Expected value is 'machineGroup'.
+     * Expected value is &#39;machineGroup&#39;.
      * 
      */
     private final String kind;
@@ -120,7 +120,7 @@ public final class GetMachineGroupResult {
     }
     /**
      * Additional resource type qualifier.
-     * Expected value is 'machineGroup'.
+     * Expected value is &#39;machineGroup&#39;.
      * 
     */
     public String kind() {

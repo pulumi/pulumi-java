@@ -162,14 +162,14 @@ public class Reservation extends com.pulumi.resources.CustomResource {
         return this.specificReservation;
     }
     /**
-     * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+     * Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
      * 
      */
     @Export(name="specificReservationRequired", type=Boolean.class, parameters={})
     private Output<Boolean> specificReservationRequired;
 
     /**
-     * @return Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
+     * @return Indicates whether the reservation can be consumed by VMs with affinity for &#34;any&#34; reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
      * 
      */
     public Output<Boolean> specificReservationRequired() {

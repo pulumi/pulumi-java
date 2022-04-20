@@ -22,7 +22,7 @@ public final class WebPubSubHubPropertiesResponse extends com.pulumi.resources.I
     public static final WebPubSubHubPropertiesResponse Empty = new WebPubSubHubPropertiesResponse();
 
     /**
-     * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
+     * The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
      * 
      */
     @Import(name="anonymousConnectPolicy")

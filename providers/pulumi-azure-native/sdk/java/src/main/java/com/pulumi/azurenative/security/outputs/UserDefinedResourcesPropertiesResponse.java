@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class UserDefinedResourcesPropertiesResponse {
     /**
-     * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
+     * Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
      * 
      */
     private final String query;
@@ -30,7 +30,7 @@ public final class UserDefinedResourcesPropertiesResponse {
     }
 
     /**
-     * Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""
+     * Azure Resource Graph query which represents the security solution&#39;s user defined resources. Required to start with &#34;where type != &#34;Microsoft.Devices/IotHubs&#34;&#34;
      * 
     */
     public String query() {

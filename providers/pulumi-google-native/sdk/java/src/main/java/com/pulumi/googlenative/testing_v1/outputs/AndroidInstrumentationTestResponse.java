@@ -24,7 +24,7 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final AppBundleResponse appBundle;
     /**
-     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     private final String appPackageId;
@@ -44,17 +44,17 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final FileReferenceResponse testApk;
     /**
-     * The java package for the test to be executed. The default value is determined by examining the application's manifest.
+     * The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     private final String testPackageId;
     /**
-     * The InstrumentationTestRunner class. The default value is determined by examining the application's manifest.
+     * The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
      * 
      */
     private final String testRunnerClass;
     /**
-     * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
+     * Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
      * 
      */
     private final List<String> testTargets;
@@ -96,7 +96,7 @@ public final class AndroidInstrumentationTestResponse {
         return this.appBundle;
     }
     /**
-     * The java package for the application under test. The default value is determined by examining the application's manifest.
+     * The java package for the application under test. The default value is determined by examining the application&#39;s manifest.
      * 
     */
     public String appPackageId() {
@@ -124,21 +124,21 @@ public final class AndroidInstrumentationTestResponse {
         return this.testApk;
     }
     /**
-     * The java package for the test to be executed. The default value is determined by examining the application's manifest.
+     * The java package for the test to be executed. The default value is determined by examining the application&#39;s manifest.
      * 
     */
     public String testPackageId() {
         return this.testPackageId;
     }
     /**
-     * The InstrumentationTestRunner class. The default value is determined by examining the application's manifest.
+     * The InstrumentationTestRunner class. The default value is determined by examining the application&#39;s manifest.
      * 
     */
     public String testRunnerClass() {
         return this.testRunnerClass;
     }
     /**
-     * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
+     * Each target must be fully qualified with the package name or class name, in one of these formats: - &#34;package package_name&#34; - &#34;class package_name.class_name&#34; - &#34;class package_name.class_name#method_name&#34; If empty, all targets in the module will be run.
      * 
     */
     public List<String> testTargets() {

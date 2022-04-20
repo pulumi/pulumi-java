@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
+     * Which authentication method Cassandra should use to authenticate clients. &#39;None&#39; turns off authentication, so should not be used except in emergencies. &#39;Cassandra&#39; is the default password based authentication. The default is &#39;Cassandra&#39;.
      * 
      */
     @EnumType

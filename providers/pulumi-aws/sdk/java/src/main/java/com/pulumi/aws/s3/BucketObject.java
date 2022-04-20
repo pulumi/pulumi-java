@@ -179,14 +179,14 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.contentType;
     }
     /**
-     * Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
+     * Triggers updates when the value changes. The only meaningful value is `filemd5(&#34;path/to/file&#34;)`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = &#34;aws:kms&#34;` (see `source_hash` instead).
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
+     * @return Triggers updates when the value changes. The only meaningful value is `filemd5(&#34;path/to/file&#34;)`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = &#34;aws:kms&#34;` (see `source_hash` instead).
      * 
      */
     public Output<String> etag() {
@@ -277,28 +277,28 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.objectLockMode;
     }
     /**
-     * Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+     * Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object&#39;s object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
      * 
      */
     @Export(name="objectLockRetainUntilDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectLockRetainUntilDate;
 
     /**
-     * @return Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+     * @return Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object&#39;s object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
      * 
      */
     public Output</* @Nullable */ String> objectLockRetainUntilDate() {
         return this.objectLockRetainUntilDate;
     }
     /**
-     * Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+     * Server-side encryption of the object in S3. Valid values are &#34;`AES256`&#34; and &#34;`aws:kms`&#34;.
      * 
      */
     @Export(name="serverSideEncryption", type=String.class, parameters={})
     private Output<String> serverSideEncryption;
 
     /**
-     * @return Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+     * @return Server-side encryption of the object in S3. Valid values are &#34;`AES256`&#34; and &#34;`aws:kms`&#34;.
      * 
      */
     public Output<String> serverSideEncryption() {
@@ -319,28 +319,28 @@ public class BucketObject extends com.pulumi.resources.CustomResource {
         return this.source;
     }
     /**
-     * Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
+     * Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5(&#34;path/to/source&#34;)`. (The value is only stored in state and not saved by AWS.)
      * 
      */
     @Export(name="sourceHash", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceHash;
 
     /**
-     * @return Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
+     * @return Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5(&#34;path/to/source&#34;)`. (The value is only stored in state and not saved by AWS.)
      * 
      */
     public Output</* @Nullable */ String> sourceHash() {
         return this.sourceHash;
     }
     /**
-     * [Storage Class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html#AmazonS3-PutObject-request-header-StorageClass) for the object. Defaults to "`STANDARD`".
+     * [Storage Class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html#AmazonS3-PutObject-request-header-StorageClass) for the object. Defaults to &#34;`STANDARD`&#34;.
      * 
      */
     @Export(name="storageClass", type=String.class, parameters={})
     private Output<String> storageClass;
 
     /**
-     * @return [Storage Class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html#AmazonS3-PutObject-request-header-StorageClass) for the object. Defaults to "`STANDARD`".
+     * @return [Storage Class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html#AmazonS3-PutObject-request-header-StorageClass) for the object. Defaults to &#34;`STANDARD`&#34;.
      * 
      */
     public Output<String> storageClass() {

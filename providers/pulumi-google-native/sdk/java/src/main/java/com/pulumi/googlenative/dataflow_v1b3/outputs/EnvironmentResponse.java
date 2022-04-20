@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class EnvironmentResponse {
     /**
-     * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".
+     * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. &#34;compute.googleapis.com&#34;.
      * 
      */
     private final String clusterManagerApiService;
@@ -69,7 +69,7 @@ public final class EnvironmentResponse {
      */
     private final String shuffleMode;
     /**
-     * The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * The prefix of the resources the system should use for temporary storage. The system will append the suffix &#34;/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
      * 
      */
     private final String tempStoragePrefix;
@@ -84,17 +84,17 @@ public final class EnvironmentResponse {
      */
     private final Map<String,String> version;
     /**
-     * The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.
+     * The worker pools. At least one &#34;harness&#34; worker pool must be specified in order for the job to have workers.
      * 
      */
     private final List<WorkerPoolResponse> workerPools;
     /**
-     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
+     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1&#34;. Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane&#39;s region.
      * 
      */
     private final String workerRegion;
     /**
-     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.
+     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1-a&#34;. Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane&#39;s region is chosen based on available capacity.
      * 
      */
     private final String workerZone;
@@ -138,7 +138,7 @@ public final class EnvironmentResponse {
     }
 
     /**
-     * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".
+     * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. &#34;compute.googleapis.com&#34;.
      * 
     */
     public String clusterManagerApiService() {
@@ -215,7 +215,7 @@ public final class EnvironmentResponse {
         return this.shuffleMode;
     }
     /**
-     * The prefix of the resources the system should use for temporary storage. The system will append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     * The prefix of the resources the system should use for temporary storage. The system will append the suffix &#34;/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the job_name field. The resulting bucket and object prefix is used as the prefix of the resources used to store temporary data needed during the job execution. NOTE: This will override the value in taskrunner_settings. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
      * 
     */
     public String tempStoragePrefix() {
@@ -236,21 +236,21 @@ public final class EnvironmentResponse {
         return this.version;
     }
     /**
-     * The worker pools. At least one "harness" worker pool must be specified in order for the job to have workers.
+     * The worker pools. At least one &#34;harness&#34; worker pool must be specified in order for the job to have workers.
      * 
     */
     public List<WorkerPoolResponse> workerPools() {
         return this.workerPools;
     }
     /**
-     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
+     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1&#34;. Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane&#39;s region.
      * 
     */
     public String workerRegion() {
         return this.workerRegion;
     }
     /**
-     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity.
+     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1-a&#34;. Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane&#39;s region is chosen based on available capacity.
      * 
     */
     public String workerZone() {

@@ -45,7 +45,7 @@ public final class DataCenterResourcePropertiesArgs extends com.pulumi.resources
     }
 
     /**
-     * Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.
+     * Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in &#39;dataCenterLocation&#39; and must be able to route to the subnet specified in the cluster&#39;s &#39;delegatedManagementSubnetId&#39; property. This resource id will be of the form &#39;/subscriptions/&lt;subscription id&gt;/resourceGroups/&lt;resource group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;virtual network&gt;/subnets/&lt;subnet&gt;&#39;.
      * 
      */
     @Import(name="delegatedSubnetId")

@@ -38,7 +38,7 @@ public final class ResolverDnsSecConfigState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The ID of the virtual private cloud (VPC) that you're updating the DNSSEC validation status for.
+     * The ID of the virtual private cloud (VPC) that you&#39;re updating the DNSSEC validation status for.
      * 
      */
     @Import(name="resourceId")

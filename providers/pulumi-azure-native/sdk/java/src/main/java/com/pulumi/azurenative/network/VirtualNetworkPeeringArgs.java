@@ -110,7 +110,7 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The reference to the remote virtual network's Bgp Communities.
+     * The reference to the remote virtual network&#39;s Bgp Communities.
      * 
      */
     @Import(name="remoteBgpCommunities")

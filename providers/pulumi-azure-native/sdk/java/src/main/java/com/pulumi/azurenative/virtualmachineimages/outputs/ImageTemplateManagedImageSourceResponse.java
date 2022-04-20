@@ -16,7 +16,7 @@ public final class ImageTemplateManagedImageSourceResponse {
     private final String imageId;
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'ManagedImage'.
+     * Expected value is &#39;ManagedImage&#39;.
      * 
      */
     private final String type;
@@ -38,7 +38,7 @@ public final class ImageTemplateManagedImageSourceResponse {
     }
     /**
      * Specifies the type of source image you want to start with.
-     * Expected value is 'ManagedImage'.
+     * Expected value is &#39;ManagedImage&#39;.
      * 
     */
     public String type() {

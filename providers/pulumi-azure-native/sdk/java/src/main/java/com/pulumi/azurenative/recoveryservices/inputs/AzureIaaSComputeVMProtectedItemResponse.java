@@ -248,7 +248,7 @@ public final class AzureIaaSComputeVMProtectedItemResponse extends com.pulumi.re
 
     /**
      * backup item type.
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

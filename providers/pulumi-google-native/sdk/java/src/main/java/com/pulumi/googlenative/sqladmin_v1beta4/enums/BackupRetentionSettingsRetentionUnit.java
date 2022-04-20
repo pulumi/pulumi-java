@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The unit that 'retained_backups' represents.
+     * The unit that &#39;retained_backups&#39; represents.
      * 
      */
     @EnumType
@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         RetentionUnitUnspecified("RETENTION_UNIT_UNSPECIFIED"),
         /**
-         * Retention will be by count, eg. "retain the most recent 7 backups".
+         * Retention will be by count, eg. &#34;retain the most recent 7 backups&#34;.
          * 
          */
         Count("COUNT");

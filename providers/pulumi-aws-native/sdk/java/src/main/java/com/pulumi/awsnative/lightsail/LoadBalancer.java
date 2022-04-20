@@ -37,28 +37,28 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
         return this.attachedInstances;
     }
     /**
-     * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
      */
     @Export(name="healthCheckPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckPath;
 
     /**
-     * @return The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * @return The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
      */
     public Output</* @Nullable */ String> healthCheckPath() {
         return this.healthCheckPath;
     }
     /**
-     * The instance port where you're creating your load balancer.
+     * The instance port where you&#39;re creating your load balancer.
      * 
      */
     @Export(name="instancePort", type=Integer.class, parameters={})
     private Output<Integer> instancePort;
 
     /**
-     * @return The instance port where you're creating your load balancer.
+     * @return The instance port where you&#39;re creating your load balancer.
      * 
      */
     public Output<Integer> instancePort() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Presto parameters.</p>
+ * &lt;p&gt;Presto parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourcePrestoParameters extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSourcePrestoParameters extends com.pulumi.resources.Invok
     public static final DataSourcePrestoParameters Empty = new DataSourcePrestoParameters();
 
     /**
-     * <p>Catalog.</p>
+     * &lt;p&gt;Catalog.&lt;/p&gt;
      * 
      */
     @Import(name="catalog", required=true)
@@ -29,7 +29,7 @@ public final class DataSourcePrestoParameters extends com.pulumi.resources.Invok
     }
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -40,7 +40,7 @@ public final class DataSourcePrestoParameters extends com.pulumi.resources.Invok
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

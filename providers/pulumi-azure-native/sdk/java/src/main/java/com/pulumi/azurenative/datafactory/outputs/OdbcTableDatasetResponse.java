@@ -59,7 +59,7 @@ public final class OdbcTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'OdbcTable'.
+     * Expected value is &#39;OdbcTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class OdbcTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'OdbcTable'.
+     * Expected value is &#39;OdbcTable&#39;.
      * 
     */
     public String type() {

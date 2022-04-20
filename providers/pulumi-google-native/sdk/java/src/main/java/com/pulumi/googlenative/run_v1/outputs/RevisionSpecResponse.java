@@ -26,7 +26,7 @@ public final class RevisionSpecResponse {
      */
     private final List<ContainerResponse> containers;
     /**
-     * Indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
+     * Indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
      * 
      */
     private final Boolean enableServiceLinks;
@@ -36,7 +36,7 @@ public final class RevisionSpecResponse {
      */
     private final List<LocalObjectReferenceResponse> imagePullSecrets;
     /**
-     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
+     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
      * 
      */
     private final String serviceAccountName;
@@ -80,7 +80,7 @@ public final class RevisionSpecResponse {
         return this.containers;
     }
     /**
-     * Indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
+     * Indicates whether information about services should be injected into pod&#39;s environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
      * 
     */
     public Boolean enableServiceLinks() {
@@ -94,7 +94,7 @@ public final class RevisionSpecResponse {
         return this.imagePullSecrets;
     }
     /**
-     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
+     * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account.
      * 
     */
     public String serviceAccountName() {

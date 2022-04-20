@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Set search results crowding limits. Crowding is a situation in which multiple results from the same source or host "crowd out" other results, diminishing the quality of search for users. To foster better search quality and source diversity in search results, you can set a condition to reduce repetitive results by source.
+ * Set search results crowding limits. Crowding is a situation in which multiple results from the same source or host &#34;crowd out&#34; other results, diminishing the quality of search for users. To foster better search quality and source diversity in search results, you can set a condition to reduce repetitive results by source.
  * 
  */
 public final class SourceCrowdingConfigResponse extends com.pulumi.resources.InvokeArgs {

@@ -123,7 +123,7 @@ public final class Dialogflow_v2Functions {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getParticipant", TypeShape.of(GetParticipantResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Retrieves the specified session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
+     * Retrieves the specified session entity type. This method doesn&#39;t work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
      * 
      */
     public static CompletableFuture<GetSessionEntityTypeResult> getSessionEntityType(GetSessionEntityTypeArgs args) {

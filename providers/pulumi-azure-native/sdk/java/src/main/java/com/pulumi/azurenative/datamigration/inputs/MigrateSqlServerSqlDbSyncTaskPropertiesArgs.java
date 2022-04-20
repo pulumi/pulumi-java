@@ -33,7 +33,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesArgs extends com.pulum
 
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDb.Sync'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDb.Sync&#39;.
      * 
      */
     @Import(name="taskType", required=true)

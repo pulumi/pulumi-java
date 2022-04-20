@@ -23,19 +23,19 @@ import javax.annotation.Nullable;
  * * `gcp.projects.IAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the project are preserved.
  * * `gcp.projects.IAMAuditConfig`: Authoritative for a given service. Updates the IAM policy to enable audit logging for the given service.
  * 
- * > **Note:** `gcp.projects.IAMPolicy` **cannot** be used in conjunction with `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.projects.IAMPolicy` **cannot** be used in conjunction with `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.projects.IAMBinding` resources **can be** used in conjunction with `gcp.projects.IAMMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.projects.IAMBinding` resources **can be** used in conjunction with `gcp.projects.IAMMember` resources **only if** they do not grant privilege to the same role.
  * 
- * > **Note:** The underlying API method `projects.setIamPolicy` has a lot of constraints which are documented [here](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy). In addition to these constraints,
+ * &gt; **Note:** The underlying API method `projects.setIamPolicy` has a lot of constraints which are documented [here](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy). In addition to these constraints,
  *    IAM Conditions cannot be used with Basic Roles such as Owner. Violating these constraints will result in the API returning 400 error code so please review these if you encounter errors with this resource.
  * 
  * ## google\_project\_iam\_policy
  * 
- * > **Be careful!** You can accidentally lock yourself out of your project
+ * &gt; **Be careful!** You can accidentally lock yourself out of your project
  *    using this resource. Deleting a `gcp.projects.IAMPolicy` removes access
  *    from anyone without organization-level access to the project. Proceed with caution.
- *    It's not recommended to use `gcp.projects.IAMPolicy` with your provider project
+ *    It&#39;s not recommended to use `gcp.projects.IAMPolicy` with your provider project
  *    to avoid locking yourself out, and it should generally only be used with projects
  *    fully managed by this provider. If you do use this resource, it is recommended to **import** the policy before
  *    applying the change.
@@ -59,7 +59,7 @@ import javax.annotation.Nullable;
  * This member resource can be imported using the `project_id`, role, and member e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:projects/iAMBinding:IAMBinding my_project "your-project-id roles/viewer user:foo@example.com"
+ *  $ pulumi import gcp:projects/iAMBinding:IAMBinding my_project &#34;your-project-id roles/viewer user:foo@example.com&#34;
  * ```
  * 
  *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
@@ -67,7 +67,7 @@ import javax.annotation.Nullable;
  * This binding resource can be imported using the `project_id` and role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:projects/iAMBinding:IAMBinding my_project "your-project-id roles/viewer"
+ *  $ pulumi import gcp:projects/iAMBinding:IAMBinding my_project &#34;your-project-id roles/viewer&#34;
  * ```
  * 
  *  IAM policy imports use the identifier of the resource in question.
@@ -81,10 +81,10 @@ import javax.annotation.Nullable;
  *  IAM audit config imports use the identifier of the resource in question and the service, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:projects/iAMBinding:IAMBinding my_project "your-project-id foo.googleapis.com"
+ *  $ pulumi import gcp:projects/iAMBinding:IAMBinding my_project &#34;your-project-id foo.googleapis.com&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -108,14 +108,14 @@ public class IAMBinding extends com.pulumi.resources.CustomResource {
         return this.condition;
     }
     /**
-     * (Computed) The etag of the project's IAM policy.
+     * (Computed) The etag of the project&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the project's IAM policy.
+     * @return (Computed) The etag of the project&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

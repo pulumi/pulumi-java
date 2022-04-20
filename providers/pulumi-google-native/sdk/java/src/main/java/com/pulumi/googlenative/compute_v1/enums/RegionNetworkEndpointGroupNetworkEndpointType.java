@@ -35,7 +35,7 @@ import java.util.StringJoiner;
          */
         InternetIpPort("INTERNET_IP_PORT"),
         /**
-         * The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.
+         * The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer&#39;s on-premises.
          * 
          */
         NonGcpPrivateIpPort("NON_GCP_PRIVATE_IP_PORT"),

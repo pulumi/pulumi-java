@@ -123,7 +123,7 @@ public final class AzureVmWorkloadProtectedItemResponse {
     private final @Nullable String protectedItemHealthStatus;
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadProtectedItem'.
+     * Expected value is &#39;AzureVmWorkloadProtectedItem&#39;.
      * 
      */
     private final String protectedItemType;
@@ -360,7 +360,7 @@ public final class AzureVmWorkloadProtectedItemResponse {
     }
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadProtectedItem'.
+     * Expected value is &#39;AzureVmWorkloadProtectedItem&#39;.
      * 
     */
     public String protectedItemType() {

@@ -17,7 +17,7 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
     public static final UrlDispatchRuleResponse Empty = new UrlDispatchRuleResponse();
 
     /**
-     * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".
+     * Domain name to match against. The wildcard &#34;*&#34; is supported if specified before a period: &#34;*.&#34;.Defaults to matching all domains: &#34;*&#34;.
      * 
      */
     @Import(name="domain", required=true)
@@ -28,7 +28,7 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+     * Pathname within the host. Must start with a &#34;/&#34;. A single &#34;*&#34; can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
      */
     @Import(name="path", required=true)

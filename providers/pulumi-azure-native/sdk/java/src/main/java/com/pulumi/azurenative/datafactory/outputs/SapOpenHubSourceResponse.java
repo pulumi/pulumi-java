@@ -64,7 +64,7 @@ public final class SapOpenHubSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SapOpenHubSource'.
+     * Expected value is &#39;SapOpenHubSource&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class SapOpenHubSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SapOpenHubSource'.
+     * Expected value is &#39;SapOpenHubSource&#39;.
      * 
     */
     public String type() {

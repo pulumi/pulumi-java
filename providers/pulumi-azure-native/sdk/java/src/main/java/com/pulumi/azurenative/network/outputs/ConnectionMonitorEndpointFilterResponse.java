@@ -19,7 +19,7 @@ public final class ConnectionMonitorEndpointFilterResponse {
      */
     private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
     /**
-     * The behavior of the endpoint filter. Currently only 'Include' is supported.
+     * The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
      * 
      */
     private final @Nullable String type;
@@ -40,7 +40,7 @@ public final class ConnectionMonitorEndpointFilterResponse {
         return this.items == null ? List.of() : this.items;
     }
     /**
-     * The behavior of the endpoint filter. Currently only 'Include' is supported.
+     * The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
      * 
     */
     public Optional<String> type() {

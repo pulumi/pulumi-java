@@ -50,7 +50,7 @@ import java.util.StringJoiner;
          */
         Discovery("DISCOVERY"),
         /**
-         * This represents a logical "role" that can attest to artifacts.
+         * This represents a logical &#34;role&#34; that can attest to artifacts.
          * 
          */
         Attestation("ATTESTATION"),

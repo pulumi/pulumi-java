@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Properties of a lab's support banner
+ * Properties of a lab&#39;s support banner
  * 
  */
 public final class LabSupportPropertiesArgs extends com.pulumi.resources.ResourceArgs {

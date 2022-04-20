@@ -16,10 +16,10 @@ import javax.annotation.Nullable;
  * An Activity Log Alert rule condition that is met when all its member conditions are met.
  * Each condition can be of one of the following types:
  * __Important__: Each type has its unique subset of properties. Properties from different types CANNOT exist in one condition.
- *    * __Leaf Condition -__ must contain 'field' and either 'equals' or 'containsAny'.
- *        _Please note, 'anyOf' should __not__ be set in a Leaf Condition._
- *   * __AnyOf Condition -__ must contain __only__ 'anyOf' (which is an array of Leaf Conditions).
- *       _Please note, 'field', 'equals' and 'containsAny' should __not__ be set in an AnyOf Condition._
+ *    * __Leaf Condition -__ must contain &#39;field&#39; and either &#39;equals&#39; or &#39;containsAny&#39;.
+ *        _Please note, &#39;anyOf&#39; should __not__ be set in a Leaf Condition._
+ *   * __AnyOf Condition -__ must contain __only__ &#39;anyOf&#39; (which is an array of Leaf Conditions).
+ *       _Please note, &#39;field&#39;, &#39;equals&#39; and &#39;containsAny&#39; should __not__ be set in an AnyOf Condition._
  * 
  */
 public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.resources.InvokeArgs {
@@ -38,7 +38,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
     }
 
     /**
-     * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+     * The value of the event&#39;s field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
      * 
      */
     @Import(name="containsAny")
@@ -49,7 +49,7 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
     }
 
     /**
-     * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
+     * The value of the event&#39;s field will be compared to this value (case-insensitive) to determine if the condition is met.
      * 
      */
     @Import(name="equals")
@@ -60,8 +60,8 @@ public final class AlertRuleAnyOfOrLeafConditionResponse extends com.pulumi.reso
     }
 
     /**
-     * The name of the Activity Log event's field that this condition will examine.
-     * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
+     * The name of the Activity Log event&#39;s field that this condition will examine.
+     * The possible values for this field are (case-insensitive): &#39;resourceId&#39;, &#39;category&#39;, &#39;caller&#39;, &#39;level&#39;, &#39;operationName&#39;, &#39;resourceGroup&#39;, &#39;resourceProvider&#39;, &#39;status&#39;, &#39;subStatus&#39;, &#39;resourceType&#39;, or anything beginning with &#39;properties&#39;.
      * 
      */
     @Import(name="field")

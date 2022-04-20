@@ -21,7 +21,7 @@ public final class ResourceRecordArgs extends com.pulumi.resources.ResourceArgs 
     public static final ResourceRecordArgs Empty = new ResourceRecordArgs();
 
     /**
-     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
+     * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: &#39;www&#39;.
      * 
      */
     @Import(name="name")

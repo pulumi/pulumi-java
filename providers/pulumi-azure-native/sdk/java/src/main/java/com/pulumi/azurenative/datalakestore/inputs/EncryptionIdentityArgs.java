@@ -19,7 +19,7 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
     public static final EncryptionIdentityArgs Empty = new EncryptionIdentityArgs();
 
     /**
-     * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+     * The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
      * 
      */
     @Import(name="type", required=true)

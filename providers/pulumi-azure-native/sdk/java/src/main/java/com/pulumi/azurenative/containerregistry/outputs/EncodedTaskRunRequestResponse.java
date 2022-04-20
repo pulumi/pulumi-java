@@ -71,7 +71,7 @@ public final class EncodedTaskRunRequestResponse {
     private final @Nullable Integer timeout;
     /**
      * The type of the run request.
-     * Expected value is 'EncodedTaskRunRequest'.
+     * Expected value is &#39;EncodedTaskRunRequest&#39;.
      * 
      */
     private final String type;
@@ -182,7 +182,7 @@ public final class EncodedTaskRunRequestResponse {
     }
     /**
      * The type of the run request.
-     * Expected value is 'EncodedTaskRunRequest'.
+     * Expected value is &#39;EncodedTaskRunRequest&#39;.
      * 
     */
     public String type() {

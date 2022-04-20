@@ -94,14 +94,14 @@ public class Package extends com.pulumi.resources.CustomResource {
         return this.flightingRing;
     }
     /**
-     * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+     * Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
      * 
      */
     @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
     /**
-     * @return Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+     * @return Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
      * 
      */
     public Output<Boolean> isEnabled() {
@@ -220,14 +220,14 @@ public class Package extends com.pulumi.resources.CustomResource {
         return this.targetOSList;
     }
     /**
-     * OOB, functional or both. Mapped to the data in 'tests' property.
+     * OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
      * 
      */
     @Export(name="testTypes", type=List.class, parameters={String.class})
     private Output<List<String>> testTypes;
 
     /**
-     * @return OOB, functional or both. Mapped to the data in 'tests' property.
+     * @return OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
      * 
      */
     public Output<List<String>> testTypes() {
@@ -262,14 +262,14 @@ public class Package extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * The validation results. There's validation on package when it's created or updated.
+     * The validation results. There&#39;s validation on package when it&#39;s created or updated.
      * 
      */
     @Export(name="validationResults", type=List.class, parameters={PackageValidationResultResponse.class})
     private Output<List<PackageValidationResultResponse>> validationResults;
 
     /**
-     * @return The validation results. There's validation on package when it's created or updated.
+     * @return The validation results. There&#39;s validation on package when it&#39;s created or updated.
      * 
      */
     public Output<List<PackageValidationResultResponse>> validationResults() {

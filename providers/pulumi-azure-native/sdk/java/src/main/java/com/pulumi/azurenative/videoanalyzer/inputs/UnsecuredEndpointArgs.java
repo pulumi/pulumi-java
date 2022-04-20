@@ -45,7 +45,7 @@ public final class UnsecuredEndpointArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.UnsecuredEndpoint'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#39;.
      * 
      */
     @Import(name="type", required=true)

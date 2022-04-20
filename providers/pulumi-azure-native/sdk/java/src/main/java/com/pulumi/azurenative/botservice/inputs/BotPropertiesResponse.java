@@ -155,7 +155,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The bot's endpoint
+     * The bot&#39;s endpoint
      * 
      */
     @Import(name="endpoint", required=true)
@@ -166,7 +166,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The bot's endpoint version
+     * The bot&#39;s endpoint version
      * 
      */
     @Import(name="endpointVersion", required=true)
@@ -243,7 +243,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The bot's manifest url
+     * The bot&#39;s manifest url
      * 
      */
     @Import(name="manifestUrl")

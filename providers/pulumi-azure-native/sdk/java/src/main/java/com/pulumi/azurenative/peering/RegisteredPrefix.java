@@ -15,7 +15,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * The customer's prefix that is registered by the peering service provider.
+ * The customer&#39;s prefix that is registered by the peering service provider.
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
@@ -74,14 +74,14 @@ public class RegisteredPrefix extends com.pulumi.resources.CustomResource {
         return this.peeringServicePrefixKey;
     }
     /**
-     * The customer's prefix from which traffic originates.
+     * The customer&#39;s prefix from which traffic originates.
      * 
      */
     @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**
-     * @return The customer's prefix from which traffic originates.
+     * @return The customer&#39;s prefix from which traffic originates.
      * 
      */
     public Output</* @Nullable */ String> prefix() {

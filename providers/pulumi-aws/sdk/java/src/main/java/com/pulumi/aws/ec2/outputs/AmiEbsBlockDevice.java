@@ -25,7 +25,7 @@ public final class AmiEbsBlockDevice {
      */
     private final String deviceName;
     /**
-     * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
+     * Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
      */
     private final @Nullable Boolean encrypted;
@@ -96,7 +96,7 @@ public final class AmiEbsBlockDevice {
         return this.deviceName;
     }
     /**
-     * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
+     * Boolean controlling whether the created EBS volumes will be encrypted. Can&#39;t be used with `snapshot_id`.
      * 
     */
     public Optional<Boolean> encrypted() {

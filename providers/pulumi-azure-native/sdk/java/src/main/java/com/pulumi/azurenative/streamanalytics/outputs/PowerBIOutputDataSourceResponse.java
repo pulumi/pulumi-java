@@ -48,7 +48,7 @@ public final class PowerBIOutputDataSourceResponse {
     private final @Nullable String tokenUserPrincipalName;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'PowerBI'.
+     * Expected value is &#39;PowerBI&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class PowerBIOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'PowerBI'.
+     * Expected value is &#39;PowerBI&#39;.
      * 
     */
     public String type() {

@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputErrorResponse extends com.
 
     /**
      * Result type
-     * Expected value is 'ErrorOutput'.
+     * Expected value is &#39;ErrorOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

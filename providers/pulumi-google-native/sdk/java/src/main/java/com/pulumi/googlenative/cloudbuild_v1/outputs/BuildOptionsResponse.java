@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class BuildOptionsResponse {
     /**
-     * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
+     * Requested disk size for the VM that runs the build. Note that this is *NOT* &#34;disk free&#34;; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
      * 
      */
     private final String diskSizeGb;
@@ -24,7 +24,7 @@ public final class BuildOptionsResponse {
      */
     private final Boolean dynamicSubstitutions;
     /**
-     * A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
      */
     private final List<String> env;
@@ -54,7 +54,7 @@ public final class BuildOptionsResponse {
      */
     private final String requestedVerifyOption;
     /**
-     * A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.
+     * A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`. These variables will be available to all build steps in this build.
      * 
      */
     private final List<String> secretEnv;
@@ -110,7 +110,7 @@ public final class BuildOptionsResponse {
     }
 
     /**
-     * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
+     * Requested disk size for the VM that runs the build. Note that this is *NOT* &#34;disk free&#34;; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
      * 
     */
     public String diskSizeGb() {
@@ -124,7 +124,7 @@ public final class BuildOptionsResponse {
         return this.dynamicSubstitutions;
     }
     /**
-     * A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
     */
     public List<String> env() {
@@ -166,7 +166,7 @@ public final class BuildOptionsResponse {
         return this.requestedVerifyOption;
     }
     /**
-     * A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.
+     * A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build&#39;s `Secret`. These variables will be available to all build steps in this build.
      * 
     */
     public List<String> secretEnv() {

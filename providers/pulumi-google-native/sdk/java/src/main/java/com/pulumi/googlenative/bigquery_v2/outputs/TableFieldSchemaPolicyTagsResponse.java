@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class TableFieldSchemaPolicyTagsResponse {
     /**
-     * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * A list of category resource names. For example, &#34;projects/1/location/eu/taxonomies/2/policyTags/3&#34;. At most 1 policy tag is allowed.
      * 
      */
     private final List<String> names;
@@ -22,7 +22,7 @@ public final class TableFieldSchemaPolicyTagsResponse {
     }
 
     /**
-     * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     * A list of category resource names. For example, &#34;projects/1/location/eu/taxonomies/2/policyTags/3&#34;. At most 1 policy tag is allowed.
      * 
     */
     public List<String> names() {

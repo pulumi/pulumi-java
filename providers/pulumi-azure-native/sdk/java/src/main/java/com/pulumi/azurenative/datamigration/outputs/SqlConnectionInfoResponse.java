@@ -49,7 +49,7 @@ public final class SqlConnectionInfoResponse {
     private final @Nullable Boolean trustServerCertificate;
     /**
      * Type of connection info
-     * Expected value is 'SqlConnectionInfo'.
+     * Expected value is &#39;SqlConnectionInfo&#39;.
      * 
      */
     private final String type;
@@ -132,7 +132,7 @@ public final class SqlConnectionInfoResponse {
     }
     /**
      * Type of connection info
-     * Expected value is 'SqlConnectionInfo'.
+     * Expected value is &#39;SqlConnectionInfo&#39;.
      * 
     */
     public String type() {

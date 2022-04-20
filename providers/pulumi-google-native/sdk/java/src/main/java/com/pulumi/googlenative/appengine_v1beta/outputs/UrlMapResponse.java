@@ -33,7 +33,7 @@ public final class UrlMapResponse {
      */
     private final String redirectHttpResponseCode;
     /**
-     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
+     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script&#34;: &#34;auto&#34;.
      * 
      */
     private final ScriptHandlerResponse script;
@@ -102,7 +102,7 @@ public final class UrlMapResponse {
         return this.redirectHttpResponseCode;
     }
     /**
-     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
+     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script&#34;: &#34;auto&#34;.
      * 
     */
     public ScriptHandlerResponse script() {

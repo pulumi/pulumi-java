@@ -22,7 +22,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
     public static final MetricAlertSingleResourceMultipleMetricCriteriaResponse Empty = new MetricAlertSingleResourceMultipleMetricCriteriaResponse();
 
     /**
-     * The list of metric criteria for this 'all of' operation.
+     * The list of metric criteria for this &#39;all of&#39; operation.
      * 
      */
     @Import(name="allOf")
@@ -34,7 +34,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse exten
 
     /**
      * specifies the type of the alert criteria.
-     * Expected value is 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'.
+     * Expected value is &#39;Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria&#39;.
      * 
      */
     @Import(name="odataType", required=true)

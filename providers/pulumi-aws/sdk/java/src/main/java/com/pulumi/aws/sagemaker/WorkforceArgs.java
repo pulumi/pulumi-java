@@ -41,7 +41,7 @@ public final class WorkforceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.
+     * A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn&#39;t restricted to specific IP addresses. see Source Ip Config details below.
      * 
      */
     @Import(name="sourceIpConfig")

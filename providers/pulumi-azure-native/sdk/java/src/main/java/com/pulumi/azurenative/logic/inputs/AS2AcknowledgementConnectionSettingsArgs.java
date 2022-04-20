@@ -41,7 +41,7 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * Indicates whether to support HTTP status code 'CONTINUE'.
+     * Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
      * 
      */
     @Import(name="supportHttpStatusCodeContinue", required=true)

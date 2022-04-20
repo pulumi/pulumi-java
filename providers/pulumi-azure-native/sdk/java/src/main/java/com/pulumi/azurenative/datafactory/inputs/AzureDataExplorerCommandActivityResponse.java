@@ -104,7 +104,7 @@ public final class AzureDataExplorerCommandActivityResponse extends com.pulumi.r
 
     /**
      * Type of activity.
-     * Expected value is 'AzureDataExplorerCommand'.
+     * Expected value is &#39;AzureDataExplorerCommand&#39;.
      * 
      */
     @Import(name="type", required=true)

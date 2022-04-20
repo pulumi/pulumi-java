@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new bucket in Google cloud storage service (GCS).
- * Once a bucket has been created, its location can't be changed.
+ * Once a bucket has been created, its location can&#39;t be changed.
  * 
  * For more information see
  * [the official documentation](https://cloud.google.com/storage/docs/overview)
@@ -51,20 +51,20 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:storage/bucket:Bucket image-store tf-test-project/image-store-bucket
  * ```
  * 
- *  `false` in state. If you've set it to `true` in config, run `terraform apply` to update the value set in state. If you delete this resource before updating the value, objects in the bucket will not be destroyed.
+ *  `false` in state. If you&#39;ve set it to `true` in config, run `terraform apply` to update the value set in state. If you delete this resource before updating the value, objects in the bucket will not be destroyed.
  * 
  */
 @ResourceType(type="gcp:storage/bucket:Bucket")
 public class Bucket extends com.pulumi.resources.CustomResource {
     /**
-     * The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
     @Export(name="cors", type=List.class, parameters={BucketCor.class})
     private Output</* @Nullable */ List<BucketCor>> cors;
 
     /**
-     * @return The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * @return The bucket&#39;s [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
     public Output</* @Nullable */ List<BucketCor>> cors() {
@@ -77,14 +77,14 @@ public class Bucket extends com.pulumi.resources.CustomResource {
         return this.defaultEventBasedHold;
     }
     /**
-     * The bucket's encryption configuration. Structure is documented below.
+     * The bucket&#39;s encryption configuration. Structure is documented below.
      * 
      */
     @Export(name="encryption", type=BucketEncryption.class, parameters={})
     private Output</* @Nullable */ BucketEncryption> encryption;
 
     /**
-     * @return The bucket's encryption configuration. Structure is documented below.
+     * @return The bucket&#39;s encryption configuration. Structure is documented below.
      * 
      */
     public Output</* @Nullable */ BucketEncryption> encryption() {
@@ -123,14 +123,14 @@ public class Bucket extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
     @Export(name="lifecycleRules", type=List.class, parameters={BucketLifecycleRule.class})
     private Output</* @Nullable */ List<BucketLifecycleRule>> lifecycleRules;
 
     /**
-     * @return The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
+     * @return The bucket&#39;s [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
     public Output</* @Nullable */ List<BucketLifecycleRule>> lifecycleRules() {
@@ -151,14 +151,14 @@ public class Bucket extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
+     * The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
     @Export(name="logging", type=BucketLogging.class, parameters={})
     private Output</* @Nullable */ BucketLogging> logging;
 
     /**
-     * @return The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
+     * @return The bucket&#39;s [Access &amp; Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
     public Output</* @Nullable */ BucketLogging> logging() {
@@ -223,14 +223,14 @@ public class Bucket extends com.pulumi.resources.CustomResource {
         return this.requesterPays;
     }
     /**
-     * Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
+     * Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
     @Export(name="retentionPolicy", type=BucketRetentionPolicy.class, parameters={})
     private Output</* @Nullable */ BucketRetentionPolicy> retentionPolicy;
 
     /**
-     * @return Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
+     * @return Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
     public Output</* @Nullable */ BucketRetentionPolicy> retentionPolicy() {
@@ -279,28 +279,28 @@ public class Bucket extends com.pulumi.resources.CustomResource {
         return this.uniformBucketLevelAccess;
     }
     /**
-     * The base URL of the bucket, in the format `gs://<bucket-name>`.
+     * The base URL of the bucket, in the format `gs://&lt;bucket-name&gt;`.
      * 
      */
     @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
-     * @return The base URL of the bucket, in the format `gs://<bucket-name>`.
+     * @return The base URL of the bucket, in the format `gs://&lt;bucket-name&gt;`.
      * 
      */
     public Output<String> url() {
         return this.url;
     }
     /**
-     * The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
+     * The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
     @Export(name="versioning", type=BucketVersioning.class, parameters={})
     private Output</* @Nullable */ BucketVersioning> versioning;
 
     /**
-     * @return The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
+     * @return The bucket&#39;s [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
     public Output</* @Nullable */ BucketVersioning> versioning() {

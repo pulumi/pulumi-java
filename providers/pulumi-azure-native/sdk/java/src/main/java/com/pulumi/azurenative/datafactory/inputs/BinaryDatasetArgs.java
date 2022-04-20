@@ -140,7 +140,7 @@ public final class BinaryDatasetArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset.
-     * Expected value is 'Binary'.
+     * Expected value is &#39;Binary&#39;.
      * 
      */
     @Import(name="type", required=true)

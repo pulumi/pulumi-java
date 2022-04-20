@@ -87,7 +87,7 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+     * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
      * 
      */
     @Import(name="contentType")
@@ -118,7 +118,7 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
-     * signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+     * signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects
      * will be subject to bucket-level retention (if any).
      * 
      */
@@ -152,7 +152,7 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the object. If you're interpolating the name of this object, see `output_name` instead.
+     * The name of the object. If you&#39;re interpolating the name of this object, see `output_name` instead.
      * 
      */
     @Import(name="name")
@@ -176,7 +176,7 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
-     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
+     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
      */

@@ -40,7 +40,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends co
     }
 
     /**
-     * The maximum hourly price you're willing to pay for the Spot Instances.
+     * The maximum hourly price you&#39;re willing to pay for the Spot Instances.
      * 
      */
     @Import(name="maxPrice")

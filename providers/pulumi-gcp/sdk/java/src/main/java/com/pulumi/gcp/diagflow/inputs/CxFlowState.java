@@ -42,9 +42,9 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A flow's event handlers serve two purposes:
+     * A flow&#39;s event handlers serve two purposes:
      * They are responsible for handling events (e.g. no match, webhook errors) in the flow.
-     * They are inherited by every page's [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
+     * They are inherited by every page&#39;s [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
      * Unlike transitionRoutes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
      * Structure is documented below.
      * 
@@ -62,7 +62,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * Flow.event_handlers.trigger_fulfillment.conditional_cases
      * Flow.transition_routes.trigger_fulfillment.messages
      * Flow.transition_routes.trigger_fulfillment.conditional_cases
-     * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
+     * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
     @Import(name="languageCode")
@@ -98,7 +98,7 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The agent to create a flow for.
-     * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
+     * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
     @Import(name="parent")
@@ -109,10 +109,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A flow's transition route group serve two purposes:
-     * They are responsible for matching the user's first utterances in the flow.
-     * They are inherited by every page's [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
-     * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
+     * A flow&#39;s transition route group serve two purposes:
+     * They are responsible for matching the user&#39;s first utterances in the flow.
+     * They are inherited by every page&#39;s [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
+     * Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;.
      * 
      */
     @Import(name="transitionRouteGroups")
@@ -123,9 +123,9 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A flow's transition routes serve two purposes:
-     * They are responsible for matching the user's first utterances in the flow.
-     * They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
+     * A flow&#39;s transition routes serve two purposes:
+     * They are responsible for matching the user&#39;s first utterances in the flow.
+     * They are inherited by every page&#39;s [transition routes][Page.transition_routes] and can support use cases such as the user saying &#34;help&#34; or &#34;can I talk to a human?&#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
     @Import(name="transitionRoutes")

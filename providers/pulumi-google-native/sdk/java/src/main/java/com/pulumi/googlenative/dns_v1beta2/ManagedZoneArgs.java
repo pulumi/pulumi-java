@@ -51,7 +51,7 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.
+     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the managed zone&#39;s function.
      * 
      */
     @Import(name="description")
@@ -62,7 +62,7 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DNS name of this managed zone, for instance "example.com.".
+     * The DNS name of this managed zone, for instance &#34;example.com.&#34;.
      * 
      */
     @Import(name="dnsName")
@@ -208,7 +208,7 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
+     * The zone&#39;s visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
      * 
      */
     @Import(name="visibility")

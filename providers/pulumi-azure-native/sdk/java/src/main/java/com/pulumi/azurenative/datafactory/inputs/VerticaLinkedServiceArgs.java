@@ -104,7 +104,7 @@ public final class VerticaLinkedServiceArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of linked service.
-     * Expected value is 'Vertica'.
+     * Expected value is &#39;Vertica&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -59,7 +59,7 @@ public final class InformixTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'InformixTable'.
+     * Expected value is &#39;InformixTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class InformixTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'InformixTable'.
+     * Expected value is &#39;InformixTable&#39;.
      * 
     */
     public String type() {

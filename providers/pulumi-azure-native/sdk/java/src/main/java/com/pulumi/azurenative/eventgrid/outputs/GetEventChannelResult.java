@@ -58,7 +58,7 @@ public final class GetEventChannelResult {
      */
     private final String provisioningState;
     /**
-     * Source of the event channel. This represents a unique resource in the partner's resource model.
+     * Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
      */
     private final @Nullable EventChannelSourceResponse source;
@@ -158,7 +158,7 @@ public final class GetEventChannelResult {
         return this.provisioningState;
     }
     /**
-     * Source of the event channel. This represents a unique resource in the partner's resource model.
+     * Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
      * 
     */
     public Optional<EventChannelSourceResponse> source() {

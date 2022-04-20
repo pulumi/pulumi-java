@@ -20,7 +20,7 @@ public final class EncryptionIdentityResponse {
      */
     private final String tenantId;
     /**
-     * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+     * The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
      * 
      */
     private final String type;
@@ -50,7 +50,7 @@ public final class EncryptionIdentityResponse {
         return this.tenantId;
     }
     /**
-     * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+     * The type of encryption being used. Currently the only supported type is &#39;SystemAssigned&#39;.
      * 
     */
     public String type() {

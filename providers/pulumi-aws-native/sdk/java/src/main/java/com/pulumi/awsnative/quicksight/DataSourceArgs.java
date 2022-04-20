@@ -25,15 +25,15 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
     /**
-     * <p>A set of alternate data source parameters that you want to share for the credentials
+     * &lt;p&gt;A set of alternate data source parameters that you want to share for the credentials
      *             stored with this data source. The credentials are applied in tandem with the data source
      *             parameters when you copy a data source by using a create or update request. The API
-     *             operation compares the <code>DataSourceParameters</code> structure that's in the request
-     *             with the structures in the <code>AlternateDataSourceParameters</code> allow list. If the
+     *             operation compares the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request
+     *             with the structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
      *             structures are an exact match, the request is allowed to use the credentials from this
-     *             existing data source. If the <code>AlternateDataSourceParameters</code> list is null,
-     *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
-     *             are automatically allowed.</p>
+     *             existing data source. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is null,
+     *             the &lt;code&gt;Credentials&lt;/code&gt; originally used with this &lt;code&gt;DataSourceParameters&lt;/code&gt;
+     *             are automatically allowed.&lt;/p&gt;
      * 
      */
     @Import(name="alternateDataSourceParameters")
@@ -79,7 +79,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A display name for the data source.</p>
+     * &lt;p&gt;A display name for the data source.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -90,7 +90,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A list of resource permissions on the data source.</p>
+     * &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
      * 
      */
     @Import(name="permissions")
@@ -108,7 +108,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
+     * &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
      * 
      */
     @Import(name="tags")

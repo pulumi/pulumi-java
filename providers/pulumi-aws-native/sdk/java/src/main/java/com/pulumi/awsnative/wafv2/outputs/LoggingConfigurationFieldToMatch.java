@@ -29,7 +29,7 @@ public final class LoggingConfigurationFieldToMatch {
      */
     private final @Nullable Object queryString;
     /**
-     * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.
+     * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn&#39;t case sensitive.
      * 
      */
     private final @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader;
@@ -75,7 +75,7 @@ public final class LoggingConfigurationFieldToMatch {
         return Optional.ofNullable(this.queryString);
     }
     /**
-     * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.
+     * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn&#39;t case sensitive.
      * 
     */
     public Optional<LoggingConfigurationFieldToMatchSingleHeaderProperties> singleHeader() {

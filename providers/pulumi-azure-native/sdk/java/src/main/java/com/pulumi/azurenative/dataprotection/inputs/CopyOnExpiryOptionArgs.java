@@ -20,7 +20,7 @@ public final class CopyOnExpiryOptionArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'CopyOnExpiryOption'.
+     * Expected value is &#39;CopyOnExpiryOption&#39;.
      * 
      */
     @Import(name="objectType", required=true)

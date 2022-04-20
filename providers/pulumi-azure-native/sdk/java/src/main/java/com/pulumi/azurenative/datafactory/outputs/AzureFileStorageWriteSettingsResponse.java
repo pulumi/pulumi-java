@@ -29,7 +29,7 @@ public final class AzureFileStorageWriteSettingsResponse {
     private final @Nullable Object maxConcurrentConnections;
     /**
      * The write setting type.
-     * Expected value is 'AzureFileStorageWriteSettings'.
+     * Expected value is &#39;AzureFileStorageWriteSettings&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class AzureFileStorageWriteSettingsResponse {
     }
     /**
      * The write setting type.
-     * Expected value is 'AzureFileStorageWriteSettings'.
+     * Expected value is &#39;AzureFileStorageWriteSettings&#39;.
      * 
     */
     public String type() {

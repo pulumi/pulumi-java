@@ -19,7 +19,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final RuleArgs Empty = new RuleArgs();
 
     /**
-     * The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
+     * The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can&#39;t contain whitespace.
      * 
      */
     @Import(name="metricName", required=true)

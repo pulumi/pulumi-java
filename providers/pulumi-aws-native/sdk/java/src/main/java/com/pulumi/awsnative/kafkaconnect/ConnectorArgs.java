@@ -86,7 +86,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
+     * The version of Kafka Connect. It has to be compatible with both the Kafka cluster&#39;s version and the plugins.
      * 
      */
     @Import(name="kafkaConnectVersion", required=true)

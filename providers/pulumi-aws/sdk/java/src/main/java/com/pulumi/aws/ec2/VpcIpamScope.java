@@ -39,42 +39,42 @@ public class VpcIpamScope extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * A description for the scope you're creating.
+     * A description for the scope you&#39;re creating.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return A description for the scope you're creating.
+     * @return A description for the scope you&#39;re creating.
      * 
      */
     public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
-     * The ARN of the IPAM for which you're creating this scope.
+     * The ARN of the IPAM for which you&#39;re creating this scope.
      * 
      */
     @Export(name="ipamArn", type=String.class, parameters={})
     private Output<String> ipamArn;
 
     /**
-     * @return The ARN of the IPAM for which you're creating this scope.
+     * @return The ARN of the IPAM for which you&#39;re creating this scope.
      * 
      */
     public Output<String> ipamArn() {
         return this.ipamArn;
     }
     /**
-     * The ID of the IPAM for which you're creating this scope.
+     * The ID of the IPAM for which you&#39;re creating this scope.
      * 
      */
     @Export(name="ipamId", type=String.class, parameters={})
     private Output<String> ipamId;
 
     /**
-     * @return The ID of the IPAM for which you're creating this scope.
+     * @return The ID of the IPAM for which you&#39;re creating this scope.
      * 
      */
     public Output<String> ipamId() {

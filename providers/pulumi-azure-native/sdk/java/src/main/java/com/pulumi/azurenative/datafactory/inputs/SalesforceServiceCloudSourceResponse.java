@@ -99,7 +99,7 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
 
     /**
      * Copy source type.
-     * Expected value is 'SalesforceServiceCloudSource'.
+     * Expected value is &#39;SalesforceServiceCloudSource&#39;.
      * 
      */
     @Import(name="type", required=true)

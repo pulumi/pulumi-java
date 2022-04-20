@@ -47,7 +47,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
 
     /**
      * Names of query string parameters to exclude from cache keys. All other parameters will be included.
-     * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
+     * Either specify includedQueryParameters or excludedQueryParameters, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
     @Import(name="excludedQueryParameters")
@@ -72,7 +72,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
      * - Header names must be valid HTTP RFC 7230 header field values.
      * - Header field names are case insensitive
-     * - To include the HTTP method, use ":method"
+     * - To include the HTTP method, use &#34;:method&#34;
      *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
      * 
      */
@@ -85,7 +85,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
 
     /**
      * Names of query string parameters to include in cache keys. All other parameters will be excluded.
-     * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
+     * Either specify includedQueryParameters or excludedQueryParameters, not both. &#39;&amp;&#39; and &#39;=&#39; will be percent encoded and not treated as delimiters.
      * 
      */
     @Import(name="includedQueryParameters")

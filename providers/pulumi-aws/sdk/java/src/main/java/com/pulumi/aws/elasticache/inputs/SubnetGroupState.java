@@ -25,7 +25,7 @@ public final class SubnetGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Description for the cache subnet group. Defaults to "Managed by Pulumi".
+     * Description for the cache subnet group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

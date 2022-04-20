@@ -117,7 +117,7 @@ public final class GoogleCloudStorageLinkedServiceResponse extends com.pulumi.re
 
     /**
      * Type of linked service.
-     * Expected value is 'GoogleCloudStorage'.
+     * Expected value is &#39;GoogleCloudStorage&#39;.
      * 
      */
     @Import(name="type", required=true)

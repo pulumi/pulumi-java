@@ -20,7 +20,7 @@ public final class ReusableConfigValuesResponse {
      */
     private final List<X509ExtensionResponse> additionalExtensions;
     /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
+     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
      */
     private final List<String> aiaOcspServers;
@@ -62,7 +62,7 @@ public final class ReusableConfigValuesResponse {
         return this.additionalExtensions;
     }
     /**
-     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
+     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the &#34;Authority Information Access&#34; extension in the certificate.
      * 
     */
     public List<String> aiaOcspServers() {

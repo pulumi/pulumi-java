@@ -44,14 +44,14 @@ public class VpcAssociationAuthorization extends com.pulumi.resources.CustomReso
         return this.vpcId;
     }
     /**
-     * The VPC's region. Defaults to the region of the AWS provider.
+     * The VPC&#39;s region. Defaults to the region of the AWS provider.
      * 
      */
     @Export(name="vpcRegion", type=String.class, parameters={})
     private Output<String> vpcRegion;
 
     /**
-     * @return The VPC's region. Defaults to the region of the AWS provider.
+     * @return The VPC&#39;s region. Defaults to the region of the AWS provider.
      * 
      */
     public Output<String> vpcRegion() {

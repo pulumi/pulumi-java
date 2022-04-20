@@ -17,7 +17,7 @@ public final class ResolverFirewallRuleState extends com.pulumi.resources.Resour
     public static final ResolverFirewallRuleState Empty = new ResolverFirewallRuleState();
 
     /**
-     * The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule's domain list. Valid values: `ALLOW`, `BLOCK`, `ALERT`.
+     * The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule&#39;s domain list. Valid values: `ALLOW`, `BLOCK`, `ALERT`.
      * 
      */
     @Import(name="action")
@@ -28,7 +28,7 @@ public final class ResolverFirewallRuleState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The DNS record's type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
+     * The DNS record&#39;s type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
      * 
      */
     @Import(name="blockOverrideDnsType")

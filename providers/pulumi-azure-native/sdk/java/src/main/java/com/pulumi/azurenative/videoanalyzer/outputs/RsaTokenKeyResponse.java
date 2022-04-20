@@ -31,7 +31,7 @@ public final class RsaTokenKeyResponse {
     private final String n;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RsaTokenKey&#39;.
      * 
      */
     private final String type;
@@ -80,7 +80,7 @@ public final class RsaTokenKeyResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.RsaTokenKey&#39;.
      * 
     */
     public String type() {

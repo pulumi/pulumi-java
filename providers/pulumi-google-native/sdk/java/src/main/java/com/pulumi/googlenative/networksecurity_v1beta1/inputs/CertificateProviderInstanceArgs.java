@@ -19,7 +19,7 @@ public final class CertificateProviderInstanceArgs extends com.pulumi.resources.
     public static final CertificateProviderInstanceArgs Empty = new CertificateProviderInstanceArgs();
 
     /**
-     * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
+     * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to &#34;google_cloud_private_spiffe&#34; to use Certificate Authority Service certificate provider instance.
      * 
      */
     @Import(name="pluginInstance", required=true)

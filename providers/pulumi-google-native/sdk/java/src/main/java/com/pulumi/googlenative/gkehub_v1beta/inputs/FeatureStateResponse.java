@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * FeatureState describes the high-level state of a Feature. It may be used to describe a Feature's state at the environ-level, or per-membershop, depending on the context.
+ * FeatureState describes the high-level state of a Feature. It may be used to describe a Feature&#39;s state at the environ-level, or per-membershop, depending on the context.
  * 
  */
 public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs {

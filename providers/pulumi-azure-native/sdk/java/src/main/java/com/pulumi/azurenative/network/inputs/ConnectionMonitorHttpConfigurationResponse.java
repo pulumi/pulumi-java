@@ -34,7 +34,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
     }
 
     /**
-     * The path component of the URI. For instance, "/dir1/dir2".
+     * The path component of the URI. For instance, &#34;/dir1/dir2&#34;.
      * 
      */
     @Import(name="path")
@@ -78,7 +78,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
     }
 
     /**
-     * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
+     * HTTP status codes to consider successful. For instance, &#34;2xx,301-304,418&#34;.
      * 
      */
     @Import(name="validStatusCodeRanges")

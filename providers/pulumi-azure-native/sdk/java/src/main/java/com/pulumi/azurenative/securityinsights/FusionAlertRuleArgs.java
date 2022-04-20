@@ -40,7 +40,7 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * The kind of the alert rule
-     * Expected value is 'Fusion'.
+     * Expected value is &#39;Fusion&#39;.
      * 
      */
     @Import(name="kind", required=true)
@@ -51,7 +51,7 @@ public final class FusionAlertRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

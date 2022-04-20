@@ -81,7 +81,7 @@ public final class HDInsightHiveActivityResponse {
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
     /**
      * Type of activity.
-     * Expected value is 'HDInsightHive'.
+     * Expected value is &#39;HDInsightHive&#39;.
      * 
      */
     private final String type;
@@ -216,7 +216,7 @@ public final class HDInsightHiveActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'HDInsightHive'.
+     * Expected value is &#39;HDInsightHive&#39;.
      * 
     */
     public String type() {

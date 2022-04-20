@@ -77,7 +77,7 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureMySqlSink'.
+     * Expected value is &#39;AzureMySqlSink&#39;.
      * 
      */
     @Import(name="type", required=true)

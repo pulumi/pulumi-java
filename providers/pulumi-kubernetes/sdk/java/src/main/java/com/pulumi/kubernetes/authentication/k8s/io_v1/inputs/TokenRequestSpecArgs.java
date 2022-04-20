@@ -34,7 +34,7 @@ public final class TokenRequestSpecArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as the bound object exists. NOTE: The API server's TokenReview endpoint will validate the BoundObjectRef, but other audiences may not. Keep ExpirationSeconds small if you want prompt revocation.
+     * BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as the bound object exists. NOTE: The API server&#39;s TokenReview endpoint will validate the BoundObjectRef, but other audiences may not. Keep ExpirationSeconds small if you want prompt revocation.
      * 
      */
     @Import(name="boundObjectRef")
@@ -45,7 +45,7 @@ public final class TokenRequestSpecArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the 'expiration' field in a response.
+     * ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the &#39;expiration&#39; field in a response.
      * 
      */
     @Import(name="expirationSeconds")

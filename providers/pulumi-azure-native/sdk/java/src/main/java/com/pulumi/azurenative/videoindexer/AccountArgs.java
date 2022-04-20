@@ -19,7 +19,7 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     public static final AccountArgs Empty = new AccountArgs();
 
     /**
-     * The account's data-plane ID
+     * The account&#39;s data-plane ID
      * 
      */
     @Import(name="accountId")

@@ -23,7 +23,7 @@ public final class SqlIpConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final SqlIpConfigArgs Empty = new SqlIpConfigArgs();
 
     /**
-     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
+     * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as &#39;slash&#39; notation (e.g. `192.168.100.0/24`).
      * 
      */
     @Import(name="authorizedNetworks")

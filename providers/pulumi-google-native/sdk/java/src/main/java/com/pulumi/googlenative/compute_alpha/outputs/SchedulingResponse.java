@@ -55,7 +55,7 @@ public final class SchedulingResponse {
      */
     private final String locationHint;
     /**
-     * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
+     * Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
      * 
      */
     private final Integer maintenanceFreezeDurationHours;
@@ -195,7 +195,7 @@ public final class SchedulingResponse {
         return this.locationHint;
     }
     /**
-     * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
+     * Specifies the number of hours after VM instance creation where the VM won&#39;t be scheduled for maintenance.
      * 
     */
     public Integer maintenanceFreezeDurationHours() {

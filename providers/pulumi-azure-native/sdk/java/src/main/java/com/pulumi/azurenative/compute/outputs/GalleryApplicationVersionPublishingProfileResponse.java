@@ -28,7 +28,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
      */
     private final @Nullable String endOfLifeDate;
     /**
-     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
+     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
      * 
      */
     private final @Nullable Boolean excludeFromLatest;
@@ -96,7 +96,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
-     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
+     * If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
      * 
     */
     public Optional<Boolean> excludeFromLatest() {

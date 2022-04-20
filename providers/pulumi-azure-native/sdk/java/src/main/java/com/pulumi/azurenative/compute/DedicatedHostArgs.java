@@ -21,7 +21,7 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
     public static final DedicatedHostArgs Empty = new DedicatedHostArgs();
 
     /**
-     * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
+     * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
      * 
      */
     @Import(name="autoReplaceOnFailure")
@@ -54,7 +54,7 @@ public final class DedicatedHostArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
+     * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
      * 
      */
     @Import(name="licenseType")

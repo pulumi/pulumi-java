@@ -39,7 +39,7 @@ public final class ServiceBusQueueOutputDataSourceResponse {
     private final @Nullable String sharedAccessPolicyName;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/Queue'.
+     * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class ServiceBusQueueOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/Queue'.
+     * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
      * 
     */
     public String type() {

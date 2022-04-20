@@ -66,8 +66,8 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The unique identifier of the fulfillment. Format: projects/<Project ID>/agent/fulfillment - projects/<Project
-     * ID>/locations/<Location ID>/agent/fulfillment
+     * The unique identifier of the fulfillment. Format: projects/&lt;Project ID&gt;/agent/fulfillment - projects/&lt;Project
+     * ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment
      * 
      */
     @Import(name="name")

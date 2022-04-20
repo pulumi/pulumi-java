@@ -32,7 +32,7 @@ public final class PlanResponse {
      */
     private final @Nullable String publisher;
     /**
-     * The plan's version.
+     * The plan&#39;s version.
      * 
      */
     private final @Nullable String version;
@@ -80,7 +80,7 @@ public final class PlanResponse {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * The plan's version.
+     * The plan&#39;s version.
      * 
     */
     public Optional<String> version() {

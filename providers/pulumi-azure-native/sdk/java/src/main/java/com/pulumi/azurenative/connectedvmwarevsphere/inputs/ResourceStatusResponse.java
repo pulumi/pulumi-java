@@ -39,7 +39,7 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The reason for the condition's status.
+     * The reason for the condition&#39;s status.
      * 
      */
     @Import(name="reason", required=true)

@@ -12,13 +12,13 @@ import java.util.Objects;
 public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
     private final String kind;
     /**
-     * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
+     * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
      * 
      */
     private final String location;
     private final List<String> rrdatas;
     /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
      * 
      */
     private final List<String> signatureRrdatas;
@@ -39,7 +39,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
         return this.kind;
     }
     /**
-     * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
+     * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. &#34;us-east1&#34;, &#34;southamerica-east1&#34;, &#34;asia-east1&#34;, etc.
      * 
     */
     public String location() {
@@ -49,7 +49,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
         return this.rrdatas;
     }
     /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
      * 
     */
     public List<String> signatureRrdatas() {

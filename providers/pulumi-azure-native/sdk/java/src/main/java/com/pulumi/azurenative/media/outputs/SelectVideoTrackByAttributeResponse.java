@@ -22,13 +22,13 @@ public final class SelectVideoTrackByAttributeResponse {
      */
     private final String filter;
     /**
-     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.
+     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: &#39;1500000&#39;).  The TrackAttribute.Language is not supported for video tracks.
      * 
      */
     private final @Nullable String filterValue;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.SelectVideoTrackByAttribute'.
+     * Expected value is &#39;#Microsoft.Media.SelectVideoTrackByAttribute&#39;.
      * 
      */
     private final String odataType;
@@ -60,7 +60,7 @@ public final class SelectVideoTrackByAttributeResponse {
         return this.filter;
     }
     /**
-     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.
+     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: &#39;1500000&#39;).  The TrackAttribute.Language is not supported for video tracks.
      * 
     */
     public Optional<String> filterValue() {
@@ -68,7 +68,7 @@ public final class SelectVideoTrackByAttributeResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.SelectVideoTrackByAttribute'.
+     * Expected value is &#39;#Microsoft.Media.SelectVideoTrackByAttribute&#39;.
      * 
     */
     public String odataType() {

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 /**
  * Provides network associations for AWS Client VPN endpoints. For more information on usage, please see the
- * [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
+ * [AWS Client VPN Administrator&#39;s Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
  * 
  * ## Example Usage
  * 
@@ -60,14 +60,14 @@ public class NetworkAssociation extends com.pulumi.resources.CustomResource {
         return this.clientVpnEndpointId;
     }
     /**
-     * A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
+     * A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
      * 
      */
     @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     /**
-     * @return A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
+     * @return A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
      * 
      */
     public Output<List<String>> securityGroups() {

@@ -31,7 +31,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends com.pulumi.
     }
 
     /**
-     * Preserved metadata defined for this instance. This is a list of key->value pairs.
+     * Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
      * 
      */
     @Import(name="metadata")

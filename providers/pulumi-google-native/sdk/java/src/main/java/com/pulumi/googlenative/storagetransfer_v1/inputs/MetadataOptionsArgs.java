@@ -27,7 +27,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     public static final MetadataOptionsArgs Empty = new MetadataOptionsArgs();
 
     /**
-     * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+     * Specifies how each object&#39;s ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
      * 
      */
     @Import(name="acl")
@@ -38,7 +38,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
      * 
      */
     @Import(name="gid")
@@ -49,7 +49,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each object's Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
+     * Specifies how each object&#39;s Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
      * 
      */
     @Import(name="kmsKey")
@@ -60,7 +60,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
      * 
      */
     @Import(name="mode")
@@ -93,7 +93,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each object's temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
+     * Specifies how each object&#39;s temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
      * 
      */
     @Import(name="temporaryHold")
@@ -104,7 +104,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
      * 
      */
     @Import(name="uid")

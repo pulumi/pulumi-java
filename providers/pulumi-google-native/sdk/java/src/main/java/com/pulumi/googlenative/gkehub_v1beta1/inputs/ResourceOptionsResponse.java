@@ -40,7 +40,7 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.
+     * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions &lt;1.16.
      * 
      */
     @Import(name="v1beta1Crd", required=true)

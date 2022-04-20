@@ -165,7 +165,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * A size of the storage used by the disk's snapshot by this machine image.
+     * A size of the storage used by the disk&#39;s snapshot by this machine image.
      * 
      */
     @Import(name="storageBytes", required=true)

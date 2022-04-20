@@ -14,7 +14,7 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends com.pulumi
     public static final SecurityPolicyRuleHttpHeaderActionResponse Empty = new SecurityPolicyRuleHttpHeaderActionResponse();
 
     /**
-     * The list of request headers to add or overwrite if they're already present.
+     * The list of request headers to add or overwrite if they&#39;re already present.
      * 
      */
     @Import(name="requestHeadersToAdds", required=true)

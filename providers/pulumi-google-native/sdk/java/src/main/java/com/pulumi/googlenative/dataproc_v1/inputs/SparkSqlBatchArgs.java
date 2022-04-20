@@ -44,7 +44,7 @@ public final class SparkSqlBatchArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
      */
     @Import(name="queryVariables")

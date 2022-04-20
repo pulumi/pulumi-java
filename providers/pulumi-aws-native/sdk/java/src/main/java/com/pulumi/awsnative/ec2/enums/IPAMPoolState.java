@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
+     * The state of this pool. This can be one of the following values: &#34;create-in-progress&#34;, &#34;create-complete&#34;, &#34;modify-in-progress&#34;, &#34;modify-complete&#34;, &#34;delete-in-progress&#34;, or &#34;delete-complete&#34;
      * 
      */
     @EnumType

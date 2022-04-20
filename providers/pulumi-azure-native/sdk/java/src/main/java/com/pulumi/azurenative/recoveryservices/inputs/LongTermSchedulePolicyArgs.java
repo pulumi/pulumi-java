@@ -20,7 +20,7 @@ public final class LongTermSchedulePolicyArgs extends com.pulumi.resources.Resou
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'LongTermSchedulePolicy'.
+     * Expected value is &#39;LongTermSchedulePolicy&#39;.
      * 
      */
     @Import(name="schedulePolicyType", required=true)

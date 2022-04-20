@@ -112,7 +112,7 @@ public final class ApiPortalPropertiesResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * URL of the API portal, exposed when 'public' is true.
+     * URL of the API portal, exposed when &#39;public&#39; is true.
      * 
      */
     @Import(name="url", required=true)

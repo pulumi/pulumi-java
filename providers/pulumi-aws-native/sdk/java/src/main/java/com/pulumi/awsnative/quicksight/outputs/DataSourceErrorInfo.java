@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataSourceErrorInfo {
     /**
-     * <p>Error message.</p>
+     * &lt;p&gt;Error message.&lt;/p&gt;
      * 
      */
     private final @Nullable String message;
@@ -28,7 +28,7 @@ public final class DataSourceErrorInfo {
     }
 
     /**
-     * <p>Error message.</p>
+     * &lt;p&gt;Error message.&lt;/p&gt;
      * 
     */
     public Optional<String> message() {

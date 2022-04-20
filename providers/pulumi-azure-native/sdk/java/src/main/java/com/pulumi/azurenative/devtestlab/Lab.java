@@ -49,14 +49,14 @@ public class Lab extends com.pulumi.resources.CustomResource {
         return this.announcement;
     }
     /**
-     * The lab's artifact storage account.
+     * The lab&#39;s artifact storage account.
      * 
      */
     @Export(name="artifactsStorageAccount", type=String.class, parameters={})
     private Output<String> artifactsStorageAccount;
 
     /**
-     * @return The lab's artifact storage account.
+     * @return The lab&#39;s artifact storage account.
      * 
      */
     public Output<String> artifactsStorageAccount() {
@@ -77,28 +77,28 @@ public class Lab extends com.pulumi.resources.CustomResource {
         return this.createdDate;
     }
     /**
-     * The lab's default premium storage account.
+     * The lab&#39;s default premium storage account.
      * 
      */
     @Export(name="defaultPremiumStorageAccount", type=String.class, parameters={})
     private Output<String> defaultPremiumStorageAccount;
 
     /**
-     * @return The lab's default premium storage account.
+     * @return The lab&#39;s default premium storage account.
      * 
      */
     public Output<String> defaultPremiumStorageAccount() {
         return this.defaultPremiumStorageAccount;
     }
     /**
-     * The lab's default storage account.
+     * The lab&#39;s default storage account.
      * 
      */
     @Export(name="defaultStorageAccount", type=String.class, parameters={})
     private Output<String> defaultStorageAccount;
 
     /**
-     * @return The lab's default storage account.
+     * @return The lab&#39;s default storage account.
      * 
      */
     public Output<String> defaultStorageAccount() {
@@ -231,14 +231,14 @@ public class Lab extends com.pulumi.resources.CustomResource {
         return this.networkSecurityGroupId;
     }
     /**
-     * The lab's premium data disk storage account.
+     * The lab&#39;s premium data disk storage account.
      * 
      */
     @Export(name="premiumDataDiskStorageAccount", type=String.class, parameters={})
     private Output<String> premiumDataDiskStorageAccount;
 
     /**
-     * @return The lab's premium data disk storage account.
+     * @return The lab&#39;s premium data disk storage account.
      * 
      */
     public Output<String> premiumDataDiskStorageAccount() {
@@ -246,8 +246,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
     }
     /**
      * The setting to enable usage of premium data disks.
-     * When its value is 'Enabled', creation of standard or premium data disks is allowed.
-     * When its value is 'Disabled', only creation of standard data disks is allowed.
+     * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+     * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
      */
     @Export(name="premiumDataDisks", type=String.class, parameters={})
@@ -255,8 +255,8 @@ public class Lab extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The setting to enable usage of premium data disks.
-     * When its value is 'Enabled', creation of standard or premium data disks is allowed.
-     * When its value is 'Disabled', only creation of standard data disks is allowed.
+     * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+     * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
      * 
      */
     public Output</* @Nullable */ String> premiumDataDisks() {
@@ -277,14 +277,14 @@ public class Lab extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * The public IP address for the lab's load balancer.
+     * The public IP address for the lab&#39;s load balancer.
      * 
      */
     @Export(name="publicIpId", type=String.class, parameters={})
     private Output<String> publicIpId;
 
     /**
-     * @return The public IP address for the lab's load balancer.
+     * @return The public IP address for the lab&#39;s load balancer.
      * 
      */
     public Output<String> publicIpId() {
@@ -347,14 +347,14 @@ public class Lab extends com.pulumi.resources.CustomResource {
         return this.uniqueIdentifier;
     }
     /**
-     * The lab's Key vault.
+     * The lab&#39;s Key vault.
      * 
      */
     @Export(name="vaultName", type=String.class, parameters={})
     private Output<String> vaultName;
 
     /**
-     * @return The lab's Key vault.
+     * @return The lab&#39;s Key vault.
      * 
      */
     public Output<String> vaultName() {

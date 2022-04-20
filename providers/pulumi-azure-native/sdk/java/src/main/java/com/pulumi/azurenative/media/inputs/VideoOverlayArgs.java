@@ -89,7 +89,7 @@ public final class VideoOverlayArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.VideoOverlay'.
+     * Expected value is &#39;#Microsoft.Media.VideoOverlay&#39;.
      * 
      */
     @Import(name="odataType", required=true)

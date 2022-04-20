@@ -15,7 +15,7 @@ public final class GetVirtualMachineScheduleArgs extends com.pulumi.resources.In
     public static final GetVirtualMachineScheduleArgs Empty = new GetVirtualMachineScheduleArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=status)'
+     * Specify the $expand query. Example: &#39;properties($select=status)&#39;
      * 
      */
     @Import(name="expand")

@@ -20,7 +20,7 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     public static final ConsentArtifactArgs Empty = new ConsentArtifactArgs();
 
     /**
-     * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
+     * Optional. Screenshots, PDFs, or other binary information documenting the user&#39;s consent.
      * 
      */
     @Import(name="consentContentScreenshots")
@@ -103,7 +103,7 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Import(name="userId", required=true)
@@ -114,7 +114,7 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Optional. User's signature.
+     * Optional. User&#39;s signature.
      * 
      */
     @Import(name="userSignature")

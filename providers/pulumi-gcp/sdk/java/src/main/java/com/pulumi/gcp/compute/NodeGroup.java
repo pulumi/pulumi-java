@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
  * 
- * > **Warning:** Due to limitations of the API, this provider cannot update the
+ * &gt; **Warning:** Due to limitations of the API, this provider cannot update the
  * number of nodes in a node group and changes to node group size either
  * through provider config or through external changes will cause
  * the provider to delete and recreate the node group.

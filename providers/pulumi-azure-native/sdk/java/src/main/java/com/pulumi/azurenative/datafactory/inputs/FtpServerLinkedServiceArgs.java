@@ -151,7 +151,7 @@ public final class FtpServerLinkedServiceArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of linked service.
-     * Expected value is 'FtpServer'.
+     * Expected value is &#39;FtpServer&#39;.
      * 
      */
     @Import(name="type", required=true)

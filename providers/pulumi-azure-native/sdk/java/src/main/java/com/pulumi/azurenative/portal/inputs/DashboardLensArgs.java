@@ -25,7 +25,7 @@ public final class DashboardLensArgs extends com.pulumi.resources.ResourceArgs {
     public static final DashboardLensArgs Empty = new DashboardLensArgs();
 
     /**
-     * The dashboard len's metadata.
+     * The dashboard len&#39;s metadata.
      * 
      */
     @Import(name="metadata")

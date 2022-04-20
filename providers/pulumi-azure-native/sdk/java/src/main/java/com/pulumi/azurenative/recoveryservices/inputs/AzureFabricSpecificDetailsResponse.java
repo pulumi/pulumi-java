@@ -33,7 +33,7 @@ public final class AzureFabricSpecificDetailsResponse extends com.pulumi.resourc
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'Azure'.
+     * Expected value is &#39;Azure&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

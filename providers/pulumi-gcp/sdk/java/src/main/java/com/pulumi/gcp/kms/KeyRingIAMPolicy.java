@@ -20,9 +20,9 @@ import javax.annotation.Nullable;
  * * `gcp.kms.KeyRingIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the key ring are preserved.
  * * `gcp.kms.KeyRingIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the key ring are preserved.
  * 
- * > **Note:** `gcp.kms.KeyRingIAMPolicy` **cannot** be used in conjunction with `gcp.kms.KeyRingIAMBinding` and `gcp.kms.KeyRingIAMMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.kms.KeyRingIAMPolicy` **cannot** be used in conjunction with `gcp.kms.KeyRingIAMBinding` and `gcp.kms.KeyRingIAMMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_kms\_key\_ring\_iam\_policy
  * 
@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  * This member resource can be imported using the `key_ring_id`, role, and account e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer user:foo@example.com"
+ *  $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam &#34;your-project-id/location-name/key-ring-name roles/viewer user:foo@example.com&#34;
  * ```
  * 
  *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
@@ -51,7 +51,7 @@ import javax.annotation.Nullable;
  * This binding resource can be imported using the `key_ring_id` and role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer"
+ *  $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam &#34;your-project-id/location-name/key-ring-name roles/viewer&#34;
  * ```
  * 
  *  IAM policy imports use the identifier of the resource in question.
@@ -66,14 +66,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy")
 public class KeyRingIAMPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * (Computed) The etag of the key ring's IAM policy.
+     * (Computed) The etag of the key ring&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the key ring's IAM policy.
+     * @return (Computed) The etag of the key ring&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {
@@ -82,7 +82,7 @@ public class KeyRingIAMPolicy extends com.pulumi.resources.CustomResource {
     /**
      * The key ring ID, in the form
      * `{project_id}/{location_name}/{key_ring_name}` or
-     * `{location_name}/{key_ring_name}`. In the second form, the provider's
+     * `{location_name}/{key_ring_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */
@@ -92,7 +92,7 @@ public class KeyRingIAMPolicy extends com.pulumi.resources.CustomResource {
     /**
      * @return The key ring ID, in the form
      * `{project_id}/{location_name}/{key_ring_name}` or
-     * `{location_name}/{key_ring_name}`. In the second form, the provider's
+     * `{location_name}/{key_ring_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

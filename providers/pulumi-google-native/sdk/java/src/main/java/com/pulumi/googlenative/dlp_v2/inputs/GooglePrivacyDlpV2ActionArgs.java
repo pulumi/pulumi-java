@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ActionArgs extends com.pulumi.resources.Res
     public static final GooglePrivacyDlpV2ActionArgs Empty = new GooglePrivacyDlpV2ActionArgs();
 
     /**
-     * Enable email notification for project owners and editors on job's completion/failure.
+     * Enable email notification for project owners and editors on job&#39;s completion/failure.
      * 
      */
     @Import(name="jobNotificationEmails")

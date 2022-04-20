@@ -68,7 +68,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
         return this.apiVersion;
     }
     /**
-     * The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+     * The URI of the agent&#39;s avatar, which are used throughout the Dialogflow console. When an image URL is entered
      * into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
      * from the API will be shown in the [avatarUriBackend] field.
      * 
@@ -77,7 +77,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> avatarUri;
 
     /**
-     * @return The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
+     * @return The URI of the agent&#39;s avatar, which are used throughout the Dialogflow console. When an image URL is entered
      * into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
      * from the API will be shown in the [avatarUriBackend] field.
      * 
@@ -86,7 +86,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
         return this.avatarUri;
     }
     /**
-     * The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
+     * The URI of the agent&#39;s avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
      * [avatarUri] field can be used.
      * 
      */
@@ -94,7 +94,7 @@ public class Agent extends com.pulumi.resources.CustomResource {
     private Output<String> avatarUriBackend;
 
     /**
-     * @return The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
+     * @return The URI of the agent&#39;s avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
      * [avatarUri] field can be used.
      * 
      */

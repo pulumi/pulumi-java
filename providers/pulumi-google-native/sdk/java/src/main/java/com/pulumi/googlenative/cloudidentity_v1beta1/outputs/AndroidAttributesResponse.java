@@ -26,7 +26,7 @@ public final class AndroidAttributesResponse {
      */
     private final String ownershipPrivilege;
     /**
-     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the "Enforce Work Profile" policy.
+     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
      * 
      */
     private final Boolean supportsWorkProfile;
@@ -65,7 +65,7 @@ public final class AndroidAttributesResponse {
         return this.ownershipPrivilege;
     }
     /**
-     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the "Enforce Work Profile" policy.
+     * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the &#34;Enforce Work Profile&#34; policy.
      * 
     */
     public Boolean supportsWorkProfile() {

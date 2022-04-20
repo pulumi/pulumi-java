@@ -73,7 +73,7 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The IAM user's name.
+     * The IAM user&#39;s name.
      * 
      */
     @Import(name="user")

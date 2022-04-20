@@ -17,7 +17,7 @@ public final class SecretVersionResponse extends com.pulumi.resources.InvokeArgs
     public static final SecretVersionResponse Empty = new SecretVersionResponse();
 
     /**
-     * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as '/etc/secrets' and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
+     * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as &#39;/etc/secrets&#39; and path as `/secret_foo` would mount the secret value file at `/etc/secrets/secret_foo`.
      * 
      */
     @Import(name="path", required=true)
@@ -28,7 +28,7 @@ public final class SecretVersionResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Version of the secret (version number or the string 'latest'). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
+     * Version of the secret (version number or the string &#39;latest&#39;). It is preferrable to use `latest` version with secret volumes as secret value changes are reflected immediately.
      * 
      */
     @Import(name="version", required=true)

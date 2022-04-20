@@ -39,7 +39,7 @@ public final class GetWebPubSubResult {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, its globally default value will be used
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
      */
     private final @Nullable List<WebPubSubFeatureResponse> features;
@@ -84,9 +84,9 @@ public final class GetWebPubSubResult {
      */
     private final String provisioningState;
     /**
-     * Enable or disable public network access. Default to "Enabled".
-     * When it's Enabled, network ACLs still apply.
-     * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+     * Enable or disable public network access. Default to &#34;Enabled&#34;.
+     * When it&#39;s Enabled, network ACLs still apply.
+     * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
      */
     private final @Nullable String publicNetworkAccess;
@@ -126,7 +126,7 @@ public final class GetWebPubSubResult {
      */
     private final @Nullable WebPubSubTlsSettingsResponse tls;
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
      */
     private final String type;
@@ -202,7 +202,7 @@ public final class GetWebPubSubResult {
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, its globally default value will be used
-     * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
     */
     public List<WebPubSubFeatureResponse> features() {
@@ -265,9 +265,9 @@ public final class GetWebPubSubResult {
         return this.provisioningState;
     }
     /**
-     * Enable or disable public network access. Default to "Enabled".
-     * When it's Enabled, network ACLs still apply.
-     * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+     * Enable or disable public network access. Default to &#34;Enabled&#34;.
+     * When it&#39;s Enabled, network ACLs still apply.
+     * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
     */
     public Optional<String> publicNetworkAccess() {
@@ -323,7 +323,7 @@ public final class GetWebPubSubResult {
         return Optional.ofNullable(this.tls);
     }
     /**
-     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
     */
     public String type() {

@@ -27,7 +27,7 @@ public final class VirtualNetworkGatewayResponse {
      */
     private final @Nullable Boolean activeActive;
     /**
-     * Virtual network gateway's BGP speaker settings.
+     * Virtual network gateway&#39;s BGP speaker settings.
      * 
      */
     private final @Nullable BgpSettingsResponse bgpSettings;
@@ -202,7 +202,7 @@ public final class VirtualNetworkGatewayResponse {
         return Optional.ofNullable(this.activeActive);
     }
     /**
-     * Virtual network gateway's BGP speaker settings.
+     * Virtual network gateway&#39;s BGP speaker settings.
      * 
     */
     public Optional<BgpSettingsResponse> bgpSettings() {

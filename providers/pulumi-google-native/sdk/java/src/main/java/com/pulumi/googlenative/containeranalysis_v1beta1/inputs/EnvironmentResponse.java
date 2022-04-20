@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Defines an object for the environment field in in-toto links. The suggested fields are "variables", "filesystem", and "workdir".
+ * Defines an object for the environment field in in-toto links. The suggested fields are &#34;variables&#34;, &#34;filesystem&#34;, and &#34;workdir&#34;.
  * 
  */
 public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {

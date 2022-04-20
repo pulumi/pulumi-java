@@ -32,7 +32,7 @@ public final class GetRegisteredPrefixResult {
      */
     private final String peeringServicePrefixKey;
     /**
-     * The customer's prefix from which traffic originates.
+     * The customer&#39;s prefix from which traffic originates.
      * 
      */
     private final @Nullable String prefix;
@@ -101,7 +101,7 @@ public final class GetRegisteredPrefixResult {
         return this.peeringServicePrefixKey;
     }
     /**
-     * The customer's prefix from which traffic originates.
+     * The customer&#39;s prefix from which traffic originates.
      * 
     */
     public Optional<String> prefix() {

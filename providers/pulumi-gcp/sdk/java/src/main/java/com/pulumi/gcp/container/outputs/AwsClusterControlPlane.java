@@ -46,7 +46,7 @@ public final class AwsClusterControlPlane {
      */
     private final @Nullable String instanceType;
     /**
-     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
+     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
      * 
      */
     private final @Nullable AwsClusterControlPlaneMainVolume mainVolume;
@@ -152,7 +152,7 @@ public final class AwsClusterControlPlane {
         return Optional.ofNullable(this.instanceType);
     }
     /**
-     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
+     * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster&#39;s etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
      * 
     */
     public Optional<AwsClusterControlPlaneMainVolume> mainVolume() {

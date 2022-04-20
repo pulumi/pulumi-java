@@ -61,7 +61,7 @@ public final class KubernetesClusterStateResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
+     * The cloud provider type reported by the first node&#39;s providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
      * 
      */
     @Import(name="provider", required=true)

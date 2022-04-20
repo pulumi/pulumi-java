@@ -19,7 +19,7 @@ public final class ExperimentMetricGoalObject {
      */
     private final String entityIdKey;
     /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
+     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
      * 
      */
     private final String eventPattern;
@@ -58,7 +58,7 @@ public final class ExperimentMetricGoalObject {
         return this.entityIdKey;
     }
     /**
-     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
+     * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn&#39;t.
      * 
     */
     public String eventPattern() {

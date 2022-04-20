@@ -46,7 +46,7 @@ public final class K8sOnlineDeploymentResponse {
     private final @Nullable String description;
     /**
      * Enum to determine endpoint compute type.
-     * Expected value is 'K8S'.
+     * Expected value is &#39;K8S&#39;.
      * 
      */
     private final String endpointComputeType;
@@ -151,7 +151,7 @@ public final class K8sOnlineDeploymentResponse {
     }
     /**
      * Enum to determine endpoint compute type.
-     * Expected value is 'K8S'.
+     * Expected value is &#39;K8S&#39;.
      * 
     */
     public String endpointComputeType() {

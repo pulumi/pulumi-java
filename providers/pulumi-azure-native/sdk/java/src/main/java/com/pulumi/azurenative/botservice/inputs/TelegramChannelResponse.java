@@ -22,7 +22,7 @@ public final class TelegramChannelResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * The channel name
-     * Expected value is 'TelegramChannel'.
+     * Expected value is &#39;TelegramChannel&#39;.
      * 
      */
     @Import(name="channelName", required=true)

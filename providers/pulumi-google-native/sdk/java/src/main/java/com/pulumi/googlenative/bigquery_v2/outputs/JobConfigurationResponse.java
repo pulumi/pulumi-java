@@ -21,7 +21,7 @@ public final class JobConfigurationResponse {
      */
     private final JobConfigurationTableCopyResponse copy;
     /**
-     * [Optional] If set, don't actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run. Behavior of non-query jobs is undefined.
+     * [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
      * 
      */
     private final Boolean dryRun;
@@ -84,7 +84,7 @@ public final class JobConfigurationResponse {
         return this.copy;
     }
     /**
-     * [Optional] If set, don't actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run. Behavior of non-query jobs is undefined.
+     * [Optional] If set, don&#39;t actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn&#39;t a dry run. Behavior of non-query jobs is undefined.
      * 
     */
     public Boolean dryRun() {

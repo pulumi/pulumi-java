@@ -132,7 +132,7 @@ public final class SapOpenHubSourceResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Copy source type.
-     * Expected value is 'SapOpenHubSource'.
+     * Expected value is &#39;SapOpenHubSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -81,7 +81,7 @@ public final class WebACLFieldToMatchArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
+     * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn&#39;t case sensitive.
      * 
      */
     @Import(name="singleQueryArgument")

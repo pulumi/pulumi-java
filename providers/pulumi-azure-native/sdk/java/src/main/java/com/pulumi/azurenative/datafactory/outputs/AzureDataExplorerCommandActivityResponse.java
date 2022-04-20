@@ -54,7 +54,7 @@ public final class AzureDataExplorerCommandActivityResponse {
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * Type of activity.
-     * Expected value is 'AzureDataExplorerCommand'.
+     * Expected value is &#39;AzureDataExplorerCommand&#39;.
      * 
      */
     private final String type;
@@ -137,7 +137,7 @@ public final class AzureDataExplorerCommandActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'AzureDataExplorerCommand'.
+     * Expected value is &#39;AzureDataExplorerCommand&#39;.
      * 
     */
     public String type() {

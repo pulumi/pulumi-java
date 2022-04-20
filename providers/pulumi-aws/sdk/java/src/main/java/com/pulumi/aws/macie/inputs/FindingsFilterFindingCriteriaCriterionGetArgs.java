@@ -94,7 +94,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
     }
 
     /**
-     * The value for the property doesn't match (doesn't equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
+     * The value for the property doesn&#39;t match (doesn&#39;t equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
      */
     @Import(name="neqs")

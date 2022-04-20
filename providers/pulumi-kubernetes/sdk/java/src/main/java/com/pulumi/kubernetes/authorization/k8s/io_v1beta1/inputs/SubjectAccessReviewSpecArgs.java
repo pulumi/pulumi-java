@@ -35,7 +35,7 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Groups is the groups you're testing for.
+     * Groups is the groups you&#39;re testing for.
      * 
      */
     @Import(name="group")
@@ -79,7 +79,7 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * User is the user you're testing for. If you specify "User" but not "Group", then is it interpreted as "What if User were not a member of any groups
+     * User is the user you&#39;re testing for. If you specify &#34;User&#34; but not &#34;Group&#34;, then is it interpreted as &#34;What if User were not a member of any groups
      * 
      */
     @Import(name="user")

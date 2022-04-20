@@ -19,7 +19,7 @@ public final class ClusterEncryptionConfig {
      */
     private final @Nullable ClusterEncryptionConfigProviderProperties provider;
     /**
-     * Specifies the resources to be encrypted. The only supported value is "secrets".
+     * Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
      * 
      */
     private final @Nullable List<String> resources;
@@ -40,7 +40,7 @@ public final class ClusterEncryptionConfig {
         return Optional.ofNullable(this.provider);
     }
     /**
-     * Specifies the resources to be encrypted. The only supported value is "secrets".
+     * Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
      * 
     */
     public List<String> resources() {

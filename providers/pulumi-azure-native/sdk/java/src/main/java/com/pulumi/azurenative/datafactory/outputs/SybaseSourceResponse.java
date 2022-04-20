@@ -49,7 +49,7 @@ public final class SybaseSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'SybaseSource'.
+     * Expected value is &#39;SybaseSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class SybaseSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SybaseSource'.
+     * Expected value is &#39;SybaseSource&#39;.
      * 
     */
     public String type() {

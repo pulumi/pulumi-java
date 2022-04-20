@@ -19,7 +19,7 @@ public final class ReplicationControllerStatus {
      */
     private final @Nullable Integer availableReplicas;
     /**
-     * Represents the latest available observations of a replication controller's current state.
+     * Represents the latest available observations of a replication controller&#39;s current state.
      * 
      */
     private final @Nullable List<ReplicationControllerCondition> conditions;
@@ -68,7 +68,7 @@ public final class ReplicationControllerStatus {
         return Optional.ofNullable(this.availableReplicas);
     }
     /**
-     * Represents the latest available observations of a replication controller's current state.
+     * Represents the latest available observations of a replication controller&#39;s current state.
      * 
     */
     public List<ReplicationControllerCondition> conditions() {

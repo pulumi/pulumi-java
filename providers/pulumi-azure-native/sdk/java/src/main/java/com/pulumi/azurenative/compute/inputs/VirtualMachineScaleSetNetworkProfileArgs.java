@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.r
     public static final VirtualMachineScaleSetNetworkProfileArgs Empty = new VirtualMachineScaleSetNetworkProfileArgs();
 
     /**
-     * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
+     * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}&#39;.
      * 
      */
     @Import(name="healthProbe")
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends com.pulumi.r
     }
 
     /**
-     * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'
+     * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
      * 
      */
     @Import(name="networkApiVersion")

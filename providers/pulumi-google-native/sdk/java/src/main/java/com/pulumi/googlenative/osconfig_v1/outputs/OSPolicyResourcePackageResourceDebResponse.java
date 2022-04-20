@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class OSPolicyResourcePackageResourceDebResponse {
     /**
-     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
+     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
      * 
      */
     private final Boolean pullDeps;
@@ -30,7 +30,7 @@ public final class OSPolicyResourcePackageResourceDebResponse {
     }
 
     /**
-     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
+     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
      * 
     */
     public Boolean pullDeps() {

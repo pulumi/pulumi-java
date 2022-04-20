@@ -18,7 +18,7 @@ public final class LocationResponse {
      */
     private final LatLngResponse latLng;
     /**
-     * The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.
+     * The type of a location, which corresponds to the address lines field of PostalAddress. For example, &#34;Downtown, Atlanta, GA, USA&#34; has a type of LocationType#NEIGHBORHOOD, and &#34;Kansas City, KS, USA&#34; has a type of LocationType#LOCALITY.
      * 
      */
     private final String locationType;
@@ -28,7 +28,7 @@ public final class LocationResponse {
      */
     private final PostalAddressResponse postalAddress;
     /**
-     * Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
+     * Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, &#34;Mountain View, CA, USA&#34; has a radius of 6.17 miles.
      * 
      */
     private final Double radiusInMiles;
@@ -53,7 +53,7 @@ public final class LocationResponse {
         return this.latLng;
     }
     /**
-     * The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.
+     * The type of a location, which corresponds to the address lines field of PostalAddress. For example, &#34;Downtown, Atlanta, GA, USA&#34; has a type of LocationType#NEIGHBORHOOD, and &#34;Kansas City, KS, USA&#34; has a type of LocationType#LOCALITY.
      * 
     */
     public String locationType() {
@@ -67,7 +67,7 @@ public final class LocationResponse {
         return this.postalAddress;
     }
     /**
-     * Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
+     * Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, &#34;Mountain View, CA, USA&#34; has a radius of 6.17 miles.
      * 
     */
     public Double radiusInMiles() {

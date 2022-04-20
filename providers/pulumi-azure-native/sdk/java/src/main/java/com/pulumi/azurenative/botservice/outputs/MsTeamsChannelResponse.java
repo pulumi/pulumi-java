@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class MsTeamsChannelResponse {
     /**
      * The channel name
-     * Expected value is 'MsTeamsChannel'.
+     * Expected value is &#39;MsTeamsChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class MsTeamsChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'MsTeamsChannel'.
+     * Expected value is &#39;MsTeamsChannel&#39;.
      * 
     */
     public String channelName() {

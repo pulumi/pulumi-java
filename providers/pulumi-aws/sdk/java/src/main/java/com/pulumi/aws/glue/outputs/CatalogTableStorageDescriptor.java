@@ -66,7 +66,7 @@ public final class CatalogTableStorageDescriptor {
      */
     private final @Nullable CatalogTableStorageDescriptorSchemaReference schemaReference;
     /**
-     * Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
+     * Configuration block for serialization and deserialization (&#34;SerDe&#34;) information. See `ser_de_info` below.
      * 
      */
     private final @Nullable CatalogTableStorageDescriptorSerDeInfo serDeInfo;
@@ -180,7 +180,7 @@ public final class CatalogTableStorageDescriptor {
         return Optional.ofNullable(this.schemaReference);
     }
     /**
-     * Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
+     * Configuration block for serialization and deserialization (&#34;SerDe&#34;) information. See `ser_de_info` below.
      * 
     */
     public Optional<CatalogTableStorageDescriptorSerDeInfo> serDeInfo() {

@@ -170,14 +170,14 @@ public class Key extends com.pulumi.resources.CustomResource {
         return this.serviceAccountId;
     }
     /**
-     * The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The key can be used after this timestamp. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="validAfter", type=String.class, parameters={})
     private Output<String> validAfter;
 
     /**
-     * @return The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * @return The key can be used after this timestamp. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> validAfter() {
@@ -185,7 +185,7 @@ public class Key extends com.pulumi.resources.CustomResource {
     }
     /**
      * The key can be used before this timestamp.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="validBefore", type=String.class, parameters={})
@@ -193,7 +193,7 @@ public class Key extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The key can be used before this timestamp.
-     * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> validBefore() {

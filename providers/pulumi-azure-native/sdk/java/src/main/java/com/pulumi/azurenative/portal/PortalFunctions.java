@@ -91,7 +91,7 @@ public final class PortalFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getUserSettingsWithLocation", TypeShape.of(GetUserSettingsWithLocationResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * List of list of items that violate tenant's configuration.
+     * List of list of items that violate tenant&#39;s configuration.
      * API Version: 2020-09-01-preview.
      * 
      */

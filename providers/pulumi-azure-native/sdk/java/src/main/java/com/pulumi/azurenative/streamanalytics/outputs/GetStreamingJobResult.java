@@ -30,7 +30,7 @@ public final class GetStreamingJobResult {
      */
     private final String createdDate;
     /**
-     * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
+     * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to &#39;en-US&#39; if none specified.
      * 
      */
     private final @Nullable String dataLocale;
@@ -207,7 +207,7 @@ public final class GetStreamingJobResult {
         return this.createdDate;
     }
     /**
-     * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
+     * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to &#39;en-US&#39; if none specified.
      * 
     */
     public Optional<String> dataLocale() {

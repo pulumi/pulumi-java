@@ -16,7 +16,7 @@ public final class SchedulePolicyResponse {
      */
     private final String idleDuration;
     /**
-     * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM's operating system undergoes changes and adaptations to fully function on Compute Engine.
+     * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM&#39;s operating system undergoes changes and adaptations to fully function on Compute Engine.
      * 
      */
     private final Boolean skipOsAdaptation;
@@ -37,7 +37,7 @@ public final class SchedulePolicyResponse {
         return this.idleDuration;
     }
     /**
-     * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM's operating system undergoes changes and adaptations to fully function on Compute Engine.
+     * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM&#39;s operating system undergoes changes and adaptations to fully function on Compute Engine.
      * 
     */
     public Boolean skipOsAdaptation() {

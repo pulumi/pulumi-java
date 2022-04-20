@@ -49,7 +49,7 @@ public final class Datacatalog_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getEntryGroup", TypeShape.of(GetEntryGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the access control policy for a resource. May return: * A`NOT_FOUND` error if the resource doesn't exist or you don't have the permission to view it. * An empty policy if the resource exists but doesn't have a set policy. Supported resources are: - Tag templates - Entry groups Note: This method doesn't get policies from Google Cloud Platform resources ingested into Data Catalog. To call this method, you must have the following Google IAM permissions: - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+     * Gets the access control policy for a resource. May return: * A`NOT_FOUND` error if the resource doesn&#39;t exist or you don&#39;t have the permission to view it. * An empty policy if the resource exists but doesn&#39;t have a set policy. Supported resources are: - Tag templates - Entry groups Note: This method doesn&#39;t get policies from Google Cloud Platform resources ingested into Data Catalog. To call this method, you must have the following Google IAM permissions: - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
      * 
      */
     public static CompletableFuture<GetEntryGroupIamPolicyResult> getEntryGroupIamPolicy(GetEntryGroupIamPolicyArgs args) {
@@ -79,7 +79,7 @@ public final class Datacatalog_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getTagTemplate", TypeShape.of(GetTagTemplateResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the access control policy for a resource. May return: * A`NOT_FOUND` error if the resource doesn't exist or you don't have the permission to view it. * An empty policy if the resource exists but doesn't have a set policy. Supported resources are: - Tag templates - Entry groups Note: This method doesn't get policies from Google Cloud Platform resources ingested into Data Catalog. To call this method, you must have the following Google IAM permissions: - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+     * Gets the access control policy for a resource. May return: * A`NOT_FOUND` error if the resource doesn&#39;t exist or you don&#39;t have the permission to view it. * An empty policy if the resource exists but doesn&#39;t have a set policy. Supported resources are: - Tag templates - Entry groups Note: This method doesn&#39;t get policies from Google Cloud Platform resources ingested into Data Catalog. To call this method, you must have the following Google IAM permissions: - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag templates. - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
      * 
      */
     public static CompletableFuture<GetTagTemplateIamPolicyResult> getTagTemplateIamPolicy(GetTagTemplateIamPolicyArgs args) {

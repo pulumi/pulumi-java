@@ -52,7 +52,7 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
     }
 
     /**
-     * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file's filename extension.
+     * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file&#39;s filename extension.
      * 
      */
     @Import(name="mimeType", required=true)

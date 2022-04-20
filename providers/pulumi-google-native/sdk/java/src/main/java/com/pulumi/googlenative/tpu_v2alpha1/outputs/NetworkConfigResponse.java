@@ -21,12 +21,12 @@ public final class NetworkConfigResponse {
      */
     private final Boolean enableExternalIps;
     /**
-     * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, "default" will be used.
+     * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
      * 
      */
     private final String network;
     /**
-     * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, "default" will be used.
+     * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
      * 
      */
     private final String subnetwork;
@@ -58,14 +58,14 @@ public final class NetworkConfigResponse {
         return this.enableExternalIps;
     }
     /**
-     * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, "default" will be used.
+     * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, &#34;default&#34; will be used.
      * 
     */
     public String network() {
         return this.network;
     }
     /**
-     * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, "default" will be used.
+     * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, &#34;default&#34; will be used.
      * 
     */
     public String subnetwork() {

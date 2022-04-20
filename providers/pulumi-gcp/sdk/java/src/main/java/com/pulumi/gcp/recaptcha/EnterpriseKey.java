@@ -113,14 +113,14 @@ public class EnterpriseKey extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource name for the Key in the format "projects/{project}/keys/{key}".
+     * The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for the Key in the format "projects/{project}/keys/{key}".
+     * @return The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
      * 
      */
     public Output<String> name() {

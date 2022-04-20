@@ -78,7 +78,7 @@ public final class BlobOutputDataSourceResponse extends com.pulumi.resources.Inv
 
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Storage/Blob'.
+     * Expected value is &#39;Microsoft.Storage/Blob&#39;.
      * 
      */
     @Import(name="type", required=true)

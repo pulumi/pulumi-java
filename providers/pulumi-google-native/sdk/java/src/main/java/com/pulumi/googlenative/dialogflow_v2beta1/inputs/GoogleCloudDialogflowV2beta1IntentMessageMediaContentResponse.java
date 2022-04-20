@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     }
 
     /**
-     * Optional. What type of media is the content (ie "audio").
+     * Optional. What type of media is the content (ie &#34;audio&#34;).
      * 
      */
     @Import(name="mediaType", required=true)

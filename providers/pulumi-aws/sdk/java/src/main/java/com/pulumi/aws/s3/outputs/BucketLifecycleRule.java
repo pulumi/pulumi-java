@@ -30,7 +30,7 @@ public final class BucketLifecycleRule {
      */
     private final Boolean enabled;
     /**
-     * Specifies a period in the object's expire (documented below).
+     * Specifies a period in the object&#39;s expire (documented below).
      * 
      */
     private final @Nullable BucketLifecycleRuleExpiration expiration;
@@ -60,7 +60,7 @@ public final class BucketLifecycleRule {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Specifies a period in the object's transitions (documented below).
+     * Specifies a period in the object&#39;s transitions (documented below).
      * 
      */
     private final @Nullable List<BucketLifecycleRuleTransition> transitions;
@@ -102,7 +102,7 @@ public final class BucketLifecycleRule {
         return this.enabled;
     }
     /**
-     * Specifies a period in the object's expire (documented below).
+     * Specifies a period in the object&#39;s expire (documented below).
      * 
     */
     public Optional<BucketLifecycleRuleExpiration> expiration() {
@@ -144,7 +144,7 @@ public final class BucketLifecycleRule {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies a period in the object's transitions (documented below).
+     * Specifies a period in the object&#39;s transitions (documented below).
      * 
     */
     public List<BucketLifecycleRuleTransition> transitions() {

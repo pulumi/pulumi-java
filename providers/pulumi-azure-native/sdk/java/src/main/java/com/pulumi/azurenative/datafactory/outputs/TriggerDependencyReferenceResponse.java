@@ -17,7 +17,7 @@ public final class TriggerDependencyReferenceResponse {
     private final TriggerReferenceResponse referenceTrigger;
     /**
      * The type of dependency reference.
-     * Expected value is 'TriggerDependencyReference'.
+     * Expected value is &#39;TriggerDependencyReference&#39;.
      * 
      */
     private final String type;
@@ -39,7 +39,7 @@ public final class TriggerDependencyReferenceResponse {
     }
     /**
      * The type of dependency reference.
-     * Expected value is 'TriggerDependencyReference'.
+     * Expected value is &#39;TriggerDependencyReference&#39;.
      * 
     */
     public String type() {

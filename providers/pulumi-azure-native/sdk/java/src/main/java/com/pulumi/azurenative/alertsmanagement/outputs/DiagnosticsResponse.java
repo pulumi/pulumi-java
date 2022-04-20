@@ -55,7 +55,7 @@ public final class DiagnosticsResponse {
     private final @Nullable String status;
     /**
      * Indicates type of action rule
-     * Expected value is 'Diagnostics'.
+     * Expected value is &#39;Diagnostics&#39;.
      * 
      */
     private final String type;
@@ -140,7 +140,7 @@ public final class DiagnosticsResponse {
     }
     /**
      * Indicates type of action rule
-     * Expected value is 'Diagnostics'.
+     * Expected value is &#39;Diagnostics&#39;.
      * 
     */
     public String type() {

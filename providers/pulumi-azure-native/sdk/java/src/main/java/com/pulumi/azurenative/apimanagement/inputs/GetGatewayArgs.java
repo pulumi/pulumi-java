@@ -13,7 +13,7 @@ public final class GetGatewayArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGatewayArgs Empty = new GetGatewayArgs();
 
     /**
-     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
      * 
      */
     @Import(name="gatewayId", required=true)

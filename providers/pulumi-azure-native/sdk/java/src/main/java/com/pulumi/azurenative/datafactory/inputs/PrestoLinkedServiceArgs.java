@@ -206,7 +206,7 @@ public final class PrestoLinkedServiceArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of linked service.
-     * Expected value is 'Presto'.
+     * Expected value is &#39;Presto&#39;.
      * 
      */
     @Import(name="type", required=true)

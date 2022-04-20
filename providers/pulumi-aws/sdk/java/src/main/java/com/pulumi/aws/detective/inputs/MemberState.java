@@ -112,7 +112,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account's status.
+     * Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account&#39;s status.
      * 
      */
     @Import(name="updatedTime")

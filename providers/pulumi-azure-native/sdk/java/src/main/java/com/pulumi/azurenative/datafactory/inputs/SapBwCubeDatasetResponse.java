@@ -104,7 +104,7 @@ public final class SapBwCubeDatasetResponse extends com.pulumi.resources.InvokeA
 
     /**
      * Type of dataset.
-     * Expected value is 'SapBwCube'.
+     * Expected value is &#39;SapBwCube&#39;.
      * 
      */
     @Import(name="type", required=true)

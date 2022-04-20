@@ -89,7 +89,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     }
 
     /**
-     * Use to override the device's volume size.
+     * Use to override the device&#39;s volume size.
      * 
      */
     @Import(name="volumeSize")
@@ -100,7 +100,7 @@ public final class ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs extend
     }
 
     /**
-     * Use to override the device's volume type.
+     * Use to override the device&#39;s volume type.
      * 
      */
     @Import(name="volumeType")

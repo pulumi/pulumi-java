@@ -31,14 +31,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:ec2/vpnGateway:VpnGateway")
 public class VpnGateway extends com.pulumi.resources.CustomResource {
     /**
-     * The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don't specify an ASN, the virtual private gateway is created with the default ASN.
+     * The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don&#39;t specify an ASN, the virtual private gateway is created with the default ASN.
      * 
      */
     @Export(name="amazonSideAsn", type=String.class, parameters={})
     private Output<String> amazonSideAsn;
 
     /**
-     * @return The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don't specify an ASN, the virtual private gateway is created with the default ASN.
+     * @return The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don&#39;t specify an ASN, the virtual private gateway is created with the default ASN.
      * 
      */
     public Output<String> amazonSideAsn() {

@@ -15,7 +15,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
     public static final PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs Empty = new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs();
 
     /**
-     * The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
+     * The url, in the format `gs://&lt;bucket&gt;/&lt;path&gt;`. Trailing wildcard in the path is allowed.
      * 
      */
     @Import(name="url", required=true)

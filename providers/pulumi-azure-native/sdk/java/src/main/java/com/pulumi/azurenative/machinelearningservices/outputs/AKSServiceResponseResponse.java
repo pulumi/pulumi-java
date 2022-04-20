@@ -52,7 +52,7 @@ public final class AKSServiceResponseResponse {
     private final @Nullable String computeName;
     /**
      * The compute environment type for the service.
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
      */
     private final String computeType;
@@ -271,7 +271,7 @@ public final class AKSServiceResponseResponse {
     }
     /**
      * The compute environment type for the service.
-     * Expected value is 'AKS'.
+     * Expected value is &#39;AKS&#39;.
      * 
     */
     public String computeType() {

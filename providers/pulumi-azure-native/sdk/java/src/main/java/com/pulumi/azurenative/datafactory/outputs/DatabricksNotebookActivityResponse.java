@@ -60,7 +60,7 @@ public final class DatabricksNotebookActivityResponse {
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * Type of activity.
-     * Expected value is 'DatabricksNotebook'.
+     * Expected value is &#39;DatabricksNotebook&#39;.
      * 
      */
     private final String type;
@@ -152,7 +152,7 @@ public final class DatabricksNotebookActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'DatabricksNotebook'.
+     * Expected value is &#39;DatabricksNotebook&#39;.
      * 
     */
     public String type() {

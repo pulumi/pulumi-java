@@ -42,7 +42,7 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'delay'.
+     * Expected value is &#39;delay&#39;.
      * 
      */
     @Import(name="type", required=true)

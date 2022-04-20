@@ -56,8 +56,8 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
-     * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="createTime")
@@ -110,8 +110,8 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Labels with user-defined metadata.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
-     * "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+     * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")
@@ -122,9 +122,9 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
-     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
-     * fractional digits, terminated by 's'. Example: "3.5s".
+     * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="lifetime")
@@ -158,9 +158,9 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
+     * This CertificateAuthority&#39;s certificate chain, including the current CertificateAuthority&#39;s certificate. Ordered such
      * that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
-     * current CertificateAuthority's certificate.
+     * current CertificateAuthority&#39;s certificate.
      * 
      */
     @Import(name="pemCaCertificates")
@@ -206,7 +206,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The Type of this CertificateAuthority.
-     * > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+     * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
      * be manually activated (via Cloud Console of `gcloud`) before they can
      * issue certificates.
      * Default value is `SELF_SIGNED`.
@@ -221,8 +221,8 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
-     * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+     * The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Import(name="updateTime")

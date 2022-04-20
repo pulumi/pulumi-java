@@ -26,7 +26,7 @@ public final class URLMapHostRule {
     private final List<String> hosts;
     /**
      * The name of the PathMatcher to use to match the path portion of the URL if the
-     * hostRule matches the URL's host portion.
+     * hostRule matches the URL&#39;s host portion.
      * 
      */
     private final String pathMatcher;
@@ -59,7 +59,7 @@ public final class URLMapHostRule {
     }
     /**
      * The name of the PathMatcher to use to match the path portion of the URL if the
-     * hostRule matches the URL's host portion.
+     * hostRule matches the URL&#39;s host portion.
      * 
     */
     public String pathMatcher() {

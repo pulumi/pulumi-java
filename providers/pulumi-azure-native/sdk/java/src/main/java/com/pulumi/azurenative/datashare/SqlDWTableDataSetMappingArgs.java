@@ -61,7 +61,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
 
     /**
      * Kind of data set mapping.
-     * Expected value is 'SqlDWTable'.
+     * Expected value is &#39;SqlDWTable&#39;.
      * 
      */
     @Import(name="kind", required=true)

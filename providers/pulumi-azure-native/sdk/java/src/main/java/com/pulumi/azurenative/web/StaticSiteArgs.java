@@ -23,7 +23,7 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     public static final StaticSiteArgs Empty = new StaticSiteArgs();
 
     /**
-     * <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="allowConfigFileUpdates")
@@ -100,7 +100,7 @@ public final class StaticSiteArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
+     * A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
      * 
      */
     @Import(name="repositoryToken")

@@ -173,7 +173,7 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
 
     /**
      * Type of activity.
-     * Expected value is 'HDInsightMapReduce'.
+     * Expected value is &#39;HDInsightMapReduce&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a Load Balancer resource.
  * 
- * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
+ * &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
  * 
  * ## Example Usage
  * 
@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticloadbalancingv2/loadBalancer:LoadBalancer bar arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/50dc6c495c0c9188
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * aws.elasticloadbalancingv2.LoadBalancer has been deprecated in favor of aws.lb.LoadBalancer
  * 
  */

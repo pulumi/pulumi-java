@@ -128,7 +128,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends com.pulumi.re
 
     /**
      * Gets the Instance type.
-     * Expected value is 'InMageAzureV2'.
+     * Expected value is &#39;InMageAzureV2&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

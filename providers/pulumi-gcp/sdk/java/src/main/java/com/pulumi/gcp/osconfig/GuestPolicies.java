@@ -79,16 +79,16 @@ public class GuestPolicies extends com.pulumi.resources.CustomResource {
         return this.assignment;
     }
     /**
-     * Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
-     * "2014-10-02T15:01:23.045123456Z".
+     * Time this guest policy was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
-     * @return Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
-     * "2014-10-02T15:01:23.045123456Z".
+     * @return Time this guest policy was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> createTime() {
@@ -109,14 +109,14 @@ public class GuestPolicies extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The etag for this guest policy. If this is provided on update, it must match the server's etag.
+     * The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return The etag for this guest policy. If this is provided on update, it must match the server's etag.
+     * @return The etag for this guest policy. If this is provided on update, it must match the server&#39;s etag.
      * 
      */
     public Output<String> etag() {
@@ -235,16 +235,16 @@ public class GuestPolicies extends com.pulumi.resources.CustomResource {
         return this.recipes;
     }
     /**
-     * Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
-     * "2014-10-02T15:01:23.045123456Z".
+     * Last time this guest policy was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
-     * @return Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
-     * "2014-10-02T15:01:23.045123456Z".
+     * @return Last time this guest policy was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example:
+     * &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     public Output<String> updateTime() {

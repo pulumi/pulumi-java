@@ -30,7 +30,7 @@ public final class EncoderSystemPresetResponse extends com.pulumi.resources.Invo
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.EncoderSystemPreset'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderSystemPreset&#39;.
      * 
      */
     @Import(name="type", required=true)

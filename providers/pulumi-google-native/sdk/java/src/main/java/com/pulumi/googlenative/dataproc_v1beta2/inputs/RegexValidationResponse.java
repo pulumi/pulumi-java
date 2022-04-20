@@ -18,7 +18,7 @@ public final class RegexValidationResponse extends com.pulumi.resources.InvokeAr
     public static final RegexValidationResponse Empty = new RegexValidationResponse();
 
     /**
-     * RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
+     * RE2 regular expressions used to validate the parameter&#39;s value. The value must match the regex in its entirety (substring matches are not sufficient).
      * 
      */
     @Import(name="regexes", required=true)

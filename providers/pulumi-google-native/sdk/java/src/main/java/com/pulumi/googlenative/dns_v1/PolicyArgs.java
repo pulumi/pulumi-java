@@ -38,7 +38,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
+     * A mutable string of at most 1024 characters associated with this resource for the user&#39;s convenience. Has no effect on the policy&#39;s function.
      * 
      */
     @Import(name="description")

@@ -76,7 +76,7 @@ public final class AppProfileState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The unique name of the requested app profile. Values are of the form
-     * 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
+     * &#39;projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;appProfileId&gt;&#39;.
      * 
      */
     @Import(name="name")

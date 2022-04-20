@@ -78,14 +78,14 @@ public class CapacityDetails extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
+     * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value &#39;Gen2&#39; is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
      * 
      */
     @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
-     * @return Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
+     * @return Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value &#39;Gen2&#39; is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
      * 
      */
     public Output</* @Nullable */ String> mode() {

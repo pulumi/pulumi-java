@@ -48,7 +48,7 @@ public final class ServicePerimetersServicePerimeterSpec {
     private final @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicy> ingressPolicies;
     /**
      * A list of resources, currently only projects in the form
-     * `projects/<projectnumber>`, that match this to stanza. A request matches
+     * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
      * if it contains a resource in this list. If * is specified for resources,
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
@@ -59,7 +59,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * GCP services that are subject to the Service Perimeter
      * restrictions. Must contain a list of services. For example, if
      * `storage.googleapis.com` is specified, access to the storage
-     * buckets inside the perimeter must meet the perimeter's access
+     * buckets inside the perimeter must meet the perimeter&#39;s access
      * restrictions.
      * 
      */
@@ -127,7 +127,7 @@ public final class ServicePerimetersServicePerimeterSpec {
     }
     /**
      * A list of resources, currently only projects in the form
-     * `projects/<projectnumber>`, that match this to stanza. A request matches
+     * `projects/&lt;projectnumber&gt;`, that match this to stanza. A request matches
      * if it contains a resource in this list. If * is specified for resources,
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
@@ -140,7 +140,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * GCP services that are subject to the Service Perimeter
      * restrictions. Must contain a list of services. For example, if
      * `storage.googleapis.com` is specified, access to the storage
-     * buckets inside the perimeter must meet the perimeter's access
+     * buckets inside the perimeter must meet the perimeter&#39;s access
      * restrictions.
      * 
     */

@@ -39,7 +39,7 @@ public final class TableServicePropertiesArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)
@@ -50,7 +50,7 @@ public final class TableServicePropertiesArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The name of the Table Service within the specified storage account. Table Service Name must be 'default'
+     * The name of the Table Service within the specified storage account. Table Service Name must be &#39;default&#39;
      * 
      */
     @Import(name="tableServiceName")

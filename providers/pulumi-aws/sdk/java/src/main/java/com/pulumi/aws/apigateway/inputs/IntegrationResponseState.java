@@ -51,7 +51,7 @@ public final class IntegrationResponseState extends com.pulumi.resources.Resourc
 
     /**
      * A map of response parameters that can be read from the backend response.
-     * For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
+     * For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = &#34;integration.response.header.X-Some-Other-Header&#34; }`
      * 
      */
     @Import(name="responseParameters")

@@ -23,7 +23,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras' RTSP endpoints and credentials. Overall a topology is composed of the following:
+ * Pipeline topology describes the processing steps to be applied when processing content for a particular outcome. The topology should be defined according to the scenario to be achieved and can be reused across many pipeline instances which share the same processing characteristics. For instance, a pipeline topology which captures content from a RTSP camera and archives the content can be reused across many different cameras, as long as the same processing is to be applied across all the cameras. Individual instance properties can be defined through the use of user-defined parameters, which allow for a topology to be parameterized. This allows  individual pipelines refer to different values, such as individual cameras&#39; RTSP endpoints and credentials. Overall a topology is composed of the following:
  * 
  *   - Parameters: list of user defined parameters that can be references across the topology nodes.
  *   - Sources: list of one or more data sources nodes such as an RTSP source which allows for content to be ingested from cameras.
@@ -87,14 +87,14 @@ public class PipelineTopology extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+     * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
      */
     @Export(name="parameters", type=List.class, parameters={ParameterDeclarationResponse.class})
     private Output</* @Nullable */ List<ParameterDeclarationResponse>> parameters;
 
     /**
-     * @return List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
+     * @return List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of &#34;${PARAMETER_NAME}&#34; string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
      */
     public Output</* @Nullable */ List<ParameterDeclarationResponse>> parameters() {
@@ -171,14 +171,14 @@ public class PipelineTopology extends com.pulumi.resources.CustomResource {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

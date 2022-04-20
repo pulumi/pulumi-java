@@ -33,7 +33,7 @@ public final class DatabricksArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The type of compute
-     * Expected value is 'Databricks'.
+     * Expected value is &#39;Databricks&#39;.
      * 
      */
     @Import(name="computeType", required=true)

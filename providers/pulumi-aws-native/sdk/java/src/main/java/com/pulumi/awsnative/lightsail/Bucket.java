@@ -23,14 +23,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws-native:lightsail:Bucket")
 public class Bucket extends com.pulumi.resources.CustomResource {
     /**
-     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
      * 
      */
     @Export(name="ableToUpdateBundle", type=Boolean.class, parameters={})
     private Output<Boolean> ableToUpdateBundle;
 
     /**
-     * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket&#39;s bundle only one time within a monthly AWS billing cycle.
      * 
      */
     public Output<Boolean> ableToUpdateBundle() {

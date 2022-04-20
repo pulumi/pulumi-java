@@ -63,7 +63,7 @@ public final class GuestAgentProfileResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * Specifies the VM's unique SMBIOS ID.
+     * Specifies the VM&#39;s unique SMBIOS ID.
      * 
      */
     @Import(name="vmUuid", required=true)

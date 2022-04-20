@@ -18,12 +18,12 @@ public final class GetCustomerResult {
      */
     private final String alternateEmail;
     /**
-     * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
+     * Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
     private final String channelPartnerId;
     /**
-     * The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
+     * The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
      */
     private final String cloudIdentityId;
@@ -38,12 +38,12 @@ public final class GetCustomerResult {
      */
     private final String createTime;
     /**
-     * The customer's primary domain. Must match the primary contact email's domain.
+     * The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
      * 
      */
     private final String domain;
     /**
-     * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
     private final String languageCode;
@@ -58,7 +58,7 @@ public final class GetCustomerResult {
      */
     private final String orgDisplayName;
     /**
-     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
+     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
      * 
      */
     private final GoogleTypePostalAddressResponse orgPostalAddress;
@@ -109,14 +109,14 @@ public final class GetCustomerResult {
         return this.alternateEmail;
     }
     /**
-     * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
+     * Cloud Identity ID of the customer&#39;s channel partner. Populated only if a channel partner exists for this customer.
      * 
     */
     public String channelPartnerId() {
         return this.channelPartnerId;
     }
     /**
-     * The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
+     * The customer&#39;s Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
     */
     public String cloudIdentityId() {
@@ -137,14 +137,14 @@ public final class GetCustomerResult {
         return this.createTime;
     }
     /**
-     * The customer's primary domain. Must match the primary contact email's domain.
+     * The customer&#39;s primary domain. Must match the primary contact email&#39;s domain.
      * 
     */
     public String domain() {
         return this.domain;
     }
     /**
-     * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     * Optional. The BCP-47 language code, such as &#34;en-US&#34; or &#34;sr-Latn&#34;. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
     */
     public String languageCode() {
@@ -165,7 +165,7 @@ public final class GetCustomerResult {
         return this.orgDisplayName;
     }
     /**
-     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
+     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer&#39;s language, use the Customer-level language code.
      * 
     */
     public GoogleTypePostalAddressResponse orgPostalAddress() {

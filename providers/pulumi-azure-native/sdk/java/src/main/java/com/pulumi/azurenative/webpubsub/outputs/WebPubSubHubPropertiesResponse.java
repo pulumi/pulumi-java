@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebPubSubHubPropertiesResponse {
     /**
-     * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
+     * The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
      * 
      */
     private final @Nullable String anonymousConnectPolicy;
@@ -33,7 +33,7 @@ public final class WebPubSubHubPropertiesResponse {
     }
 
     /**
-     * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
+     * The settings for configuring if anonymous connections are allowed for this hub: &#34;allow&#34; or &#34;deny&#34;. Default to &#34;deny&#34;.
      * 
     */
     public Optional<String> anonymousConnectPolicy() {

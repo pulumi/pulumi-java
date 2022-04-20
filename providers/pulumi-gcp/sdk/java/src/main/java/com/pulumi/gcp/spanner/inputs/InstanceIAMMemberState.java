@@ -24,7 +24,7 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * (Computed) The etag of the instance's IAM policy.
+     * (Computed) The etag of the instance&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

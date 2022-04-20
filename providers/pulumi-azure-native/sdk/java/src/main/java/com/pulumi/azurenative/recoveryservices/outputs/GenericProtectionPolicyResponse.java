@@ -16,12 +16,12 @@ import javax.annotation.Nullable;
 public final class GenericProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'GenericProtectionPolicy'.
+     * Expected value is &#39;GenericProtectionPolicy&#39;.
      * 
      */
     private final String backupManagementType;
     /**
-     * Name of this policy's fabric.
+     * Name of this policy&#39;s fabric.
      * 
      */
     private final @Nullable String fabricName;
@@ -36,7 +36,7 @@ public final class GenericProtectionPolicyResponse {
      */
     private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     private final @Nullable String timeZone;
@@ -57,14 +57,14 @@ public final class GenericProtectionPolicyResponse {
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'GenericProtectionPolicy'.
+     * Expected value is &#39;GenericProtectionPolicy&#39;.
      * 
     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
     /**
-     * Name of this policy's fabric.
+     * Name of this policy&#39;s fabric.
      * 
     */
     public Optional<String> fabricName() {
@@ -85,7 +85,7 @@ public final class GenericProtectionPolicyResponse {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
     */
     public Optional<String> timeZone() {

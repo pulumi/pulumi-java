@@ -31,7 +31,7 @@ public final class IngressProfileArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The ingress profile name.  Must be "default" (immutable).
+     * The ingress profile name.  Must be &#34;default&#34; (immutable).
      * 
      */
     @Import(name="name")

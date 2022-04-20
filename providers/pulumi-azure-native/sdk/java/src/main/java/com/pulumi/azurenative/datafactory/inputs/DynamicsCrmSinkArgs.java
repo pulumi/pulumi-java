@@ -90,7 +90,7 @@ public final class DynamicsCrmSinkArgs extends com.pulumi.resources.ResourceArgs
 
     /**
      * Copy sink type.
-     * Expected value is 'DynamicsCrmSink'.
+     * Expected value is &#39;DynamicsCrmSink&#39;.
      * 
      */
     @Import(name="type", required=true)

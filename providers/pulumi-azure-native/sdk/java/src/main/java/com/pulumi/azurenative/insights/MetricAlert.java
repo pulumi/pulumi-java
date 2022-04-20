@@ -180,14 +180,14 @@ public class MetricAlert extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * the list of resource id's that this metric alert is scoped to.
+     * the list of resource id&#39;s that this metric alert is scoped to.
      * 
      */
     @Export(name="scopes", type=List.class, parameters={String.class})
     private Output<List<String>> scopes;
 
     /**
-     * @return the list of resource id's that this metric alert is scoped to.
+     * @return the list of resource id&#39;s that this metric alert is scoped to.
      * 
      */
     public Output<List<String>> scopes() {

@@ -29,7 +29,7 @@ public final class GetStageResult {
      */
     private final @Nullable Boolean cacheClusterEnabled;
     /**
-     * The stage's cache cluster size.
+     * The stage&#39;s cache cluster size.
      * 
      */
     private final @Nullable String cacheClusterSize;
@@ -122,7 +122,7 @@ public final class GetStageResult {
         return Optional.ofNullable(this.cacheClusterEnabled);
     }
     /**
-     * The stage's cache cluster size.
+     * The stage&#39;s cache cluster size.
      * 
     */
     public Optional<String> cacheClusterSize() {

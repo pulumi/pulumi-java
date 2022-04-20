@@ -28,7 +28,7 @@ public final class CustomerGatewayState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+     * The gateway&#39;s Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
      */
     @Import(name="bgpAsn")
@@ -61,7 +61,7 @@ public final class CustomerGatewayState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The IP address of the gateway's Internet-routable external interface.
+     * The IP address of the gateway&#39;s Internet-routable external interface.
      * 
      */
     @Import(name="ipAddress")
@@ -95,7 +95,7 @@ public final class CustomerGatewayState extends com.pulumi.resources.ResourceArg
 
     /**
      * The type of customer gateway. The only type AWS
-     * supports at this time is "ipsec.1".
+     * supports at this time is &#34;ipsec.1&#34;.
      * 
      */
     @Import(name="type")

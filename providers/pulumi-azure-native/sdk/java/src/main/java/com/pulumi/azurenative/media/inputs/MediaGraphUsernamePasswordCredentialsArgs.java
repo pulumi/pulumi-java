@@ -20,7 +20,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends com.pulumi.
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
      * 
      */
     @Import(name="odataType", required=true)

@@ -21,7 +21,7 @@ public final class ParquetWriteSettingsArgs extends com.pulumi.resources.Resourc
     public static final ParquetWriteSettingsArgs Empty = new ParquetWriteSettingsArgs();
 
     /**
-     * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     * Specifies the file name pattern &lt;fileNamePrefix&gt;_&lt;fileIndex&gt;.&lt;fileExtension&gt; when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="fileNamePrefix")
@@ -32,7 +32,7 @@ public final class ParquetWriteSettingsArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     * Limit the written file&#39;s row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
      */
     @Import(name="maxRowsPerFile")
@@ -44,7 +44,7 @@ public final class ParquetWriteSettingsArgs extends com.pulumi.resources.Resourc
 
     /**
      * The write setting type.
-     * Expected value is 'ParquetWriteSettings'.
+     * Expected value is &#39;ParquetWriteSettings&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -33,7 +33,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
     private final @Nullable String table;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Sql/Server/Database'.
+     * Expected value is &#39;Microsoft.Sql/Server/Database&#39;.
      * 
      */
     private final String type;
@@ -89,7 +89,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Sql/Server/Database'.
+     * Expected value is &#39;Microsoft.Sql/Server/Database&#39;.
      * 
     */
     public String type() {

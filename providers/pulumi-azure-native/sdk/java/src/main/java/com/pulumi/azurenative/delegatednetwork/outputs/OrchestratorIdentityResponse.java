@@ -22,7 +22,7 @@ public final class OrchestratorIdentityResponse {
      */
     private final String tenantId;
     /**
-     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
+     * The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
      * 
      */
     private final @Nullable String type;
@@ -52,7 +52,7 @@ public final class OrchestratorIdentityResponse {
         return this.tenantId;
     }
     /**
-     * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
+     * The type of identity used for orchestrator cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity orchestrator clusters
      * 
     */
     public Optional<String> type() {

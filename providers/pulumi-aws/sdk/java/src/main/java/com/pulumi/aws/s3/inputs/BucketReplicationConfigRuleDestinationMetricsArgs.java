@@ -28,7 +28,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsArgs extends com
     }
 
     /**
-     * The status of the Destination Metrics. Either `"Enabled"` or `"Disabled"`.
+     * The status of the Destination Metrics. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`.
      * 
      */
     @Import(name="status", required=true)

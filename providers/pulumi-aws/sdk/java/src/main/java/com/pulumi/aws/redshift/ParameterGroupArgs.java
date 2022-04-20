@@ -19,7 +19,7 @@ public final class ParameterGroupArgs extends com.pulumi.resources.ResourceArgs 
     public static final ParameterGroupArgs Empty = new ParameterGroupArgs();
 
     /**
-     * The description of the Redshift parameter group. Defaults to "Managed by Pulumi".
+     * The description of the Redshift parameter group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

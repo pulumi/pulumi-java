@@ -33,7 +33,7 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'BoolEquals'.
+     * Expected value is &#39;BoolEquals&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

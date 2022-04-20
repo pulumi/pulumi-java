@@ -93,7 +93,7 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
      */
     @Import(name="serviceDataAccessAuthIdentity")

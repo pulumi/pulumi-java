@@ -25,7 +25,7 @@ public final class JobIAMBindingState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * (Computed) The etag of the jobs's IAM policy.
+     * (Computed) The etag of the jobs&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

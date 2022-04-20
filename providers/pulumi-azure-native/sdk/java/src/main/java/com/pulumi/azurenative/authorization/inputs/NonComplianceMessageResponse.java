@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
+ * A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
  * 
  */
 public final class NonComplianceMessageResponse extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class NonComplianceMessageResponse extends com.pulumi.resources.Inv
     public static final NonComplianceMessageResponse Empty = new NonComplianceMessageResponse();
 
     /**
-     * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
+     * A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
      * 
      */
     @Import(name="message", required=true)

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
+     * Immutable. Specifies how the Certificate&#39;s identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
      */
     @EnumType
@@ -20,12 +20,12 @@ import java.util.StringJoiner;
          */
         SubjectRequestModeUnspecified("SUBJECT_REQUEST_MODE_UNSPECIFIED"),
         /**
-         * The default mode used in most cases. Indicates that the certificate's Subject and/or SubjectAltNames are specified in the certificate request. This mode requires the caller to have the `privateca.certificates.create` permission.
+         * The default mode used in most cases. Indicates that the certificate&#39;s Subject and/or SubjectAltNames are specified in the certificate request. This mode requires the caller to have the `privateca.certificates.create` permission.
          * 
          */
         Default("DEFAULT"),
         /**
-         * A mode reserved for special cases. Indicates that the certificate should have one or more SPIFFE SubjectAltNames set by the service based on the caller's identity. This mode will ignore any explicitly specified Subject and/or SubjectAltNames in the certificate request. This mode requires the caller to have the `privateca.certificates.createForSelf` permission.
+         * A mode reserved for special cases. Indicates that the certificate should have one or more SPIFFE SubjectAltNames set by the service based on the caller&#39;s identity. This mode will ignore any explicitly specified Subject and/or SubjectAltNames in the certificate request. This mode requires the caller to have the `privateca.certificates.createForSelf` permission.
          * 
          */
         ReflectedSpiffe("REFLECTED_SPIFFE");

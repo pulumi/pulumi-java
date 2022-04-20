@@ -13,7 +13,7 @@ public final class GetWorkloadNetworkDnsServiceArgs extends com.pulumi.resources
     public static final GetWorkloadNetworkDnsServiceArgs Empty = new GetWorkloadNetworkDnsServiceArgs();
 
     /**
-     * NSX DNS Service identifier. Generally the same as the DNS Service's display name
+     * NSX DNS Service identifier. Generally the same as the DNS Service&#39;s display name
      * 
      */
     @Import(name="dnsServiceId", required=true)

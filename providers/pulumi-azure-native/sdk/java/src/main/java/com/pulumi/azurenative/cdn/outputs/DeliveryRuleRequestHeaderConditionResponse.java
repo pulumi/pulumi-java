@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class DeliveryRuleRequestHeaderConditionResponse {
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'RequestHeader'.
+     * Expected value is &#39;RequestHeader&#39;.
      * 
      */
     private final String name;
@@ -32,7 +32,7 @@ public final class DeliveryRuleRequestHeaderConditionResponse {
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'RequestHeader'.
+     * Expected value is &#39;RequestHeader&#39;.
      * 
     */
     public String name() {

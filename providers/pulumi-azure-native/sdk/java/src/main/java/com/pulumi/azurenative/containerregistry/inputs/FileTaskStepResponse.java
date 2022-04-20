@@ -68,7 +68,7 @@ public final class FileTaskStepResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * The type of the step.
-     * Expected value is 'FileTask'.
+     * Expected value is &#39;FileTask&#39;.
      * 
      */
     @Import(name="type", required=true)

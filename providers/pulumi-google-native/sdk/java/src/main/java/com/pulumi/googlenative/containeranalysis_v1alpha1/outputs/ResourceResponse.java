@@ -16,12 +16,12 @@ public final class ResourceResponse {
      */
     private final HashResponse contentHash;
     /**
-     * The name of the resource. E.g., the name of a Docker image - "Debian".
+     * The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
      * 
      */
     private final String name;
     /**
-     * The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
+     * The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
      * 
      */
     private final String uri;
@@ -44,14 +44,14 @@ public final class ResourceResponse {
         return this.contentHash;
     }
     /**
-     * The name of the resource. E.g., the name of a Docker image - "Debian".
+     * The name of the resource. E.g., the name of a Docker image - &#34;Debian&#34;.
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
+     * The unique URI of the resource. E.g., &#34;https://gcr.io/project/image@sha256:foo&#34; for a Docker image.
      * 
     */
     public String uri() {

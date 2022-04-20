@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecArgs extends com.pulumi.re
     }
 
     /**
-     * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to tf.Summary. By default, "training/hptuning/metric" will be used.
+     * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all scopes. For versions of TensorFlow prior to 0.12, this should be only the tag passed to tf.Summary. By default, &#34;training/hptuning/metric&#34; will be used.
      * 
      */
     @Import(name="hyperparameterMetricTag")

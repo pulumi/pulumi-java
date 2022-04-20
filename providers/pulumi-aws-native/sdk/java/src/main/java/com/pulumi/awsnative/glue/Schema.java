@@ -59,14 +59,14 @@ public class Schema extends com.pulumi.resources.CustomResource {
         return this.compatibility;
     }
     /**
-     * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
+     * Data format name to use for the schema. Accepted values: &#39;AVRO&#39;, &#39;JSON&#39;, &#39;PROTOBUF&#39;
      * 
      */
     @Export(name="dataFormat", type=SchemaDataFormat.class, parameters={})
     private Output<SchemaDataFormat> dataFormat;
 
     /**
-     * @return Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
+     * @return Data format name to use for the schema. Accepted values: &#39;AVRO&#39;, &#39;JSON&#39;, &#39;PROTOBUF&#39;
      * 
      */
     public Output<SchemaDataFormat> dataFormat() {

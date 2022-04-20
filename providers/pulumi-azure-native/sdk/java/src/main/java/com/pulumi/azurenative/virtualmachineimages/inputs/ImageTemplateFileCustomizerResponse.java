@@ -64,8 +64,8 @@ public final class ImageTemplateFileCustomizerResponse extends com.pulumi.resour
     }
 
     /**
-     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
-     * Expected value is 'File'.
+     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * Expected value is &#39;File&#39;.
      * 
      */
     @Import(name="type", required=true)

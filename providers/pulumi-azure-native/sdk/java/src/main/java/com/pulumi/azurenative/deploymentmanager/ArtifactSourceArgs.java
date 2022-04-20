@@ -18,7 +18,7 @@ public final class ArtifactSourceArgs extends com.pulumi.resources.ResourceArgs 
     public static final ArtifactSourceArgs Empty = new ArtifactSourceArgs();
 
     /**
-     * The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
+     * The path from the location that the &#39;authentication&#39; property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
      * 
      */
     @Import(name="artifactRoot")

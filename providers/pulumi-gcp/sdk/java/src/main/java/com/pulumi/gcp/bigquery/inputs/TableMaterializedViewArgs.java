@@ -18,7 +18,7 @@ public final class TableMaterializedViewArgs extends com.pulumi.resources.Resour
     public static final TableMaterializedViewArgs Empty = new TableMaterializedViewArgs();
 
     /**
-     * Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
+     * Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
      * The default value is true.
      * 
      */

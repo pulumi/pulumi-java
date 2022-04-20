@@ -64,7 +64,7 @@ public final class SqlServerTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'SqlServerTable'.
+     * Expected value is &#39;SqlServerTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class SqlServerTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SqlServerTable'.
+     * Expected value is &#39;SqlServerTable&#39;.
      * 
     */
     public String type() {

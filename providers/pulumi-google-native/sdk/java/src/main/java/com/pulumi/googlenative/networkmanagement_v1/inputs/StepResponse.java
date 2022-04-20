@@ -33,7 +33,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     public static final StepResponse Empty = new StepResponse();
 
     /**
-     * Display information of the final state "abort" and reason.
+     * Display information of the final state &#34;abort&#34; and reason.
      * 
      */
     @Import(name="abort", required=true)
@@ -66,7 +66,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Display information of the final state "deliver" and reason.
+     * Display information of the final state &#34;deliver&#34; and reason.
      * 
      */
     @Import(name="deliver", required=true)
@@ -88,7 +88,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Display information of the final state "drop" and reason.
+     * Display information of the final state &#34;drop&#34; and reason.
      * 
      */
     @Import(name="drop", required=true)
@@ -121,7 +121,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Display information of the final state "forward" and reason.
+     * Display information of the final state &#34;forward&#34; and reason.
      * 
      */
     @Import(name="forward", required=true)

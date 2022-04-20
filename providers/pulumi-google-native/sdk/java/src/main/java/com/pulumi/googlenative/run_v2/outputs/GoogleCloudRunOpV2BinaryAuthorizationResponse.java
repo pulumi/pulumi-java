@@ -16,7 +16,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse {
      */
     private final String breakglassJustification;
     /**
-     * If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
+     * If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
      * 
      */
     private final Boolean useDefault;
@@ -37,7 +37,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse {
         return this.breakglassJustification;
     }
     /**
-     * If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
+     * If True, indicates to use the default project&#39;s binary authorization policy. If False, binary authorization will be disabled.
      * 
     */
     public Boolean useDefault() {

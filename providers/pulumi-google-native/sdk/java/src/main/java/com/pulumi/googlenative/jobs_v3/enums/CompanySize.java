@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Optional. The employer's company size.
+     * Optional. The employer&#39;s company size.
      * 
      */
     @EnumType

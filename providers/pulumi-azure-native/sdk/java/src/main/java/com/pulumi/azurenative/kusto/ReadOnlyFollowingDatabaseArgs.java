@@ -50,7 +50,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
 
     /**
      * Kind of the database
-     * Expected value is 'ReadOnlyFollowing'.
+     * Expected value is &#39;ReadOnlyFollowing&#39;.
      * 
      */
     @Import(name="kind", required=true)

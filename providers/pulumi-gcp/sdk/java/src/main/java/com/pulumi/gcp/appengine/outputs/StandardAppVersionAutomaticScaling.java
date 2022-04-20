@@ -26,7 +26,7 @@ public final class StandardAppVersionAutomaticScaling {
     private final @Nullable Integer maxIdleInstances;
     /**
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     private final @Nullable String maxPendingLatency;
@@ -37,7 +37,7 @@ public final class StandardAppVersionAutomaticScaling {
     private final @Nullable Integer minIdleInstances;
     /**
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     private final @Nullable String minPendingLatency;
@@ -81,7 +81,7 @@ public final class StandardAppVersionAutomaticScaling {
     }
     /**
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
     */
     public Optional<String> maxPendingLatency() {
@@ -96,7 +96,7 @@ public final class StandardAppVersionAutomaticScaling {
     }
     /**
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
     */
     public Optional<String> minPendingLatency() {

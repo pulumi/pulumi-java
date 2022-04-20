@@ -126,7 +126,7 @@ public final class AzureTableStorageLinkedServiceResponse extends com.pulumi.res
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureTableStorage'.
+     * Expected value is &#39;AzureTableStorage&#39;.
      * 
      */
     @Import(name="type", required=true)

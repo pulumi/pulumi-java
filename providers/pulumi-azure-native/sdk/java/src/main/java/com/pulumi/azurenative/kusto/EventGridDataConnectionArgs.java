@@ -109,7 +109,7 @@ public final class EventGridDataConnectionArgs extends com.pulumi.resources.Reso
 
     /**
      * Kind of the endpoint for the data connection
-     * Expected value is 'EventGrid'.
+     * Expected value is &#39;EventGrid&#39;.
      * 
      */
     @Import(name="kind", required=true)

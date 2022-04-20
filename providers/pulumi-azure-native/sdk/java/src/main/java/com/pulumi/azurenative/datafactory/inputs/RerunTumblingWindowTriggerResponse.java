@@ -101,7 +101,7 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
 
     /**
      * Trigger type.
-     * Expected value is 'RerunTumblingWindowTrigger'.
+     * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

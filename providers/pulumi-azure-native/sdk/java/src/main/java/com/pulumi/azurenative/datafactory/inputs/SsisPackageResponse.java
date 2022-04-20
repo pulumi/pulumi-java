@@ -101,7 +101,7 @@ public final class SsisPackageResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of SSIS object metadata.
-     * Expected value is 'Package'.
+     * Expected value is &#39;Package&#39;.
      * 
      */
     @Import(name="type", required=true)

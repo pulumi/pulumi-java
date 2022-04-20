@@ -91,14 +91,14 @@ public class Manager extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
+     * Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
      * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
-     * @return Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
+     * @return Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
      * 
      */
     public Output</* @Nullable */ String> provisioningState() {

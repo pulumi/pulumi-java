@@ -20,7 +20,7 @@ public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
     public static final TimeZoneArgs Empty = new TimeZoneArgs();
 
     /**
-     * IANA Time Zone Database time zone, e.g. "America/New_York".
+     * IANA Time Zone Database time zone, e.g. &#34;America/New_York&#34;.
      * 
      */
     @Import(name="id")
@@ -31,7 +31,7 @@ public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. IANA Time Zone Database version number, e.g. "2019a".
+     * Optional. IANA Time Zone Database version number, e.g. &#34;2019a&#34;.
      * 
      */
     @Import(name="version")

@@ -42,7 +42,7 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends com.pulumi.resources.
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#39;.
      * 
      */
     @Import(name="odataType", required=true)

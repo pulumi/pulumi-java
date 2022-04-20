@@ -95,14 +95,14 @@ public class Project extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The project's provisioning state
+     * The project&#39;s provisioning state
      * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
-     * @return The project's provisioning state
+     * @return The project&#39;s provisioning state
      * 
      */
     public Output<String> provisioningState() {

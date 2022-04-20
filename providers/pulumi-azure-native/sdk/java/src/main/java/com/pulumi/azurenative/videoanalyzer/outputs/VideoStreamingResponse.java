@@ -18,7 +18,7 @@ public final class VideoStreamingResponse {
      *   - HLS CMAF:  /manifest(format=m3u8-cmaf)
      *   - DASH CMAF: /manifest(format=mpd-time-cmaf)
      * 
-     * Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
+     * Moreover, an ongoing video recording can be played in &#34;live mode&#34; with latencies which are approximately double of the chosen video segment length.
      * 
      */
     private final @Nullable String archiveBaseUrl;
@@ -35,7 +35,7 @@ public final class VideoStreamingResponse {
      *   - HLS CMAF:  /manifest(format=m3u8-cmaf)
      *   - DASH CMAF: /manifest(format=mpd-time-cmaf)
      * 
-     * Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
+     * Moreover, an ongoing video recording can be played in &#34;live mode&#34; with latencies which are approximately double of the chosen video segment length.
      * 
     */
     public Optional<String> archiveBaseUrl() {

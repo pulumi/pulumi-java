@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerPort {
     /**
-     * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.
+     * Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
      */
     private final Integer containerPort;
@@ -23,7 +23,7 @@ public final class ContainerPort {
      */
     private final @Nullable String hostIP;
     /**
-     * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
+     * Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
      * 
      */
     private final @Nullable Integer hostPort;
@@ -33,12 +33,12 @@ public final class ContainerPort {
      */
     private final @Nullable String name;
     /**
-     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
+     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
      * 
      * Possible enum values:
-     *  - `"SCTP"` is the SCTP protocol.
-     *  - `"TCP"` is the TCP protocol.
-     *  - `"UDP"` is the UDP protocol.
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     private final @Nullable String protocol;
@@ -58,7 +58,7 @@ public final class ContainerPort {
     }
 
     /**
-     * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.
+     * Number of port to expose on the pod&#39;s IP address. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
     */
     public Integer containerPort() {
@@ -72,7 +72,7 @@ public final class ContainerPort {
         return Optional.ofNullable(this.hostIP);
     }
     /**
-     * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
+     * Number of port to expose on the host. If specified, this must be a valid port number, 0 &lt; x &lt; 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
      * 
     */
     public Optional<Integer> hostPort() {
@@ -86,12 +86,12 @@ public final class ContainerPort {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
+     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
      * 
      * Possible enum values:
-     *  - `"SCTP"` is the SCTP protocol.
-     *  - `"TCP"` is the TCP protocol.
-     *  - `"UDP"` is the UDP protocol.
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
     */
     public Optional<String> protocol() {

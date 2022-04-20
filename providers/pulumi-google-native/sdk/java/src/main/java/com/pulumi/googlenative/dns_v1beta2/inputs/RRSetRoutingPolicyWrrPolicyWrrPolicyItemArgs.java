@@ -36,7 +36,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends com.pulu
     }
 
     /**
-     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
+     * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there&#39;s a restriction of 1 ip per item. .
      * 
      */
     @Import(name="signatureRrdatas")

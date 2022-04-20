@@ -66,7 +66,7 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Optional. Contains valid 32-bit IPv4 addresses and subnet ranges or RFC 4291 IPv6 addresses and subnet ranges. Subnet ranges are specified using the '/' notation (e.g. 10.0.0.0/8, 2001:700:300:1800::/64). Glob patterns are supported only for ip address entries (i.e. not for subnet ranges).
+     * Optional. Contains valid 32-bit IPv4 addresses and subnet ranges or RFC 4291 IPv6 addresses and subnet ranges. Subnet ranges are specified using the &#39;/&#39; notation (e.g. 10.0.0.0/8, 2001:700:300:1800::/64). Glob patterns are supported only for ip address entries (i.e. not for subnet ranges).
      * 
      */
     @Import(name="allowedIps")
@@ -77,7 +77,7 @@ public final class AllowedSubjectAltNamesArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Optional. Contains valid RFC 3986 URIs. Glob patterns are also supported. To match across path seperators (i.e. '/') use the double star glob pattern (i.e. '**').
+     * Optional. Contains valid RFC 3986 URIs. Glob patterns are also supported. To match across path seperators (i.e. &#39;/&#39;) use the double star glob pattern (i.e. &#39;**&#39;).
      * 
      */
     @Import(name="allowedUris")

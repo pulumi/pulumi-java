@@ -126,7 +126,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * "Sha1" "Sha256". The hashing algorithm used when hashing the content.
+     * &#34;Sha1&#34; &#34;Sha256&#34;. The hashing algorithm used when hashing the content.
      * 
      */
     @Import(name="hashType")
@@ -192,7 +192,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
+     * A list of OS platforms compatible with this SSM document, either &#34;Windows&#34; or &#34;Linux&#34;.
      * 
      */
     @Import(name="platformTypes")
@@ -214,7 +214,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * "Creating", "Active" or "Deleting". The current status of the document.
+     * &#34;Creating&#34;, &#34;Active&#34; or &#34;Deleting&#34;. The current status of the document.
      * 
      */
     @Import(name="status")
@@ -258,7 +258,7 @@ public final class DocumentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A field specifying the version of the artifact you are creating with the document. For example, "Release 12, Update 6". This value is unique across all versions of a document and cannot be changed for an existing document version.
+     * A field specifying the version of the artifact you are creating with the document. For example, &#34;Release 12, Update 6&#34;. This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
     @Import(name="versionName")

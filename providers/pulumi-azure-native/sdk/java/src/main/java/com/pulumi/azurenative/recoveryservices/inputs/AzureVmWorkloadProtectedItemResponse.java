@@ -257,7 +257,7 @@ public final class AzureVmWorkloadProtectedItemResponse extends com.pulumi.resou
 
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadProtectedItem'.
+     * Expected value is &#39;AzureVmWorkloadProtectedItem&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

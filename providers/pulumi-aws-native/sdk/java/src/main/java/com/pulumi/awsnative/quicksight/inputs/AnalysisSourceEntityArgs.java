@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The source entity of an analysis.</p>
+ * &lt;p&gt;The source entity of an analysis.&lt;/p&gt;
  * 
  */
 public final class AnalysisSourceEntityArgs extends com.pulumi.resources.ResourceArgs {

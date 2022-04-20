@@ -63,14 +63,14 @@ public class VolumeContainer extends com.pulumi.resources.CustomResource {
         return this.bandwidthSettingId;
     }
     /**
-     * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+     * The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
      * 
      */
     @Export(name="encryptionKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptionKey;
 
     /**
-     * @return The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+     * @return The key used to encrypt data in the volume container. It is required when property &#39;EncryptionStatus&#39; is &#34;Enabled&#34;.
      * 
      */
     public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptionKey() {
@@ -119,14 +119,14 @@ public class VolumeContainer extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
+     * The owner ship status of the volume container. Only when the status is &#34;NotOwned&#34;, the delete operation on the volume container is permitted.
      * 
      */
     @Export(name="ownerShipStatus", type=String.class, parameters={})
     private Output<String> ownerShipStatus;
 
     /**
-     * @return The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
+     * @return The owner ship status of the volume container. Only when the status is &#34;NotOwned&#34;, the delete operation on the volume container is permitted.
      * 
      */
     public Output<String> ownerShipStatus() {

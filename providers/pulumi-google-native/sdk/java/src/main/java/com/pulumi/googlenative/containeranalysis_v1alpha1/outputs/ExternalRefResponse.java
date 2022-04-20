@@ -25,7 +25,7 @@ public final class ExternalRefResponse {
      */
     private final String locator;
     /**
-     * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
+     * Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
      * 
      */
     private final String type;
@@ -64,7 +64,7 @@ public final class ExternalRefResponse {
         return this.locator;
     }
     /**
-     * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
+     * Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
      * 
     */
     public String type() {

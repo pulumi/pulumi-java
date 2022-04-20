@@ -23,7 +23,7 @@ public final class TaskOptions {
      */
     private final @Nullable Integer bytesPerSecond;
     /**
-     * Group identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
+     * Group identifier of the file&#39;s owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
      */
     private final @Nullable String gid;
@@ -68,7 +68,7 @@ public final class TaskOptions {
      */
     private final @Nullable String transferMode;
     /**
-     * User identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
+     * User identifier of the file&#39;s owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
      */
     private final @Nullable String uid;
@@ -123,7 +123,7 @@ public final class TaskOptions {
         return Optional.ofNullable(this.bytesPerSecond);
     }
     /**
-     * Group identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
+     * Group identifier of the file&#39;s owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
     */
     public Optional<String> gid() {
@@ -186,7 +186,7 @@ public final class TaskOptions {
         return Optional.ofNullable(this.transferMode);
     }
     /**
-     * User identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
+     * User identifier of the file&#39;s owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
     */
     public Optional<String> uid() {

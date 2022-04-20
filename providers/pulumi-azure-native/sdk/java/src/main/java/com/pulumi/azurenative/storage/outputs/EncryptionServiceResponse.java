@@ -18,7 +18,7 @@ public final class EncryptionServiceResponse {
      */
     private final @Nullable Boolean enabled;
     /**
-     * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
+     * Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
      * 
      */
     private final @Nullable String keyType;
@@ -46,7 +46,7 @@ public final class EncryptionServiceResponse {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
+     * Encryption key type to be used for the encryption service. &#39;Account&#39; key type implies that an account-scoped encryption key will be used. &#39;Service&#39; key type implies that a default service key is used.
      * 
     */
     public Optional<String> keyType() {

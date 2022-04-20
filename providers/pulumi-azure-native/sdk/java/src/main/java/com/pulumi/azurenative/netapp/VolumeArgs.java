@@ -69,7 +69,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;
      * 
      */
     @Import(name="encryptionKeySource")
@@ -212,7 +212,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume&#39;s snapshots (default to true).
      * 
      */
     @Import(name="snapshotDirectoryVisible")

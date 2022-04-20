@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
      */
     private final String outputAudioEncoding;
     /**
-     * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice's natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+     * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
      * 
      */
     private final Integer sampleRateHertz;
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
         return this.outputAudioEncoding;
     }
     /**
-     * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice's natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
+     * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice&#39;s natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
      * 
     */
     public Integer sampleRateHertz() {

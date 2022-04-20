@@ -126,7 +126,7 @@ public final class GreenplumTableDatasetArgs extends com.pulumi.resources.Resour
 
     /**
      * Type of dataset.
-     * Expected value is 'GreenplumTable'.
+     * Expected value is &#39;GreenplumTable&#39;.
      * 
      */
     @Import(name="type", required=true)

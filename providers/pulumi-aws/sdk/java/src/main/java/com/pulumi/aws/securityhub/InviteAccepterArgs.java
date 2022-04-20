@@ -15,7 +15,7 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
     public static final InviteAccepterArgs Empty = new InviteAccepterArgs();
 
     /**
-     * The account ID of the master Security Hub account whose invitation you're accepting.
+     * The account ID of the master Security Hub account whose invitation you&#39;re accepting.
      * 
      */
     @Import(name="masterId", required=true)

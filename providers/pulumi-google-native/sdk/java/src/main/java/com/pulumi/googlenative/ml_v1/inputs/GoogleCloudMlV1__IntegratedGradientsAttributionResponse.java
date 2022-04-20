@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+ * Attributes credit by computing the Aumann-Shapley value taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
  * 
  */
 public final class GoogleCloudMlV1__IntegratedGradientsAttributionResponse extends com.pulumi.resources.InvokeArgs {

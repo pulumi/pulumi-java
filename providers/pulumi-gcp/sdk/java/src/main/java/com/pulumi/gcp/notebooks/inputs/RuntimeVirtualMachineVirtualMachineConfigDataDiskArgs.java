@@ -115,12 +115,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     }
 
     /**
-     * "Specifies the disk interface to use for attaching this disk,
+     * &#34;Specifies the disk interface to use for attaching this disk,
      * which is either SCSI or NVME. The default is SCSI. Persistent
      * disks must always use SCSI and the request will fail if you attempt
      * to attach a persistent disk in any other format than SCSI. Local SSDs
      * can use either NVME or SCSI. For performance characteristics of SCSI
-     * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
+     * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI&#34;.
      * 
      */
     @Import(name="interface")

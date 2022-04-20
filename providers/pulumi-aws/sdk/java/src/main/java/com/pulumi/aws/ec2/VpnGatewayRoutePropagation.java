@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Requests automatic route propagation between a VPN gateway and a route table.
  * 
- * > **Note:** This resource should not be used with a route table that has
+ * &gt; **Note:** This resource should not be used with a route table that has
  * the `propagating_vgws` argument set. If that argument is set, any route
  * propagation not explicitly listed in its value will be removed.
  * 

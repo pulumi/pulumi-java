@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class StorageAccountDetailsResponse {
     /**
      * Account Type of the data to be transferred.
-     * Expected value is 'StorageAccount'.
+     * Expected value is &#39;StorageAccount&#39;.
      * 
      */
     private final String dataAccountType;
@@ -31,7 +31,7 @@ public final class StorageAccountDetailsResponse {
 
     /**
      * Account Type of the data to be transferred.
-     * Expected value is 'StorageAccount'.
+     * Expected value is &#39;StorageAccount&#39;.
      * 
     */
     public String dataAccountType() {

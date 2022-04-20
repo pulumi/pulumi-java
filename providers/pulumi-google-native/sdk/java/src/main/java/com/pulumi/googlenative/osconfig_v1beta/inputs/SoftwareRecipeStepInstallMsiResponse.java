@@ -41,7 +41,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
     }
 
     /**
-     * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
+     * The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
      * 
      */
     @Import(name="flags", required=true)

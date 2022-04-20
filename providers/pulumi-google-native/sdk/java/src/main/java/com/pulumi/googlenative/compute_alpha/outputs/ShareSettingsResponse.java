@@ -12,17 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class ShareSettingsResponse {
     /**
-     * A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without "folders/" prefix.
+     * A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without &#34;folders/&#34; prefix.
      * 
      */
     private final Map<String,String> folderMap;
     /**
-     * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     private final Map<String,String> projectMap;
     /**
-     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     private final List<String> projects;
@@ -45,21 +45,21 @@ public final class ShareSettingsResponse {
     }
 
     /**
-     * A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without "folders/" prefix.
+     * A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without &#34;folders/&#34; prefix.
      * 
     */
     public Map<String,String> folderMap() {
         return this.folderMap;
     }
     /**
-     * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
     */
     public Map<String,String> projectMap() {
         return this.projectMap;
     }
     /**
-     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
     */
     public List<String> projects() {

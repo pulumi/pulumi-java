@@ -27,7 +27,7 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The API key description. Defaults to "Managed by Pulumi".
+     * The API key description. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

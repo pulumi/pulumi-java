@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Contains the data that describes an Identity Aware Proxy owned client.
  * 
- * > **Note:** Only internal org clients can be created via declarative tools. External clients must be
+ * &gt; **Note:** Only internal org clients can be created via declarative tools. External clients must be
  * manually created via the GCP console. This restriction is due to the existing APIs and not lack of support
  * in this tool.
  * 
@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Setting up IAP Client](https://cloud.google.com/iap/docs/authentication-howto)
  * 
- * > **Warning:** All arguments including `secret` will be stored in the raw
+ * &gt; **Warning:** All arguments including `secret` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage

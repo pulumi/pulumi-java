@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a CodeDeploy Deployment Group for a CodeDeploy Application
  * 
- * > **NOTE on blue/green deployments:** When using `green_fleet_provisioning_option` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
+ * &gt; **NOTE on blue/green deployments:** When using `green_fleet_provisioning_option` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
  * 
  * ## Example Usage
  * 
@@ -144,14 +144,14 @@ public class DeploymentGroup extends com.pulumi.resources.CustomResource {
         return this.computePlatform;
     }
     /**
-     * The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
+     * The name of the group&#39;s deployment config. The default is &#34;CodeDeployDefault.OneAtATime&#34;.
      * 
      */
     @Export(name="deploymentConfigName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deploymentConfigName;
 
     /**
-     * @return The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
+     * @return The name of the group&#39;s deployment config. The default is &#34;CodeDeployDefault.OneAtATime&#34;.
      * 
      */
     public Output</* @Nullable */ String> deploymentConfigName() {

@@ -42,7 +42,7 @@ public final class ReplicationControllerConditionArgs extends com.pulumi.resourc
     }
 
     /**
-     * The reason for the condition's last transition.
+     * The reason for the condition&#39;s last transition.
      * 
      */
     @Import(name="reason")

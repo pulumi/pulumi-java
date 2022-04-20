@@ -148,7 +148,7 @@ public final class AzureSqlDatabaseSectionResponse extends com.pulumi.resources.
     }
 
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
      */
     @Import(name="serviceDataAccessAuthIdentity")

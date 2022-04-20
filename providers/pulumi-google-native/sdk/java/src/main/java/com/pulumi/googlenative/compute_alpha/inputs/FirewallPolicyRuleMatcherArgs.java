@@ -56,7 +56,7 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.
+     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
      * 
      */
     @Import(name="destRegionCodes")
@@ -111,7 +111,7 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.
+     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
      * 
      */
     @Import(name="srcRegionCodes")

@@ -63,8 +63,8 @@ public final class GetAvailabilityZonesArgs extends com.pulumi.resources.InvokeA
 
     /**
      * Allows to filter list of Availability Zones based on their
-     * current state. Can be either `"available"`, `"information"`, `"impaired"` or
-     * `"unavailable"`. By default the list includes a complete set of Availability Zones
+     * current state. Can be either `&#34;available&#34;`, `&#34;information&#34;`, `&#34;impaired&#34;` or
+     * `&#34;unavailable&#34;`. By default the list includes a complete set of Availability Zones
      * to which the underlying AWS account has access, regardless of their state.
      * 
      */

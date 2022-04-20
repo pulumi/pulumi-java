@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Replaces a term in the query. Multiple replacement candidates can be specified. All `query_terms` will be replaced with the replacement term. Example: Replace "gShoe" with "google shoe".
+ * Replaces a term in the query. Multiple replacement candidates can be specified. All `query_terms` will be replaced with the replacement term. Example: Replace &#34;gShoe&#34; with &#34;google shoe&#34;.
  * 
  */
 public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends com.pulumi.resources.InvokeArgs {

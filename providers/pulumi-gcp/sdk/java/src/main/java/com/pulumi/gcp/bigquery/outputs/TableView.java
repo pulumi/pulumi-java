@@ -18,8 +18,8 @@ public final class TableView {
      */
     private final String query;
     /**
-     * Specifies whether to use BigQuery's legacy SQL for this view.
-     * The default value is true. If set to false, the view will use BigQuery's standard SQL.
+     * Specifies whether to use BigQuery&#39;s legacy SQL for this view.
+     * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
      * 
      */
     private final @Nullable Boolean useLegacySql;
@@ -40,8 +40,8 @@ public final class TableView {
         return this.query;
     }
     /**
-     * Specifies whether to use BigQuery's legacy SQL for this view.
-     * The default value is true. If set to false, the view will use BigQuery's standard SQL.
+     * Specifies whether to use BigQuery&#39;s legacy SQL for this view.
+     * The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL.
      * 
     */
     public Optional<Boolean> useLegacySql() {

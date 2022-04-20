@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobTemplateSpec {
     /**
-     * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     private final @Nullable ObjectMeta metadata;
@@ -32,7 +32,7 @@ public final class JobTemplateSpec {
     }
 
     /**
-     * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
     */
     public Optional<ObjectMeta> metadata() {

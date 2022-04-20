@@ -32,7 +32,7 @@ public final class StandardSqlFieldArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
+     * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this &#34;type&#34; field).
      * 
      */
     @Import(name="type")

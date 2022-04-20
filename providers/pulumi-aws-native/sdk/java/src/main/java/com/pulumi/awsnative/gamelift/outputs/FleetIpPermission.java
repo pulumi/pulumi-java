@@ -17,7 +17,7 @@ public final class FleetIpPermission {
      */
     private final Integer fromPort;
     /**
-     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: "000.000.000.000/[subnet mask]" or optionally the shortened version "0.0.0.0/[subnet mask]".
+     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
      * 
      */
     private final String ipRange;
@@ -52,7 +52,7 @@ public final class FleetIpPermission {
         return this.fromPort;
     }
     /**
-     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: "000.000.000.000/[subnet mask]" or optionally the shortened version "0.0.0.0/[subnet mask]".
+     * A range of allowed IP addresses. This value must be expressed in CIDR notation. Example: &#34;000.000.000.000/[subnet mask]&#34; or optionally the shortened version &#34;0.0.0.0/[subnet mask]&#34;.
      * 
     */
     public String ipRange() {

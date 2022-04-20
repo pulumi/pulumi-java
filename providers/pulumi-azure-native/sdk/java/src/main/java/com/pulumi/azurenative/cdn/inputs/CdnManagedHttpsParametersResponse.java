@@ -22,7 +22,7 @@ public final class CdnManagedHttpsParametersResponse extends com.pulumi.resource
 
     /**
      * Defines the source of the SSL certificate.
-     * Expected value is 'Cdn'.
+     * Expected value is &#39;Cdn&#39;.
      * 
      */
     @Import(name="certificateSource", required=true)

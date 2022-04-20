@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 /**
  * Create a new CryptoKeyVersion in a CryptoKey. The server will assign the next sequential id. If unset, state will be set to ENABLED.
  * Auto-naming is currently not supported for this resource.
- * Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+ * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
  */
@@ -67,28 +67,28 @@ public class CryptoKeyVersion extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
-     * The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
+     * The time this CryptoKeyVersion&#39;s key material was destroyed. Only present if state is DESTROYED.
      * 
      */
     @Export(name="destroyEventTime", type=String.class, parameters={})
     private Output<String> destroyEventTime;
 
     /**
-     * @return The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
+     * @return The time this CryptoKeyVersion&#39;s key material was destroyed. Only present if state is DESTROYED.
      * 
      */
     public Output<String> destroyEventTime() {
         return this.destroyEventTime;
     }
     /**
-     * The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+     * The time this CryptoKeyVersion&#39;s key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
      * 
      */
     @Export(name="destroyTime", type=String.class, parameters={})
     private Output<String> destroyTime;
 
     /**
-     * @return The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
+     * @return The time this CryptoKeyVersion&#39;s key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
      * 
      */
     public Output<String> destroyTime() {
@@ -109,14 +109,14 @@ public class CryptoKeyVersion extends com.pulumi.resources.CustomResource {
         return this.externalProtectionLevelOptions;
     }
     /**
-     * The time this CryptoKeyVersion's key material was generated.
+     * The time this CryptoKeyVersion&#39;s key material was generated.
      * 
      */
     @Export(name="generateTime", type=String.class, parameters={})
     private Output<String> generateTime;
 
     /**
-     * @return The time this CryptoKeyVersion's key material was generated.
+     * @return The time this CryptoKeyVersion&#39;s key material was generated.
      * 
      */
     public Output<String> generateTime() {
@@ -151,14 +151,14 @@ public class CryptoKeyVersion extends com.pulumi.resources.CustomResource {
         return this.importJob;
     }
     /**
-     * The time at which this CryptoKeyVersion's key material was most recently imported.
+     * The time at which this CryptoKeyVersion&#39;s key material was most recently imported.
      * 
      */
     @Export(name="importTime", type=String.class, parameters={})
     private Output<String> importTime;
 
     /**
-     * @return The time at which this CryptoKeyVersion's key material was most recently imported.
+     * @return The time at which this CryptoKeyVersion&#39;s key material was most recently imported.
      * 
      */
     public Output<String> importTime() {

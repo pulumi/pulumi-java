@@ -20,17 +20,17 @@ import java.util.StringJoiner;
          */
         UnspecifiedLogName("UNSPECIFIED_LOG_NAME"),
         /**
-         * Corresponds to "cloudaudit.googleapis.com/activity"
+         * Corresponds to &#34;cloudaudit.googleapis.com/activity&#34;
          * 
          */
         AdminActivity("ADMIN_ACTIVITY"),
         /**
-         * Corresponds to "cloudaudit.googleapis.com/data_access"
+         * Corresponds to &#34;cloudaudit.googleapis.com/data_access&#34;
          * 
          */
         DataAccess("DATA_ACCESS"),
         /**
-         * What if triple quotes """ are used in the description
+         * What if triple quotes &#34;&#34;&#34; are used in the description
          * 
          */
         Synthetic("SYNTHETIC");

@@ -53,7 +53,7 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
+     * Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
      * 
      */
     @Import(name="proximityPlacementGroupType")

@@ -20,10 +20,10 @@ import javax.annotation.Nullable;
  * and
  * [API](https://cloud.google.com/compute/docs/reference/latest/networks).
  * 
- * > Both networks must create a peering with each other for the peering
+ * &gt; Both networks must create a peering with each other for the peering
  * to be functional.
  * 
- * > Subnets IP ranges across peered VPC networks cannot overlap.
+ * &gt; Subnets IP ranges across peered VPC networks cannot overlap.
  * 
  * ## Example Usage
  * 
@@ -140,7 +140,7 @@ public class NetworkPeering extends com.pulumi.resources.CustomResource {
     }
     /**
      * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
-     * `ACTIVE` when there's a matching configuration in the peer network.
+     * `ACTIVE` when there&#39;s a matching configuration in the peer network.
      * 
      */
     @Export(name="state", type=String.class, parameters={})
@@ -148,7 +148,7 @@ public class NetworkPeering extends com.pulumi.resources.CustomResource {
 
     /**
      * @return State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
-     * `ACTIVE` when there's a matching configuration in the peer network.
+     * `ACTIVE` when there&#39;s a matching configuration in the peer network.
      * 
      */
     public Output<String> state() {

@@ -11,7 +11,7 @@ import java.util.StringJoiner;
     /**
      * The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
-     * action is set to "RedirectToLoginPage".
+     * action is set to &#34;RedirectToLoginPage&#34;.
      * 
      */
     @EnumType

@@ -161,7 +161,7 @@ public final class HDInsightHiveActivityResponse extends com.pulumi.resources.In
 
     /**
      * Type of activity.
-     * Expected value is 'HDInsightHive'.
+     * Expected value is &#39;HDInsightHive&#39;.
      * 
      */
     @Import(name="type", required=true)

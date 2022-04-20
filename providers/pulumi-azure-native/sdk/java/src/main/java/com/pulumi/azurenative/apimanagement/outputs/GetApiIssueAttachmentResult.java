@@ -15,7 +15,7 @@ public final class GetApiIssueAttachmentResult {
      */
     private final String content;
     /**
-     * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
+     * Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
      * 
      */
     private final String contentFormat;
@@ -64,7 +64,7 @@ public final class GetApiIssueAttachmentResult {
         return this.content;
     }
     /**
-     * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
+     * Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
      * 
     */
     public String contentFormat() {

@@ -29,7 +29,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
 
     /**
      * Configuration of the snapshot analysis based monitoring pipeline running interval. The value is rolled up to full day.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="monitoringInterval")

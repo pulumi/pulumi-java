@@ -51,7 +51,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Serial number of the certificate, Example: "123456789".
+     * Serial number of the certificate, Example: &#34;123456789&#34;.
      * 
      */
     @Import(name="serialNumber", required=true)

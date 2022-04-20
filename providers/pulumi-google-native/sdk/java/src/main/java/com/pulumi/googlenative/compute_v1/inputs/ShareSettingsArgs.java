@@ -22,7 +22,7 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
     public static final ShareSettingsArgs Empty = new ShareSettingsArgs();
 
     /**
-     * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     * A map of project id and project config. This is only valid when share_type&#39;s value is SPECIFIC_PROJECTS.
      * 
      */
     @Import(name="projectMap")

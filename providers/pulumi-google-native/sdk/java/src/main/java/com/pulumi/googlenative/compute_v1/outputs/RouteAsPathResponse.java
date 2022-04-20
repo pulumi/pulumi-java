@@ -17,7 +17,7 @@ public final class RouteAsPathResponse {
      */
     private final List<Integer> asLists;
     /**
-     * The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed
+     * The type of the AS Path, which can be one of the following values: - &#39;AS_SET&#39;: unordered set of autonomous systems that the route in has traversed - &#39;AS_SEQUENCE&#39;: ordered set of autonomous systems that the route has traversed - &#39;AS_CONFED_SEQUENCE&#39;: ordered set of Member Autonomous Systems in the local confederation that the route has traversed - &#39;AS_CONFED_SET&#39;: unordered set of Member Autonomous Systems in the local confederation that the route has traversed
      * 
      */
     private final String pathSegmentType;
@@ -38,7 +38,7 @@ public final class RouteAsPathResponse {
         return this.asLists;
     }
     /**
-     * The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed
+     * The type of the AS Path, which can be one of the following values: - &#39;AS_SET&#39;: unordered set of autonomous systems that the route in has traversed - &#39;AS_SEQUENCE&#39;: ordered set of autonomous systems that the route has traversed - &#39;AS_CONFED_SEQUENCE&#39;: ordered set of Member Autonomous Systems in the local confederation that the route has traversed - &#39;AS_CONFED_SET&#39;: unordered set of Member Autonomous Systems in the local confederation that the route has traversed
      * 
     */
     public String pathSegmentType() {

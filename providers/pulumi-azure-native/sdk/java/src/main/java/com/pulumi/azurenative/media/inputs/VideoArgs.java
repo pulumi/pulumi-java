@@ -46,7 +46,7 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Video'.
+     * Expected value is &#39;#Microsoft.Media.Video&#39;.
      * 
      */
     @Import(name="odataType", required=true)

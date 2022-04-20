@@ -75,7 +75,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The type of snapshots to be returned. If you don't specify a SnapshotType
+     * The type of snapshots to be returned. If you don&#39;t specify a SnapshotType
      * value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not
      * included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
      * 

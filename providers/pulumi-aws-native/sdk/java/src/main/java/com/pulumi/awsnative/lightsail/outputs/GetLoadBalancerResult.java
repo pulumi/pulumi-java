@@ -20,7 +20,7 @@ public final class GetLoadBalancerResult {
      */
     private final @Nullable List<String> attachedInstances;
     /**
-     * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
      */
     private final @Nullable String healthCheckPath;
@@ -65,7 +65,7 @@ public final class GetLoadBalancerResult {
         return this.attachedInstances == null ? List.of() : this.attachedInstances;
     }
     /**
-     * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
+     * The path you provided to perform the load balancer health check. If you didn&#39;t specify a health check path, Lightsail uses the root path of your website (e.g., &#34;/&#34;).
      * 
     */
     public Optional<String> healthCheckPath() {

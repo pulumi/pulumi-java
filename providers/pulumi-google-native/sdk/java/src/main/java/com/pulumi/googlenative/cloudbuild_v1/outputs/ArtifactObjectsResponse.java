@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ArtifactObjectsResponse {
     /**
-     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
      * 
      */
     private final String location;
     /**
-     * Path globs used to match files in the build's workspace.
+     * Path globs used to match files in the build&#39;s workspace.
      * 
      */
     private final List<String> paths;
@@ -38,14 +38,14 @@ public final class ArtifactObjectsResponse {
     }
 
     /**
-     * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
+     * Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;. (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
      * 
     */
     public String location() {
         return this.location;
     }
     /**
-     * Path globs used to match files in the build's workspace.
+     * Path globs used to match files in the build&#39;s workspace.
      * 
     */
     public List<String> paths() {

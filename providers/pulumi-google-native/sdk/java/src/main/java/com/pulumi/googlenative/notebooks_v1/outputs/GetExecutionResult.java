@@ -21,7 +21,7 @@ public final class GetExecutionResult {
      */
     private final String description;
     /**
-     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores '_'.
+     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores &#39;_&#39;.
      * 
      */
     private final String displayName;
@@ -93,7 +93,7 @@ public final class GetExecutionResult {
         return this.description;
     }
     /**
-     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores '_'.
+     * Name used for UI purposes. Name can only contain alphanumeric characters and underscores &#39;_&#39;.
      * 
     */
     public String displayName() {

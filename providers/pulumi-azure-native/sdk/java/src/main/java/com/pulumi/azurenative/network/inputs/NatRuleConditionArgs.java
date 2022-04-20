@@ -79,7 +79,7 @@ public final class NatRuleConditionArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Rule Condition Type.
-     * Expected value is 'NatRuleCondition'.
+     * Expected value is &#39;NatRuleCondition&#39;.
      * 
      */
     @Import(name="ruleConditionType", required=true)

@@ -59,7 +59,7 @@ public final class AmazonRdsForSqlServerTableDatasetResponse {
     private final @Nullable Object table;
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRdsForSqlServerTable'.
+     * Expected value is &#39;AmazonRdsForSqlServerTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class AmazonRdsForSqlServerTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRdsForSqlServerTable'.
+     * Expected value is &#39;AmazonRdsForSqlServerTable&#39;.
      * 
     */
     public String type() {

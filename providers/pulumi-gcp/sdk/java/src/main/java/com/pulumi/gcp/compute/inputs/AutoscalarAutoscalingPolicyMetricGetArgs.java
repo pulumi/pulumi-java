@@ -76,7 +76,7 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends com.pulumi.r
      * or a custom metric exporting the total number of requests coming to
      * your instances.
      * A bad example would be a metric exporting an average or median
-     * latency, since this value can't include a chunk assignable to a
+     * latency, since this value can&#39;t include a chunk assignable to a
      * single instance, it could be better used with utilization_target
      * instead.
      * 

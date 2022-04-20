@@ -79,7 +79,7 @@ public final class AzureMLExecutePipelineActivityResponse {
     private final @Nullable ActivityPolicyResponse policy;
     /**
      * Type of activity.
-     * Expected value is 'AzureMLExecutePipeline'.
+     * Expected value is &#39;AzureMLExecutePipeline&#39;.
      * 
      */
     private final String type;
@@ -214,7 +214,7 @@ public final class AzureMLExecutePipelineActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'AzureMLExecutePipeline'.
+     * Expected value is &#39;AzureMLExecutePipeline&#39;.
      * 
     */
     public String type() {

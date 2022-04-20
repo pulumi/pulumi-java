@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * specify IP addresses and ports, you can distribute traffic in a granular
  * fashion among applications or containers running within VM instances.
  * 
- * Recreating a network endpoint group that's in use by another resource will give a
+ * Recreating a network endpoint group that&#39;s in use by another resource will give a
  * `resourceInUseByAnotherResource` error. Use `lifecycle.create_before_destroy`
  * to avoid this type of error.
  * 
@@ -121,7 +121,7 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
     }
     /**
      * The network to which all network endpoints in the NEG belong.
-     * Uses "default" project network if unspecified.
+     * Uses &#34;default&#34; project network if unspecified.
      * 
      */
     @Export(name="network", type=String.class, parameters={})
@@ -129,7 +129,7 @@ public class NetworkEndpointGroup extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The network to which all network endpoints in the NEG belong.
-     * Uses "default" project network if unspecified.
+     * Uses &#34;default&#34; project network if unspecified.
      * 
      */
     public Output<String> network() {

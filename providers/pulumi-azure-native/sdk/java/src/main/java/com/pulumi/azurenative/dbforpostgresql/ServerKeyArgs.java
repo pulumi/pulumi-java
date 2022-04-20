@@ -40,7 +40,7 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The key type like 'AzureKeyVault'.
+     * The key type like &#39;AzureKeyVault&#39;.
      * 
      */
     @Import(name="serverKeyType", required=true)

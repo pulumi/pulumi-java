@@ -18,7 +18,7 @@ public final class StorageBlobDeadLetterDestinationResponse {
     private final @Nullable String blobContainerName;
     /**
      * Type of the endpoint for the dead letter destination
-     * Expected value is 'StorageBlob'.
+     * Expected value is &#39;StorageBlob&#39;.
      * 
      */
     private final String endpointType;
@@ -47,7 +47,7 @@ public final class StorageBlobDeadLetterDestinationResponse {
     }
     /**
      * Type of the endpoint for the dead letter destination
-     * Expected value is 'StorageBlob'.
+     * Expected value is &#39;StorageBlob&#39;.
      * 
     */
     public String endpointType() {

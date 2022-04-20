@@ -140,7 +140,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * (Optional, Deprecated)
      * The name of the Filestore zone of the instance.
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated in favor of location.
      * 
      */

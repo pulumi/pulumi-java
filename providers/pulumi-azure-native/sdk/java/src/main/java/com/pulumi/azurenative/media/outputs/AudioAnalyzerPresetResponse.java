@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AudioAnalyzerPresetResponse {
     /**
-     * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
+     * The language for the audio payload in the input using the BCP-47 format of &#39;language tag-region&#39; (e.g: &#39;en-US&#39;).  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn&#39;t specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to &#39;en-US&#39;.&#34; The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
      * 
      */
     private final @Nullable String audioLanguage;
@@ -29,7 +29,7 @@ public final class AudioAnalyzerPresetResponse {
     private final @Nullable String mode;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.AudioAnalyzerPreset'.
+     * Expected value is &#39;#Microsoft.Media.AudioAnalyzerPreset&#39;.
      * 
      */
     private final String odataType;
@@ -47,7 +47,7 @@ public final class AudioAnalyzerPresetResponse {
     }
 
     /**
-     * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
+     * The language for the audio payload in the input using the BCP-47 format of &#39;language tag-region&#39; (e.g: &#39;en-US&#39;).  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn&#39;t specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to &#39;en-US&#39;.&#34; The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
      * 
     */
     public Optional<String> audioLanguage() {
@@ -69,7 +69,7 @@ public final class AudioAnalyzerPresetResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.AudioAnalyzerPreset'.
+     * Expected value is &#39;#Microsoft.Media.AudioAnalyzerPreset&#39;.
      * 
     */
     public String odataType() {

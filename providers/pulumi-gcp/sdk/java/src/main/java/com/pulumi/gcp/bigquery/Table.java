@@ -28,9 +28,9 @@ import javax.annotation.Nullable;
  * [the official documentation](https://cloud.google.com/bigquery/docs/) and
  * [API](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables).
  * 
- * > **Note**: On newer versions of the provider, you must explicitly set `deletion_protection=false`
+ * &gt; **Note**: On newer versions of the provider, you must explicitly set `deletion_protection=false`
  * (and run `pulumi update` to write the field to state) in order to destroy an instance.
- * It is recommended to not set this field (or set it to true) until you're ready to destroy.
+ * It is recommended to not set this field (or set it to true) until you&#39;re ready to destroy.
  * 
  * ## Example Usage
  * 
@@ -282,14 +282,14 @@ public class Table extends com.pulumi.resources.CustomResource {
         return this.numBytes;
     }
     /**
-     * The number of bytes in the table that are considered "long-term storage".
+     * The number of bytes in the table that are considered &#34;long-term storage&#34;.
      * 
      */
     @Export(name="numLongTermBytes", type=Integer.class, parameters={})
     private Output<Integer> numLongTermBytes;
 
     /**
-     * @return The number of bytes in the table that are considered "long-term storage".
+     * @return The number of bytes in the table that are considered &#34;long-term storage&#34;.
      * 
      */
     public Output<Integer> numLongTermBytes() {
@@ -345,8 +345,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * A JSON schema for the external table. Schema is required
      * for CSV and JSON formats if autodetect is not on. Schema is disallowed
      * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
-     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
-     * string will create a diff, even if the JSON itself hasn't changed.
+     * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn&#39;t changed.
      * Furthermore drift for this field cannot not be detected because BigQuery
      * only uses this schema to compute the effective schema for the table, therefore
      * any changes on the configured value will force the table to be recreated.
@@ -362,8 +362,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return A JSON schema for the external table. Schema is required
      * for CSV and JSON formats if autodetect is not on. Schema is disallowed
      * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
-     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
-     * string will create a diff, even if the JSON itself hasn't changed.
+     * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn&#39;t changed.
      * Furthermore drift for this field cannot not be detected because BigQuery
      * only uses this schema to compute the effective schema for the table, therefore
      * any changes on the configured value will force the table to be recreated.

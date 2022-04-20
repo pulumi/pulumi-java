@@ -13,7 +13,7 @@ public final class GetCloudFormationTypeLoggingConfig extends com.pulumi.resourc
     public static final GetCloudFormationTypeLoggingConfig Empty = new GetCloudFormationTypeLoggingConfig();
 
     /**
-     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type's handlers.
+     * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
      */
     @Import(name="logGroupName", required=true)

@@ -83,7 +83,7 @@ public final class JsonDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'Json'.
+     * Expected value is &#39;Json&#39;.
      * 
      */
     private final String type;
@@ -186,7 +186,7 @@ public final class JsonDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Json'.
+     * Expected value is &#39;Json&#39;.
      * 
     */
     public String type() {

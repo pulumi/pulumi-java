@@ -73,7 +73,7 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
 
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

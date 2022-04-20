@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class ScheduledSourceSynchronizationSettingResponse {
     /**
      * Kind of synchronization setting on share.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     private final String kind;
@@ -40,7 +40,7 @@ public final class ScheduledSourceSynchronizationSettingResponse {
 
     /**
      * Kind of synchronization setting on share.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
     */
     public String kind() {

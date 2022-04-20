@@ -20,9 +20,9 @@ import javax.annotation.Nullable;
  * * `gcp.dataproc.JobIAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the job are preserved.
  * * `gcp.dataproc.JobIAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the job are preserved.
  * 
- * > **Note:** `gcp.dataproc.JobIAMPolicy` **cannot** be used in conjunction with `gcp.dataproc.JobIAMBinding` and `gcp.dataproc.JobIAMMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as `gcp.dataproc.JobIAMPolicy` replaces the entire policy.
+ * &gt; **Note:** `gcp.dataproc.JobIAMPolicy` **cannot** be used in conjunction with `gcp.dataproc.JobIAMBinding` and `gcp.dataproc.JobIAMMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as `gcp.dataproc.JobIAMPolicy` replaces the entire policy.
  * 
- * > **Note:** `gcp.dataproc.JobIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.JobIAMMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.dataproc.JobIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.JobIAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_dataproc\_job\_iam\_policy
  * 
@@ -35,18 +35,18 @@ import javax.annotation.Nullable;
  * Job IAM resources can be imported using the project, region, job id, role and/or member.
  * 
  * ```sh
- *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor "projects/{project}/regions/{region}/jobs/{job_id}"
+ *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor &#34;projects/{project}/regions/{region}/jobs/{job_id}&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor "projects/{project}/regions/{region}/jobs/{job_id} roles/editor"
+ *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor &#34;projects/{project}/regions/{region}/jobs/{job_id} roles/editor&#34;
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor "projects/{project}/regions/{region}/jobs/{job_id} roles/editor user:jane@example.com"
+ *  $ pulumi import gcp:dataproc/jobIAMPolicy:JobIAMPolicy editor &#34;projects/{project}/regions/{region}/jobs/{job_id} roles/editor user:jane@example.com&#34;
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -54,14 +54,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:dataproc/jobIAMPolicy:JobIAMPolicy")
 public class JobIAMPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * (Computed) The etag of the jobs's IAM policy.
+     * (Computed) The etag of the jobs&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return (Computed) The etag of the jobs's IAM policy.
+     * @return (Computed) The etag of the jobs&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {

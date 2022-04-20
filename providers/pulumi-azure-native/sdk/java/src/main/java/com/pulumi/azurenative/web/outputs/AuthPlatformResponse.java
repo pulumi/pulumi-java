@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class AuthPlatformResponse {
     /**
      * The path of the config file containing auth settings if they come from a file.
-     * If the path is relative, base will the site's root directory.
+     * If the path is relative, base will the site&#39;s root directory.
      * 
      */
     private final @Nullable String configFilePath;
     /**
-     * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -42,14 +42,14 @@ public final class AuthPlatformResponse {
 
     /**
      * The path of the config file containing auth settings if they come from a file.
-     * If the path is relative, base will the site's root directory.
+     * If the path is relative, base will the site&#39;s root directory.
      * 
     */
     public Optional<String> configFilePath() {
         return Optional.ofNullable(this.configFilePath);
     }
     /**
-     * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> enabled() {

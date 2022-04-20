@@ -37,14 +37,14 @@ public class Accelerator extends com.pulumi.resources.CustomResource {
         return this.acceleratorArn;
     }
     /**
-     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
+     * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
      * 
      */
     @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
-     * @return The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
+     * @return The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator&#39;s static IP addresses.
      * 
      */
     public Output<String> dnsName() {

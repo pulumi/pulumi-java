@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class StandardAppVersionBasicScaling {
     /**
      * Duration of time after the last request that an instance must wait before the instance is shut down.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
      * 
      */
     private final @Nullable String idleTimeout;
@@ -34,7 +34,7 @@ public final class StandardAppVersionBasicScaling {
 
     /**
      * Duration of time after the last request that an instance must wait before the instance is shut down.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. Defaults to 900s.
      * 
     */
     public Optional<String> idleTimeout() {

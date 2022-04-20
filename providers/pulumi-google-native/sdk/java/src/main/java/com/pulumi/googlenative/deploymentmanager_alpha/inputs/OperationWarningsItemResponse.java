@@ -26,7 +26,7 @@ public final class OperationWarningsItemResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
+     * Metadata about this warning in key: value format. For example: &#34;data&#34;: [ { &#34;key&#34;: &#34;scope&#34;, &#34;value&#34;: &#34;zones/us-east1-d&#34; }
      * 
      */
     @Import(name="data", required=true)

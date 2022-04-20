@@ -24,7 +24,7 @@ public final class InMageAzureV2PolicyDetailsResponse {
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMageAzureV2'.
+     * Expected value is &#39;InMageAzureV2&#39;.
      * 
      */
     private final String instanceType;
@@ -76,7 +76,7 @@ public final class InMageAzureV2PolicyDetailsResponse {
     }
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'InMageAzureV2'.
+     * Expected value is &#39;InMageAzureV2&#39;.
      * 
     */
     public String instanceType() {

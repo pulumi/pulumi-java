@@ -28,7 +28,7 @@ public final class InstanceGroupManagerStatusResponse {
      */
     private final InstanceGroupManagerStatusStatefulResponse stateful;
     /**
-     * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
+     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
      * 
      */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
@@ -67,7 +67,7 @@ public final class InstanceGroupManagerStatusResponse {
         return this.stateful;
     }
     /**
-     * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
+     * A status of consistency of Instances&#39; versions with their target version specified by version field on Instance Group Manager.
      * 
     */
     public InstanceGroupManagerStatusVersionTargetResponse versionTarget() {

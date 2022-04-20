@@ -115,7 +115,7 @@ public final class AmazonRdsForOracleTableDatasetResponse extends com.pulumi.res
 
     /**
      * Type of dataset.
-     * Expected value is 'AmazonRdsForOracleTable'.
+     * Expected value is &#39;AmazonRdsForOracleTable&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -17,35 +17,35 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThemeVersion {
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * <p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
-     *             themes initially inherit from a default QuickSight theme.</p>
+     * &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+     *             themes initially inherit from a default QuickSight theme.&lt;/p&gt;
      * 
      */
     private final @Nullable String baseThemeId;
     private final @Nullable ThemeConfiguration configuration;
     /**
-     * <p>The date and time that this theme version was created.</p>
+     * &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * <p>The description of the theme.</p>
+     * &lt;p&gt;The description of the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     /**
-     * <p>Errors associated with the theme.</p>
+     * &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable List<ThemeError> errors;
     private final @Nullable ThemeResourceStatus status;
     /**
-     * <p>The version number of the theme.</p>
+     * &lt;p&gt;The version number of the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable Double versionNumber;
@@ -71,15 +71,15 @@ public final class ThemeVersion {
     }
 
     /**
-     * <p>The Amazon Resource Name (ARN) of the resource.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * <p>The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
-     *             themes initially inherit from a default QuickSight theme.</p>
+     * &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+     *             themes initially inherit from a default QuickSight theme.&lt;/p&gt;
      * 
     */
     public Optional<String> baseThemeId() {
@@ -89,21 +89,21 @@ public final class ThemeVersion {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * <p>The date and time that this theme version was created.</p>
+     * &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
      * 
     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * <p>The description of the theme.</p>
+     * &lt;p&gt;The description of the theme.&lt;/p&gt;
      * 
     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * <p>Errors associated with the theme.</p>
+     * &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
      * 
     */
     public List<ThemeError> errors() {
@@ -113,7 +113,7 @@ public final class ThemeVersion {
         return Optional.ofNullable(this.status);
     }
     /**
-     * <p>The version number of the theme.</p>
+     * &lt;p&gt;The version number of the theme.&lt;/p&gt;
      * 
     */
     public Optional<Double> versionNumber() {

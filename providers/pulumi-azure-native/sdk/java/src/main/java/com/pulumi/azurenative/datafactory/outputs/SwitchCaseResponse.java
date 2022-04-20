@@ -57,7 +57,7 @@ public final class SwitchCaseResponse {
      */
     private final @Nullable List<Object> activities;
     /**
-     * Expected value that satisfies the expression result of the 'on' property.
+     * Expected value that satisfies the expression result of the &#39;on&#39; property.
      * 
      */
     private final @Nullable String value;
@@ -78,7 +78,7 @@ public final class SwitchCaseResponse {
         return this.activities == null ? List.of() : this.activities;
     }
     /**
-     * Expected value that satisfies the expression result of the 'on' property.
+     * Expected value that satisfies the expression result of the &#39;on&#39; property.
      * 
     */
     public Optional<String> value() {

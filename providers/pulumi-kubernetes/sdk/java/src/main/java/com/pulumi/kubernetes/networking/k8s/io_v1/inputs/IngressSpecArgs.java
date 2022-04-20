@@ -24,7 +24,7 @@ public final class IngressSpecArgs extends com.pulumi.resources.ResourceArgs {
     public static final IngressSpecArgs Empty = new IngressSpecArgs();
 
     /**
-     * DefaultBackend is the backend that should handle requests that don't match any rule. If Rules are not specified, DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the rules will be up to the Ingress controller.
+     * DefaultBackend is the backend that should handle requests that don&#39;t match any rule. If Rules are not specified, DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the rules will be up to the Ingress controller.
      * 
      */
     @Import(name="defaultBackend")

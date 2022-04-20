@@ -34,7 +34,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends com.pulumi.
 
     /**
      * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
-     * "Authority Information Access" extension in the certificate.
+     * &#34;Authority Information Access&#34; extension in the certificate.
      * 
      */
     @Import(name="aiaOcspServers")

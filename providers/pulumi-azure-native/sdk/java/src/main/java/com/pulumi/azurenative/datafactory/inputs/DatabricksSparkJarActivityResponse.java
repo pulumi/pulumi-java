@@ -116,7 +116,7 @@ public final class DatabricksSparkJarActivityResponse extends com.pulumi.resourc
 
     /**
      * Type of activity.
-     * Expected value is 'DatabricksSparkJar'.
+     * Expected value is &#39;DatabricksSparkJar&#39;.
      * 
      */
     @Import(name="type", required=true)

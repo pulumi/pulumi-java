@@ -18,7 +18,7 @@ public final class TestTargetsForShardResponse extends com.pulumi.resources.Invo
     public static final TestTargetsForShardResponse Empty = new TestTargetsForShardResponse();
 
     /**
-     * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, "package com.my.packages" "class com.my.package.MyClass". The number of shard_test_targets must be greater than 0.
+     * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
      * 
      */
     @Import(name="testTargets", required=true)

@@ -117,7 +117,7 @@ public final class ResourcesFunctions {
      * Deployment script object.
      * API Version: 2020-10-01.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: AzureCliScript, AzurePowerShellScript.
      * 
      */

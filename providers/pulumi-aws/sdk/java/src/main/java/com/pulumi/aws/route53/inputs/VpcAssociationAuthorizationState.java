@@ -27,7 +27,7 @@ public final class VpcAssociationAuthorizationState extends com.pulumi.resources
     }
 
     /**
-     * The VPC's region. Defaults to the region of the AWS provider.
+     * The VPC&#39;s region. Defaults to the region of the AWS provider.
      * 
      */
     @Import(name="vpcRegion")

@@ -32,7 +32,7 @@ public final class GetDistributionResult {
     private final String domainName;
     private final Boolean enabled;
     /**
-     * The current version of the distribution's information. For example:
+     * The current version of the distribution&#39;s information. For example:
      * `E2QWRUHAPOMQZL`.
      * 
      */
@@ -62,7 +62,7 @@ public final class GetDistributionResult {
     private final String lastModifiedTime;
     /**
      * The current status of the distribution. `Deployed` if the
-     * distribution's information is fully propagated throughout the Amazon
+     * distribution&#39;s information is fully propagated throughout the Amazon
      * CloudFront system.
      * 
      */
@@ -121,7 +121,7 @@ public final class GetDistributionResult {
         return this.enabled;
     }
     /**
-     * The current version of the distribution's information. For example:
+     * The current version of the distribution&#39;s information. For example:
      * `E2QWRUHAPOMQZL`.
      * 
     */
@@ -161,7 +161,7 @@ public final class GetDistributionResult {
     }
     /**
      * The current status of the distribution. `Deployed` if the
-     * distribution's information is fully propagated throughout the Amazon
+     * distribution&#39;s information is fully propagated throughout the Amazon
      * CloudFront system.
      * 
     */

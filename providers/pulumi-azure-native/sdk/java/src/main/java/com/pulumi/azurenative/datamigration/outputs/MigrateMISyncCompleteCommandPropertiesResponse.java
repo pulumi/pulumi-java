@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public final class MigrateMISyncCompleteCommandPropertiesResponse {
     /**
      * Command type.
-     * Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
+     * Expected value is &#39;Migrate.SqlServer.AzureDbSqlMi.Complete&#39;.
      * 
      */
     private final String commandType;
@@ -58,7 +58,7 @@ public final class MigrateMISyncCompleteCommandPropertiesResponse {
 
     /**
      * Command type.
-     * Expected value is 'Migrate.SqlServer.AzureDbSqlMi.Complete'.
+     * Expected value is &#39;Migrate.SqlServer.AzureDbSqlMi.Complete&#39;.
      * 
     */
     public String commandType() {

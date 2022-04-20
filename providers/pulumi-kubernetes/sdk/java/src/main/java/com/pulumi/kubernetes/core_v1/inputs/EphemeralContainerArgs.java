@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  * To add an ephemeral container, use the ephemeralcontainers subresource of an existing Pod. Ephemeral containers may not be removed or restarted.
  * 
- * This is a beta feature available on clusters that haven't disabled the EphemeralContainers feature gate.
+ * This is a beta feature available on clusters that haven&#39;t disabled the EphemeralContainers feature gate.
  * 
  */
 public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceArgs {
@@ -35,7 +35,7 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     public static final EphemeralContainerArgs Empty = new EphemeralContainerArgs();
 
     /**
-     * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * Arguments to the entrypoint. The docker image&#39;s CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
     @Import(name="args")
@@ -46,7 +46,7 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+     * Entrypoint array. Not executed within a shell. The docker image&#39;s ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container&#39;s environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
     @Import(name="command")
@@ -93,9 +93,9 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
      * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
      * 
      * Possible enum values:
-     *  - `"Always"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.
-     *  - `"IfNotPresent"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.
-     *  - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
+     *  - `&#34;Always&#34;` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.
+     *  - `&#34;IfNotPresent&#34;` means that kubelet pulls if the image isn&#39;t present on disk. Container will fail if the image isn&#39;t present and the pull fails.
+     *  - `&#34;Never&#34;` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn&#39;t present
      * 
      */
     @Import(name="imagePullPolicy")
@@ -229,7 +229,7 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
+     * Optional: Path at which the file to which the container&#39;s termination message will be written is mounted into the container&#39;s filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
      * 
      */
     @Import(name="terminationMessagePath")
@@ -243,8 +243,8 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
      * Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
      * 
      * Possible enum values:
-     *  - `"FallbackToLogsOnError"` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
-     *  - `"File"` is the default behavior and will set the container status message to the contents of the container's terminationMessagePath when the container exits.
+     *  - `&#34;FallbackToLogsOnError&#34;` will read the most recent contents of the container logs for the container status message when the container exits with an error and the terminationMessagePath has no contents.
+     *  - `&#34;File&#34;` is the default behavior and will set the container status message to the contents of the container&#39;s terminationMessagePath when the container exits.
      * 
      */
     @Import(name="terminationMessagePolicy")
@@ -255,7 +255,7 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.
+     * Whether this container should allocate a TTY for itself, also requires &#39;stdin&#39; to be true. Default is false.
      * 
      */
     @Import(name="tty")
@@ -277,7 +277,7 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
+     * Pod volumes to mount into the container&#39;s filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
      * 
      */
     @Import(name="volumeMounts")
@@ -288,7 +288,7 @@ public final class EphemeralContainerArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.
+     * Container&#39;s working directory. If not specified, the container runtime&#39;s default will be used, which might be configured in the container image. Cannot be updated.
      * 
      */
     @Import(name="workingDir")

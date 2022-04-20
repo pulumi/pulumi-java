@@ -31,7 +31,7 @@ public final class ExportDatasetResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The granularity of rows in the export. Currently only 'Daily' is supported.
+     * The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
      * 
      */
     @Import(name="granularity")

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig {
     /**
-     * - The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+     * - The match status to assign to the web request if the request doesn&#39;t have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
      * 
      */
     private final String fallbackBehavior;
@@ -29,7 +29,7 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatem
     }
 
     /**
-     * - The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
+     * - The match status to assign to the web request if the request doesn&#39;t have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
      * 
     */
     public String fallbackBehavior() {

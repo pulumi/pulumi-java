@@ -15,7 +15,7 @@ import java.util.Objects;
 public final class GetApiProductResult {
     private final List<String> apiResources;
     /**
-     * Flag that specifies how API keys are approved to access the APIs defined by the API product. If set to `manual`, the consumer key is generated and returned in "pending" state. In this case, the API keys won't work until they have been explicitly approved. If set to `auto`, the consumer key is generated and returned in "approved" state and can be used immediately. **Note:** Typically, `auto` is used to provide access to free or trial API products that provide limited quota or capabilities.
+     * Flag that specifies how API keys are approved to access the APIs defined by the API product. If set to `manual`, the consumer key is generated and returned in &#34;pending&#34; state. In this case, the API keys won&#39;t work until they have been explicitly approved. If set to `auto`, the consumer key is generated and returned in &#34;approved&#34; state and can be used immediately. **Note:** Typically, `auto` is used to provide access to free or trial API products that provide limited quota or capabilities.
      * 
      */
     private final String approvalType;
@@ -130,7 +130,7 @@ public final class GetApiProductResult {
         return this.apiResources;
     }
     /**
-     * Flag that specifies how API keys are approved to access the APIs defined by the API product. If set to `manual`, the consumer key is generated and returned in "pending" state. In this case, the API keys won't work until they have been explicitly approved. If set to `auto`, the consumer key is generated and returned in "approved" state and can be used immediately. **Note:** Typically, `auto` is used to provide access to free or trial API products that provide limited quota or capabilities.
+     * Flag that specifies how API keys are approved to access the APIs defined by the API product. If set to `manual`, the consumer key is generated and returned in &#34;pending&#34; state. In this case, the API keys won&#39;t work until they have been explicitly approved. If set to `auto`, the consumer key is generated and returned in &#34;approved&#34; state and can be used immediately. **Note:** Typically, `auto` is used to provide access to free or trial API products that provide limited quota or capabilities.
      * 
     */
     public String approvalType() {

@@ -24,11 +24,11 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/storage/docs/authentication/managing-hmackeys)
  * 
- * > **Warning:** All arguments including the `secret` value will be stored in the raw
+ * &gt; **Warning:** All arguments including the `secret` value will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * On import, the `secret` value will not be retrieved.
  * 
- * > **Warning:** All arguments including `secret` will be stored in the raw
+ * &gt; **Warning:** All arguments including `secret` will be stored in the raw
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
@@ -97,14 +97,14 @@ public class HmacKey extends com.pulumi.resources.CustomResource {
         return this.secret;
     }
     /**
-     * The email address of the key's associated service account.
+     * The email address of the key&#39;s associated service account.
      * 
      */
     @Export(name="serviceAccountEmail", type=String.class, parameters={})
     private Output<String> serviceAccountEmail;
 
     /**
-     * @return The email address of the key's associated service account.
+     * @return The email address of the key&#39;s associated service account.
      * 
      */
     public Output<String> serviceAccountEmail() {
@@ -129,28 +129,28 @@ public class HmacKey extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * 'The creation time of the HMAC key in RFC 3339 format. '
+     * &#39;The creation time of the HMAC key in RFC 3339 format. &#39;
      * 
      */
     @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
-     * @return 'The creation time of the HMAC key in RFC 3339 format. '
+     * @return &#39;The creation time of the HMAC key in RFC 3339 format. &#39;
      * 
      */
     public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
-     * 'The last modification time of the HMAC key metadata in RFC 3339 format.'
+     * &#39;The last modification time of the HMAC key metadata in RFC 3339 format.&#39;
      * 
      */
     @Export(name="updated", type=String.class, parameters={})
     private Output<String> updated;
 
     /**
-     * @return 'The last modification time of the HMAC key metadata in RFC 3339 format.'
+     * @return &#39;The last modification time of the HMAC key metadata in RFC 3339 format.&#39;
      * 
      */
     public Output<String> updated() {

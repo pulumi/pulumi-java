@@ -29,7 +29,7 @@ public final class GetKubernetesRoleResult {
     private final String id;
     /**
      * Role type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
      */
     private final String kind;
@@ -118,7 +118,7 @@ public final class GetKubernetesRoleResult {
     }
     /**
      * Role type.
-     * Expected value is 'Kubernetes'.
+     * Expected value is &#39;Kubernetes&#39;.
      * 
     */
     public String kind() {

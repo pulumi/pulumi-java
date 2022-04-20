@@ -18,7 +18,7 @@ public final class TaskSetScale {
      */
     private final @Nullable TaskSetScaleUnit unit;
     /**
-     * The value, specified as a percent total of a service's desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+     * The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
      * 
      */
     private final @Nullable Double value;
@@ -39,7 +39,7 @@ public final class TaskSetScale {
         return Optional.ofNullable(this.unit);
     }
     /**
-     * The value, specified as a percent total of a service's desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
+     * The value, specified as a percent total of a service&#39;s desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
      * 
     */
     public Optional<Double> value() {

@@ -48,7 +48,7 @@ public final class FindingsFilterFindingCriteriaCriterion {
      */
     private final @Nullable String lte;
     /**
-     * The value for the property doesn't match (doesn't equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
+     * The value for the property doesn&#39;t match (doesn&#39;t equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
      */
     private final @Nullable List<String> neqs;
@@ -123,7 +123,7 @@ public final class FindingsFilterFindingCriteriaCriterion {
         return Optional.ofNullable(this.lte);
     }
     /**
-     * The value for the property doesn't match (doesn't equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
+     * The value for the property doesn&#39;t match (doesn&#39;t equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
     */
     public List<String> neqs() {

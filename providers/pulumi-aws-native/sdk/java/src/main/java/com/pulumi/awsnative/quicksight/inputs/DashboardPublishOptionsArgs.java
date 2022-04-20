@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Dashboard publish options.</p>
+ * &lt;p&gt;Dashboard publish options.&lt;/p&gt;
  * 
  */
 public final class DashboardPublishOptionsArgs extends com.pulumi.resources.ResourceArgs {

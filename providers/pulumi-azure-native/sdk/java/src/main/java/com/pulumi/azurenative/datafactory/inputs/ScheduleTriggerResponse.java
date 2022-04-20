@@ -80,7 +80,7 @@ public final class ScheduleTriggerResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Trigger type.
-     * Expected value is 'ScheduleTrigger'.
+     * Expected value is &#39;ScheduleTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

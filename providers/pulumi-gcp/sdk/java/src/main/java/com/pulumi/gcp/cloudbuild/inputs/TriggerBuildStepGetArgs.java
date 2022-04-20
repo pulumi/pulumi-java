@@ -19,7 +19,7 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
 
     /**
      * A list of arguments that will be presented to the step when it is started.
-     * If the image used to run the step's container has an entrypoint, the args
+     * If the image used to run the step&#39;s container has an entrypoint, the args
      * are used as arguments to that entrypoint. If the image does not define an
      * entrypoint, the first element in args is used as the entrypoint, and the
      * remainder will be used as arguments.
@@ -33,15 +33,15 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Working directory to use when running this step's container.
-     * If this value is a relative path, it is relative to the build's working
-     * directory. If this value is absolute, it may be outside the build's working
+     * Working directory to use when running this step&#39;s container.
+     * If this value is a relative path, it is relative to the build&#39;s working
+     * directory. If this value is absolute, it may be outside the build&#39;s working
      * directory, in which case the contents of the path may not be persisted
      * across build step executions, unless a `volume` for that path is specified.
      * If the build specifies a `RepoSource` with `dir` and a step with a
      * `dir`,
      * which specifies an absolute path, the `RepoSource` `dir` is ignored
-     * for the step's execution.
+     * for the step&#39;s execution.
      * 
      */
     @Import(name="dir")
@@ -52,9 +52,9 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Entrypoint to be used instead of the build step image's
+     * Entrypoint to be used instead of the build step image&#39;s
      * default entrypoint.
-     * If unset, the image's default entrypoint is used
+     * If unset, the image&#39;s default entrypoint is used
      * 
      */
     @Import(name="entrypoint")
@@ -68,7 +68,7 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * A list of global environment variable definitions that will exist for all build steps
      * in this build. If a variable is defined in both globally and in a build step,
      * the variable will use the build step value.
-     * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
+     * The elements are of the form &#34;KEY=VALUE&#34; for the environment variable &#34;KEY&#34; being given the value &#34;VALUE&#34;.
      * 
      */
     @Import(name="envs")
@@ -105,7 +105,7 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
 
     /**
      * A list of global environment variables, which are encrypted using a Cloud Key Management
-     * Service crypto key. These values must be specified in the build's Secret. These variables
+     * Service crypto key. These values must be specified in the build&#39;s Secret. These variables
      * will be available to all build steps in this build.
      * 
      */

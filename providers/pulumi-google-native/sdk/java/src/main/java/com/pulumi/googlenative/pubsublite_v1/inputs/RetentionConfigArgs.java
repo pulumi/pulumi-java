@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The settings for a topic's message retention.
+ * The settings for a topic&#39;s message retention.
  * 
  */
 public final class RetentionConfigArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class RetentionConfigArgs extends com.pulumi.resources.ResourceArgs
     public static final RetentionConfigArgs Empty = new RetentionConfigArgs();
 
     /**
-     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
+     * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic&#39;s partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
      * 
      */
     @Import(name="perPartitionBytes")

@@ -81,7 +81,7 @@ public final class QuickBooksLinkedServiceResponse {
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
      * Type of linked service.
-     * Expected value is 'QuickBooks'.
+     * Expected value is &#39;QuickBooks&#39;.
      * 
      */
     private final String type;
@@ -209,7 +209,7 @@ public final class QuickBooksLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'QuickBooks'.
+     * Expected value is &#39;QuickBooks&#39;.
      * 
     */
     public String type() {

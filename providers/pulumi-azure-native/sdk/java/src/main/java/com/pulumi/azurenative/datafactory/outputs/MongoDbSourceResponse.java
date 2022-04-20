@@ -44,7 +44,7 @@ public final class MongoDbSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'MongoDbSource'.
+     * Expected value is &#39;MongoDbSource&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class MongoDbSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'MongoDbSource'.
+     * Expected value is &#39;MongoDbSource&#39;.
      * 
     */
     public String type() {

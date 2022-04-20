@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DateResponse {
     /**
-     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
      * 
      */
     private final Integer day;
@@ -36,7 +36,7 @@ public final class DateResponse {
     }
 
     /**
-     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant.
      * 
     */
     public Integer day() {

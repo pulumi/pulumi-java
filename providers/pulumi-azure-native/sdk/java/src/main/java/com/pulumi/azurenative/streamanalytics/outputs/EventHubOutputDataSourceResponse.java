@@ -38,7 +38,7 @@ public final class EventHubOutputDataSourceResponse {
     private final @Nullable String sharedAccessPolicyName;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/EventHub'.
+     * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
      * 
      */
     private final String type;
@@ -96,7 +96,7 @@ public final class EventHubOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/EventHub'.
+     * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
      * 
     */
     public String type() {

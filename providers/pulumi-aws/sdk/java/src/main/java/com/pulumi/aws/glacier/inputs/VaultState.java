@@ -52,7 +52,7 @@ public final class VaultState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), and '.' (period).
+     * The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, &#39;_&#39; (underscore), &#39;-&#39; (hyphen), and &#39;.&#39; (period).
      * 
      */
     @Import(name="name")

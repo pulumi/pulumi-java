@@ -20,14 +20,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:pubsublite/v1:Subscription")
 public class Subscription extends com.pulumi.resources.CustomResource {
     /**
-     * The settings for this subscription's message delivery.
+     * The settings for this subscription&#39;s message delivery.
      * 
      */
     @Export(name="deliveryConfig", type=DeliveryConfigResponse.class, parameters={})
     private Output<DeliveryConfigResponse> deliveryConfig;
 
     /**
-     * @return The settings for this subscription's message delivery.
+     * @return The settings for this subscription&#39;s message delivery.
      * 
      */
     public Output<DeliveryConfigResponse> deliveryConfig() {

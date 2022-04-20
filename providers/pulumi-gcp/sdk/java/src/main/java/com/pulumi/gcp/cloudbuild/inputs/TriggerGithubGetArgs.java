@@ -32,7 +32,7 @@ public final class TriggerGithubGetArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Owner of the repository. For example: The owner for
-     * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
      */
     @Import(name="owner")

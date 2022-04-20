@@ -115,7 +115,7 @@ public final class DocumentDbCollectionDatasetResponse extends com.pulumi.resour
 
     /**
      * Type of dataset.
-     * Expected value is 'DocumentDbCollection'.
+     * Expected value is &#39;DocumentDbCollection&#39;.
      * 
      */
     @Import(name="type", required=true)

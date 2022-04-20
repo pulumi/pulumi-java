@@ -29,7 +29,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends com.p
     }
 
     /**
-     * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+     * Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode.
      * 
      */
     @Import(name="sourceFormat")

@@ -35,7 +35,7 @@ public final class LoadBalancerConfigurationResponse {
      */
     private final @Nullable String publicIpAddressResourceId;
     /**
-     * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
+     * List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
      * 
      */
     private final @Nullable List<String> sqlVirtualMachineInstances;
@@ -83,7 +83,7 @@ public final class LoadBalancerConfigurationResponse {
         return Optional.ofNullable(this.publicIpAddressResourceId);
     }
     /**
-     * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
+     * List of the SQL virtual machine instance resource id&#39;s that are enrolled into the availability group listener.
      * 
     */
     public List<String> sqlVirtualMachineInstances() {

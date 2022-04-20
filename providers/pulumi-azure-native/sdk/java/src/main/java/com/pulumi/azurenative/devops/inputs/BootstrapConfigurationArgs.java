@@ -21,7 +21,7 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
     public static final BootstrapConfigurationArgs Empty = new BootstrapConfigurationArgs();
 
     /**
-     * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
+     * Repository containing the source code for the pipeline. Currently only &#39;azurePipeline&#39; pipeline type supports this.
      * 
      */
     @Import(name="sourceRepository")

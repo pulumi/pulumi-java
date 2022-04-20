@@ -54,7 +54,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse extends com.pulu
 
     /**
      * backup protectionIntent type.
-     * Expected value is 'AzureWorkloadSQLAutoProtectionIntent'.
+     * Expected value is &#39;AzureWorkloadSQLAutoProtectionIntent&#39;.
      * 
      */
     @Import(name="protectionIntentItemType", required=true)

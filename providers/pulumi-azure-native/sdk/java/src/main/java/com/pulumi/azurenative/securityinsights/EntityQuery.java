@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:securityinsights:EntityQuery 07da3cc8-c8ad-4710-a44e-334cdcb7882b /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/entityQueries/07da3cc8-c8ad-4710-a44e-334cdcb7882b 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: ActivityCustomEntityQuery.
  * 
  */

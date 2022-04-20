@@ -66,7 +66,7 @@ public final class PostgreSqlConnectionInfoArgs extends com.pulumi.resources.Res
 
     /**
      * Type of connection info
-     * Expected value is 'PostgreSqlConnectionInfo'.
+     * Expected value is &#39;PostgreSqlConnectionInfo&#39;.
      * 
      */
     @Import(name="type", required=true)

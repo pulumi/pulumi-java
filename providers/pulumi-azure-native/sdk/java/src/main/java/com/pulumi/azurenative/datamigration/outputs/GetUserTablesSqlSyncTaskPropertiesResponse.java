@@ -45,7 +45,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'GetUserTables.AzureSqlDb.Sync'.
+     * Expected value is &#39;GetUserTables.AzureSqlDb.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class GetUserTablesSqlSyncTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'GetUserTables.AzureSqlDb.Sync'.
+     * Expected value is &#39;GetUserTables.AzureSqlDb.Sync&#39;.
      * 
     */
     public String taskType() {

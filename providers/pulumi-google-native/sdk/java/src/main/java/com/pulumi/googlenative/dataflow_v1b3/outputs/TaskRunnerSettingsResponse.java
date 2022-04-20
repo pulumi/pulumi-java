@@ -23,7 +23,7 @@ public final class TaskRunnerSettingsResponse {
      */
     private final String baseTaskDir;
     /**
-     * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+     * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
      * 
      */
     private final String baseUrl;
@@ -38,7 +38,7 @@ public final class TaskRunnerSettingsResponse {
      */
     private final Boolean continueOnException;
     /**
-     * The API version of endpoint, e.g. "v1b3"
+     * The API version of endpoint, e.g. &#34;v1b3&#34;
      * 
      */
     private final String dataflowApiVersion;
@@ -83,12 +83,12 @@ public final class TaskRunnerSettingsResponse {
      */
     private final String streamingWorkerMainClass;
     /**
-     * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".
+     * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;wheel&#34;.
      * 
      */
     private final String taskGroup;
     /**
-     * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".
+     * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;root&#34;.
      * 
      */
     private final String taskUser;
@@ -165,7 +165,7 @@ public final class TaskRunnerSettingsResponse {
         return this.baseTaskDir;
     }
     /**
-     * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+     * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, &#34;Relative Uniform Resource Locators&#34;. If not specified, the default value is &#34;http://www.googleapis.com/&#34;
      * 
     */
     public String baseUrl() {
@@ -186,7 +186,7 @@ public final class TaskRunnerSettingsResponse {
         return this.continueOnException;
     }
     /**
-     * The API version of endpoint, e.g. "v1b3"
+     * The API version of endpoint, e.g. &#34;v1b3&#34;
      * 
     */
     public String dataflowApiVersion() {
@@ -249,14 +249,14 @@ public final class TaskRunnerSettingsResponse {
         return this.streamingWorkerMainClass;
     }
     /**
-     * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".
+     * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;wheel&#34;.
      * 
     */
     public String taskGroup() {
         return this.taskGroup;
     }
     /**
-     * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".
+     * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. &#34;root&#34;.
      * 
     */
     public String taskUser() {

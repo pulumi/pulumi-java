@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class IssuingOptionsResponse {
     /**
-     * When true, includes a URL to the issuing CA certificate in the "authority information access" X.509 extension.
+     * When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
      * 
      */
     private final Boolean includeCaCertUrl;
@@ -29,7 +29,7 @@ public final class IssuingOptionsResponse {
     }
 
     /**
-     * When true, includes a URL to the issuing CA certificate in the "authority information access" X.509 extension.
+     * When true, includes a URL to the issuing CA certificate in the &#34;authority information access&#34; X.509 extension.
      * 
     */
     public Boolean includeCaCertUrl() {

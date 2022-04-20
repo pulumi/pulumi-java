@@ -147,14 +147,14 @@ public class KustoPool extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * The reason for the Kusto Pool's current state.
+     * The reason for the Kusto Pool&#39;s current state.
      * 
      */
     @Export(name="stateReason", type=String.class, parameters={})
     private Output<String> stateReason;
 
     /**
-     * @return The reason for the Kusto Pool's current state.
+     * @return The reason for the Kusto Pool&#39;s current state.
      * 
      */
     public Output<String> stateReason() {
@@ -189,14 +189,14 @@ public class KustoPool extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

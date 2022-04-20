@@ -18,7 +18,7 @@ public final class SecurityGroupState extends com.pulumi.resources.ResourceArgs 
     public static final SecurityGroupState Empty = new SecurityGroupState();
 
     /**
-     * The description of the Redshift security group. Defaults to "Managed by Pulumi".
+     * The description of the Redshift security group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

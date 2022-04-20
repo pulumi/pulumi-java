@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLogProfileResult {
     /**
-     * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
+     * the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
      * 
      */
     private final List<String> categories;
@@ -30,7 +30,7 @@ public final class GetLogProfileResult {
      */
     private final String location;
     /**
-     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
+     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
      * 
      */
     private final List<String> locations;
@@ -45,7 +45,7 @@ public final class GetLogProfileResult {
      */
     private final RetentionPolicyResponse retentionPolicy;
     /**
-     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
+     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
      * 
      */
     private final @Nullable String serviceBusRuleId;
@@ -90,7 +90,7 @@ public final class GetLogProfileResult {
     }
 
     /**
-     * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
+     * the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
      * 
     */
     public List<String> categories() {
@@ -111,7 +111,7 @@ public final class GetLogProfileResult {
         return this.location;
     }
     /**
-     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
+     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
      * 
     */
     public List<String> locations() {
@@ -132,7 +132,7 @@ public final class GetLogProfileResult {
         return this.retentionPolicy;
     }
     /**
-     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
+     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
      * 
     */
     public Optional<String> serviceBusRuleId() {

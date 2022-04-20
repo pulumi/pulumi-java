@@ -84,17 +84,17 @@ public final class ContainerCodePackagePropertiesResponse {
      */
     private final ResourceRequirementsResponse resources;
     /**
-     * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
+     * The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
      * 
      */
     private final @Nullable List<SettingResponse> settings;
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
+     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
      * 
      */
     private final @Nullable List<VolumeReferenceResponse> volumeRefs;
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
+     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
      * 
      */
     private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
@@ -218,21 +218,21 @@ public final class ContainerCodePackagePropertiesResponse {
         return this.resources;
     }
     /**
-     * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
+     * The settings to set in this container. The setting file path can be fetched from environment variable &#34;Fabric_SettingPath&#34;. The path for Windows container is &#34;C:\\secrets&#34;. The path for Linux container is &#34;/var/secrets&#34;.
      * 
     */
     public List<SettingResponse> settings() {
         return this.settings == null ? List.of() : this.settings;
     }
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
+     * Volumes to be attached to the container. The lifetime of these volumes is independent of the application&#39;s lifetime.
      * 
     */
     public List<VolumeReferenceResponse> volumeRefs() {
         return this.volumeRefs == null ? List.of() : this.volumeRefs;
     }
     /**
-     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
+     * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application&#39;s lifetime.
      * 
     */
     public List<ApplicationScopedVolumeResponse> volumes() {

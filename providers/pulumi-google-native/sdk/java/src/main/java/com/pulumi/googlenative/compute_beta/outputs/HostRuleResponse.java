@@ -21,7 +21,7 @@ public final class HostRuleResponse {
      */
     private final List<String> hosts;
     /**
-     * The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
+     * The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL&#39;s host portion.
      * 
      */
     private final String pathMatcher;
@@ -51,7 +51,7 @@ public final class HostRuleResponse {
         return this.hosts;
     }
     /**
-     * The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
+     * The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL&#39;s host portion.
      * 
     */
     public String pathMatcher() {

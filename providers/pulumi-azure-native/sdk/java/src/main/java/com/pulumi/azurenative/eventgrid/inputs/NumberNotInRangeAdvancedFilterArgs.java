@@ -34,7 +34,7 @@ public final class NumberNotInRangeAdvancedFilterArgs extends com.pulumi.resourc
 
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberNotInRange'.
+     * Expected value is &#39;NumberNotInRange&#39;.
      * 
      */
     @Import(name="operatorType", required=true)

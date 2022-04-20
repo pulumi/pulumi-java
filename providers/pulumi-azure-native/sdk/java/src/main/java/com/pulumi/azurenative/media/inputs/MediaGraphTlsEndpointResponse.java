@@ -35,7 +35,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
      * 
      */
     @Import(name="odataType", required=true)
@@ -46,7 +46,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
     }
 
     /**
-     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
+     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
      * 
      */
     @Import(name="trustedCertificates")

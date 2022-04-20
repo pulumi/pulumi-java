@@ -99,7 +99,7 @@ public final class AzureMariaDBSourceArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Copy source type.
-     * Expected value is 'AzureMariaDBSource'.
+     * Expected value is &#39;AzureMariaDBSource&#39;.
      * 
      */
     @Import(name="type", required=true)

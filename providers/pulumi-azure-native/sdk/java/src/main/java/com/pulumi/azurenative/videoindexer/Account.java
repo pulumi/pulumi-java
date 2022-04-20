@@ -36,28 +36,28 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:videoindexer:Account")
 public class Account extends com.pulumi.resources.CustomResource {
     /**
-     * The account's data-plane ID
+     * The account&#39;s data-plane ID
      * 
      */
     @Export(name="accountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> accountId;
 
     /**
-     * @return The account's data-plane ID
+     * @return The account&#39;s data-plane ID
      * 
      */
     public Output</* @Nullable */ String> accountId() {
         return this.accountId;
     }
     /**
-     * The account's name
+     * The account&#39;s name
      * 
      */
     @Export(name="accountName", type=String.class, parameters={})
     private Output<String> accountName;
 
     /**
-     * @return The account's name
+     * @return The account&#39;s name
      * 
      */
     public Output<String> accountName() {
@@ -162,28 +162,28 @@ public class Account extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The account's tenant id
+     * The account&#39;s tenant id
      * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
-     * @return The account's tenant id
+     * @return The account&#39;s tenant id
      * 
      */
     public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

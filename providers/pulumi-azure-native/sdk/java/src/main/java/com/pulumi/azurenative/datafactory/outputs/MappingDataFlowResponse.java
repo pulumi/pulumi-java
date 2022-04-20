@@ -59,7 +59,7 @@ public final class MappingDataFlowResponse {
     private final @Nullable List<TransformationResponse> transformations;
     /**
      * Type of data flow.
-     * Expected value is 'MappingDataFlow'.
+     * Expected value is &#39;MappingDataFlow&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class MappingDataFlowResponse {
     }
     /**
      * Type of data flow.
-     * Expected value is 'MappingDataFlow'.
+     * Expected value is &#39;MappingDataFlow&#39;.
      * 
     */
     public String type() {

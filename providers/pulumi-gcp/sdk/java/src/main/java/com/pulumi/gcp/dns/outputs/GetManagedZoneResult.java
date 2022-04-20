@@ -37,7 +37,7 @@ public final class GetManagedZoneResult {
     private final List<String> nameServers;
     private final @Nullable String project;
     /**
-     * The zone's visibility: public zones are exposed to the Internet,
+     * The zone&#39;s visibility: public zones are exposed to the Internet,
      * while private zones are visible only to Virtual Private Cloud resources.
      * 
      */
@@ -98,7 +98,7 @@ public final class GetManagedZoneResult {
         return Optional.ofNullable(this.project);
     }
     /**
-     * The zone's visibility: public zones are exposed to the Internet,
+     * The zone&#39;s visibility: public zones are exposed to the Internet,
      * while private zones are visible only to Virtual Private Cloud resources.
      * 
     */

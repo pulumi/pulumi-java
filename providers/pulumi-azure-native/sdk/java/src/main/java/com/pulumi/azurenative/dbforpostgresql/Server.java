@@ -38,14 +38,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:dbforpostgresql:Server")
 public class Server extends com.pulumi.resources.CustomResource {
     /**
-     * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+     * The administrator&#39;s login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
     @Export(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
     /**
-     * @return The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+     * @return The administrator&#39;s login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
     public Output</* @Nullable */ String> administratorLogin() {
@@ -192,14 +192,14 @@ public class Server extends com.pulumi.resources.CustomResource {
         return this.privateEndpointConnections;
     }
     /**
-     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
-     * @return Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     * @return Whether or not public network access is allowed for this server. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     public Output</* @Nullable */ String> publicNetworkAccess() {
@@ -290,14 +290,14 @@ public class Server extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

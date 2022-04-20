@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Represents an expression text. Example: title: "User account presence" description: "Determines whether the request has a user account" expression: "size(request.user) > 0"
+ * Represents an expression text. Example: title: &#34;User account presence&#34; description: &#34;Determines whether the request has a user account&#34; expression: &#34;size(request.user) &gt; 0&#34;
  * 
  */
 public final class ExprResponse extends com.pulumi.resources.InvokeArgs {

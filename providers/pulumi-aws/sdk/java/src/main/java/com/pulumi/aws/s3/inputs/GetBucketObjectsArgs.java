@@ -39,7 +39,7 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Encodes keys using this method (Default: none; besides none, only "url" can be used)
+     * Encodes keys using this method (Default: none; besides none, only &#34;url&#34; can be used)
      * 
      */
     @Import(name="encodingType")

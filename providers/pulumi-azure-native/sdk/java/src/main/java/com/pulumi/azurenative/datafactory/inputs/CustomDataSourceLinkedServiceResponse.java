@@ -70,7 +70,7 @@ public final class CustomDataSourceLinkedServiceResponse extends com.pulumi.reso
 
     /**
      * Type of linked service.
-     * Expected value is 'CustomDataSource'.
+     * Expected value is &#39;CustomDataSource&#39;.
      * 
      */
     @Import(name="type", required=true)

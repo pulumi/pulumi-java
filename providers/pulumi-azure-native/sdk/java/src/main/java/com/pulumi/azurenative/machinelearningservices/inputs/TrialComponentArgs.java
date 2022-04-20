@@ -38,7 +38,7 @@ public final class TrialComponentArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The command to execute on startup of the job. eg. "python train.py"
+     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     @Import(name="command", required=true)

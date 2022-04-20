@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 /**
  * Provides additional routes for AWS Client VPN endpoints. For more information on usage, please see the
- * [AWS Client VPN Administrator's Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
+ * [AWS Client VPN Administrator&#39;s Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
  * 
  * ## Example Usage
  * 

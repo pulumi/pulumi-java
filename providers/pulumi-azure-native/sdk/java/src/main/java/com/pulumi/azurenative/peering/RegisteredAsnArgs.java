@@ -17,7 +17,7 @@ public final class RegisteredAsnArgs extends com.pulumi.resources.ResourceArgs {
     public static final RegisteredAsnArgs Empty = new RegisteredAsnArgs();
 
     /**
-     * The customer's ASN from which traffic originates.
+     * The customer&#39;s ASN from which traffic originates.
      * 
      */
     @Import(name="asn")

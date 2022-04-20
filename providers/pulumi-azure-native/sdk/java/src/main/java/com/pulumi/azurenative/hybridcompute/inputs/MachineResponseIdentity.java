@@ -15,7 +15,7 @@ public final class MachineResponseIdentity extends com.pulumi.resources.InvokeAr
     public static final MachineResponseIdentity Empty = new MachineResponseIdentity();
 
     /**
-     * The identity's principal id.
+     * The identity&#39;s principal id.
      * 
      */
     @Import(name="principalId", required=true)
@@ -26,7 +26,7 @@ public final class MachineResponseIdentity extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The identity's tenant id.
+     * The identity&#39;s tenant id.
      * 
      */
     @Import(name="tenantId", required=true)

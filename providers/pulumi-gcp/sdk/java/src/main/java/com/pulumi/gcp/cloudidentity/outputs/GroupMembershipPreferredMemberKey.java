@@ -16,7 +16,7 @@ public final class GroupMembershipPreferredMemberKey {
      * For Google-managed entities, the id must be the email address of an existing
      * group or user.
      * For external-identity-mapped entities, the id must be a string conforming
-     * to the Identity Source's requirements.
+     * to the Identity Source&#39;s requirements.
      * Must be unique within a namespace.
      * 
      */
@@ -45,7 +45,7 @@ public final class GroupMembershipPreferredMemberKey {
      * For Google-managed entities, the id must be the email address of an existing
      * group or user.
      * For external-identity-mapped entities, the id must be a string conforming
-     * to the Identity Source's requirements.
+     * to the Identity Source&#39;s requirements.
      * Must be unique within a namespace.
      * 
     */

@@ -50,13 +50,13 @@ public final class SqlServerStoredProcedureActivityResponse {
      */
     private final Object storedProcedureName;
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
      */
     private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
     /**
      * Type of activity.
-     * Expected value is 'SqlServerStoredProcedure'.
+     * Expected value is &#39;SqlServerStoredProcedure&#39;.
      * 
      */
     private final String type;
@@ -131,7 +131,7 @@ public final class SqlServerStoredProcedureActivityResponse {
         return this.storedProcedureName;
     }
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
     */
     public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
@@ -139,7 +139,7 @@ public final class SqlServerStoredProcedureActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'SqlServerStoredProcedure'.
+     * Expected value is &#39;SqlServerStoredProcedure&#39;.
      * 
     */
     public String type() {

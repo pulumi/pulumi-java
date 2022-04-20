@@ -77,7 +77,7 @@ public final class HDInsightLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'HDInsight'.
+     * Expected value is &#39;HDInsight&#39;.
      * 
      */
     private final String type;
@@ -196,7 +196,7 @@ public final class HDInsightLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'HDInsight'.
+     * Expected value is &#39;HDInsight&#39;.
      * 
     */
     public String type() {

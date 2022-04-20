@@ -40,7 +40,7 @@ public final class CustomLayerEbsVolumeGetArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The path to mount the EBS volume on the layer's instances.
+     * The path to mount the EBS volume on the layer&#39;s instances.
      * 
      */
     @Import(name="mountPoint", required=true)

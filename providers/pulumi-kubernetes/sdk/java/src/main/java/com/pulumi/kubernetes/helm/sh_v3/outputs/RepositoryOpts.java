@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RepositoryOpts {
     /**
-     * The Repository's CA File
+     * The Repository&#39;s CA File
      * 
      */
     private final @Nullable String caFile;
     /**
-     * The repository's cert file
+     * The repository&#39;s cert file
      * 
      */
     private final @Nullable String certFile;
     /**
-     * The repository's cert key file
+     * The repository&#39;s cert key file
      * 
      */
     private final @Nullable String keyFile;
@@ -59,21 +59,21 @@ public final class RepositoryOpts {
     }
 
     /**
-     * The Repository's CA File
+     * The Repository&#39;s CA File
      * 
     */
     public Optional<String> caFile() {
         return Optional.ofNullable(this.caFile);
     }
     /**
-     * The repository's cert file
+     * The repository&#39;s cert file
      * 
     */
     public Optional<String> certFile() {
         return Optional.ofNullable(this.certFile);
     }
     /**
-     * The repository's cert key file
+     * The repository&#39;s cert key file
      * 
     */
     public Optional<String> keyFile() {

@@ -54,7 +54,7 @@ public final class CdnFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDCustomDomain", TypeShape.of(GetAFDCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format <endpointname>.azureedge.net.
+     * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The AzureFrontDoor endpoint uses the URL format &lt;endpointname&gt;.azureedge.net.
      * API Version: 2020-09-01.
      * 
      */
@@ -98,7 +98,7 @@ public final class CdnFunctions {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getCustomDomain", TypeShape.of(GetCustomDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The CDN endpoint uses the URL format <endpointname>.azureedge.net.
+     * CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The CDN endpoint uses the URL format &lt;endpointname&gt;.azureedge.net.
      * API Version: 2020-09-01.
      * 
      */

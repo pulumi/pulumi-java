@@ -82,14 +82,14 @@ public class Namespace extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * The resource name for the namespace in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*'.
+     * The resource name for the namespace in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name for the namespace in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*'.
+     * @return The resource name for the namespace in the format &#39;projects/*{@literal /}locations/*{@literal /}namespaces/*&#39;.
      * 
      */
     public Output<String> name() {

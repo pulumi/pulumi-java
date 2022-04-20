@@ -20,7 +20,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final ModuleArgs Empty = new ModuleArgs();
 
     /**
-     * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
+     * Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
      * 
      */
     @Import(name="args")
@@ -31,7 +31,7 @@ public final class ModuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
+     * The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
      * 
      */
     @Import(name="name", required=true)

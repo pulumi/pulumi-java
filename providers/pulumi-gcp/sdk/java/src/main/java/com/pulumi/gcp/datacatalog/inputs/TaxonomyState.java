@@ -57,7 +57,7 @@ public final class TaxonomyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Resource name of this taxonomy, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}".
+     * Resource name of this taxonomy, whose format is: &#34;projects/{project}/locations/{region}/taxonomies/{taxonomy}&#34;.
      * 
      */
     @Import(name="name")

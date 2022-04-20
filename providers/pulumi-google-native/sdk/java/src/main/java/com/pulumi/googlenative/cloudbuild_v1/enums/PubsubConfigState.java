@@ -35,7 +35,7 @@ import java.util.StringJoiner;
          */
         TopicDeleted("TOPIC_DELETED"),
         /**
-         * Some of the subscription's field are misconfigured.
+         * Some of the subscription&#39;s field are misconfigured.
          * 
          */
         SubscriptionMisconfigured("SUBSCRIPTION_MISCONFIGURED");

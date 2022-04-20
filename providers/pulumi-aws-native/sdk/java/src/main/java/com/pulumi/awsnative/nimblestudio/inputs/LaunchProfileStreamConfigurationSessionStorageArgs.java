@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The configuration for a streaming session’s upload storage.</p>
+ * &lt;p&gt;The configuration for a streaming session’s upload storage.&lt;/p&gt;
  * 
  */
 public final class LaunchProfileStreamConfigurationSessionStorageArgs extends com.pulumi.resources.ResourceArgs {
@@ -22,8 +22,8 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends co
     public static final LaunchProfileStreamConfigurationSessionStorageArgs Empty = new LaunchProfileStreamConfigurationSessionStorageArgs();
 
     /**
-     * <p>Allows artists to upload files to their workstations. The only valid option is
-     *                 <code>UPLOAD</code>.</p>
+     * &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+     *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
      * 
      */
     @Import(name="mode")

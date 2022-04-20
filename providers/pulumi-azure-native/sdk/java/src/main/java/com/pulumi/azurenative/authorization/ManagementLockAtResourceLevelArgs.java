@@ -20,7 +20,7 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     public static final ManagementLockAtResourceLevelArgs Empty = new ManagementLockAtResourceLevelArgs();
 
     /**
-     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
+     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
      * 
      */
     @Import(name="level", required=true)
@@ -31,7 +31,7 @@ public final class ManagementLockAtResourceLevelArgs extends com.pulumi.resource
     }
 
     /**
-     * The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.
+     * The name of lock. The lock name can be a maximum of 260 characters. It cannot contain &lt;, &gt; %, &amp;, :, \, ?, /, or any control characters.
      * 
      */
     @Import(name="lockName")

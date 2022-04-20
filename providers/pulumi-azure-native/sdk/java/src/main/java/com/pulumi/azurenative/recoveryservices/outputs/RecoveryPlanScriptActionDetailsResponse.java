@@ -18,7 +18,7 @@ public final class RecoveryPlanScriptActionDetailsResponse {
     private final String fabricLocation;
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is 'ScriptActionDetails'.
+     * Expected value is &#39;ScriptActionDetails&#39;.
      * 
      */
     private final String instanceType;
@@ -54,7 +54,7 @@ public final class RecoveryPlanScriptActionDetailsResponse {
     }
     /**
      * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is 'ScriptActionDetails'.
+     * Expected value is &#39;ScriptActionDetails&#39;.
      * 
     */
     public String instanceType() {

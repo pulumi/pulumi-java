@@ -17,9 +17,9 @@ import javax.annotation.Nullable;
 /**
  * Manages S3 account-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html).
  * 
- * > **NOTE:** Each AWS account may only have one S3 Public Access Block configuration. Multiple configurations of the resource against the same AWS account will cause a perpetual difference.
+ * &gt; **NOTE:** Each AWS account may only have one S3 Public Access Block configuration. Multiple configurations of the resource against the same AWS account will cause a perpetual difference.
  * 
- * > Advanced usage: To use a custom API endpoint for this resource, use the `s3control` endpoint provider configuration, not the `s3` endpoint provider configuration.
+ * &gt; Advanced usage: To use a custom API endpoint for this resource, use the `s3control` endpoint provider configuration, not the `s3` endpoint provider configuration.
  * 
  * ## Example Usage
  * 
@@ -83,7 +83,7 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
         return this.blockPublicPolicy;
     }
     /**
-     * Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
+     * Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */
@@ -91,7 +91,7 @@ public class AccountPublicAccessBlock extends com.pulumi.resources.CustomResourc
     private Output</* @Nullable */ Boolean> ignorePublicAcls;
 
     /**
-     * @return Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
+     * @return Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn&#39;t prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */

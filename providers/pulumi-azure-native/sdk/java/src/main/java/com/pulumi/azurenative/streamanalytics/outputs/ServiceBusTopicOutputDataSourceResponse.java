@@ -39,7 +39,7 @@ public final class ServiceBusTopicOutputDataSourceResponse {
     private final @Nullable String topicName;
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/Topic'.
+     * Expected value is &#39;Microsoft.ServiceBus/Topic&#39;.
      * 
      */
     private final String type;
@@ -97,7 +97,7 @@ public final class ServiceBusTopicOutputDataSourceResponse {
     }
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/Topic'.
+     * Expected value is &#39;Microsoft.ServiceBus/Topic&#39;.
      * 
     */
     public String type() {

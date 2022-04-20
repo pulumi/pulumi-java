@@ -46,14 +46,14 @@ public class RouteFilterRule extends com.pulumi.resources.CustomResource {
         return this.access;
     }
     /**
-     * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     * The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
      * 
      */
     @Export(name="communities", type=List.class, parameters={String.class})
     private Output<List<String>> communities;
 
     /**
-     * @return The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     * @return The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
      * 
      */
     public Output<List<String>> communities() {

@@ -40,7 +40,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The ID of object replication policy or 'default' if the policy ID is unknown.
+     * The ID of object replication policy or &#39;default&#39; if the policy ID is unknown.
      * 
      */
     @Import(name="objectReplicationPolicyId")
@@ -51,7 +51,7 @@ public final class ObjectReplicationPolicyArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The name of the resource group within the user's subscription. The name is case insensitive.
+     * The name of the resource group within the user&#39;s subscription. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)

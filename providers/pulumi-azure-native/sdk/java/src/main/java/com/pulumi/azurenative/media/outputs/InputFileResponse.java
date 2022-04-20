@@ -31,7 +31,7 @@ public final class InputFileResponse {
     private final @Nullable List<Object> includedTracks;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.InputFile'.
+     * Expected value is &#39;#Microsoft.Media.InputFile&#39;.
      * 
      */
     private final String odataType;
@@ -62,7 +62,7 @@ public final class InputFileResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.InputFile'.
+     * Expected value is &#39;#Microsoft.Media.InputFile&#39;.
      * 
     */
     public String odataType() {

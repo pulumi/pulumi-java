@@ -16,7 +16,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
      */
     private final String sampler;
     /**
-     * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.
+     * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
      * 
      */
     private final Double samplingRate;
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
         return this.sampler;
     }
     /**
-     * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.
+     * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are &gt; 0 and &lt;= 0.5.
      * 
     */
     public Double samplingRate() {

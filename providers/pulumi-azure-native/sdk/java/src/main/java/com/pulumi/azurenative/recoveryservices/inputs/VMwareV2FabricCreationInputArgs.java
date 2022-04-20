@@ -21,7 +21,7 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
 
     /**
      * Gets the class type.
-     * Expected value is 'VMwareV2'.
+     * Expected value is &#39;VMwareV2&#39;.
      * 
      */
     @Import(name="instanceType")

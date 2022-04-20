@@ -22,7 +22,7 @@ public final class ServiceTemplateMetadata {
      * or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
      * Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
      * - `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
-     *   for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
+     *   for the Service. For example, `&#34;run.googleapis.com/ingress&#34; = &#34;all&#34;`.
      * 
      */
     private final @Nullable Map<String,String> annotations;
@@ -41,7 +41,7 @@ public final class ServiceTemplateMetadata {
      */
     private final @Nullable Map<String,String> labels;
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     private final @Nullable String name;
@@ -107,7 +107,7 @@ public final class ServiceTemplateMetadata {
      * or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
      * Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
      * - `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
-     *   for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
+     *   for the Service. For example, `&#34;run.googleapis.com/ingress&#34; = &#34;all&#34;`.
      * 
     */
     public Map<String,String> annotations() {
@@ -132,7 +132,7 @@ public final class ServiceTemplateMetadata {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
     */
     public Optional<String> name() {

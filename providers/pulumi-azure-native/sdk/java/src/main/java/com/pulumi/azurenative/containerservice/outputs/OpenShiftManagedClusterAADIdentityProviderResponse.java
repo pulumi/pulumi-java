@@ -23,7 +23,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
     private final @Nullable String customerAdminGroupId;
     /**
      * The kind of the provider.
-     * Expected value is 'AADIdentityProvider'.
+     * Expected value is &#39;AADIdentityProvider&#39;.
      * 
      */
     private final String kind;
@@ -68,7 +68,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
     }
     /**
      * The kind of the provider.
-     * Expected value is 'AADIdentityProvider'.
+     * Expected value is &#39;AADIdentityProvider&#39;.
      * 
     */
     public String kind() {

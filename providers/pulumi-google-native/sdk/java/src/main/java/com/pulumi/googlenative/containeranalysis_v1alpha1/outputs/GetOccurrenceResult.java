@@ -81,12 +81,12 @@ public final class GetOccurrenceResult {
      */
     private final String kind;
     /**
-     * The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+     * The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
      * 
      */
     private final String name;
     /**
-     * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
+     * An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
      */
     private final String noteName;
@@ -269,14 +269,14 @@ public final class GetOccurrenceResult {
         return this.kind;
     }
     /**
-     * The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+     * The name of the `Occurrence` in the form &#34;projects/{project_id}/occurrences/{OCCURRENCE_ID}&#34;
      * 
     */
     public String name() {
         return this.name;
     }
     /**
-     * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
+     * An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
     */
     public String noteName() {

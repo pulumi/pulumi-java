@@ -18,7 +18,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * A Membership defines a relationship between a Group and an entity belonging to that Group, referred to as a "member".
+ * A Membership defines a relationship between a Group and an entity belonging to that Group, referred to as a &#34;member&#34;.
  * 
  * To get more information about GroupMembership, see:
  * 
@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/identity/docs/how-to/memberships-google-groups)
  * 
- * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * &gt; **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
  * you must specify a `billing_project` and set `user_project_override` to true
  * in the provider configuration. Otherwise the Cloud Identity API will return a 403 error.
  * Your account must have the `serviceusage.services.use` permission on the

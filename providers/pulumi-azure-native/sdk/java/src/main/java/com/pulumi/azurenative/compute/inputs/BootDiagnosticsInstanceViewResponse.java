@@ -18,7 +18,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     public static final BootDiagnosticsInstanceViewResponse Empty = new BootDiagnosticsInstanceViewResponse();
 
     /**
-     * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * The console screenshot blob URI. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
      */
     @Import(name="consoleScreenshotBlobUri", required=true)
@@ -29,7 +29,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     }
 
     /**
-     * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * The serial console log blob Uri. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
      */
     @Import(name="serialConsoleLogBlobUri", required=true)
@@ -40,7 +40,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     }
 
     /**
-     * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
+     * The boot diagnostics status information for the VM. &lt;br&gt;&lt;br&gt; NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
      * 
      */
     @Import(name="status", required=true)

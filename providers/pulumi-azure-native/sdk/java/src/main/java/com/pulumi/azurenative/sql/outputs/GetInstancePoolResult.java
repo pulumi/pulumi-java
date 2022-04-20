@@ -20,7 +20,7 @@ public final class GetInstancePoolResult {
      */
     private final String id;
     /**
-     * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
+     * The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
      * 
      */
     private final String licenseType;
@@ -90,7 +90,7 @@ public final class GetInstancePoolResult {
         return this.id;
     }
     /**
-     * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
+     * The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
      * 
     */
     public String licenseType() {

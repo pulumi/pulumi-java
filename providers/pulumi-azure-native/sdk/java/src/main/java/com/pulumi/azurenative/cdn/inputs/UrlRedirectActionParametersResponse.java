@@ -52,7 +52,7 @@ public final class UrlRedirectActionParametersResponse extends com.pulumi.resour
     }
 
     /**
-     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
+     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in &lt;key&gt;=&lt;value&gt; format. ? and &amp; will be added automatically so do not include them.
      * 
      */
     @Import(name="customQueryString")

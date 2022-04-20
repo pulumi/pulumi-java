@@ -43,7 +43,7 @@ public final class PatchDeploymentInstanceFilterArgs extends com.pulumi.resource
 
     /**
      * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
-     * VMs when targeting configs, for example prefix="prod-".
+     * VMs when targeting configs, for example prefix=&#34;prod-&#34;.
      * 
      */
     @Import(name="instanceNamePrefixes")

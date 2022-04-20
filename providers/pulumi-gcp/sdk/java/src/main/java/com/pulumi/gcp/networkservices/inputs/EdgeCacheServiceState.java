@@ -55,7 +55,7 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
 
     /**
      * URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
-     * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
+     * Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService.
      * 
      */
     @Import(name="edgeSslCertificates")
@@ -160,7 +160,7 @@ public final class EdgeCacheServiceState extends com.pulumi.resources.ResourceAr
 
     /**
      * URL of the SslPolicy resource that will be associated with the EdgeCacheService.
-     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
+     * If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy.
      * 
      */
     @Import(name="sslPolicy")

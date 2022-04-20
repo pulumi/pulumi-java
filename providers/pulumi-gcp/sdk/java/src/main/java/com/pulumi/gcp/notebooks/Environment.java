@@ -135,7 +135,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
     }
     /**
      * Path to a Bash script that automatically runs after a notebook instance fully boots up.
-     * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
+     * The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34;
      * 
      */
     @Export(name="postStartupScript", type=String.class, parameters={})
@@ -143,7 +143,7 @@ public class Environment extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Path to a Bash script that automatically runs after a notebook instance fully boots up.
-     * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
+     * The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34;
      * 
      */
     public Output</* @Nullable */ String> postStartupScript() {

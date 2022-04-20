@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>Ad hoc (one-time) filtering option.</p>
+ * &lt;p&gt;Ad hoc (one-time) filtering option.&lt;/p&gt;
  * 
  */
 public final class DashboardAdHocFilteringOptionArgs extends com.pulumi.resources.ResourceArgs {

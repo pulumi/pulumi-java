@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
 /**
  * A Cloud AI Platform Notebook instance.
  * 
- * > **Note:** Due to limitations of the Notebooks Instance API, many fields
+ * &gt; **Note:** Due to limitations of the Notebooks Instance API, many fields
  * in this resource do not properly detect drift. These fields will also not
  * appear in state once imported.
  * 
@@ -142,7 +142,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored.
-     * If not specified, we'll automatically choose from official GPU drivers.
+     * If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     @Export(name="customGpuDriverPath", type=String.class, parameters={})
@@ -150,7 +150,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Specify a custom Cloud Storage path where the GPU driver is stored.
-     * If not specified, we'll automatically choose from official GPU drivers.
+     * If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
     public Output</* @Nullable */ String> customGpuDriverPath() {
@@ -211,7 +211,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * Whether the end user authorizes Google Cloud to install GPU driver
      * on this instance. If this field is empty or set to false, the GPU driver
-     * won't be installed. Only applicable to instances with GPUs.
+     * won&#39;t be installed. Only applicable to instances with GPUs.
      * 
      */
     @Export(name="installGpuDriver", type=Boolean.class, parameters={})
@@ -220,7 +220,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     /**
      * @return Whether the end user authorizes Google Cloud to install GPU driver
      * on this instance. If this field is empty or set to false, the GPU driver
-     * won't be installed. Only applicable to instances with GPUs.
+     * won&#39;t be installed. Only applicable to instances with GPUs.
      * 
      */
     public Output</* @Nullable */ Boolean> installGpuDriver() {
@@ -231,7 +231,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Format: alias@example.com.
      * Currently supports one owner only.
      * If not specified, all of the service account users of
-     * your VM instance's service account can use the instance.
+     * your VM instance&#39;s service account can use the instance.
      * 
      */
     @Export(name="instanceOwners", type=List.class, parameters={String.class})
@@ -242,7 +242,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Format: alias@example.com.
      * Currently supports one owner only.
      * If not specified, all of the service account users of
-     * your VM instance's service account can use the instance.
+     * your VM instance&#39;s service account can use the instance.
      * 
      */
     public Output</* @Nullable */ List<String>> instanceOwners() {
@@ -266,7 +266,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Labels to apply to this instance. These can be later modified by the setLabels method.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
@@ -274,7 +274,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Labels to apply to this instance. These can be later modified by the setLabels method.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     public Output<Map<String,String>> labels() {
@@ -310,7 +310,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Custom metadata to apply to this instance.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
@@ -318,7 +318,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Custom metadata to apply to this instance.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     public Output</* @Nullable */ Map<String,String>> metadata() {

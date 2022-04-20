@@ -153,7 +153,7 @@ public final class HDInsightOnDemandLinkedServiceResponse {
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+     * Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
      * 
      */
     private final @Nullable List<ScriptActionResponse> scriptActions;
@@ -168,7 +168,7 @@ public final class HDInsightOnDemandLinkedServiceResponse {
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
     /**
-     * The version of spark if the cluster type is 'spark'. Type: string (or Expression with resultType string).
+     * The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object sparkVersion;
@@ -194,7 +194,7 @@ public final class HDInsightOnDemandLinkedServiceResponse {
     private final Object timeToLive;
     /**
      * Type of linked service.
-     * Expected value is 'HDInsightOnDemand'.
+     * Expected value is &#39;HDInsightOnDemand&#39;.
      * 
      */
     private final String type;
@@ -484,7 +484,7 @@ public final class HDInsightOnDemandLinkedServiceResponse {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+     * Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
      * 
     */
     public List<ScriptActionResponse> scriptActions() {
@@ -505,7 +505,7 @@ public final class HDInsightOnDemandLinkedServiceResponse {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
-     * The version of spark if the cluster type is 'spark'. Type: string (or Expression with resultType string).
+     * The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> sparkVersion() {
@@ -541,7 +541,7 @@ public final class HDInsightOnDemandLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'HDInsightOnDemand'.
+     * Expected value is &#39;HDInsightOnDemand&#39;.
      * 
     */
     public String type() {

@@ -25,7 +25,7 @@ public final class Cloudresourcemanager_v2Functions {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v2:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets the access control policy for a Folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the Folder's resource name, e.g. "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
+     * Gets the access control policy for a Folder. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the Folder&#39;s resource name, e.g. &#34;folders/1234&#34;. The caller must have `resourcemanager.folders.getIamPolicy` permission on the identified folder.
      * 
      */
     public static CompletableFuture<GetFolderIamPolicyResult> getFolderIamPolicy(GetFolderIamPolicyArgs args) {

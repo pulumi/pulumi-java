@@ -19,7 +19,7 @@ public final class Config {
 
     private static final com.pulumi.Config config = com.pulumi.Config.of("aws");
 /**
- * The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+ * The access key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
  * 
  */
     public Optional<String> accessKey() {
@@ -60,7 +60,7 @@ public final class Config {
         return Codegen.objectProp("ignoreTags", IgnoreTags.class).config(config).get();
     }
 /**
- * Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
+ * Explicitly allow the provider to perform &#34;insecure&#34; SSL requests. If omitted, default value is `false`
  * 
  */
     public Optional<Boolean> insecure() {
@@ -97,7 +97,7 @@ public final class Config {
         return Codegen.booleanProp("s3ForcePathStyle").config(config).get();
     }
 /**
- * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
+ * The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
  * 
  */
     public Optional<String> secretKey() {
@@ -119,7 +119,7 @@ public final class Config {
         return Codegen.booleanProp("skipCredentialsValidation").config(config).def(true).get();
     }
 /**
- * Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
+ * Skip getting the supported EC2 platforms. Used by users that don&#39;t have ec2:DescribeAccountAttributes permissions.
  * 
  */
     public Optional<Boolean> skipGetEc2Platforms() {

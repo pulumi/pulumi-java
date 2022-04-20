@@ -103,7 +103,7 @@ public final class ExcelDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'Excel'.
+     * Expected value is &#39;Excel&#39;.
      * 
      */
     private final String type;
@@ -242,7 +242,7 @@ public final class ExcelDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'Excel'.
+     * Expected value is &#39;Excel&#39;.
      * 
     */
     public String type() {

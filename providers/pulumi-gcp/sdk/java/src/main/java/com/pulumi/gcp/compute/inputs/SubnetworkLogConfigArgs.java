@@ -36,7 +36,7 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
     /**
      * Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
      * https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
-     * The default value is 'true', which evaluates to include everything.
+     * The default value is &#39;true&#39;, which evaluates to include everything.
      * 
      */
     @Import(name="filterExpr")
@@ -78,7 +78,7 @@ public final class SubnetworkLogConfigArgs extends com.pulumi.resources.Resource
 
     /**
      * List of metadata fields that should be added to reported logs.
-     * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
+     * Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; is set to CUSTOM_METADATA.
      * 
      */
     @Import(name="metadataFields")

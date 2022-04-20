@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The field's mode.
+     * The field&#39;s mode.
      * 
      */
     @EnumType
@@ -20,17 +20,17 @@ import java.util.StringJoiner;
          */
         ModeUnspecified("MODE_UNSPECIFIED"),
         /**
-         * The field's values are indexed so as to support sequencing in ascending order and also query by <, >, <=, >=, and =.
+         * The field&#39;s values are indexed so as to support sequencing in ascending order and also query by &lt;, &gt;, &lt;=, &gt;=, and =.
          * 
          */
         Ascending("ASCENDING"),
         /**
-         * The field's values are indexed so as to support sequencing in descending order and also query by <, >, <=, >=, and =.
+         * The field&#39;s values are indexed so as to support sequencing in descending order and also query by &lt;, &gt;, &lt;=, &gt;=, and =.
          * 
          */
         Descending("DESCENDING"),
         /**
-         * The field's array values are indexed so as to support membership using ARRAY_CONTAINS queries.
+         * The field&#39;s array values are indexed so as to support membership using ARRAY_CONTAINS queries.
          * 
          */
         ArrayContains("ARRAY_CONTAINS");

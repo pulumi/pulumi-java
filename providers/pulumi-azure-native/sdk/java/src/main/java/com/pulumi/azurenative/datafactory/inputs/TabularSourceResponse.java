@@ -88,7 +88,7 @@ public final class TabularSourceResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Copy source type.
-     * Expected value is 'TabularSource'.
+     * Expected value is &#39;TabularSource&#39;.
      * 
      */
     @Import(name="type", required=true)

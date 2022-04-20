@@ -132,14 +132,14 @@ public class Domain extends com.pulumi.resources.CustomResource {
         return this.locations;
     }
     /**
-     * The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
+     * The unique name of the domain using the format: &#39;projects/{project}/locations/global/domains/{domainName}&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
+     * @return The unique name of the domain using the format: &#39;projects/{project}/locations/global/domains/{domainName}&#39;.
      * 
      */
     public Output<String> name() {

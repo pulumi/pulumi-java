@@ -50,7 +50,7 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
+     * The resource name of the SecretVersion. Format: &#39;projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}&#39;
      * 
      */
     @Import(name="name")

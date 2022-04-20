@@ -20,7 +20,7 @@ public final class OAuthTokenArgs extends com.pulumi.resources.ResourceArgs {
     public static final OAuthTokenArgs Empty = new OAuthTokenArgs();
 
     /**
-     * OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
+     * OAuth scope to be used for generating OAuth access token. If not specified, &#34;https://www.googleapis.com/auth/cloud-platform&#34; will be used.
      * 
      */
     @Import(name="scope")

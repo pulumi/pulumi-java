@@ -89,14 +89,14 @@ public class Webhook extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
+     * The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
      * 
      */
     @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
-     * @return The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
+     * @return The scope of repositories where the event can be triggered. For example, &#39;foo:*&#39; means events for all tags under repository &#39;foo&#39;. &#39;foo:bar&#39; means events for &#39;foo:bar&#39; only. &#39;foo&#39; is equivalent to &#39;foo:latest&#39;. Empty means all events.
      * 
      */
     public Output</* @Nullable */ String> scope() {

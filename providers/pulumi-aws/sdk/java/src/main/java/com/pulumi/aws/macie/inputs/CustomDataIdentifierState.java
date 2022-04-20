@@ -63,7 +63,7 @@ public final class CustomDataIdentifierState extends com.pulumi.resources.Resour
     }
 
     /**
-     * An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren't case sensitive.
+     * An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren&#39;t case sensitive.
      * 
      */
     @Import(name="keywords")

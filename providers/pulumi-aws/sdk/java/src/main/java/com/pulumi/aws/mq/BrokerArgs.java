@@ -124,7 +124,7 @@ public final class BrokerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
+     * Broker&#39;s instance type. For example, `mq.t3.micro`, `mq.m5.large`.
      * 
      */
     @Import(name="hostInstanceType", required=true)
@@ -168,7 +168,7 @@ public final class BrokerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
+     * Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
      * 
      */
     @Import(name="publiclyAccessible")

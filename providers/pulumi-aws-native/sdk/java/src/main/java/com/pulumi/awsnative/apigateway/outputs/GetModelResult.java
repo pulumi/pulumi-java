@@ -18,7 +18,7 @@ public final class GetModelResult {
      */
     private final @Nullable String description;
     /**
-     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don&#39;t want to specify a schema.
      * 
      */
     private final @Nullable Object schema;
@@ -39,7 +39,7 @@ public final class GetModelResult {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
+     * The schema to use to transform data to one or more output formats. Specify null ({}) if you don&#39;t want to specify a schema.
      * 
     */
     public Optional<Object> schema() {

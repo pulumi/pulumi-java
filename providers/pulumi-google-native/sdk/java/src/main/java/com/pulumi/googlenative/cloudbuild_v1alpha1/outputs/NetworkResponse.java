@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class NetworkResponse {
     /**
-     * Network on which the workers are created. "default" network is used if empty.
+     * Network on which the workers are created. &#34;default&#34; network is used if empty.
      * 
      */
     private final String network;
@@ -20,7 +20,7 @@ public final class NetworkResponse {
      */
     private final String project;
     /**
-     * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
+     * Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
      * 
      */
     private final String subnetwork;
@@ -36,7 +36,7 @@ public final class NetworkResponse {
     }
 
     /**
-     * Network on which the workers are created. "default" network is used if empty.
+     * Network on which the workers are created. &#34;default&#34; network is used if empty.
      * 
     */
     public String network() {
@@ -50,7 +50,7 @@ public final class NetworkResponse {
         return this.project;
     }
     /**
-     * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
+     * Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
      * 
     */
     public String subnetwork() {

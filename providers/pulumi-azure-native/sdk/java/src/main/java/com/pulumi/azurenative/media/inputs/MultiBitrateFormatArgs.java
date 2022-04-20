@@ -34,7 +34,7 @@ public final class MultiBitrateFormatArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MultiBitrateFormat'.
+     * Expected value is &#39;#Microsoft.Media.MultiBitrateFormat&#39;.
      * 
      */
     @Import(name="odataType", required=true)

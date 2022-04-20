@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LocalVolumeSource {
     /**
-     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a filesystem if unspecified.
+     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
      * 
      */
     private final @Nullable String fsType;
@@ -31,7 +31,7 @@ public final class LocalVolumeSource {
     }
 
     /**
-     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a filesystem if unspecified.
+     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
      * 
     */
     public Optional<String> fsType() {

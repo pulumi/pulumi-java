@@ -40,14 +40,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="azure-native:web:StaticSite")
 public class StaticSite extends com.pulumi.resources.CustomResource {
     /**
-     * <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Export(name="allowConfigFileUpdates", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowConfigFileUpdates;
 
     /**
-     * @return <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
+     * @return &lt;code&gt;false&lt;/code&gt; if config file is locked for this static web app; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     public Output</* @Nullable */ Boolean> allowConfigFileUpdates() {
@@ -222,14 +222,14 @@ public class StaticSite extends com.pulumi.resources.CustomResource {
         return this.provider;
     }
     /**
-     * A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
+     * A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
      * 
      */
     @Export(name="repositoryToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryToken;
 
     /**
-     * @return A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
+     * @return A user&#39;s github repository token. This is used to setup the Github Actions workflow file and API secrets.
      * 
      */
     public Output</* @Nullable */ String> repositoryToken() {

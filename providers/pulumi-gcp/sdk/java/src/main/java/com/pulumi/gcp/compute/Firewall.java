@@ -28,8 +28,8 @@ import javax.annotation.Nullable;
  * 
  * The default network has automatically created firewall rules that are
  * shown in default firewall rules. No manually created network has
- * automatically created firewall rules except for a default "allow" rule for
- * outgoing traffic and a default "deny" for incoming traffic. For all
+ * automatically created firewall rules except for a default &#34;allow&#34; rule for
+ * outgoing traffic and a default &#34;deny&#34; for incoming traffic. For all
  * networks except the default network, you must create any firewall rules
  * you need.
  * 
@@ -194,7 +194,7 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * This field denotes whether to enable logging for a particular firewall rule.
      * If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
      * 
-     * @Deprecated
+     * @deprecated
      * Deprecated in favor of log_config
      * 
      */
@@ -356,7 +356,7 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * If source service accounts are specified, the firewall will apply only
      * to traffic originating from an instance with a service account in this
      * list. Source service accounts cannot be used to control traffic to an
-     * instance's external IP address because service accounts are associated
+     * instance&#39;s external IP address because service accounts are associated
      * with an instance, not an IP address. sourceRanges can be set at the
      * same time as sourceServiceAccounts. If both are set, the firewall will
      * apply to traffic that has source IP address within sourceRanges OR the
@@ -374,7 +374,7 @@ public class Firewall extends com.pulumi.resources.CustomResource {
      * @return If source service accounts are specified, the firewall will apply only
      * to traffic originating from an instance with a service account in this
      * list. Source service accounts cannot be used to control traffic to an
-     * instance's external IP address because service accounts are associated
+     * instance&#39;s external IP address because service accounts are associated
      * with an instance, not an IP address. sourceRanges can be set at the
      * same time as sourceServiceAccounts. If both are set, the firewall will
      * apply to traffic that has source IP address within sourceRanges OR the
@@ -391,7 +391,7 @@ public class Firewall extends com.pulumi.resources.CustomResource {
     /**
      * If source tags are specified, the firewall will apply only to traffic
      * with source IP that belongs to a tag listed in source tags. Source
-     * tags cannot be used to control traffic to an instance's external IP
+     * tags cannot be used to control traffic to an instance&#39;s external IP
      * address. Because tags are associated with an instance, not an IP
      * address. One or both of sourceRanges and sourceTags may be set. If
      * both properties are set, the firewall will apply to traffic that has
@@ -407,7 +407,7 @@ public class Firewall extends com.pulumi.resources.CustomResource {
     /**
      * @return If source tags are specified, the firewall will apply only to traffic
      * with source IP that belongs to a tag listed in source tags. Source
-     * tags cannot be used to control traffic to an instance's external IP
+     * tags cannot be used to control traffic to an instance&#39;s external IP
      * address. Because tags are associated with an instance, not an IP
      * address. One or both of sourceRanges and sourceTags may be set. If
      * both properties are set, the firewall will apply to traffic that has

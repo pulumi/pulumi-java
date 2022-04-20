@@ -19,7 +19,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
     public static final RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs Empty = new RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs();
 
     /**
-     * Specifies the allowed number retries. This number must be > 0.
+     * Specifies the allowed number retries. This number must be &gt; 0.
      * 
      */
     @Import(name="numRetries")

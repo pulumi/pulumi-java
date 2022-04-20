@@ -66,7 +66,7 @@ public final class CosmosDbSqlApiSinkResponse extends com.pulumi.resources.Invok
 
     /**
      * Copy sink type.
-     * Expected value is 'CosmosDbSqlApiSink'.
+     * Expected value is &#39;CosmosDbSqlApiSink&#39;.
      * 
      */
     @Import(name="type", required=true)

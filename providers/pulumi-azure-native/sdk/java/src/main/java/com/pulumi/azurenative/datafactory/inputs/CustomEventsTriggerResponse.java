@@ -112,7 +112,7 @@ public final class CustomEventsTriggerResponse extends com.pulumi.resources.Invo
 
     /**
      * Trigger type.
-     * Expected value is 'CustomEventsTrigger'.
+     * Expected value is &#39;CustomEventsTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -92,14 +92,14 @@ public class Addon extends com.pulumi.resources.CustomResource {
         return this.resolveConflicts;
     }
     /**
-     * IAM role to bind to the add-on's service account
+     * IAM role to bind to the add-on&#39;s service account
      * 
      */
     @Export(name="serviceAccountRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceAccountRoleArn;
 
     /**
-     * @return IAM role to bind to the add-on's service account
+     * @return IAM role to bind to the add-on&#39;s service account
      * 
      */
     public Output</* @Nullable */ String> serviceAccountRoleArn() {

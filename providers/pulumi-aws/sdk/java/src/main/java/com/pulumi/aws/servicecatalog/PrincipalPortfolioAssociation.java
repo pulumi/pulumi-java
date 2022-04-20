@@ -72,14 +72,14 @@ public class PrincipalPortfolioAssociation extends com.pulumi.resources.CustomRe
         return this.principalArn;
     }
     /**
-     * Principal type. Setting this argument empty (e.g., `principal_type = ""`) will result in an error. Valid value is `IAM`. Default is `IAM`.
+     * Principal type. Setting this argument empty (e.g., `principal_type = &#34;&#34;`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
     @Export(name="principalType", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalType;
 
     /**
-     * @return Principal type. Setting this argument empty (e.g., `principal_type = ""`) will result in an error. Valid value is `IAM`. Default is `IAM`.
+     * @return Principal type. Setting this argument empty (e.g., `principal_type = &#34;&#34;`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
     public Output</* @Nullable */ String> principalType() {

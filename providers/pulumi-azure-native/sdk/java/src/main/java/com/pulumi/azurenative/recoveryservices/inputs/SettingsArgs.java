@@ -21,7 +21,7 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
     public static final SettingsArgs Empty = new SettingsArgs();
 
     /**
-     * Workload compression flag. This has been added so that 'isSqlCompression'
+     * Workload compression flag. This has been added so that &#39;isSqlCompression&#39;
      * will be deprecated once clients upgrade to consider this flag.
      * 
      */
@@ -44,7 +44,7 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     @Import(name="timeZone")

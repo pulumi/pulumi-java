@@ -88,7 +88,7 @@ public final class FileSystemSourceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Copy source type.
-     * Expected value is 'FileSystemSource'.
+     * Expected value is &#39;FileSystemSource&#39;.
      * 
      */
     @Import(name="type", required=true)

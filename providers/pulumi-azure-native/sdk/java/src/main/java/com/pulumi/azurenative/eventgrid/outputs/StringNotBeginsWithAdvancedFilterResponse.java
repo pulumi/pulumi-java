@@ -19,7 +19,7 @@ public final class StringNotBeginsWithAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringNotBeginsWith'.
+     * Expected value is &#39;StringNotBeginsWith&#39;.
      * 
      */
     private final String operatorType;
@@ -48,7 +48,7 @@ public final class StringNotBeginsWithAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'StringNotBeginsWith'.
+     * Expected value is &#39;StringNotBeginsWith&#39;.
      * 
     */
     public String operatorType() {

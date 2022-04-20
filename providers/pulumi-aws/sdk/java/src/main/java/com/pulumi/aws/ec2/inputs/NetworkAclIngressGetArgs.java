@@ -84,7 +84,7 @@ public final class NetworkAclIngressGetArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The protocol to match. If using the -1 'all'
+     * The protocol to match. If using the -1 &#39;all&#39;
      * protocol, you must specify a from and to port of 0.
      * 
      */

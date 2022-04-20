@@ -92,7 +92,7 @@ public final class MongoDbAtlasLinkedServiceResponse extends com.pulumi.resource
 
     /**
      * Type of linked service.
-     * Expected value is 'MongoDbAtlas'.
+     * Expected value is &#39;MongoDbAtlas&#39;.
      * 
      */
     @Import(name="type", required=true)

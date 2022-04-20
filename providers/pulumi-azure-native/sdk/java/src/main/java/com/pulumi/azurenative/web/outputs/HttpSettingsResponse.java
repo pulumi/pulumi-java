@@ -19,7 +19,7 @@ public final class HttpSettingsResponse {
      */
     private final @Nullable ForwardProxyResponse forwardProxy;
     /**
-     * <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean requireHttps;
@@ -47,7 +47,7 @@ public final class HttpSettingsResponse {
         return Optional.ofNullable(this.forwardProxy);
     }
     /**
-     * <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> requireHttps() {

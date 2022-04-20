@@ -80,7 +80,7 @@ public final class GetExtensionResult {
      */
     private final String name;
     /**
-     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
+     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
      * 
      */
     private final @Nullable String releaseTrain;
@@ -105,7 +105,7 @@ public final class GetExtensionResult {
      */
     private final String type;
     /**
-     * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
+     * Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
      * 
      */
     private final @Nullable String version;
@@ -235,7 +235,7 @@ public final class GetExtensionResult {
         return this.name;
     }
     /**
-     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
+     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
      * 
     */
     public Optional<String> releaseTrain() {
@@ -270,7 +270,7 @@ public final class GetExtensionResult {
         return this.type;
     }
     /**
-     * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
+     * Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
      * 
     */
     public Optional<String> version() {

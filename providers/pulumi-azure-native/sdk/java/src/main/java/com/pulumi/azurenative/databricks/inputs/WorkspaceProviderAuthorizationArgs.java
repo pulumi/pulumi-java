@@ -19,7 +19,7 @@ public final class WorkspaceProviderAuthorizationArgs extends com.pulumi.resourc
     public static final WorkspaceProviderAuthorizationArgs Empty = new WorkspaceProviderAuthorizationArgs();
 
     /**
-     * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
+     * The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
      * 
      */
     @Import(name="principalId", required=true)
@@ -30,7 +30,7 @@ public final class WorkspaceProviderAuthorizationArgs extends com.pulumi.resourc
     }
 
     /**
-     * The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.
+     * The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the workspace&#39;s container resource group. This role definition cannot have permission to delete the resource group.
      * 
      */
     @Import(name="roleDefinitionId", required=true)

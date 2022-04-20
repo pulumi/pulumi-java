@@ -22,9 +22,9 @@ import javax.annotation.Nullable;
  * * `gcp.healthcare.ConsentStoreIamBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the consentstore are preserved.
  * * `gcp.healthcare.ConsentStoreIamMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the consentstore are preserved.
  * 
- * > **Note:** `gcp.healthcare.ConsentStoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.ConsentStoreIamBinding` and `gcp.healthcare.ConsentStoreIamMember` or they will fight over what your policy should be.
+ * &gt; **Note:** `gcp.healthcare.ConsentStoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.ConsentStoreIamBinding` and `gcp.healthcare.ConsentStoreIamMember` or they will fight over what your policy should be.
  * 
- * > **Note:** `gcp.healthcare.ConsentStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.ConsentStoreIamMember` resources **only if** they do not grant privilege to the same role.
+ * &gt; **Note:** `gcp.healthcare.ConsentStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.ConsentStoreIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_healthcare\_consent\_store\_iam\_policy
  * 
@@ -34,16 +34,16 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * For all import syntaxes, the "resource in question" can take any of the following forms* {{dataset}}/consentStores/{{name}} * {{name}} Any variables not passed in the import command will be taken from the provider configuration. Cloud Healthcare consentstore IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+ * For all import syntaxes, the &#34;resource in question&#34; can take any of the following forms* {{dataset}}/consentStores/{{name}} * {{name}} Any variables not passed in the import command will be taken from the provider configuration. Cloud Healthcare consentstore IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:healthcare/consentStoreIamBinding:ConsentStoreIamBinding editor "{{dataset}}/consentStores/{{consent_store}} roles/viewer user:jane@example.com"
+ *  $ pulumi import gcp:healthcare/consentStoreIamBinding:ConsentStoreIamBinding editor &#34;{{dataset}}/consentStores/{{consent_store}} roles/viewer user:jane@example.com&#34;
  * ```
  * 
  *  IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
  * 
  * ```sh
- *  $ pulumi import gcp:healthcare/consentStoreIamBinding:ConsentStoreIamBinding editor "{{dataset}}/consentStores/{{consent_store}} roles/viewer"
+ *  $ pulumi import gcp:healthcare/consentStoreIamBinding:ConsentStoreIamBinding editor &#34;{{dataset}}/consentStores/{{consent_store}} roles/viewer&#34;
  * ```
  * 
  *  IAM policy imports use the identifier of the resource in question, e.g.
@@ -52,7 +52,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import gcp:healthcare/consentStoreIamBinding:ConsentStoreIamBinding editor {{dataset}}/consentStores/{{consent_store}}
  * ```
  * 
- *  -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
  * 
  * full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
  * 
@@ -81,7 +81,7 @@ public class ConsentStoreIamBinding extends com.pulumi.resources.CustomResource 
     }
     /**
      * Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
@@ -90,7 +90,7 @@ public class ConsentStoreIamBinding extends com.pulumi.resources.CustomResource 
 
     /**
      * @return Identifies the dataset addressed by this request. Must be in the format
-     * 'projects/{project}/locations/{location}/datasets/{dataset}'
+     * &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
      * Used to find the parent resource to bind the IAM policy to
      * 
      */

@@ -43,7 +43,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Underlying volume type, e.g. 'tmpfs'.
+     * Underlying volume type, e.g. &#39;tmpfs&#39;.
      * 
      */
     @Import(name="volumeType")

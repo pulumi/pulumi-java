@@ -80,7 +80,7 @@ public final class AzureBlobFSDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'AzureBlobFSFile'.
+     * Expected value is &#39;AzureBlobFSFile&#39;.
      * 
      */
     private final String type;
@@ -192,7 +192,7 @@ public final class AzureBlobFSDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureBlobFSFile'.
+     * Expected value is &#39;AzureBlobFSFile&#39;.
      * 
     */
     public String type() {

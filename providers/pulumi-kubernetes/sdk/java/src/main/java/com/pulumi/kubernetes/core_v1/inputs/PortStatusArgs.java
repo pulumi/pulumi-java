@@ -42,12 +42,12 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"
+     * Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
      * 
      * Possible enum values:
-     *  - `"SCTP"` is the SCTP protocol.
-     *  - `"TCP"` is the TCP protocol.
-     *  - `"UDP"` is the UDP protocol.
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     @Import(name="protocol", required=true)

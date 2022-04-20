@@ -20,7 +20,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     public static final BudgetState Empty = new BudgetState();
 
     /**
-     * The ID of the target account for budget. Will use current user's account_id by default if omitted.
+     * The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
      * 
      */
     @Import(name="accountId")
@@ -141,7 +141,7 @@ public final class BudgetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
+     * The start of the time period covered by the budget. If you don&#39;t specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
      * 
      */
     @Import(name="timePeriodStart")

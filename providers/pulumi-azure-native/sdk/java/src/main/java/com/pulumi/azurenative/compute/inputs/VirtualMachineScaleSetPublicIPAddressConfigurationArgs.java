@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration
+ * Describes a virtual machines scale set IP Configuration&#39;s PublicIPAddress configuration
  * 
  */
 public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extends com.pulumi.resources.ResourceArgs {
@@ -84,7 +84,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     }
 
     /**
-     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
+     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
      * 
      */
     @Import(name="publicIPAddressVersion")

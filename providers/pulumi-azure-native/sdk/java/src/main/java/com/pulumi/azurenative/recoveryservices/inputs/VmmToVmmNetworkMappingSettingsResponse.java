@@ -19,7 +19,7 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends com.pulumi.res
 
     /**
      * Gets the Instance type.
-     * Expected value is 'VmmToVmm'.
+     * Expected value is &#39;VmmToVmm&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

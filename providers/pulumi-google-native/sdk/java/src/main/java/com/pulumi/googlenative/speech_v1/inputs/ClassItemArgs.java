@@ -20,7 +20,7 @@ public final class ClassItemArgs extends com.pulumi.resources.ResourceArgs {
     public static final ClassItemArgs Empty = new ClassItemArgs();
 
     /**
-     * The class item's value.
+     * The class item&#39;s value.
      * 
      */
     @Import(name="value")

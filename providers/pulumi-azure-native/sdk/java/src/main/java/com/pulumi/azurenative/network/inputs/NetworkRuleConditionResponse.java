@@ -88,7 +88,7 @@ public final class NetworkRuleConditionResponse extends com.pulumi.resources.Inv
 
     /**
      * Rule Condition Type.
-     * Expected value is 'NetworkRuleCondition'.
+     * Expected value is &#39;NetworkRuleCondition&#39;.
      * 
      */
     @Import(name="ruleConditionType", required=true)

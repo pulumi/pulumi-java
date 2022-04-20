@@ -36,7 +36,7 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     /**
      * The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
-     * action is set to "RedirectToLoginPage".
+     * action is set to &#34;RedirectToLoginPage&#34;.
      * 
      */
     @Import(name="redirectToProvider")
@@ -47,7 +47,7 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * <code>true</code> if the authentication flow is required any request is made; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="requireAuthentication")

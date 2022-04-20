@@ -128,7 +128,7 @@ public final class TeradataLinkedServiceResponse extends com.pulumi.resources.In
 
     /**
      * Type of linked service.
-     * Expected value is 'Teradata'.
+     * Expected value is &#39;Teradata&#39;.
      * 
      */
     @Import(name="type", required=true)

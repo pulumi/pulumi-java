@@ -21,10 +21,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * MSK Connect Worker Configuration can be imported using the plugin's `arn`, e.g.,
+ * MSK Connect Worker Configuration can be imported using the plugin&#39;s `arn`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:mskconnect/workerConfiguration:WorkerConfiguration example 'arn:aws:kafkaconnect:eu-central-1:123456789012:worker-configuration/example/8848493b-7fcc-478c-a646-4a52634e3378-4'
+ *  $ pulumi import aws:mskconnect/workerConfiguration:WorkerConfiguration example &#39;arn:aws:kafkaconnect:eu-central-1:123456789012:worker-configuration/example/8848493b-7fcc-478c-a646-4a52634e3378-4&#39;
  * ```
  * 
  */

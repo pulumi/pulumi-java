@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+     * Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
      */
     @EnumType

@@ -31,7 +31,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
+     * The URI of the agent&#39;s avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
      */
     @Import(name="avatarUri")

@@ -20,9 +20,9 @@ public final class FleetServerProcess {
     /**
      * The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
      * 
-     * Windows (for custom game builds only): C:\game. Example: "C:\game\MyGame\server.exe"
+     * Windows (for custom game builds only): C:\game. Example: &#34;C:\game\MyGame\server.exe&#34;
      * 
-     * Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/MyRealtimeScript.js"
+     * Linux: /local/game. Examples: &#34;/local/game/MyGame/server.exe&#34; or &#34;/local/game/MyRealtimeScript.js&#34;
      * 
      */
     private final String launchPath;
@@ -52,9 +52,9 @@ public final class FleetServerProcess {
     /**
      * The location of the server executable in a custom game build or the name of the Realtime script file that contains the Init() function. Game builds and Realtime scripts are installed on instances at the root:
      * 
-     * Windows (for custom game builds only): C:\game. Example: "C:\game\MyGame\server.exe"
+     * Windows (for custom game builds only): C:\game. Example: &#34;C:\game\MyGame\server.exe&#34;
      * 
-     * Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/MyRealtimeScript.js"
+     * Linux: /local/game. Examples: &#34;/local/game/MyGame/server.exe&#34; or &#34;/local/game/MyRealtimeScript.js&#34;
      * 
     */
     public String launchPath() {

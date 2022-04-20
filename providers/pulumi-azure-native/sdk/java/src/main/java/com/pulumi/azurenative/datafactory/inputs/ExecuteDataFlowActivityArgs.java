@@ -151,7 +151,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
+     * Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
      * 
      */
     @Import(name="traceLevel")
@@ -163,7 +163,7 @@ public final class ExecuteDataFlowActivityArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of activity.
-     * Expected value is 'ExecuteDataFlow'.
+     * Expected value is &#39;ExecuteDataFlow&#39;.
      * 
      */
     @Import(name="type", required=true)

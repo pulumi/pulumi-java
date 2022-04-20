@@ -19,7 +19,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
     public static final SecurityGroupArgs Empty = new SecurityGroupArgs();
 
     /**
-     * The description of the DB security group. Defaults to "Managed by Pulumi".
+     * The description of the DB security group. Defaults to &#34;Managed by Pulumi&#34;.
      * 
      */
     @Import(name="description")

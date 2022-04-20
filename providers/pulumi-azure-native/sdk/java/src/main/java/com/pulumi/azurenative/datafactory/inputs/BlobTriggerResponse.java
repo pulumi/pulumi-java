@@ -103,7 +103,7 @@ public final class BlobTriggerResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Trigger type.
-     * Expected value is 'BlobTrigger'.
+     * Expected value is &#39;BlobTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

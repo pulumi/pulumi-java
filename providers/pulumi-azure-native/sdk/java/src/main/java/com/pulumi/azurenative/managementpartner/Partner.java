@@ -131,14 +131,14 @@ public class Partner extends com.pulumi.resources.CustomResource {
         return this.tenantId;
     }
     /**
-     * Type of resource. "Microsoft.ManagementPartner/partners"
+     * Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return Type of resource. "Microsoft.ManagementPartner/partners"
+     * @return Type of resource. &#34;Microsoft.ManagementPartner/partners&#34;
      * 
      */
     public Output<String> type() {

@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * ## Usage Notes
  * 
- * > **NOTE:** To avoid conflicts always add the following lifecycle object to the `aws.s3.Bucket` resource of the source bucket.
+ * &gt; **NOTE:** To avoid conflicts always add the following lifecycle object to the `aws.s3.Bucket` resource of the source bucket.
  * 
  * This resource implements the same features that are provided by the `replication_configuration` object of the `aws.s3.Bucket` resource. To avoid conflicts or unexpected apply results, a lifecycle configuration is needed on the `aws.s3.Bucket` to ignore changes to the internal `replication_configuration` object.  Failure to add the `lifecycle` configuration to the `aws.s3.Bucket` will result in conflicting state results.
  * 

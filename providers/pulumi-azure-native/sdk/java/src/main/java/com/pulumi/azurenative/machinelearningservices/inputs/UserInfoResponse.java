@@ -52,7 +52,7 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     *  A user's full name or a service principal's app ID.
+     *  A user&#39;s full name or a service principal&#39;s app ID.
      * 
      */
     @Import(name="userName")
@@ -63,7 +63,7 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A user or service principal's object ID..
+     * A user or service principal&#39;s object ID..
      * 
      */
     @Import(name="userObjectId")
@@ -74,7 +74,7 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A user or service principal's PuID.
+     * A user or service principal&#39;s PuID.
      * 
      */
     @Import(name="userPuId")
@@ -85,7 +85,7 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A user or service principal's tenant ID.
+     * A user or service principal&#39;s tenant ID.
      * 
      */
     @Import(name="userTenantId")

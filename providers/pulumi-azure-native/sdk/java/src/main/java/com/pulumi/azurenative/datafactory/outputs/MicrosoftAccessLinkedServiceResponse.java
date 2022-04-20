@@ -66,7 +66,7 @@ public final class MicrosoftAccessLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'MicrosoftAccess'.
+     * Expected value is &#39;MicrosoftAccess&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class MicrosoftAccessLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'MicrosoftAccess'.
+     * Expected value is &#39;MicrosoftAccess&#39;.
      * 
     */
     public String type() {

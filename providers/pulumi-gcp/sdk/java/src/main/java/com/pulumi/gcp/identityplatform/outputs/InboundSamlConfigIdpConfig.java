@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InboundSamlConfigIdpConfig {
     /**
-     * The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * The IdP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
      */
@@ -49,7 +49,7 @@ public final class InboundSamlConfigIdpConfig {
     }
 
     /**
-     * The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
+     * The IdP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
     */

@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Optional. Used to perform content matching. This allows matching based on substrings and regular expressions, together with their negations. Only the first 4 MB of an HTTP or HTTPS check's response (and the first 1 MB of a TCP check's response) are examined for purposes of content matching.
+ * Optional. Used to perform content matching. This allows matching based on substrings and regular expressions, together with their negations. Only the first 4 MB of an HTTP or HTTPS check&#39;s response (and the first 1 MB of a TCP check&#39;s response) are examined for purposes of content matching.
  * 
  */
 public final class ContentMatcherArgs extends com.pulumi.resources.ResourceArgs {

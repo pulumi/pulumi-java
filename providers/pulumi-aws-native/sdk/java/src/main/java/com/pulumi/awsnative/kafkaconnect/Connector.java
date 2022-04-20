@@ -108,14 +108,14 @@ public class Connector extends com.pulumi.resources.CustomResource {
         return this.kafkaClusterEncryptionInTransit;
     }
     /**
-     * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
+     * The version of Kafka Connect. It has to be compatible with both the Kafka cluster&#39;s version and the plugins.
      * 
      */
     @Export(name="kafkaConnectVersion", type=String.class, parameters={})
     private Output<String> kafkaConnectVersion;
 
     /**
-     * @return The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
+     * @return The version of Kafka Connect. It has to be compatible with both the Kafka cluster&#39;s version and the plugins.
      * 
      */
     public Output<String> kafkaConnectVersion() {

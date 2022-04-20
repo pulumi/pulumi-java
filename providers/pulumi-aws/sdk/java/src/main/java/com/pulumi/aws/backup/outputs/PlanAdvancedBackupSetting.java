@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class PlanAdvancedBackupSetting {
     /**
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
+     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = &#34;enabled&#34; }` to enable Windows VSS backup option and create a VSS Windows backup.
      * 
      */
     private final Map<String,String> backupOptions;
@@ -30,7 +30,7 @@ public final class PlanAdvancedBackupSetting {
     }
 
     /**
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
+     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = &#34;enabled&#34; }` to enable Windows VSS backup option and create a VSS Windows backup.
      * 
     */
     public Map<String,String> backupOptions() {

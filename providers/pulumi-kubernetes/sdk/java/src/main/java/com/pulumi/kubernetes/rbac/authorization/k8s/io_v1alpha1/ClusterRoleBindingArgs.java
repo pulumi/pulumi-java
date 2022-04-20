@@ -42,7 +42,7 @@ public final class ClusterRoleBindingArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Standard object's metadata.
+     * Standard object&#39;s metadata.
      * 
      */
     @Import(name="metadata")

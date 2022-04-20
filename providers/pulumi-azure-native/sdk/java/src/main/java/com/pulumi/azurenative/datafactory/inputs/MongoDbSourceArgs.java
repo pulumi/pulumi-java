@@ -88,7 +88,7 @@ public final class MongoDbSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'MongoDbSource'.
+     * Expected value is &#39;MongoDbSource&#39;.
      * 
      */
     @Import(name="type", required=true)

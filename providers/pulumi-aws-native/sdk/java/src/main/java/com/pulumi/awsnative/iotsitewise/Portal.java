@@ -64,14 +64,14 @@ public class Portal extends com.pulumi.resources.CustomResource {
         return this.portalArn;
     }
     /**
-     * The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
+     * The service to use to authenticate users to the portal. Choose from SSO or IAM. You can&#39;t change this value after you create a portal.
      * 
      */
     @Export(name="portalAuthMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> portalAuthMode;
 
     /**
-     * @return The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
+     * @return The service to use to authenticate users to the portal. Choose from SSO or IAM. You can&#39;t change this value after you create a portal.
      * 
      */
     public Output</* @Nullable */ String> portalAuthMode() {
@@ -92,14 +92,14 @@ public class Portal extends com.pulumi.resources.CustomResource {
         return this.portalClientId;
     }
     /**
-     * The AWS administrator's contact email address.
+     * The AWS administrator&#39;s contact email address.
      * 
      */
     @Export(name="portalContactEmail", type=String.class, parameters={})
     private Output<String> portalContactEmail;
 
     /**
-     * @return The AWS administrator's contact email address.
+     * @return The AWS administrator&#39;s contact email address.
      * 
      */
     public Output<String> portalContactEmail() {
@@ -162,14 +162,14 @@ public class Portal extends com.pulumi.resources.CustomResource {
         return this.portalStartUrl;
     }
     /**
-     * The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
+     * The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
      * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
-     * @return The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
+     * @return The ARN of a service role that allows the portal&#39;s users to access your AWS IoT SiteWise resources on your behalf.
      * 
      */
     public Output<String> roleArn() {

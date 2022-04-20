@@ -85,9 +85,9 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
     }
     /**
      * The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string
-     * data contains spaces, add surrounding \" if you don't want your string to get split on spaces. To specify a single
-     * record value longer than 255 characters such as a TXT record for DKIM, add \"\" inside the Terraform configuration
-     * string (e.g. "first255characters\"\"morecharacters").
+     * data contains spaces, add surrounding \&#34; if you don&#39;t want your string to get split on spaces. To specify a single
+     * record value longer than 255 characters such as a TXT record for DKIM, add \&#34;\&#34; inside the Terraform configuration
+     * string (e.g. &#34;first255characters\&#34;\&#34;morecharacters&#34;).
      * 
      */
     @Export(name="rrdatas", type=List.class, parameters={String.class})
@@ -95,9 +95,9 @@ public class RecordSet extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string
-     * data contains spaces, add surrounding \" if you don't want your string to get split on spaces. To specify a single
-     * record value longer than 255 characters such as a TXT record for DKIM, add \"\" inside the Terraform configuration
-     * string (e.g. "first255characters\"\"morecharacters").
+     * data contains spaces, add surrounding \&#34; if you don&#39;t want your string to get split on spaces. To specify a single
+     * record value longer than 255 characters such as a TXT record for DKIM, add \&#34;\&#34; inside the Terraform configuration
+     * string (e.g. &#34;first255characters\&#34;\&#34;morecharacters&#34;).
      * 
      */
     public Output<List<String>> rrdatas() {

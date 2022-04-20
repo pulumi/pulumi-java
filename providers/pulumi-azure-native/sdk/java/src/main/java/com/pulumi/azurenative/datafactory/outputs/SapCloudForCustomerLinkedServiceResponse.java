@@ -51,12 +51,12 @@ public final class SapCloudForCustomerLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'SapCloudForCustomer'.
+     * Expected value is &#39;SapCloudForCustomer&#39;.
      * 
      */
     private final String type;
     /**
-     * The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
+     * The URL of SAP Cloud for Customer OData API. For example, &#39;[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]&#39;. Type: string (or Expression with resultType string).
      * 
      */
     private final Object url;
@@ -132,14 +132,14 @@ public final class SapCloudForCustomerLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SapCloudForCustomer'.
+     * Expected value is &#39;SapCloudForCustomer&#39;.
      * 
     */
     public String type() {
         return this.type;
     }
     /**
-     * The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
+     * The URL of SAP Cloud for Customer OData API. For example, &#39;[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]&#39;. Type: string (or Expression with resultType string).
      * 
     */
     public Object url() {

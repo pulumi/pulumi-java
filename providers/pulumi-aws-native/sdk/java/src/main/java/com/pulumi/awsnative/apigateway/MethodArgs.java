@@ -44,7 +44,7 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The method's authorization type.
+     * The method&#39;s authorization type.
      * 
      */
     @Import(name="authorizationType")
@@ -110,7 +110,7 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
+     * The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
     @Import(name="requestModels")

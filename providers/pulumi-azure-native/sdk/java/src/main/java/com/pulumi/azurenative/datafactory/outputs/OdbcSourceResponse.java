@@ -49,7 +49,7 @@ public final class OdbcSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'OdbcSource'.
+     * Expected value is &#39;OdbcSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class OdbcSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'OdbcSource'.
+     * Expected value is &#39;OdbcSource&#39;.
      * 
     */
     public String type() {

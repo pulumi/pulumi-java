@@ -16,7 +16,7 @@ public final class MigrationConfigArgs extends com.pulumi.resources.ResourceArgs
     public static final MigrationConfigArgs Empty = new MigrationConfigArgs();
 
     /**
-     * The configuration name. Should always be "$default".
+     * The configuration name. Should always be &#34;$default&#34;.
      * 
      */
     @Import(name="configName")

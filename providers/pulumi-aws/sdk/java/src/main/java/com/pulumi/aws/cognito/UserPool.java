@@ -38,7 +38,7 @@ import javax.annotation.Nullable;
  * Cognito User Pools can be imported using the `id`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:cognito/userPool:UserPool pool <id>
+ *  $ pulumi import aws:cognito/userPool:UserPool pool &lt;id&gt;
  * ```
  * 
  */
@@ -143,14 +143,14 @@ public class UserPool extends com.pulumi.resources.CustomResource {
         return this.customDomain;
     }
     /**
-     * Configuration block for the user pool's device tracking. Detailed below.
+     * Configuration block for the user pool&#39;s device tracking. Detailed below.
      * 
      */
     @Export(name="deviceConfiguration", type=UserPoolDeviceConfiguration.class, parameters={})
     private Output</* @Nullable */ UserPoolDeviceConfiguration> deviceConfiguration;
 
     /**
-     * @return Configuration block for the user pool's device tracking. Detailed below.
+     * @return Configuration block for the user pool&#39;s device tracking. Detailed below.
      * 
      */
     public Output</* @Nullable */ UserPoolDeviceConfiguration> deviceConfiguration() {

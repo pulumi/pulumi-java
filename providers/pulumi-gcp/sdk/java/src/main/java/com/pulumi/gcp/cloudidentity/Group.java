@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Official Documentation](https://cloud.google.com/identity/docs/how-to/setup)
  * 
- * > **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+ * &gt; **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
  * you must specify a `billing_project` and set `user_project_override` to true
  * in the provider configuration. Otherwise the Cloud Identity API will return a 403 error.
  * Your account must have the `serviceusage.services.use` permission on the
@@ -130,8 +130,8 @@ public class Group extends com.pulumi.resources.CustomResource {
     /**
      * The labels that apply to the Group.
      * Must not contain more than one entry. Must contain the entry
-     * 'cloudidentity.googleapis.com/groups.discussion_forum': '' if the Group is a Google Group or
-     * 'system/groups/external': '' if the Group is an external-identity-mapped group.
+     * &#39;cloudidentity.googleapis.com/groups.discussion_forum&#39;: &#39;&#39; if the Group is a Google Group or
+     * &#39;system/groups/external&#39;: &#39;&#39; if the Group is an external-identity-mapped group.
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, String.class})
@@ -140,8 +140,8 @@ public class Group extends com.pulumi.resources.CustomResource {
     /**
      * @return The labels that apply to the Group.
      * Must not contain more than one entry. Must contain the entry
-     * 'cloudidentity.googleapis.com/groups.discussion_forum': '' if the Group is a Google Group or
-     * 'system/groups/external': '' if the Group is an external-identity-mapped group.
+     * &#39;cloudidentity.googleapis.com/groups.discussion_forum&#39;: &#39;&#39; if the Group is a Google Group or
+     * &#39;system/groups/external&#39;: &#39;&#39; if the Group is an external-identity-mapped group.
      * 
      */
     public Output<Map<String,String>> labels() {

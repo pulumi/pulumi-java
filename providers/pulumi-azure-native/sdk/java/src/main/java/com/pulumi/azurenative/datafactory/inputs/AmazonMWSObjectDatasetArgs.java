@@ -115,7 +115,7 @@ public final class AmazonMWSObjectDatasetArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of dataset.
-     * Expected value is 'AmazonMWSObject'.
+     * Expected value is &#39;AmazonMWSObject&#39;.
      * 
      */
     @Import(name="type", required=true)

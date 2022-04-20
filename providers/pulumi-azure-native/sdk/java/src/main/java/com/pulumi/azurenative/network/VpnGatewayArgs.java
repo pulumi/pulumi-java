@@ -24,7 +24,7 @@ public final class VpnGatewayArgs extends com.pulumi.resources.ResourceArgs {
     public static final VpnGatewayArgs Empty = new VpnGatewayArgs();
 
     /**
-     * Local network gateway's BGP speaker settings.
+     * Local network gateway&#39;s BGP speaker settings.
      * 
      */
     @Import(name="bgpSettings")

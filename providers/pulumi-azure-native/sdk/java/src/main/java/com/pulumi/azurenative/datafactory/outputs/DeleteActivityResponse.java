@@ -90,7 +90,7 @@ public final class DeleteActivityResponse {
     private final @Nullable Object storeSettings;
     /**
      * Type of activity.
-     * Expected value is 'Delete'.
+     * Expected value is &#39;Delete&#39;.
      * 
      */
     private final String type;
@@ -209,7 +209,7 @@ public final class DeleteActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Delete'.
+     * Expected value is &#39;Delete&#39;.
      * 
     */
     public String type() {

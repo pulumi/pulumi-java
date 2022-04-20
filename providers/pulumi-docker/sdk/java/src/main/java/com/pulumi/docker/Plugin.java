@@ -18,7 +18,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * <!-- Bug: Type and Name are switched -->
+ * &lt;!-- Bug: Type and Name are switched --&gt;
  * Manages the lifecycle of a Docker plugin.
  * 
  * ## Example Usage
@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  * 
  * - **plugin_reference** (String) Docker Plugin Reference
  * 
- * <a id="nestedblock--grant_permissions"></a>
+ * &lt;a id=&#34;nestedblock--grant_permissions&#34;&gt;&lt;/a&gt;
  * ### Nested Schema for `grant_permissions`
  * 
  * Required:
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  * Import is supported using the following syntax#!/bin/bash
  * 
  * ```sh
- *  $ pulumi import docker:index/plugin:Plugin sample-volume-plugin "$(docker plugin inspect -f {{.ID}} tiborvass/sample-volume-plugin:latest)"
+ *  $ pulumi import docker:index/plugin:Plugin sample-volume-plugin &#34;$(docker plugin inspect -f {{.ID}} tiborvass/sample-volume-plugin:latest)&#34;
  * ```
  * 
  */

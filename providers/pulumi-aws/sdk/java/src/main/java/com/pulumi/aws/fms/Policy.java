@@ -56,14 +56,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.deleteAllPolicyResources;
     }
     /**
-     * A map of lists of accounts and OU's to exclude from the policy.
+     * A map of lists of accounts and OU&#39;s to exclude from the policy.
      * 
      */
     @Export(name="excludeMap", type=PolicyExcludeMap.class, parameters={})
     private Output</* @Nullable */ PolicyExcludeMap> excludeMap;
 
     /**
-     * @return A map of lists of accounts and OU's to exclude from the policy.
+     * @return A map of lists of accounts and OU&#39;s to exclude from the policy.
      * 
      */
     public Output</* @Nullable */ PolicyExcludeMap> excludeMap() {
@@ -84,14 +84,14 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return this.excludeResourceTags;
     }
     /**
-     * A map of lists of accounts and OU's to include in the policy.
+     * A map of lists of accounts and OU&#39;s to include in the policy.
      * 
      */
     @Export(name="includeMap", type=PolicyIncludeMap.class, parameters={})
     private Output</* @Nullable */ PolicyIncludeMap> includeMap;
 
     /**
-     * @return A map of lists of accounts and OU's to include in the policy.
+     * @return A map of lists of accounts and OU&#39;s to include in the policy.
      * 
      */
     public Output</* @Nullable */ PolicyIncludeMap> includeMap() {

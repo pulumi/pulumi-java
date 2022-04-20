@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".
+     * The type of the ingressStartAt, It can be &#34;EarliestAvailable&#34;, &#34;EventSourceCreationTime&#34;, &#34;CustomEnqueuedTime&#34;.
      * 
      */
     @EnumType

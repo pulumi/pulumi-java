@@ -55,7 +55,7 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'OracleCloudStorageLocation'.
+     * Expected value is &#39;OracleCloudStorageLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

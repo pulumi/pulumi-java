@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class Apikeys_v2Functions {
     /**
-     * Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
+     * Gets the metadata for an API key. The key string of the API key isn&#39;t included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * 
      */
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {

@@ -102,7 +102,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
     /**
      * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
      * Validation should be performed at the PushRequestHandler.
      * 
      */
@@ -112,7 +112,7 @@ public class WebAppSitePushSettingsSlot extends com.pulumi.resources.CustomResou
     /**
      * @return Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
-     * '_', '@', '#', '.', ':', '-'.
+     * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
      * Validation should be performed at the PushRequestHandler.
      * 
      */

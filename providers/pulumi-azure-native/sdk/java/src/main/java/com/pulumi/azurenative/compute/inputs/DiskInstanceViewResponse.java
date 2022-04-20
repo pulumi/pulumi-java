@@ -22,7 +22,7 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
     public static final DiskInstanceViewResponse Empty = new DiskInstanceViewResponse();
 
     /**
-     * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
+     * Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
      */
     @Import(name="encryptionSettings")

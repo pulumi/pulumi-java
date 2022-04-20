@@ -30,7 +30,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends com.pulum
     }
 
     /**
-     * The type of item included in the filter. Currently only 'AgentAddress' is supported.
+     * The type of item included in the filter. Currently only &#39;AgentAddress&#39; is supported.
      * 
      */
     @Import(name="type")

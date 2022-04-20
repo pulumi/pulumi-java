@@ -32,7 +32,7 @@ public final class AutomationRuleRunPlaybookActionResponse extends com.pulumi.re
 
     /**
      * The type of the automation rule action
-     * Expected value is 'RunPlaybook'.
+     * Expected value is &#39;RunPlaybook&#39;.
      * 
      */
     @Import(name="actionType", required=true)

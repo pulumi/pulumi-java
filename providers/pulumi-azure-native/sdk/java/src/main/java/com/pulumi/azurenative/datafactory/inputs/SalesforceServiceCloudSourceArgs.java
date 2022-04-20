@@ -101,7 +101,7 @@ public final class SalesforceServiceCloudSourceArgs extends com.pulumi.resources
 
     /**
      * Copy source type.
-     * Expected value is 'SalesforceServiceCloudSource'.
+     * Expected value is &#39;SalesforceServiceCloudSource&#39;.
      * 
      */
     @Import(name="type", required=true)

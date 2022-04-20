@@ -29,7 +29,7 @@ public final class GetScriptDagNode extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * A node identifier that is unique within the node's graph.
+     * A node identifier that is unique within the node&#39;s graph.
      * 
      */
     @Import(name="id", required=true)

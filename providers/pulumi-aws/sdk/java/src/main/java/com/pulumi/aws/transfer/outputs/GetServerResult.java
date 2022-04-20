@@ -56,7 +56,7 @@ public final class GetServerResult {
      */
     private final String loggingRole;
     /**
-     * The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+     * The file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint.
      * 
      */
     private final List<String> protocols;
@@ -166,7 +166,7 @@ public final class GetServerResult {
         return this.loggingRole;
     }
     /**
-     * The file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint.
+     * The file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint.
      * 
     */
     public List<String> protocols() {

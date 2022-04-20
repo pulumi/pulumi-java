@@ -66,7 +66,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don't specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
+     * The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don&#39;t specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
      * 
      */
     @Import(name="jobType", required=true)
@@ -117,7 +117,7 @@ public final class ClassificationJobArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
+     * The recurrence pattern for running the job. To run the job only once, don&#39;t specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
      * 
      */
     @Import(name="scheduleFrequency")

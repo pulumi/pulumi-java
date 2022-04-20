@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class FingerprintResponse {
     /**
-     * The layer ID of the final layer in the Docker image's v1 representation.
+     * The layer ID of the final layer in the Docker image&#39;s v1 representation.
      * 
      */
     private final String v1Name;
@@ -21,7 +21,7 @@ public final class FingerprintResponse {
      */
     private final List<String> v2Blob;
     /**
-     * The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
+     * The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept.
      * 
      */
     private final String v2Name;
@@ -37,7 +37,7 @@ public final class FingerprintResponse {
     }
 
     /**
-     * The layer ID of the final layer in the Docker image's v1 representation.
+     * The layer ID of the final layer in the Docker image&#39;s v1 representation.
      * 
     */
     public String v1Name() {
@@ -51,7 +51,7 @@ public final class FingerprintResponse {
         return this.v2Blob;
     }
     /**
-     * The name of the image's v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + " " + v2_name[N+1]) Only the name of the final blob is kept.
+     * The name of the image&#39;s v2 blobs computed via: [bottom] := v2_blobbottom := sha256(v2_blob[N] + &#34; &#34; + v2_name[N+1]) Only the name of the final blob is kept.
      * 
     */
     public String v2Name() {

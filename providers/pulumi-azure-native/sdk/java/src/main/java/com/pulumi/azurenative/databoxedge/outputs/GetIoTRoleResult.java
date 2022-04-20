@@ -54,7 +54,7 @@ public final class GetIoTRoleResult {
     private final IoTDeviceInfoResponse ioTEdgeDeviceDetails;
     /**
      * Role type.
-     * Expected value is 'IOT'.
+     * Expected value is &#39;IOT&#39;.
      * 
      */
     private final String kind;
@@ -165,7 +165,7 @@ public final class GetIoTRoleResult {
     }
     /**
      * Role type.
-     * Expected value is 'IOT'.
+     * Expected value is &#39;IOT&#39;.
      * 
     */
     public String kind() {

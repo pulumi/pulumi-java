@@ -27,7 +27,7 @@ public final class VideoSinkResponse {
     private final String name;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
      * 
      */
     private final String type;
@@ -42,7 +42,7 @@ public final class VideoSinkResponse {
      */
     private final String videoName;
     /**
-     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
+     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
      * 
      */
     private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
@@ -79,7 +79,7 @@ public final class VideoSinkResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
      * 
     */
     public String type() {
@@ -100,7 +100,7 @@ public final class VideoSinkResponse {
         return this.videoName;
     }
     /**
-     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
+     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
      * 
     */
     public Optional<VideoPublishingOptionsResponse> videoPublishingOptions() {

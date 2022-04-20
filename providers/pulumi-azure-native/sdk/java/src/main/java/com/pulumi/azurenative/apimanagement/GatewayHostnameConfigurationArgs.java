@@ -28,7 +28,7 @@ public final class GatewayHostnameConfigurationArgs extends com.pulumi.resources
     }
 
     /**
-     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value &#39;managed&#39;
      * 
      */
     @Import(name="gatewayId", required=true)

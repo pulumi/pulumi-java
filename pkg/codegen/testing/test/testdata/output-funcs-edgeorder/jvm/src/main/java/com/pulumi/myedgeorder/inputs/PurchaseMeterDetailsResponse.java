@@ -20,7 +20,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
 
     /**
      * Represents billing type.
-     * Expected value is 'Purchase'.
+     * Expected value is &#39;Purchase&#39;.
      * 
      */
     @Import(name="billingType", required=true)

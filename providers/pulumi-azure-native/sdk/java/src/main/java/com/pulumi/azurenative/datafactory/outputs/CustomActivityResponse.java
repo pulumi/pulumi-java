@@ -81,7 +81,7 @@ public final class CustomActivityResponse {
     private final @Nullable Object retentionTimeInDays;
     /**
      * Type of activity.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
      */
     private final String type;
@@ -209,7 +209,7 @@ public final class CustomActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
     */
     public String type() {

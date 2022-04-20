@@ -22,7 +22,7 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     public static final CreationDataResponse Empty = new CreationDataResponse();
 
     /**
-     * This enumerates the possible sources of a disk's creation.
+     * This enumerates the possible sources of a disk&#39;s creation.
      * 
      */
     @Import(name="createOption", required=true)

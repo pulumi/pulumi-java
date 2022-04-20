@@ -92,7 +92,7 @@ public final class HttpDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'HttpFile'.
+     * Expected value is &#39;HttpFile&#39;.
      * 
      */
     private final String type;
@@ -224,7 +224,7 @@ public final class HttpDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'HttpFile'.
+     * Expected value is &#39;HttpFile&#39;.
      * 
     */
     public String type() {

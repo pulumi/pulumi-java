@@ -47,7 +47,7 @@ public final class ChainingTriggerResponse {
     private final String runtimeState;
     /**
      * Trigger type.
-     * Expected value is 'ChainingTrigger'.
+     * Expected value is &#39;ChainingTrigger&#39;.
      * 
      */
     private final String type;
@@ -114,7 +114,7 @@ public final class ChainingTriggerResponse {
     }
     /**
      * Trigger type.
-     * Expected value is 'ChainingTrigger'.
+     * Expected value is &#39;ChainingTrigger&#39;.
      * 
     */
     public String type() {

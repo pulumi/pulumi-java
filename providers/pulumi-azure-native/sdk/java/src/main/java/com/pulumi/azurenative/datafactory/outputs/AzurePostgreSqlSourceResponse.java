@@ -49,7 +49,7 @@ public final class AzurePostgreSqlSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'AzurePostgreSqlSource'.
+     * Expected value is &#39;AzurePostgreSqlSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class AzurePostgreSqlSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'AzurePostgreSqlSource'.
+     * Expected value is &#39;AzurePostgreSqlSource&#39;.
      * 
     */
     public String type() {

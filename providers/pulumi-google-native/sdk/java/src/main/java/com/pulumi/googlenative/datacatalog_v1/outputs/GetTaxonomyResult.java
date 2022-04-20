@@ -23,7 +23,7 @@ public final class GetTaxonomyResult {
      */
     private final String description;
     /**
-     * User-defined name of this taxonomy. The name can't start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
+     * User-defined name of this taxonomy. The name can&#39;t start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
     private final String displayName;
@@ -74,7 +74,7 @@ public final class GetTaxonomyResult {
         return this.description;
     }
     /**
-     * User-defined name of this taxonomy. The name can't start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
+     * User-defined name of this taxonomy. The name can&#39;t start or end with spaces, must contain only Unicode letters, numbers, underscores, dashes, and spaces, and be at most 200 bytes long when encoded in UTF-8.
      * 
     */
     public String displayName() {

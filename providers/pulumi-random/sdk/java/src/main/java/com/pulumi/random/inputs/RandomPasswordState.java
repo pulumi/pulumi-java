@@ -130,7 +130,7 @@ public final class RandomPasswordState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+     * Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
      * 
      */
     @Import(name="special")

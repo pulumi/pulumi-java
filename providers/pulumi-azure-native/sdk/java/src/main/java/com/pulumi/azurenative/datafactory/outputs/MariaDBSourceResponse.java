@@ -49,7 +49,7 @@ public final class MariaDBSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'MariaDBSource'.
+     * Expected value is &#39;MariaDBSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class MariaDBSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'MariaDBSource'.
+     * Expected value is &#39;MariaDBSource&#39;.
      * 
     */
     public String type() {

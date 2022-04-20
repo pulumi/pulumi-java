@@ -46,7 +46,7 @@ public final class SparkSqlJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
+     * Optional. A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
      */
     @Import(name="properties")
@@ -79,7 +79,7 @@ public final class SparkSqlJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
+     * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;).
      * 
      */
     @Import(name="scriptVariables")

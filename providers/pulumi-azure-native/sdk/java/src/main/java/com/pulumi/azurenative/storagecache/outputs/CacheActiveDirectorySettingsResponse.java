@@ -33,17 +33,17 @@ public final class CacheActiveDirectorySettingsResponse {
      */
     private final String domainName;
     /**
-     * The Active Directory domain's NetBIOS name.
+     * The Active Directory domain&#39;s NetBIOS name.
      * 
      */
     private final String domainNetBiosName;
     /**
-     * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     * Primary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
      * 
      */
     private final String primaryDnsIpAddress;
     /**
-     * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     * Secondary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
      * 
      */
     private final @Nullable String secondaryDnsIpAddress;
@@ -95,21 +95,21 @@ public final class CacheActiveDirectorySettingsResponse {
         return this.domainName;
     }
     /**
-     * The Active Directory domain's NetBIOS name.
+     * The Active Directory domain&#39;s NetBIOS name.
      * 
     */
     public String domainNetBiosName() {
         return this.domainNetBiosName;
     }
     /**
-     * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     * Primary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
      * 
     */
     public String primaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
     }
     /**
-     * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     * Secondary DNS IP address used to resolve the Active Directory domain controller&#39;s fully qualified domain name.
      * 
     */
     public Optional<String> secondaryDnsIpAddress() {

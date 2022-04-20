@@ -317,7 +317,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
     }
 
     /**
-     * Custom script actions to run on HDI ondemand cluster once it's up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+     * Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
      * 
      */
     @Import(name="scriptActions")
@@ -350,7 +350,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
     }
 
     /**
-     * The version of spark if the cluster type is 'spark'. Type: string (or Expression with resultType string).
+     * The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="sparkVersion")
@@ -406,7 +406,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
 
     /**
      * Type of linked service.
-     * Expected value is 'HDInsightOnDemand'.
+     * Expected value is &#39;HDInsightOnDemand&#39;.
      * 
      */
     @Import(name="type", required=true)

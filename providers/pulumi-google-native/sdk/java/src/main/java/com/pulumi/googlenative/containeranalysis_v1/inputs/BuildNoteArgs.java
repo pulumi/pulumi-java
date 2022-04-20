@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * Note holding the version of the provider's builder and the signature of the provenance message in the build details occurrence.
+ * Note holding the version of the provider&#39;s builder and the signature of the provenance message in the build details occurrence.
  * 
  */
 public final class BuildNoteArgs extends com.pulumi.resources.ResourceArgs {

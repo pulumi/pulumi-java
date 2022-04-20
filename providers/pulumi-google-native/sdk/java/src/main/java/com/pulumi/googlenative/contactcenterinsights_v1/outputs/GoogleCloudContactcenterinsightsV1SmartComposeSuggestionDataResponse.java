@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse {
     /**
-     * The system's confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * The system&#39;s confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
     private final Double confidenceScore;
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
     }
 
     /**
-     * The system's confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+     * The system&#39;s confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
     */
     public Double confidenceScore() {

@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
 public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomResource {
     /**
      * The Action to perform when the client connection triggers the rule. Can currently be either
-     * "allow", "deny" or "goto_next".
+     * &#34;allow&#34;, &#34;deny&#34; or &#34;goto_next&#34;.
      * 
      */
     @Export(name="action", type=String.class, parameters={})
@@ -49,7 +49,7 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
 
     /**
      * @return The Action to perform when the client connection triggers the rule. Can currently be either
-     * "allow", "deny" or "goto_next".
+     * &#34;allow&#34;, &#34;deny&#34; or &#34;goto_next&#34;.
      * 
      */
     public Output<String> action() {
@@ -104,7 +104,7 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
         return this.enableLogging;
     }
     /**
-     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * Structure is documented below.
      * 
      */
@@ -112,7 +112,7 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
     private Output<OrganizationSecurityPolicyRuleMatch> match;
 
     /**
-     * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
+     * @return A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced.
      * Structure is documented below.
      * 
      */
@@ -167,7 +167,7 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
     }
     /**
      * A list of network resource URLs to which this rule applies.
-     * This field allows you to control which network's VMs get
+     * This field allows you to control which network&#39;s VMs get
      * this rule. If this field is left blank, all VMs
      * within the organization will receive the rule.
      * 
@@ -177,7 +177,7 @@ public class OrganizationSecurityPolicyRule extends com.pulumi.resources.CustomR
 
     /**
      * @return A list of network resource URLs to which this rule applies.
-     * This field allows you to control which network's VMs get
+     * This field allows you to control which network&#39;s VMs get
      * this rule. If this field is left blank, all VMs
      * within the organization will receive the rule.
      * 

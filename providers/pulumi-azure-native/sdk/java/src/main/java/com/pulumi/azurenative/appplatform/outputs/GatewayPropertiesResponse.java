@@ -65,7 +65,7 @@ public final class GatewayPropertiesResponse {
      */
     private final @Nullable SsoPropertiesResponse ssoProperties;
     /**
-     * URL of the Spring Cloud Gateway, exposed when 'public' is true.
+     * URL of the Spring Cloud Gateway, exposed when &#39;public&#39; is true.
      * 
      */
     private final String url;
@@ -158,7 +158,7 @@ public final class GatewayPropertiesResponse {
         return Optional.ofNullable(this.ssoProperties);
     }
     /**
-     * URL of the Spring Cloud Gateway, exposed when 'public' is true.
+     * URL of the Spring Cloud Gateway, exposed when &#39;public&#39; is true.
      * 
     */
     public String url() {

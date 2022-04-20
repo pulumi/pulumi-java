@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class SignalRFeatureResponse {
     /**
      * FeatureFlags is the supported features of Azure SignalR service.
-     * - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
-     * - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+     * - ServiceMode: Flag for backend server for SignalR service. Values allowed: &#34;Default&#34;: have your own backend server; &#34;Serverless&#34;: your application doesn&#39;t have a backend server; &#34;Classic&#34;: for backward compatibility. Support both Default and Serverless mode but not recommended; &#34;PredefinedOnly&#34;: for future use.
+     * - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
      * 
      */
     private final String flag;
@@ -41,8 +41,8 @@ public final class SignalRFeatureResponse {
 
     /**
      * FeatureFlags is the supported features of Azure SignalR service.
-     * - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
-     * - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+     * - ServiceMode: Flag for backend server for SignalR service. Values allowed: &#34;Default&#34;: have your own backend server; &#34;Serverless&#34;: your application doesn&#39;t have a backend server; &#34;Classic&#34;: for backward compatibility. Support both Default and Serverless mode but not recommended; &#34;PredefinedOnly&#34;: for future use.
+     * - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
      * 
     */
     public String flag() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Metric Trigger Type - 'Consecutive' or 'Total'
+     * Metric Trigger Type - &#39;Consecutive&#39; or &#39;Total&#39;
      * 
      */
     @EnumType

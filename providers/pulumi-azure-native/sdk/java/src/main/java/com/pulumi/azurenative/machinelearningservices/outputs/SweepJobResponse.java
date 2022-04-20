@@ -46,7 +46,7 @@ public final class SweepJobResponse {
      */
     private final @Nullable Object earlyTermination;
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
      */
     private final @Nullable String experimentName;
@@ -64,7 +64,7 @@ public final class SweepJobResponse {
     private final Map<String,JobEndpointResponse> interactionEndpoints;
     /**
      * Enum to determine the type of job.
-     * Expected value is 'Sweep'.
+     * Expected value is &#39;Sweep&#39;.
      * 
      */
     private final String jobType;
@@ -203,7 +203,7 @@ public final class SweepJobResponse {
         return Optional.ofNullable(this.earlyTermination);
     }
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
+     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
     */
     public Optional<String> experimentName() {
@@ -227,7 +227,7 @@ public final class SweepJobResponse {
     }
     /**
      * Enum to determine the type of job.
-     * Expected value is 'Sweep'.
+     * Expected value is &#39;Sweep&#39;.
      * 
     */
     public String jobType() {

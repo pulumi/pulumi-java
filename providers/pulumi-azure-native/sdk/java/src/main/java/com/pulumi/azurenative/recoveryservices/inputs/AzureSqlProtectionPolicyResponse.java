@@ -25,7 +25,7 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'AzureSql'.
+     * Expected value is &#39;AzureSql&#39;.
      * 
      */
     @Import(name="backupManagementType", required=true)

@@ -52,7 +52,7 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
+     * The ARN for the IAM role that&#39;s used to post flow logs to a CloudWatch Logs log group
      * 
      */
     @Import(name="iamRoleArn")
@@ -98,8 +98,8 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
     /**
      * *Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
      * 
-     * @Deprecated
-     * use 'log_destination' argument instead
+     * @deprecated
+     * use &#39;log_destination&#39; argument instead
      * 
      */
     @Deprecated /* use 'log_destination' argument instead */

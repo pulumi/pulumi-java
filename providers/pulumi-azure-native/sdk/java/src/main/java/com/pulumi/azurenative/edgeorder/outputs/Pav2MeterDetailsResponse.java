@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class Pav2MeterDetailsResponse {
     /**
      * Represents billing type.
-     * Expected value is 'Pav2'.
+     * Expected value is &#39;Pav2&#39;.
      * 
      */
     private final String billingType;
@@ -46,7 +46,7 @@ public final class Pav2MeterDetailsResponse {
 
     /**
      * Represents billing type.
-     * Expected value is 'Pav2'.
+     * Expected value is &#39;Pav2&#39;.
      * 
     */
     public String billingType() {

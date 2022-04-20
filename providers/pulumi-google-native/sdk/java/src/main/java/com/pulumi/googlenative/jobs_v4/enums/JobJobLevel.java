@@ -9,13 +9,13 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The experience level associated with the job, such as "Entry Level".
+     * The experience level associated with the job, such as &#34;Entry Level&#34;.
      * 
      */
     @EnumType
     public enum JobJobLevel {
         /**
-         * The default value if the level isn't specified.
+         * The default value if the level isn&#39;t specified.
          * 
          */
         JobLevelUnspecified("JOB_LEVEL_UNSPECIFIED"),

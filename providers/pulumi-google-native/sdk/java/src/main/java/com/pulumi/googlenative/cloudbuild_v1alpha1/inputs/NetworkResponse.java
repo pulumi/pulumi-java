@@ -17,7 +17,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     public static final NetworkResponse Empty = new NetworkResponse();
 
     /**
-     * Network on which the workers are created. "default" network is used if empty.
+     * Network on which the workers are created. &#34;default&#34; network is used if empty.
      * 
      */
     @Import(name="network", required=true)
@@ -39,7 +39,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
+     * Subnetwork on which the workers are created. &#34;default&#34; subnetwork is used if empty.
      * 
      */
     @Import(name="subnetwork", required=true)

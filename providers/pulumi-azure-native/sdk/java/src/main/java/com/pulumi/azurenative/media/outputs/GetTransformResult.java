@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTransformResult {
     /**
-     * The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     private final String created;
@@ -30,7 +30,7 @@ public final class GetTransformResult {
      */
     private final String id;
     /**
-     * The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
      */
     private final String lastModified;
@@ -50,7 +50,7 @@ public final class GetTransformResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -76,7 +76,7 @@ public final class GetTransformResult {
     }
 
     /**
-     * The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
     */
     public String created() {
@@ -97,7 +97,7 @@ public final class GetTransformResult {
         return this.id;
     }
     /**
-     * The UTC date and time when the Transform was last updated, in 'YYYY-MM-DDThh:mm:ssZ' format.
+     * The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
     */
     public String lastModified() {
@@ -125,7 +125,7 @@ public final class GetTransformResult {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

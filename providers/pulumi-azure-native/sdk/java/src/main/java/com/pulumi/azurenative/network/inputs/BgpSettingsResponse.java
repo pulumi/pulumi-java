@@ -23,7 +23,7 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
     public static final BgpSettingsResponse Empty = new BgpSettingsResponse();
 
     /**
-     * The BGP speaker's ASN.
+     * The BGP speaker&#39;s ASN.
      * 
      */
     @Import(name="asn")

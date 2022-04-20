@@ -22,7 +22,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     public static final RailsAppLayerArgs Empty = new RailsAppLayerArgs();
 
     /**
-     * Keyword for the app server to use. Defaults to "apache_passenger".
+     * Keyword for the app server to use. Defaults to &#34;apache_passenger&#34;.
      * 
      */
     @Import(name="appServer")
@@ -33,7 +33,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether to automatically assign an elastic IP address to the layer's instances.
+     * Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     @Import(name="autoAssignElasticIps")
@@ -44,7 +44,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     @Import(name="autoAssignPublicIps")
@@ -66,7 +66,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
+     * When OpsWorks is managing Bundler, which version to use. Defaults to &#34;1.5.3&#34;.
      * 
      */
     @Import(name="bundlerVersion")
@@ -98,7 +98,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of an IAM profile that will be used for the layer's instances.
+     * The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     @Import(name="customInstanceProfileArn")
@@ -120,7 +120,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Ids for a set of security groups to apply to the layer's instances.
+     * Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     @Import(name="customSecurityGroupIds")
@@ -163,7 +163,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
+     * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer&#39;s instances.
      * 
      */
     @Import(name="ebsVolumes")
@@ -229,7 +229,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The version of Passenger to use. Defaults to "4.0.46".
+     * The version of Passenger to use. Defaults to &#34;4.0.46&#34;.
      * 
      */
     @Import(name="passengerVersion")
@@ -240,7 +240,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The version of Ruby to use. Defaults to "2.0.0".
+     * The version of Ruby to use. Defaults to &#34;2.0.0&#34;.
      * 
      */
     @Import(name="rubyVersion")
@@ -251,7 +251,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The version of RubyGems to use. Defaults to "2.2.2".
+     * The version of RubyGems to use. Defaults to &#34;2.2.2&#34;.
      * 
      */
     @Import(name="rubygemsVersion")
@@ -273,7 +273,7 @@ public final class RailsAppLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Names of a set of system packages to install on the layer's instances.
+     * Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     @Import(name="systemPackages")

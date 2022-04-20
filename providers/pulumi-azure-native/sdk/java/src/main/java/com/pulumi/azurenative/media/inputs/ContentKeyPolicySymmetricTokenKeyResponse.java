@@ -30,7 +30,7 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse extends com.pulumi.
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
      * 
      */
     @Import(name="odataType", required=true)

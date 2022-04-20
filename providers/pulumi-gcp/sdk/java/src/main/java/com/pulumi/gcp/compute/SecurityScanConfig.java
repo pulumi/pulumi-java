@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * * How-to Guides
  *     * [Using Cloud Security Scanner](https://cloud.google.com/security-scanner/docs/scanning)
  * 
- * > **Warning:** All arguments including `authentication.google_account.password` and `authentication.custom_account.password` will be stored in the raw
+ * &gt; **Warning:** All arguments including `authentication.google_account.password` and `authentication.custom_account.password` will be stored in the raw
  * state as plain-text.[Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets)
  * 
  * ## Example Usage
@@ -133,14 +133,14 @@ public class SecurityScanConfig extends com.pulumi.resources.CustomResource {
         return this.maxQps;
     }
     /**
-     * A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
+     * A server defined name for this index. Format: &#39;projects/{{project}}/scanConfigs/{{server_generated_id}}&#39;
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
+     * @return A server defined name for this index. Format: &#39;projects/{{project}}/scanConfigs/{{server_generated_id}}&#39;
      * 
      */
     public Output<String> name() {

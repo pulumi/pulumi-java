@@ -19,7 +19,7 @@ public final class GcmCredentialResponse extends com.pulumi.resources.InvokeArgs
     public static final GcmCredentialResponse Empty = new GcmCredentialResponse();
 
     /**
-     * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
+     * The FCM legacy endpoint. Default value is &#39;https://fcm.googleapis.com/fcm/send&#39;
      * 
      */
     @Import(name="gcmEndpoint")

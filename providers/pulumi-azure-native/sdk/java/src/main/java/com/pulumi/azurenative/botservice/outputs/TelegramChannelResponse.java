@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class TelegramChannelResponse {
     /**
      * The channel name
-     * Expected value is 'TelegramChannel'.
+     * Expected value is &#39;TelegramChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class TelegramChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'TelegramChannel'.
+     * Expected value is &#39;TelegramChannel&#39;.
      * 
     */
     public String channelName() {

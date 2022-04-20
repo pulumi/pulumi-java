@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class StorageQueueEventSubscriptionDestinationResponse {
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'StorageQueue'.
+     * Expected value is &#39;StorageQueue&#39;.
      * 
      */
     private final String endpointType;
@@ -40,7 +40,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'StorageQueue'.
+     * Expected value is &#39;StorageQueue&#39;.
      * 
     */
     public String endpointType() {

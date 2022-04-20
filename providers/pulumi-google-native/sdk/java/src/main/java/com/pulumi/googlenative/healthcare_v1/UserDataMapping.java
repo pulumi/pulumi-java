@@ -78,28 +78,28 @@ public class UserDataMapping extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
+     * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
      * 
      */
     @Export(name="resourceAttributes", type=List.class, parameters={AttributeResponse.class})
     private Output<List<AttributeResponse>> resourceAttributes;
 
     /**
-     * @return Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
+     * @return Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field &#34;values&#34; in each Attribute.
      * 
      */
     public Output<List<AttributeResponse>> resourceAttributes() {
         return this.resourceAttributes;
     }
     /**
-     * User's UUID provided by the client.
+     * User&#39;s UUID provided by the client.
      * 
      */
     @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
-     * @return User's UUID provided by the client.
+     * @return User&#39;s UUID provided by the client.
      * 
      */
     public Output<String> userId() {

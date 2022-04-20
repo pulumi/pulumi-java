@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public final class AKSVariantResponseResponse {
     /**
      * The compute environment type for the service.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
      */
     private final String computeType;
@@ -93,7 +93,7 @@ public final class AKSVariantResponseResponse {
 
     /**
      * The compute environment type for the service.
-     * Expected value is 'Custom'.
+     * Expected value is &#39;Custom&#39;.
      * 
     */
     public String computeType() {

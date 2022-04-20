@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     public static final PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs Empty = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs();
 
     /**
-     * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
+     * Max number of bytes to scan from a file. If a scanned file&#39;s size is bigger than this value
      * then the rest of the bytes are omitted.
      * 
      */

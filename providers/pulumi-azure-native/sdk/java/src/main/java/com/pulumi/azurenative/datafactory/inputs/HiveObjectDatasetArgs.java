@@ -126,7 +126,7 @@ public final class HiveObjectDatasetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of dataset.
-     * Expected value is 'HiveObject'.
+     * Expected value is &#39;HiveObject&#39;.
      * 
      */
     @Import(name="type", required=true)

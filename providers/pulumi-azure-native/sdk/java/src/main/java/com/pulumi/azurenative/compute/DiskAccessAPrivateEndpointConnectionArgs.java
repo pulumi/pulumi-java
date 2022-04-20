@@ -17,7 +17,7 @@ public final class DiskAccessAPrivateEndpointConnectionArgs extends com.pulumi.r
     public static final DiskAccessAPrivateEndpointConnectionArgs Empty = new DiskAccessAPrivateEndpointConnectionArgs();
 
     /**
-     * The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     * The name of the disk access resource that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
      * 
      */
     @Import(name="diskAccessName", required=true)

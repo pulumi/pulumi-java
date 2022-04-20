@@ -20,7 +20,7 @@ public final class PipelineStageAction {
      */
     private final String category;
     /**
-     * A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
+     * A map of the action declaration&#39;s configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
      * 
      */
     private final @Nullable Map<String,String> configuration;
@@ -30,7 +30,7 @@ public final class PipelineStageAction {
      */
     private final @Nullable List<String> inputArtifacts;
     /**
-     * The action declaration's name.
+     * The action declaration&#39;s name.
      * 
      */
     private final String name;
@@ -111,7 +111,7 @@ public final class PipelineStageAction {
         return this.category;
     }
     /**
-     * A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
+     * A map of the action declaration&#39;s configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
      * 
     */
     public Map<String,String> configuration() {
@@ -125,7 +125,7 @@ public final class PipelineStageAction {
         return this.inputArtifacts == null ? List.of() : this.inputArtifacts;
     }
     /**
-     * The action declaration's name.
+     * The action declaration&#39;s name.
      * 
     */
     public String name() {

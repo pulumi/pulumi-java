@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The combination of user name and password that are used as credentials.</p>
+ * &lt;p&gt;The combination of user name and password that are used as credentials.&lt;/p&gt;
  * 
  */
 public final class DataSourceCredentialPairArgs extends com.pulumi.resources.ResourceArgs {
@@ -22,15 +22,15 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
     public static final DataSourceCredentialPairArgs Empty = new DataSourceCredentialPairArgs();
 
     /**
-     * <p>A set of alternate data source parameters that you want to share for these
+     * &lt;p&gt;A set of alternate data source parameters that you want to share for these
      *             credentials. The credentials are applied in tandem with the data source parameters when
      *             you copy a data source by using a create or update request. The API operation compares
-     *             the <code>DataSourceParameters</code> structure that's in the request with the
-     *             structures in the <code>AlternateDataSourceParameters</code> allow list. If the
+     *             the &lt;code&gt;DataSourceParameters&lt;/code&gt; structure that&#39;s in the request with the
+     *             structures in the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; allow list. If the
      *             structures are an exact match, the request is allowed to use the new data source with
-     *             the existing credentials. If the <code>AlternateDataSourceParameters</code> list is
-     *             null, the <code>DataSourceParameters</code> originally used with these
-     *                 <code>Credentials</code> is automatically allowed.</p>
+     *             the existing credentials. If the &lt;code&gt;AlternateDataSourceParameters&lt;/code&gt; list is
+     *             null, the &lt;code&gt;DataSourceParameters&lt;/code&gt; originally used with these
+     *                 &lt;code&gt;Credentials&lt;/code&gt; is automatically allowed.&lt;/p&gt;
      * 
      */
     @Import(name="alternateDataSourceParameters")
@@ -41,7 +41,7 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * <p>Password.</p>
+     * &lt;p&gt;Password.&lt;/p&gt;
      * 
      */
     @Import(name="password", required=true)
@@ -52,7 +52,7 @@ public final class DataSourceCredentialPairArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * <p>User name.</p>
+     * &lt;p&gt;User name.&lt;/p&gt;
      * 
      */
     @Import(name="username", required=true)

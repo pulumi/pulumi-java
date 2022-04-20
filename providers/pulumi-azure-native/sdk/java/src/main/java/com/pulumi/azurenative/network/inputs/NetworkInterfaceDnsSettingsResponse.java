@@ -31,7 +31,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     }
 
     /**
-     * List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+     * List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
      * 
      */
     @Import(name="dnsServers")

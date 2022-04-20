@@ -41,7 +41,7 @@ public final class GetNamespaceResult {
      */
     private final @Nullable String location;
     /**
-     * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
+     * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
      * 
      */
     private final @Nullable Integer maximumThroughputUnits;
@@ -76,7 +76,7 @@ public final class GetNamespaceResult {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -154,7 +154,7 @@ public final class GetNamespaceResult {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
+     * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( &#39;0&#39; if AutoInflateEnabled = true)
      * 
     */
     public Optional<Integer> maximumThroughputUnits() {
@@ -203,7 +203,7 @@ public final class GetNamespaceResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

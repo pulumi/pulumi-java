@@ -101,7 +101,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
+     * The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
      * 
      */
     @Import(name="functionName")
@@ -134,7 +134,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
+     * The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
     @Import(name="kmsKeyArn")
@@ -145,7 +145,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
+     * A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
      * 
      */
     @Import(name="layers")
@@ -156,7 +156,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
     @Import(name="memorySize")
@@ -189,7 +189,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the function's execution role.
+     * The Amazon Resource Name (ARN) of the function&#39;s execution role.
      * 
      */
     @Import(name="role", required=true)
@@ -200,7 +200,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The identifier of the function's runtime.
+     * The identifier of the function&#39;s runtime.
      * 
      */
     @Import(name="runtime")

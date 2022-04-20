@@ -17,7 +17,7 @@ public final class WorkflowState extends com.pulumi.resources.ResourceArgs {
     public static final WorkflowState Empty = new WorkflowState();
 
     /**
-     * The timestamp of when the workflow was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine
+     * The timestamp of when the workflow was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine
      * fractional digits.
      * 
      */
@@ -143,7 +143,7 @@ public final class WorkflowState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The timestamp of when the workflow was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * The timestamp of when the workflow was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
      * nine fractional digits.
      * 
      */

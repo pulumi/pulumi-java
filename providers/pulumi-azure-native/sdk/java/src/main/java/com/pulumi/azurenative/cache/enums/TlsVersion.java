@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The minimum TLS version for the cluster to support, e.g. '1.2'
+     * The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
      * 
      */
     @EnumType

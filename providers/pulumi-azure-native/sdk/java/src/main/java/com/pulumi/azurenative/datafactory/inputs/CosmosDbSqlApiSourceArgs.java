@@ -121,7 +121,7 @@ public final class CosmosDbSqlApiSourceArgs extends com.pulumi.resources.Resourc
 
     /**
      * Copy source type.
-     * Expected value is 'CosmosDbSqlApiSource'.
+     * Expected value is &#39;CosmosDbSqlApiSource&#39;.
      * 
      */
     @Import(name="type", required=true)

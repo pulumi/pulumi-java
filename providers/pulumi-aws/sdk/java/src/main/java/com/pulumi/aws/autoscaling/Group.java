@@ -26,9 +26,9 @@ import javax.annotation.Nullable;
 /**
  * Provides an Auto Scaling Group resource.
  * 
- * > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
+ * &gt; **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
  * 
- * > **NOTE on Auto Scaling Groups and ASG Attachments:** This provider currently provides
+ * &gt; **NOTE on Auto Scaling Groups and ASG Attachments:** This provider currently provides
  * both a standalone `aws.autoscaling.Attachment` resource
  * (describing an ASG attached to an ELB or ALB), and an `aws.autoscaling.Group`
  * with `load_balancers` and `target_group_arns` defined in-line. These two methods are not
@@ -59,17 +59,17 @@ import javax.annotation.Nullable;
  * this provider will also wait for the correct number of healthy instances before
  * continuing.
  * 
- * This provider considers an instance "healthy" when the ASG reports `HealthStatus:
- * "Healthy"` and `LifecycleState: "InService"`. See the [AWS AutoScaling
+ * This provider considers an instance &#34;healthy&#34; when the ASG reports `HealthStatus:
+ * &#34;Healthy&#34;` and `LifecycleState: &#34;InService&#34;`. See the [AWS AutoScaling
  * Docs](https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html)
- * for more information on an ASG's lifecycle.
+ * for more information on an ASG&#39;s lifecycle.
  * 
  * This provider will wait for healthy instances for up to
  * `wait_for_capacity_timeout`. If ASG creation is taking more than a few minutes,
- * it's worth investigating for scaling activity errors, which can be caused by
+ * it&#39;s worth investigating for scaling activity errors, which can be caused by
  * problems with the selected Launch Configuration.
  * 
- * Setting `wait_for_capacity_timeout` to `"0"` disables ASG Capacity waiting.
+ * Setting `wait_for_capacity_timeout` to `&#34;0&#34;` disables ASG Capacity waiting.
  * 
  * #### Waiting for ELB Capacity
  * 
@@ -77,15 +77,15 @@ import javax.annotation.Nullable;
  * via the `load_balancers` attribute or with ALBs specified with `target_group_arns`.
  * 
  * The `min_elb_capacity` parameter causes this provider to wait for at least the
- * requested number of instances to show up `"InService"` in all attached ELBs
+ * requested number of instances to show up `&#34;InService&#34;` in all attached ELBs
  * during ASG creation.  It has no effect on ASG updates.
  * 
  * If `wait_for_elb_capacity` is set, this provider will wait for exactly that number
- * of Instances to be `"InService"` in all attached ELBs on both creation and
+ * of Instances to be `&#34;InService&#34;` in all attached ELBs on both creation and
  * updates.
  * 
  * These parameters can be used to ensure that service is being provided before
- * the provider moves on. If new instances don't pass the ELB's health checks for any
+ * the provider moves on. If new instances don&#39;t pass the ELB&#39;s health checks for any
  * reason, the apply will time out, and the ASG will be marked as
  * tainted (i.e., marked to be destroyed in a follow up run).
  * 
@@ -201,7 +201,7 @@ public class Group extends com.pulumi.resources.CustomResource {
     /**
      * Allows deleting the Auto Scaling Group without waiting
      * for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
-     * even if it's in the process of scaling a resource. Normally, this provider
+     * even if it&#39;s in the process of scaling a resource. Normally, this provider
      * drains all the instances before deleting the group.  This bypasses that
      * behavior and potentially leaves resources dangling.
      * 
@@ -212,7 +212,7 @@ public class Group extends com.pulumi.resources.CustomResource {
     /**
      * @return Allows deleting the Auto Scaling Group without waiting
      * for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
-     * even if it's in the process of scaling a resource. Normally, this provider
+     * even if it&#39;s in the process of scaling a resource. Normally, this provider
      * drains all the instances before deleting the group.  This bypasses that
      * behavior and potentially leaves resources dangling.
      * 
@@ -241,14 +241,14 @@ public class Group extends com.pulumi.resources.CustomResource {
         return this.healthCheckGracePeriod;
     }
     /**
-     * "EC2" or "ELB". Controls how health checking is done.
+     * &#34;EC2&#34; or &#34;ELB&#34;. Controls how health checking is done.
      * 
      */
     @Export(name="healthCheckType", type=String.class, parameters={})
     private Output<String> healthCheckType;
 
     /**
-     * @return "EC2" or "ELB". Controls how health checking is done.
+     * @return &#34;EC2&#34; or &#34;ELB&#34;. Controls how health checking is done.
      * 
      */
     public Output<String> healthCheckType() {
@@ -463,14 +463,14 @@ public class Group extends com.pulumi.resources.CustomResource {
         return this.namePrefix;
     }
     /**
-     * The name of the placement group into which you'll launch your instances, if any.
+     * The name of the placement group into which you&#39;ll launch your instances, if any.
      * 
      */
     @Export(name="placementGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> placementGroup;
 
     /**
-     * @return The name of the placement group into which you'll launch your instances, if any.
+     * @return The name of the placement group into which you&#39;ll launch your instances, if any.
      * 
      */
     public Output</* @Nullable */ String> placementGroup() {
@@ -598,7 +598,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * A maximum
      * [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
      * wait for ASG instances to be healthy before timing out.  (See also Waiting
-     * for Capacity below.) Setting this to "0" causes
+     * for Capacity below.) Setting this to &#34;0&#34; causes
      * this provider to skip all Capacity Waiting behavior.
      * 
      */
@@ -609,7 +609,7 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A maximum
      * [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
      * wait for ASG instances to be healthy before timing out.  (See also Waiting
-     * for Capacity below.) Setting this to "0" causes
+     * for Capacity below.) Setting this to &#34;0&#34; causes
      * this provider to skip all Capacity Waiting behavior.
      * 
      */

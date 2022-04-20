@@ -21,7 +21,7 @@ public final class BgpPeerStatusResponse {
      */
     private final String connectedDuration;
     /**
-     * The virtual network gateway's local address.
+     * The virtual network gateway&#39;s local address.
      * 
      */
     private final String localAddress;
@@ -86,7 +86,7 @@ public final class BgpPeerStatusResponse {
         return this.connectedDuration;
     }
     /**
-     * The virtual network gateway's local address.
+     * The virtual network gateway&#39;s local address.
      * 
     */
     public String localAddress() {

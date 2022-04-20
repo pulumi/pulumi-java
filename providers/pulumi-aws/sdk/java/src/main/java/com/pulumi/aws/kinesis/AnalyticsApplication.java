@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * 
  * For more details, see the [Amazon Kinesis Analytics Documentation](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html).
  * 
- * > **Note:** To manage Amazon Kinesis Data Analytics for Apache Flink applications, use the `aws.kinesisanalyticsv2.Application` resource.
+ * &gt; **Note:** To manage Amazon Kinesis Data Analytics for Apache Flink applications, use the `aws.kinesisanalyticsv2.Application` resource.
  * 
  * ## Example Usage
  * 
@@ -188,7 +188,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
     }
     /**
      * Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
-     * To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+     * To modify an application&#39;s starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
     @Export(name="startApplication", type=Boolean.class, parameters={})
@@ -196,7 +196,7 @@ public class AnalyticsApplication extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined `starting_position` must be configured.
-     * To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
+     * To modify an application&#39;s starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
     public Output</* @Nullable */ Boolean> startApplication() {

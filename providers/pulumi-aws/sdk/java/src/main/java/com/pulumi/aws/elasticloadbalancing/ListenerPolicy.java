@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
- * @Deprecated
+ * @deprecated
  * aws.elasticloadbalancing.ListenerPolicy has been deprecated in favor of aws.elb.ListenerPolicy
  * 
  */

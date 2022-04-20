@@ -18,7 +18,7 @@ public final class Office365SourceResponse {
      */
     private final @Nullable Object allowedGroups;
     /**
-     * The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
+     * The Column to apply the &lt;paramref name=&#34;StartTime&#34;/&gt; and &lt;paramref name=&#34;EndTime&#34;/&gt;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object dateFilterColumn;
@@ -38,7 +38,7 @@ public final class Office365SourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
+     * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { &#34;name&#34;: &#34;Id&#34; }, { &#34;name&#34;: &#34;CreatedDateTime&#34; } ]
      * 
      */
     private final @Nullable Object outputColumns;
@@ -59,7 +59,7 @@ public final class Office365SourceResponse {
     private final @Nullable Object startTime;
     /**
      * Copy source type.
-     * Expected value is 'Office365Source'.
+     * Expected value is &#39;Office365Source&#39;.
      * 
      */
     private final String type;
@@ -103,7 +103,7 @@ public final class Office365SourceResponse {
         return Optional.ofNullable(this.allowedGroups);
     }
     /**
-     * The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
+     * The Column to apply the &lt;paramref name=&#34;StartTime&#34;/&gt; and &lt;paramref name=&#34;EndTime&#34;/&gt;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> dateFilterColumn() {
@@ -131,7 +131,7 @@ public final class Office365SourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
+     * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { &#34;name&#34;: &#34;Id&#34; }, { &#34;name&#34;: &#34;CreatedDateTime&#34; } ]
      * 
     */
     public Optional<Object> outputColumns() {
@@ -160,7 +160,7 @@ public final class Office365SourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'Office365Source'.
+     * Expected value is &#39;Office365Source&#39;.
      * 
     */
     public String type() {

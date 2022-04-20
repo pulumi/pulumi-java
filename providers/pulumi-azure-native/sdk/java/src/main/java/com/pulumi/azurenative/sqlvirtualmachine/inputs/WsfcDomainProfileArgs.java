@@ -20,7 +20,7 @@ public final class WsfcDomainProfileArgs extends com.pulumi.resources.ResourceAr
     public static final WsfcDomainProfileArgs Empty = new WsfcDomainProfileArgs();
 
     /**
-     * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
+     * Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
      * 
      */
     @Import(name="clusterBootstrapAccount")

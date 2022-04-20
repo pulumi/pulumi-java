@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * An access configuration attached to an instance's network interface. Only one access config per instance is supported.
+ * An access configuration attached to an instance&#39;s network interface. Only one access config per instance is supported.
  * 
  */
 public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs {
@@ -107,7 +107,7 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Specifies whether a public DNS 'A' record should be created for the external IP address of this access configuration.
+     * Specifies whether a public DNS &#39;A&#39; record should be created for the external IP address of this access configuration.
      * 
      */
     @Import(name="setPublicDns", required=true)
@@ -118,7 +118,7 @@ public final class AccessConfigResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
+     * Specifies whether a public DNS &#39;PTR&#39; record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
      * 
      */
     @Import(name="setPublicPtr", required=true)

@@ -27,7 +27,7 @@ public final class GetKustoDatabaseDataSetMappingResult {
     private final String id;
     /**
      * Kind of data set mapping.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
      */
     private final String kind;
@@ -109,7 +109,7 @@ public final class GetKustoDatabaseDataSetMappingResult {
     }
     /**
      * Kind of data set mapping.
-     * Expected value is 'KustoDatabase'.
+     * Expected value is &#39;KustoDatabase&#39;.
      * 
     */
     public String kind() {

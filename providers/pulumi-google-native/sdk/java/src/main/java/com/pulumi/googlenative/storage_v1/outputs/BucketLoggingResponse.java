@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BucketLoggingResponse {
     /**
-     * The destination bucket where the current bucket's logs should be placed.
+     * The destination bucket where the current bucket&#39;s logs should be placed.
      * 
      */
     private final String logBucket;
@@ -29,7 +29,7 @@ public final class BucketLoggingResponse {
     }
 
     /**
-     * The destination bucket where the current bucket's logs should be placed.
+     * The destination bucket where the current bucket&#39;s logs should be placed.
      * 
     */
     public String logBucket() {

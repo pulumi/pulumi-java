@@ -56,7 +56,7 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Labels to apply to this address.  A list of key->value pairs.
+     * Labels to apply to this address.  A list of key-&gt;value pairs.
      * 
      */
     @Import(name="labels")
@@ -168,7 +168,7 @@ public final class AddressArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The URL of the subnetwork in which to reserve the address. If an IP
-     * address is specified, it must be within the subnetwork's IP range.
+     * address is specified, it must be within the subnetwork&#39;s IP range.
      * This field can only be used with INTERNAL type with
      * GCE_ENDPOINT/DNS_RESOLVER purposes.
      * 

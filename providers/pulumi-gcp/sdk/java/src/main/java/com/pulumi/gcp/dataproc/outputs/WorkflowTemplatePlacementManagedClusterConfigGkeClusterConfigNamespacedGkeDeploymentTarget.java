@@ -17,7 +17,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      */
     private final @Nullable String clusterNamespace;
     /**
-     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
      */
     private final @Nullable String targetGkeCluster;
@@ -38,7 +38,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
         return Optional.ofNullable(this.clusterNamespace);
     }
     /**
-     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     * Optional. The target GKE cluster to deploy to. Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
     */
     public Optional<String> targetGkeCluster() {

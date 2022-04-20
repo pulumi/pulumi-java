@@ -33,7 +33,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Login parameters to send to the OpenID Connect authorization endpoint when
-     * a user logs in. Each parameter must be in the form "key=value".
+     * a user logs in. Each parameter must be in the form &#34;key=value&#34;.
      * 
      */
     @Import(name="additionalLoginParams")
@@ -45,7 +45,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Allowed audience values to consider when validating JWTs issued by
-     * Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
+     * Azure Active Directory. Note that the &lt;code&gt;ClientID&lt;/code&gt; value is always considered an
      * allowed audience, regardless of this setting.
      * 
      */
@@ -71,7 +71,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The path of the config file containing auth settings.
-     * If the path is relative, base will the site's root directory.
+     * If the path is relative, base will the site&#39;s root directory.
      * 
      */
     @Import(name="authFilePath")
@@ -147,7 +147,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     /**
      * The default authentication provider to use when multiple providers are configured.
      * This setting is only needed if multiple providers are configured and the unauthenticated client
-     * action is set to "RedirectToLoginPage".
+     * action is set to &#34;RedirectToLoginPage&#34;.
      * 
      */
     @Import(name="defaultProvider")
@@ -158,7 +158,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")
@@ -306,7 +306,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
-     * This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
+     * This setting is optional. If not specified, &#34;openid&#34;, &#34;profile&#34;, and &#34;email&#34; are used as default scopes.
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
@@ -318,8 +318,8 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * "true" if the auth config settings should be read from a file,
-     * "false" otherwise
+     * &#34;true&#34; if the auth config settings should be read from a file,
+     * &#34;false&#34; otherwise
      * 
      */
     @Import(name="isAuthFromFile")
@@ -394,7 +394,7 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
 
     /**
      * The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
-     * This setting is optional. If not specified, "wl.basic" is used as the default scope.
+     * This setting is optional. If not specified, &#34;wl.basic&#34; is used as the default scope.
      * Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
      * 
      */
@@ -452,8 +452,8 @@ public final class WebAppAuthSettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
-     *  The default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="tokenStoreEnabled")

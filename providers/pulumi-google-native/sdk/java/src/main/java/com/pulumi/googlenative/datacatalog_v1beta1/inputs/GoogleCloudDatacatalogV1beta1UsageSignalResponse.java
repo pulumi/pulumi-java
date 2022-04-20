@@ -29,7 +29,7 @@ public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse extends com.
     }
 
     /**
-     * Usage statistics over each of the pre-defined time ranges, supported strings for time ranges are {"24H", "7D", "30D"}.
+     * Usage statistics over each of the pre-defined time ranges, supported strings for time ranges are {&#34;24H&#34;, &#34;7D&#34;, &#34;30D&#34;}.
      * 
      */
     @Import(name="usageWithinTimeRange", required=true)

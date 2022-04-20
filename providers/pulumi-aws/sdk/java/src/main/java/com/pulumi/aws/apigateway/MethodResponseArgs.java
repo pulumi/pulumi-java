@@ -40,7 +40,7 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * A map of the API models used for the response's content type
+     * A map of the API models used for the response&#39;s content type
      * 
      */
     @Import(name="responseModels")
@@ -52,7 +52,7 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * A map of response parameters that can be sent to the caller.
-     * For example: `response_parameters = { "method.response.header.X-Some-Header" = true }`
+     * For example: `response_parameters = { &#34;method.response.header.X-Some-Header&#34; = true }`
      * would define that the header `X-Some-Header` can be provided on the response.
      * 
      */

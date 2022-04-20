@@ -25,7 +25,7 @@ public final class CmdkeySetupResponse {
     private final Object targetName;
     /**
      * The type of custom setup.
-     * Expected value is 'CmdkeySetup'.
+     * Expected value is &#39;CmdkeySetup&#39;.
      * 
      */
     private final String type;
@@ -63,7 +63,7 @@ public final class CmdkeySetupResponse {
     }
     /**
      * The type of custom setup.
-     * Expected value is 'CmdkeySetup'.
+     * Expected value is &#39;CmdkeySetup&#39;.
      * 
     */
     public String type() {

@@ -20,7 +20,7 @@ public final class NetworkRoutingConfigArgs extends com.pulumi.resources.Resourc
     public static final NetworkRoutingConfigArgs Empty = new NetworkRoutingConfigArgs();
 
     /**
-     * The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.
+     * The network-wide routing mode to use. If set to REGIONAL, this network&#39;s Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network&#39;s Cloud Routers will advertise routes with all subnets of this network, across regions.
      * 
      */
     @Import(name="routingMode")

@@ -24,7 +24,7 @@ public final class GetSubnetworkResult {
      */
     private final String description;
     /**
-     * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+     * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn&#39;t supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
      * 
      */
     private final Boolean enableFlowLogs;
@@ -49,7 +49,7 @@ public final class GetSubnetworkResult {
      */
     private final String ipCidrRange;
     /**
-     * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+     * The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
      * 
      */
     private final String ipv6AccessType;
@@ -89,7 +89,7 @@ public final class GetSubnetworkResult {
      */
     private final String privateIpv6GoogleAccess;
     /**
-     * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+     * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn&#39;t supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
      * 
      */
     private final String purpose;
@@ -187,7 +187,7 @@ public final class GetSubnetworkResult {
         return this.description;
     }
     /**
-     * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+     * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn&#39;t supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
      * 
     */
     public Boolean enableFlowLogs() {
@@ -222,7 +222,7 @@ public final class GetSubnetworkResult {
         return this.ipCidrRange;
     }
     /**
-     * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+     * The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
      * 
     */
     public String ipv6AccessType() {
@@ -278,7 +278,7 @@ public final class GetSubnetworkResult {
         return this.privateIpv6GoogleAccess;
     }
     /**
-     * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+     * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn&#39;t supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
      * 
     */
     public String purpose() {

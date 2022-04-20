@@ -115,7 +115,7 @@ public final class RelationalTableDatasetArgs extends com.pulumi.resources.Resou
 
     /**
      * Type of dataset.
-     * Expected value is 'RelationalTable'.
+     * Expected value is &#39;RelationalTable&#39;.
      * 
      */
     @Import(name="type", required=true)

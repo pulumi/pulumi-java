@@ -32,7 +32,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of an AWS storage resource's location.
+     * The ARN of an AWS storage resource&#39;s location.
      * 
      */
     @Import(name="destinationLocationArn", required=true)

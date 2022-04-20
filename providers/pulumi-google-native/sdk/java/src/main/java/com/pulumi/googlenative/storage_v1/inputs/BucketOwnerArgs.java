@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The owner of the bucket. This is always the project team's owner group.
+ * The owner of the bucket. This is always the project team&#39;s owner group.
  * 
  */
 public final class BucketOwnerArgs extends com.pulumi.resources.ResourceArgs {

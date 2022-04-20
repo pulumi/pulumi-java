@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * Details of the final state "forward" and associated resource.
+ * Details of the final state &#34;forward&#34; and associated resource.
  * 
  */
 public final class ForwardInfoResponse extends com.pulumi.resources.InvokeArgs {

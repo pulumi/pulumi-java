@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a CloudWatch Composite Alarm resource.
  * 
- * > **NOTE:** An alarm (composite or metric) cannot be destroyed when there are other composite alarms depending on it. This can lead to a cyclical dependency on update, as the provider will unsuccessfully attempt to destroy alarms before updating the rule. Consider using `depends_on`, references to alarm names, and two-stage updates.
+ * &gt; **NOTE:** An alarm (composite or metric) cannot be destroyed when there are other composite alarms depending on it. This can lead to a cyclical dependency on update, as the provider will unsuccessfully attempt to destroy alarms before updating the rule. Consider using `depends_on`, references to alarm names, and two-stage updates.
  * 
  * ## Example Usage
  * 
@@ -91,14 +91,14 @@ public class CompositeAlarm extends com.pulumi.resources.CustomResource {
         return this.alarmName;
     }
     /**
-     * An expression that specifies which other alarms are to be evaluated to determine this composite alarm's state. For syntax, see [Creating a Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html). The maximum length is 10240 characters.
+     * An expression that specifies which other alarms are to be evaluated to determine this composite alarm&#39;s state. For syntax, see [Creating a Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html). The maximum length is 10240 characters.
      * 
      */
     @Export(name="alarmRule", type=String.class, parameters={})
     private Output<String> alarmRule;
 
     /**
-     * @return An expression that specifies which other alarms are to be evaluated to determine this composite alarm's state. For syntax, see [Creating a Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html). The maximum length is 10240 characters.
+     * @return An expression that specifies which other alarms are to be evaluated to determine this composite alarm&#39;s state. For syntax, see [Creating a Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html). The maximum length is 10240 characters.
      * 
      */
     public Output<String> alarmRule() {

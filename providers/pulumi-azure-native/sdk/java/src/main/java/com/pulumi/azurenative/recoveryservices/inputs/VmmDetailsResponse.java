@@ -19,7 +19,7 @@ public final class VmmDetailsResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'VMM'.
+     * Expected value is &#39;VMM&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

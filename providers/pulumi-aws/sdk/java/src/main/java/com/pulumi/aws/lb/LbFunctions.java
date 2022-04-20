@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class LbFunctions {
     /**
-     * > **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
+     * &gt; **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
      * 
      * Provides information about a Load Balancer Listener.
      * 
@@ -36,7 +36,7 @@ public final class LbFunctions {
         return Deployment.getInstance().invokeAsync("aws:lb/getListener:getListener", TypeShape.of(GetListenerResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
+     * &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
      * 
      * Provides information about a Load Balancer.
      * 
@@ -57,7 +57,7 @@ public final class LbFunctions {
         return Deployment.getInstance().invokeAsync("aws:lb/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * > **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
+     * &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
      * 
      * Provides information about a Load Balancer Target Group.
      * 

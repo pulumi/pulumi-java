@@ -126,7 +126,7 @@ public final class AzureSqlDWTableDatasetResponse extends com.pulumi.resources.I
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureSqlDWTable'.
+     * Expected value is &#39;AzureSqlDWTable&#39;.
      * 
      */
     @Import(name="type", required=true)

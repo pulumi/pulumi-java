@@ -19,7 +19,7 @@ public final class GetKubeEnvironmentResult {
     private final @Nullable String aksResourceID;
     /**
      * Cluster configuration which enables the log daemon to export
-     * app logs to a destination. Currently only "log-analytics" is
+     * app logs to a destination. Currently only &#34;log-analytics&#34; is
      * supported
      * 
      */
@@ -131,7 +131,7 @@ public final class GetKubeEnvironmentResult {
     }
     /**
      * Cluster configuration which enables the log daemon to export
-     * app logs to a destination. Currently only "log-analytics" is
+     * app logs to a destination. Currently only &#34;log-analytics&#34; is
      * supported
      * 
     */

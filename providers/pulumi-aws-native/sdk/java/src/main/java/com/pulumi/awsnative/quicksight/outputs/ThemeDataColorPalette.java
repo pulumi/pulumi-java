@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThemeDataColorPalette {
     /**
-     * <p>The hexadecimal codes for the colors.</p>
+     * &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
      * 
      */
     private final @Nullable List<String> colors;
     /**
-     * <p>The hexadecimal code of a color that applies to charts where a lack of data is
-     *             highlighted.</p>
+     * &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+     *             highlighted.&lt;/p&gt;
      * 
      */
     private final @Nullable String emptyFillColor;
     /**
-     * <p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>
+     * &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
      * 
      */
     private final @Nullable List<String> minMaxGradient;
@@ -40,22 +40,22 @@ public final class ThemeDataColorPalette {
     }
 
     /**
-     * <p>The hexadecimal codes for the colors.</p>
+     * &lt;p&gt;The hexadecimal codes for the colors.&lt;/p&gt;
      * 
     */
     public List<String> colors() {
         return this.colors == null ? List.of() : this.colors;
     }
     /**
-     * <p>The hexadecimal code of a color that applies to charts where a lack of data is
-     *             highlighted.</p>
+     * &lt;p&gt;The hexadecimal code of a color that applies to charts where a lack of data is
+     *             highlighted.&lt;/p&gt;
      * 
     */
     public Optional<String> emptyFillColor() {
         return Optional.ofNullable(this.emptyFillColor);
     }
     /**
-     * <p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>
+     * &lt;p&gt;The minimum and maximum hexadecimal codes that describe a color gradient. &lt;/p&gt;
      * 
     */
     public List<String> minMaxGradient() {

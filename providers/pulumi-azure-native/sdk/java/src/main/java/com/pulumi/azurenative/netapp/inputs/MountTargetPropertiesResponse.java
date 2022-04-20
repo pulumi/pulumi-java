@@ -30,7 +30,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The mount target's IPv4 address
+     * The mount target&#39;s IPv4 address
      * 
      */
     @Import(name="ipAddress", required=true)
@@ -52,7 +52,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
     }
 
     /**
-     * The SMB server's Fully Qualified Domain Name, FQDN
+     * The SMB server&#39;s Fully Qualified Domain Name, FQDN
      * 
      */
     @Import(name="smbServerFqdn")

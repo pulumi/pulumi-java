@@ -81,7 +81,7 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
+     * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate&#39;s requested maximum_lifetime, the effective lifetime will be explicitly truncated.
      * 
      */
     @Import(name="maximumLifetime")

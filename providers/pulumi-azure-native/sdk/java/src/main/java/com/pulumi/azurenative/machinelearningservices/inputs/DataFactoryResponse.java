@@ -35,7 +35,7 @@ public final class DataFactoryResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * The type of compute
-     * Expected value is 'DataFactory'.
+     * Expected value is &#39;DataFactory&#39;.
      * 
      */
     @Import(name="computeType", required=true)

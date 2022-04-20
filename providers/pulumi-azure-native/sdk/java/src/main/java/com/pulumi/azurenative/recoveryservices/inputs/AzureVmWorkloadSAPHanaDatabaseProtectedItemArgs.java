@@ -252,7 +252,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends com.p
 
     /**
      * backup item type.
-     * Expected value is 'AzureVmWorkloadSAPHanaDatabase'.
+     * Expected value is &#39;AzureVmWorkloadSAPHanaDatabase&#39;.
      * 
      */
     @Import(name="protectedItemType", required=true)

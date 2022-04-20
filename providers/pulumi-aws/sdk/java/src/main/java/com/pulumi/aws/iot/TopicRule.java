@@ -40,7 +40,7 @@ import javax.annotation.Nullable;
  * IoT Topic Rules can be imported using the `name`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:iot/topicRule:TopicRule rule <name>
+ *  $ pulumi import aws:iot/topicRule:TopicRule rule &lt;name&gt;
  * ```
  * 
  */

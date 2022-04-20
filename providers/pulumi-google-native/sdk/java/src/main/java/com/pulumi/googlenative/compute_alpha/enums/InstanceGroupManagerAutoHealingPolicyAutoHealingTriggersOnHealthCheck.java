@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         Off("OFF"),
         /**
-         * (Default) The group recreates running VMs that fail the group's application-based health check.
+         * (Default) The group recreates running VMs that fail the group&#39;s application-based health check.
          * 
          */
         On("ON");

@@ -16,7 +16,7 @@ public final class HookVersionLoggingConfigArgs extends com.pulumi.resources.Res
     public static final HookVersionLoggingConfigArgs Empty = new HookVersionLoggingConfigArgs();
 
     /**
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
+     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
      * 
      */
     @Import(name="logGroupName")

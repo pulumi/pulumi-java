@@ -17,7 +17,7 @@ public final class BoundObjectReference {
      */
     private final @Nullable String apiVersion;
     /**
-     * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
+     * Kind of the referent. Valid kinds are &#39;Pod&#39; and &#39;Secret&#39;.
      * 
      */
     private final @Nullable String kind;
@@ -52,7 +52,7 @@ public final class BoundObjectReference {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
+     * Kind of the referent. Valid kinds are &#39;Pod&#39; and &#39;Secret&#39;.
      * 
     */
     public Optional<String> kind() {

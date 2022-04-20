@@ -61,7 +61,7 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
 
     /**
      * The type of the rule collection.
-     * Expected value is 'FirewallPolicyNatRuleCollection'.
+     * Expected value is &#39;FirewallPolicyNatRuleCollection&#39;.
      * 
      */
     @Import(name="ruleCollectionType", required=true)

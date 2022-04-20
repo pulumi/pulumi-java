@@ -19,7 +19,7 @@ public final class BackupPolicyResponse {
      */
     private final List<String> datasourceTypes;
     /**
-     * Expected value is 'BackupPolicy'.
+     * Expected value is &#39;BackupPolicy&#39;.
      * 
      */
     private final String objectType;
@@ -47,7 +47,7 @@ public final class BackupPolicyResponse {
         return this.datasourceTypes;
     }
     /**
-     * Expected value is 'BackupPolicy'.
+     * Expected value is &#39;BackupPolicy&#39;.
      * 
     */
     public String objectType() {

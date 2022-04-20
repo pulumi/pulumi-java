@@ -73,7 +73,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+     * Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
      * 
      */
     @Import(name="stepScalingPolicyConfiguration")
@@ -84,7 +84,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+     * A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
      * 
      */
     @Import(name="targetTrackingScalingPolicyConfiguration")

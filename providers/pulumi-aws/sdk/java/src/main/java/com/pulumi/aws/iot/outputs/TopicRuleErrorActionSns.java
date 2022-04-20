@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TopicRuleErrorActionSns {
     /**
-     * The message format of the message to publish. Accepted values are "JSON" and "RAW".
+     * The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
      * 
      */
     private final @Nullable String messageFormat;
@@ -38,7 +38,7 @@ public final class TopicRuleErrorActionSns {
     }
 
     /**
-     * The message format of the message to publish. Accepted values are "JSON" and "RAW".
+     * The message format of the message to publish. Accepted values are &#34;JSON&#34; and &#34;RAW&#34;.
      * 
     */
     public Optional<String> messageFormat() {

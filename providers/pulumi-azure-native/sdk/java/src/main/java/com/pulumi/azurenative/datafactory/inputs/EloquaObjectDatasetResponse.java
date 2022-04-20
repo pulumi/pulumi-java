@@ -115,7 +115,7 @@ public final class EloquaObjectDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'EloquaObject'.
+     * Expected value is &#39;EloquaObject&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class UserManagedHttpsParametersResponse {
     /**
      * Defines the source of the SSL certificate.
-     * Expected value is 'AzureKeyVault'.
+     * Expected value is &#39;AzureKeyVault&#39;.
      * 
      */
     private final String certificateSource;
     /**
-     * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+     * Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
      * 
      */
     private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
@@ -48,14 +48,14 @@ public final class UserManagedHttpsParametersResponse {
 
     /**
      * Defines the source of the SSL certificate.
-     * Expected value is 'AzureKeyVault'.
+     * Expected value is &#39;AzureKeyVault&#39;.
      * 
     */
     public String certificateSource() {
         return this.certificateSource;
     }
     /**
-     * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
+     * Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
      * 
     */
     public KeyVaultCertificateSourceParametersResponse certificateSourceParameters() {

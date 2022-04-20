@@ -91,12 +91,12 @@ public final class GetFileShareResult {
      */
     private final Double shareUsageBytes;
     /**
-     * Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
+     * Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
      * 
      */
     private final String snapshotTime;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -252,14 +252,14 @@ public final class GetFileShareResult {
         return this.shareUsageBytes;
     }
     /**
-     * Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
+     * Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
      * 
     */
     public String snapshotTime() {
         return this.snapshotTime;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

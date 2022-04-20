@@ -63,7 +63,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The plan's version.
+     * The plan&#39;s version.
      * 
      */
     @Import(name="version")

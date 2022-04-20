@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The assignee's type, user/group
+     * The assignee&#39;s type, user/group
      * 
      */
     @EnumType

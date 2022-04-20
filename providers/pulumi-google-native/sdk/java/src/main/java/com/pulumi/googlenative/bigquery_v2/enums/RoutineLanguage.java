@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Optional. Defaults to "SQL".
+     * Optional. Defaults to &#34;SQL&#34;.
      * 
      */
     @EnumType

@@ -51,12 +51,12 @@ public final class SapEccLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'SapEcc'.
+     * Expected value is &#39;SapEcc&#39;.
      * 
      */
     private final String type;
     /**
-     * The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
+     * The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
      * 
      */
     private final String url;
@@ -132,14 +132,14 @@ public final class SapEccLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'SapEcc'.
+     * Expected value is &#39;SapEcc&#39;.
      * 
     */
     public String type() {
         return this.type;
     }
     /**
-     * The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
+     * The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
      * 
     */
     public String url() {

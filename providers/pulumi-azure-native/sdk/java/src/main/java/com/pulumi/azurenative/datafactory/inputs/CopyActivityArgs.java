@@ -398,7 +398,7 @@ public final class CopyActivityArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of activity.
-     * Expected value is 'Copy'.
+     * Expected value is &#39;Copy&#39;.
      * 
      */
     @Import(name="type", required=true)

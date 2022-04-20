@@ -65,7 +65,7 @@ public final class ACIServiceResponseResponse extends com.pulumi.resources.Invok
 
     /**
      * The compute environment type for the service.
-     * Expected value is 'ACI'.
+     * Expected value is &#39;ACI&#39;.
      * 
      */
     @Import(name="computeType", required=true)

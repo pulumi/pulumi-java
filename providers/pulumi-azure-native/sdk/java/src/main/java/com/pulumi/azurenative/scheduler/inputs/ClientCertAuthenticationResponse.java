@@ -72,7 +72,7 @@ public final class ClientCertAuthenticationResponse extends com.pulumi.resources
 
     /**
      * Gets or sets the HTTP authentication type.
-     * Expected value is 'ClientCertificate'.
+     * Expected value is &#39;ClientCertificate&#39;.
      * 
      */
     @Import(name="type", required=true)

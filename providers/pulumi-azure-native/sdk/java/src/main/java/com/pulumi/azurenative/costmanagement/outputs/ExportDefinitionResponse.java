@@ -29,7 +29,7 @@ public final class ExportDefinitionResponse {
      */
     private final String timeframe;
     /**
-     * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+     * The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
      * 
      */
     private final String type;
@@ -68,7 +68,7 @@ public final class ExportDefinitionResponse {
         return this.timeframe;
     }
     /**
-     * The type of the export. Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
+     * The type of the export. Note that &#39;Usage&#39; is equivalent to &#39;ActualCost&#39; and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
      * 
     */
     public String type() {

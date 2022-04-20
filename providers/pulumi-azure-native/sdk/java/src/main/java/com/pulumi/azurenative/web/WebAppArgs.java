@@ -27,7 +27,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     public static final WebAppArgs Empty = new WebAppArgs();
 
     /**
-     * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="clientAffinityEnabled")
@@ -38,7 +38,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="clientCertEnabled")
@@ -118,7 +118,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
+     * &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
      */
     @Import(name="enabled")
@@ -129,7 +129,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
+     * Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
      */
     @Import(name="hostNameSslStates")
@@ -140,8 +140,8 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
-     *  If <code>true</code>, the app is only accessible via API management process.
+     * &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
      */
     @Import(name="hostNamesDisabled")
@@ -263,7 +263,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if reserved; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="reserved")
@@ -285,7 +285,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="scmSiteAlsoStopped")
@@ -296,7 +296,7 @@ public final class WebAppArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
     @Import(name="serverFarmId")

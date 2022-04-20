@@ -19,7 +19,7 @@ public final class GetTrialResult {
      */
     private final String clientId;
     /**
-     * Time at which the trial's status changed to COMPLETED.
+     * Time at which the trial&#39;s status changed to COMPLETED.
      * 
      */
     private final String endTime;
@@ -96,7 +96,7 @@ public final class GetTrialResult {
         return this.clientId;
     }
     /**
-     * Time at which the trial's status changed to COMPLETED.
+     * Time at which the trial&#39;s status changed to COMPLETED.
      * 
     */
     public String endTime() {

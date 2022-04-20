@@ -115,7 +115,7 @@ public final class CommonDataServiceForAppsEntityDatasetArgs extends com.pulumi.
 
     /**
      * Type of dataset.
-     * Expected value is 'CommonDataServiceForAppsEntity'.
+     * Expected value is &#39;CommonDataServiceForAppsEntity&#39;.
      * 
      */
     @Import(name="type", required=true)

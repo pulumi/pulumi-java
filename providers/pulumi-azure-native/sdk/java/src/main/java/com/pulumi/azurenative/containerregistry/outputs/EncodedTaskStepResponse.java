@@ -41,7 +41,7 @@ public final class EncodedTaskStepResponse {
     private final @Nullable String encodedValuesContent;
     /**
      * The type of the step.
-     * Expected value is 'EncodedTask'.
+     * Expected value is &#39;EncodedTask&#39;.
      * 
      */
     private final String type;
@@ -106,7 +106,7 @@ public final class EncodedTaskStepResponse {
     }
     /**
      * The type of the step.
-     * Expected value is 'EncodedTask'.
+     * Expected value is &#39;EncodedTask&#39;.
      * 
     */
     public String type() {

@@ -25,19 +25,19 @@ public final class TableExternalDataConfiguration {
     private final Boolean autodetect;
     /**
      * The compression type of the data source.
-     * Valid values are "NONE" or "GZIP".
+     * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
      * 
      */
     private final @Nullable String compression;
     /**
      * Additional properties to set if
-     * `source_format` is set to "CSV". Structure is documented below.
+     * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
      * 
      */
     private final @Nullable TableExternalDataConfigurationCsvOptions csvOptions;
     /**
      * Additional options if
-     * `source_format` is set to "GOOGLE_SHEETS". Structure is
+     * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
      * documented below.
      * 
      */
@@ -70,8 +70,8 @@ public final class TableExternalDataConfiguration {
      * A JSON schema for the external table. Schema is required
      * for CSV and JSON formats if autodetect is not on. Schema is disallowed
      * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
-     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
-     * string will create a diff, even if the JSON itself hasn't changed.
+     * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn&#39;t changed.
      * Furthermore drift for this field cannot not be detected because BigQuery
      * only uses this schema to compute the effective schema for the table, therefore
      * any changes on the configured value will force the table to be recreated.
@@ -83,10 +83,10 @@ public final class TableExternalDataConfiguration {
     private final @Nullable String schema;
     /**
      * The data format. Supported values are:
-     * "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC",
-     * "DATSTORE_BACKUP", and "BIGTABLE". To use "GOOGLE_SHEETS"
+     * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
+     * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
      * the `scopes` must include
-     * "https://www.googleapis.com/auth/drive.readonly".
+     * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
      * 
      */
     private final String sourceFormat;
@@ -131,7 +131,7 @@ public final class TableExternalDataConfiguration {
     }
     /**
      * The compression type of the data source.
-     * Valid values are "NONE" or "GZIP".
+     * Valid values are &#34;NONE&#34; or &#34;GZIP&#34;.
      * 
     */
     public Optional<String> compression() {
@@ -139,7 +139,7 @@ public final class TableExternalDataConfiguration {
     }
     /**
      * Additional properties to set if
-     * `source_format` is set to "CSV". Structure is documented below.
+     * `source_format` is set to &#34;CSV&#34;. Structure is documented below.
      * 
     */
     public Optional<TableExternalDataConfigurationCsvOptions> csvOptions() {
@@ -147,7 +147,7 @@ public final class TableExternalDataConfiguration {
     }
     /**
      * Additional options if
-     * `source_format` is set to "GOOGLE_SHEETS". Structure is
+     * `source_format` is set to &#34;GOOGLE_SHEETS&#34;. Structure is
      * documented below.
      * 
     */
@@ -188,8 +188,8 @@ public final class TableExternalDataConfiguration {
      * A JSON schema for the external table. Schema is required
      * for CSV and JSON formats if autodetect is not on. Schema is disallowed
      * for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
-     * ~>**NOTE:** Because this field expects a JSON string, any changes to the
-     * string will create a diff, even if the JSON itself hasn't changed.
+     * ~&gt;**NOTE:** Because this field expects a JSON string, any changes to the
+     * string will create a diff, even if the JSON itself hasn&#39;t changed.
      * Furthermore drift for this field cannot not be detected because BigQuery
      * only uses this schema to compute the effective schema for the table, therefore
      * any changes on the configured value will force the table to be recreated.
@@ -203,10 +203,10 @@ public final class TableExternalDataConfiguration {
     }
     /**
      * The data format. Supported values are:
-     * "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC",
-     * "DATSTORE_BACKUP", and "BIGTABLE". To use "GOOGLE_SHEETS"
+     * &#34;CSV&#34;, &#34;GOOGLE_SHEETS&#34;, &#34;NEWLINE_DELIMITED_JSON&#34;, &#34;AVRO&#34;, &#34;PARQUET&#34;, &#34;ORC&#34;,
+     * &#34;DATSTORE_BACKUP&#34;, and &#34;BIGTABLE&#34;. To use &#34;GOOGLE_SHEETS&#34;
      * the `scopes` must include
-     * "https://www.googleapis.com/auth/drive.readonly".
+     * &#34;https://www.googleapis.com/auth/drive.readonly&#34;.
      * 
     */
     public String sourceFormat() {

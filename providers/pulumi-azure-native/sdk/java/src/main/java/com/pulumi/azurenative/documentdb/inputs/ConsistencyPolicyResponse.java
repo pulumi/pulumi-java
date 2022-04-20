@@ -32,7 +32,7 @@ public final class ConsistencyPolicyResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
      */
     @Import(name="maxIntervalInSeconds")
@@ -43,7 +43,7 @@ public final class ConsistencyPolicyResponse extends com.pulumi.resources.Invoke
     }
 
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
+     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
      */
     @Import(name="maxStalenessPrefix")

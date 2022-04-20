@@ -30,7 +30,7 @@ public final class KeyRingIAMBindingState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * (Computed) The etag of the key ring's IAM policy.
+     * (Computed) The etag of the key ring&#39;s IAM policy.
      * 
      */
     @Import(name="etag")
@@ -43,7 +43,7 @@ public final class KeyRingIAMBindingState extends com.pulumi.resources.ResourceA
     /**
      * The key ring ID, in the form
      * `{project_id}/{location_name}/{key_ring_name}` or
-     * `{location_name}/{key_ring_name}`. In the second form, the provider's
+     * `{location_name}/{key_ring_name}`. In the second form, the provider&#39;s
      * project setting will be used as a fallback.
      * 
      */

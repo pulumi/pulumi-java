@@ -29,7 +29,7 @@ public final class SqlDWSourceResponse {
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
      */
     private final @Nullable Object partitionOption;
@@ -64,13 +64,13 @@ public final class SqlDWSourceResponse {
      */
     private final @Nullable Object sqlReaderStoredProcedureName;
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;. Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
      * 
      */
     private final @Nullable Object storedProcedureParameters;
     /**
      * Copy source type.
-     * Expected value is 'SqlDWSource'.
+     * Expected value is &#39;SqlDWSource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class SqlDWSourceResponse {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;DynamicRange&#34;.
      * 
     */
     public Optional<Object> partitionOption() {
@@ -174,7 +174,7 @@ public final class SqlDWSourceResponse {
         return Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
     /**
-     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
+     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;. Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
      * 
     */
     public Optional<Object> storedProcedureParameters() {
@@ -182,7 +182,7 @@ public final class SqlDWSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'SqlDWSource'.
+     * Expected value is &#39;SqlDWSource&#39;.
      * 
     */
     public String type() {

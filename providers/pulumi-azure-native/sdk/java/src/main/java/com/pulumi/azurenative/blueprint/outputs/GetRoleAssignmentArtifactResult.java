@@ -35,7 +35,7 @@ public final class GetRoleAssignmentArtifactResult {
     private final String id;
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'roleAssignment'.
+     * Expected value is &#39;roleAssignment&#39;.
      * 
      */
     private final String kind;
@@ -119,7 +119,7 @@ public final class GetRoleAssignmentArtifactResult {
     }
     /**
      * Specifies the kind of blueprint artifact.
-     * Expected value is 'roleAssignment'.
+     * Expected value is &#39;roleAssignment&#39;.
      * 
     */
     public String kind() {

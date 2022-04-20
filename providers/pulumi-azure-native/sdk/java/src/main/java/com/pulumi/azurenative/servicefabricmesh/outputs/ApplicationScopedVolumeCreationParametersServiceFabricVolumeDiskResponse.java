@@ -18,7 +18,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     private final @Nullable String description;
     /**
      * Specifies the application-scoped volume kind.
-     * Expected value is 'ServiceFabricVolumeDisk'.
+     * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
      * 
      */
     private final String kind;
@@ -47,7 +47,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     }
     /**
      * Specifies the application-scoped volume kind.
-     * Expected value is 'ServiceFabricVolumeDisk'.
+     * Expected value is &#39;ServiceFabricVolumeDisk&#39;.
      * 
     */
     public String kind() {

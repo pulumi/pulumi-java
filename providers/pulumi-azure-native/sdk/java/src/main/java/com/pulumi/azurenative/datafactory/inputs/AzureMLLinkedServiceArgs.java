@@ -150,7 +150,7 @@ public final class AzureMLLinkedServiceArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureML'.
+     * Expected value is &#39;AzureML&#39;.
      * 
      */
     @Import(name="type", required=true)

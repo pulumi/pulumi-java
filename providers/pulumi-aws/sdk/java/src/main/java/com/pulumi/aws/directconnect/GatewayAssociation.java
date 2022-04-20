@@ -153,8 +153,8 @@ public class GatewayAssociation extends com.pulumi.resources.CustomResource {
         return this.proposalId;
     }
     /**
-     * @Deprecated
-     * use 'associated_gateway_id' argument instead
+     * @deprecated
+     * use &#39;associated_gateway_id&#39; argument instead
      * 
      */
     @Deprecated /* use 'associated_gateway_id' argument instead */

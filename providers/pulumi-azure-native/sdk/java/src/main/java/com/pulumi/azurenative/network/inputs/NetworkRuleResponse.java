@@ -99,7 +99,7 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Rule Type.
-     * Expected value is 'NetworkRule'.
+     * Expected value is &#39;NetworkRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

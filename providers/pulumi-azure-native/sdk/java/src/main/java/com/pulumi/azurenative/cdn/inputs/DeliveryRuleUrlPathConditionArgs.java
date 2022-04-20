@@ -21,7 +21,7 @@ public final class DeliveryRuleUrlPathConditionArgs extends com.pulumi.resources
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'UrlPath'.
+     * Expected value is &#39;UrlPath&#39;.
      * 
      */
     @Import(name="name", required=true)

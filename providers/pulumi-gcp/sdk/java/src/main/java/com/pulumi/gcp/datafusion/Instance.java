@@ -51,14 +51,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:datafusion/instance:Instance")
 public class Instance extends com.pulumi.resources.CustomResource {
     /**
-     * The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * The time the instance was created in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
      * 
      */
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
-     * @return The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * @return The time the instance was created in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
      * 
      */
     public Output<String> createTime() {
@@ -323,14 +323,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.type;
     }
     /**
-     * The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * The time the instance was last updated in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
      * 
      */
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
-     * @return The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
+     * @return The time the instance was last updated in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds.
      * 
      */
     public Output<String> updateTime() {

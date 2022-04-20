@@ -16,7 +16,7 @@ import java.util.Objects;
 @CustomType
 public final class GetMigrationJobResult {
     /**
-     * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final String createTime;
@@ -41,7 +41,7 @@ public final class GetMigrationJobResult {
      */
     private final String dumpPath;
     /**
-     * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     private final String duration;
@@ -56,7 +56,7 @@ public final class GetMigrationJobResult {
      */
     private final StatusResponse error;
     /**
-     * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
+     * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
      */
     private final Map<String,String> labels;
@@ -101,7 +101,7 @@ public final class GetMigrationJobResult {
      */
     private final String type;
     /**
-     * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
      */
     private final String updateTime;
@@ -154,7 +154,7 @@ public final class GetMigrationJobResult {
     }
 
     /**
-     * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
     */
     public String createTime() {
@@ -189,7 +189,7 @@ public final class GetMigrationJobResult {
         return this.dumpPath;
     }
     /**
-     * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+     * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
     */
     public String duration() {
@@ -210,7 +210,7 @@ public final class GetMigrationJobResult {
         return this.error;
     }
     /**
-     * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
+     * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of &#34;key&#34;: &#34;value&#34; pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
     */
     public Map<String,String> labels() {
@@ -273,7 +273,7 @@ public final class GetMigrationJobResult {
         return this.type;
     }
     /**
-     * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+     * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
      * 
     */
     public String updateTime() {

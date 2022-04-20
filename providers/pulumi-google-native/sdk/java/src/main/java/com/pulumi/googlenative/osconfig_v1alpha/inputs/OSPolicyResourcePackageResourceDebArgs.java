@@ -21,7 +21,7 @@ public final class OSPolicyResourcePackageResourceDebArgs extends com.pulumi.res
     public static final OSPolicyResourcePackageResourceDebArgs Empty = new OSPolicyResourcePackageResourceDebArgs();
 
     /**
-     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
+     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb`
      * 
      */
     @Import(name="pullDeps")

@@ -19,11 +19,11 @@ import javax.annotation.Nullable;
  * 
  * If the portfolio share with the specified account or organization node already exists, using this resource to re-create the share will have no effect and will not return an error. You can then use this resource to update the share.
  * 
- * > **NOTE:** Shares to an organization node can only be created by the management account of an organization or by a delegated administrator. If a delegated admin is de-registered, they can no longer create portfolio shares.
+ * &gt; **NOTE:** Shares to an organization node can only be created by the management account of an organization or by a delegated administrator. If a delegated admin is de-registered, they can no longer create portfolio shares.
  * 
- * > **NOTE:** AWSOrganizationsAccess must be enabled in order to create a portfolio share to an organization node.
+ * &gt; **NOTE:** AWSOrganizationsAccess must be enabled in order to create a portfolio share to an organization node.
  * 
- * > **NOTE:** You can't share a shared resource, including portfolios that contain a shared product.
+ * &gt; **NOTE:** You can&#39;t share a shared resource, including portfolios that contain a shared product.
  * 
  * ## Example Usage
  * 

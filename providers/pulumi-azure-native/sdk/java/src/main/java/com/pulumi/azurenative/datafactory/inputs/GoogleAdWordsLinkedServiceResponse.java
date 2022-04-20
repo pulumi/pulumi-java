@@ -194,7 +194,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
 
     /**
      * Type of linked service.
-     * Expected value is 'GoogleAdWords'.
+     * Expected value is &#39;GoogleAdWords&#39;.
      * 
      */
     @Import(name="type", required=true)

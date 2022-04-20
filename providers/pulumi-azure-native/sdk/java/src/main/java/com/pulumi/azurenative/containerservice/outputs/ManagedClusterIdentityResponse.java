@@ -24,12 +24,12 @@ public final class ManagedClusterIdentityResponse {
      */
     private final String tenantId;
     /**
-     * The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.
+     * The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
      * 
      */
     private final @Nullable String type;
     /**
-     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     private final @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
@@ -61,14 +61,14 @@ public final class ManagedClusterIdentityResponse {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.
+     * The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
      * 
     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
     */
     public Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities() {

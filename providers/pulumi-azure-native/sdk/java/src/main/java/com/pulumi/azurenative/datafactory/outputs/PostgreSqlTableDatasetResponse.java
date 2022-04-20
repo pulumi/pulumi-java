@@ -64,7 +64,7 @@ public final class PostgreSqlTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'PostgreSqlTable'.
+     * Expected value is &#39;PostgreSqlTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class PostgreSqlTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'PostgreSqlTable'.
+     * Expected value is &#39;PostgreSqlTable&#39;.
      * 
     */
     public String type() {

@@ -15,7 +15,7 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
     public static final GetArtifactSourceArgs Empty = new GetArtifactSourceArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=displayName)'
+     * Specify the $expand query. Example: &#39;properties($select=displayName)&#39;
      * 
      */
     @Import(name="expand")

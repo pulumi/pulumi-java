@@ -86,7 +86,7 @@ public final class ImpalaLinkedServiceResponse {
     private final @Nullable Object trustedCertPath;
     /**
      * Type of linked service.
-     * Expected value is 'Impala'.
+     * Expected value is &#39;Impala&#39;.
      * 
      */
     private final String type;
@@ -230,7 +230,7 @@ public final class ImpalaLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Impala'.
+     * Expected value is &#39;Impala&#39;.
      * 
     */
     public String type() {

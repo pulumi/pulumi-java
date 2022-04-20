@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class VolumeMountResponse {
     /**
-     * Path within the container at which the volume should be mounted. Must not contain ':'.
+     * Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
      * 
      */
     private final String mountPath;
@@ -26,7 +26,7 @@ public final class VolumeMountResponse {
      */
     private final Boolean readOnly;
     /**
-     * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
+     * (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
      * 
      */
     private final String subPath;
@@ -44,7 +44,7 @@ public final class VolumeMountResponse {
     }
 
     /**
-     * Path within the container at which the volume should be mounted. Must not contain ':'.
+     * Path within the container at which the volume should be mounted. Must not contain &#39;:&#39;.
      * 
     */
     public String mountPath() {
@@ -65,7 +65,7 @@ public final class VolumeMountResponse {
         return this.readOnly;
     }
     /**
-     * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
+     * (Optional) Path within the volume from which the container&#39;s volume should be mounted. Defaults to &#34;&#34; (volume&#39;s root).
      * 
     */
     public String subPath() {

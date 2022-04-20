@@ -23,7 +23,7 @@ public final class MiSqlConnectionInfoResponse {
     private final @Nullable String password;
     /**
      * Type of connection info
-     * Expected value is 'MiSqlConnectionInfo'.
+     * Expected value is &#39;MiSqlConnectionInfo&#39;.
      * 
      */
     private final String type;
@@ -61,7 +61,7 @@ public final class MiSqlConnectionInfoResponse {
     }
     /**
      * Type of connection info
-     * Expected value is 'MiSqlConnectionInfo'.
+     * Expected value is &#39;MiSqlConnectionInfo&#39;.
      * 
     */
     public String type() {

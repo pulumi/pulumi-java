@@ -99,7 +99,7 @@ public final class OdbcSourceResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy source type.
-     * Expected value is 'OdbcSource'.
+     * Expected value is &#39;OdbcSource&#39;.
      * 
      */
     @Import(name="type", required=true)

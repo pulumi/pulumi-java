@@ -20,7 +20,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     /**
-     * The application's configuration
+     * The application&#39;s configuration
      * 
      */
     @Import(name="applicationConfiguration")

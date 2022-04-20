@@ -47,7 +47,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
 
     /**
      * The class type.
-     * Expected value is 'VMwareCbt'.
+     * Expected value is &#39;VMwareCbt&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

@@ -19,7 +19,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse extend
     public static final GoogleCloudDialogflowCxV3beta1ExperimentResultResponse Empty = new GoogleCloudDialogflowCxV3beta1ExperimentResultResponse();
 
     /**
-     * The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.
+     * The last time the experiment&#39;s stats data was updated. Will have default value if stats have never been computed for this experiment.
      * 
      */
     @Import(name="lastUpdateTime", required=true)

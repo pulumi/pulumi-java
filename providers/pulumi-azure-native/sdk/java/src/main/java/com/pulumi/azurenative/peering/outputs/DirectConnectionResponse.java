@@ -40,7 +40,7 @@ public final class DirectConnectionResponse {
      */
     private final String errorMessage;
     /**
-     * The ID used within Microsoft's peering provisioning system to track the connection
+     * The ID used within Microsoft&#39;s peering provisioning system to track the connection
      * 
      */
     private final String microsoftTrackingId;
@@ -125,7 +125,7 @@ public final class DirectConnectionResponse {
         return this.errorMessage;
     }
     /**
-     * The ID used within Microsoft's peering provisioning system to track the connection
+     * The ID used within Microsoft&#39;s peering provisioning system to track the connection
      * 
     */
     public String microsoftTrackingId() {

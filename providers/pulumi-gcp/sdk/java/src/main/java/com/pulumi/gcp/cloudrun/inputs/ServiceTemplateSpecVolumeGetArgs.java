@@ -16,7 +16,7 @@ public final class ServiceTemplateSpecVolumeGetArgs extends com.pulumi.resources
     public static final ServiceTemplateSpecVolumeGetArgs Empty = new ServiceTemplateSpecVolumeGetArgs();
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name", required=true)
@@ -27,7 +27,7 @@ public final class ServiceTemplateSpecVolumeGetArgs extends com.pulumi.resources
     }
 
     /**
-     * The secret's value will be presented as the content of a file whose
+     * The secret&#39;s value will be presented as the content of a file whose
      * name is defined in the item path. If no items are defined, the name of
      * the file is the secret_name.
      * Structure is documented below.

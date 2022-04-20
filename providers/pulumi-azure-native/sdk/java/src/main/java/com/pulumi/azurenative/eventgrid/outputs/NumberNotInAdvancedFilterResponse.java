@@ -20,7 +20,7 @@ public final class NumberNotInAdvancedFilterResponse {
     private final @Nullable String key;
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberNotIn'.
+     * Expected value is &#39;NumberNotIn&#39;.
      * 
      */
     private final String operatorType;
@@ -49,7 +49,7 @@ public final class NumberNotInAdvancedFilterResponse {
     }
     /**
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
-     * Expected value is 'NumberNotIn'.
+     * Expected value is &#39;NumberNotIn&#39;.
      * 
     */
     public String operatorType() {

@@ -20,7 +20,7 @@ public final class DeliveryRulePostArgsConditionResponse extends com.pulumi.reso
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'PostArgs'.
+     * Expected value is &#39;PostArgs&#39;.
      * 
      */
     @Import(name="name", required=true)

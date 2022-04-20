@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessPointRootDirectory {
     /**
-     * POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
+     * POSIX IDs and permissions to apply to the access point&#39;s Root Directory. See Creation Info below.
      * 
      */
     private final @Nullable AccessPointRootDirectoryCreationInfo creationInfo;
@@ -32,7 +32,7 @@ public final class AccessPointRootDirectory {
     }
 
     /**
-     * POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
+     * POSIX IDs and permissions to apply to the access point&#39;s Root Directory. See Creation Info below.
      * 
     */
     public Optional<AccessPointRootDirectoryCreationInfo> creationInfo() {

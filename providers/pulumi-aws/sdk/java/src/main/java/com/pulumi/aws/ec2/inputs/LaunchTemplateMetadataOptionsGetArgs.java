@@ -17,7 +17,7 @@ public final class LaunchTemplateMetadataOptionsGetArgs extends com.pulumi.resou
     public static final LaunchTemplateMetadataOptionsGetArgs Empty = new LaunchTemplateMetadataOptionsGetArgs();
 
     /**
-     * Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
+     * Whether the metadata service is available. Can be `&#34;enabled&#34;` or `&#34;disabled&#34;`. (Default: `&#34;enabled&#34;`).
      * 
      */
     @Import(name="httpEndpoint")
@@ -50,7 +50,7 @@ public final class LaunchTemplateMetadataOptionsGetArgs extends com.pulumi.resou
     }
 
     /**
-     * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
+     * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `&#34;optional&#34;` or `&#34;required&#34;`. (Default: `&#34;optional&#34;`).
      * 
      */
     @Import(name="httpTokens")

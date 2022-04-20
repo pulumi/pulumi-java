@@ -73,7 +73,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.
+     * This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn&#39;t specified.
      * 
      */
     @Import(name="disablePulumiPartnerId", json=true)

@@ -19,7 +19,7 @@ public final class DatabaseProjectSummaryResponse {
     private final @Nullable Map<String,String> extendedSummary;
     /**
      * Gets the Instance type.
-     * Expected value is 'Databases'.
+     * Expected value is &#39;Databases&#39;.
      * 
      */
     private final String instanceType;
@@ -55,7 +55,7 @@ public final class DatabaseProjectSummaryResponse {
     }
     /**
      * Gets the Instance type.
-     * Expected value is 'Databases'.
+     * Expected value is &#39;Databases&#39;.
      * 
     */
     public String instanceType() {

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Video sink in a live topology allows for video and audio to be captured, optionally archived, and published via a video resource. If archiving is enabled, this results in a video of type 'archive'. If used in a batch topology, this allows for video and audio to be stored as a file, and published via a video resource of type 'file'
+ * Video sink in a live topology allows for video and audio to be captured, optionally archived, and published via a video resource. If archiving is enabled, this results in a video of type &#39;archive&#39;. If used in a batch topology, this allows for video and audio to be stored as a file, and published via a video resource of type &#39;file&#39;
  * 
  */
 public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
@@ -47,7 +47,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -80,7 +80,7 @@ public final class VideoSinkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
+     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
      * 
      */
     @Import(name="videoPublishingOptions")

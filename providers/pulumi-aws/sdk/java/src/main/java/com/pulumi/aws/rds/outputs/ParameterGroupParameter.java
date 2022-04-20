@@ -12,9 +12,9 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ParameterGroupParameter {
     /**
-     * "immediate" (default), or "pending-reboot". Some
-     * engines can't apply some parameters without a reboot, and you will need to
-     * specify "pending-reboot" here.
+     * &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
+     * engines can&#39;t apply some parameters without a reboot, and you will need to
+     * specify &#34;pending-reboot&#34; here.
      * 
      */
     private final @Nullable String applyMethod;
@@ -40,9 +40,9 @@ public final class ParameterGroupParameter {
     }
 
     /**
-     * "immediate" (default), or "pending-reboot". Some
-     * engines can't apply some parameters without a reboot, and you will need to
-     * specify "pending-reboot" here.
+     * &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
+     * engines can&#39;t apply some parameters without a reboot, and you will need to
+     * specify &#34;pending-reboot&#34; here.
      * 
     */
     public Optional<String> applyMethod() {

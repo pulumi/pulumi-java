@@ -28,7 +28,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
     }
 
     /**
-     * Volume's name.
+     * Volume&#39;s name.
      * 
      */
     @Import(name="name")

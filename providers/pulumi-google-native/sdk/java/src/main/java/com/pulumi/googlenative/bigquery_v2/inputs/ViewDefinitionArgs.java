@@ -30,7 +30,7 @@ public final class ViewDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1, c2) AS ...' syntax. Can only be set using BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/
+     * True if the column names are explicitly specified. For example by using the &#39;CREATE VIEW v(c1, c2) AS ...&#39; syntax. Can only be set using BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/
      * 
      */
     @Import(name="useExplicitColumnNames")
@@ -41,7 +41,7 @@ public final class ViewDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
+     * Specifies whether to use BigQuery&#39;s legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery&#39;s standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
      * 
      */
     @Import(name="useLegacySql")

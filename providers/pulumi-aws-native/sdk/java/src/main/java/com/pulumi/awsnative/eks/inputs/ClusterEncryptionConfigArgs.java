@@ -33,7 +33,7 @@ public final class ClusterEncryptionConfigArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Specifies the resources to be encrypted. The only supported value is "secrets".
+     * Specifies the resources to be encrypted. The only supported value is &#34;secrets&#34;.
      * 
      */
     @Import(name="resources")

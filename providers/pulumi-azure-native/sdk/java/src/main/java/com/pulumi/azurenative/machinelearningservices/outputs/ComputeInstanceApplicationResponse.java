@@ -17,7 +17,7 @@ public final class ComputeInstanceApplicationResponse {
      */
     private final @Nullable String displayName;
     /**
-     * Application' endpoint URI.
+     * Application&#39; endpoint URI.
      * 
      */
     private final @Nullable String endpointUri;
@@ -38,7 +38,7 @@ public final class ComputeInstanceApplicationResponse {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Application' endpoint URI.
+     * Application&#39; endpoint URI.
      * 
     */
     public Optional<String> endpointUri() {

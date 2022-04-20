@@ -66,7 +66,7 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
 
     /**
      * Type of distribution.
-     * Expected value is 'ManagedImage'.
+     * Expected value is &#39;ManagedImage&#39;.
      * 
      */
     @Import(name="type", required=true)

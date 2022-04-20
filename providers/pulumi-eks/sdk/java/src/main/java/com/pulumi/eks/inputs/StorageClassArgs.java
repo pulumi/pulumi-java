@@ -61,7 +61,7 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * I/O operations per second per GiB for "io1" volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.
+     * I/O operations per second per GiB for &#34;io1&#34; volumes. The AWS volume plugin multiplies this with the size of a requested volume to compute IOPS of the volume and caps the result at 20,000 IOPS.
      * 
      */
     @Import(name="iopsPerGb")
@@ -83,7 +83,7 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")
@@ -94,7 +94,7 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
+     * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. [&#34;ro&#34;, &#34;soft&#34;]. Not validated - mount of the PVs will simply fail if one is invalid.
      * 
      */
     @Import(name="mountOptions")

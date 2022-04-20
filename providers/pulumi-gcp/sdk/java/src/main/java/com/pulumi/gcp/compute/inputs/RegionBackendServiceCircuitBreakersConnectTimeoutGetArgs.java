@@ -16,7 +16,7 @@ public final class RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs exte
     public static final RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs Empty = new RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs();
 
     /**
-     * Span of time that's a fraction of a second at nanosecond resolution. Durations
+     * Span of time that&#39;s a fraction of a second at nanosecond resolution. Durations
      * less than one second are represented with a 0 `seconds` field and a positive
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 

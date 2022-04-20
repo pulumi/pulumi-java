@@ -117,7 +117,7 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     * This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
      */
     @Import(name="supportedOSType", required=true)

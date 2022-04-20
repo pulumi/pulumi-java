@@ -249,14 +249,14 @@ public class BatchAccount extends com.pulumi.resources.CustomResource {
         return this.provisioningState;
     }
     /**
-     * If not specified, the default value is 'enabled'.
+     * If not specified, the default value is &#39;enabled&#39;.
      * 
      */
     @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output<String> publicNetworkAccess;
 
     /**
-     * @return If not specified, the default value is 'enabled'.
+     * @return If not specified, the default value is &#39;enabled&#39;.
      * 
      */
     public Output<String> publicNetworkAccess() {

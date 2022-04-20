@@ -95,7 +95,7 @@ public final class ParquetSinkResponse extends com.pulumi.resources.InvokeArgs {
 
     /**
      * Copy sink type.
-     * Expected value is 'ParquetSink'.
+     * Expected value is &#39;ParquetSink&#39;.
      * 
      */
     @Import(name="type", required=true)

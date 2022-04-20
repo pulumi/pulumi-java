@@ -33,7 +33,7 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * App Mesh virtual nodes can be imported using `mesh_name` together with the virtual node's `name`, e.g.,
+ * App Mesh virtual nodes can be imported using `mesh_name` together with the virtual node&#39;s `name`, e.g.,
  * 
  * ```sh
  *  $ pulumi import aws:appmesh/virtualNode:VirtualNode serviceb1 simpleapp/serviceBv1
@@ -101,14 +101,14 @@ public class VirtualNode extends com.pulumi.resources.CustomResource {
         return this.meshName;
     }
     /**
-     * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+     * The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
     @Export(name="meshOwner", type=String.class, parameters={})
     private Output<String> meshOwner;
 
     /**
-     * @return The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+     * @return The AWS account ID of the service mesh&#39;s owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
     public Output<String> meshOwner() {
@@ -129,14 +129,14 @@ public class VirtualNode extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The resource owner's AWS account ID.
+     * The resource owner&#39;s AWS account ID.
      * 
      */
     @Export(name="resourceOwner", type=String.class, parameters={})
     private Output<String> resourceOwner;
 
     /**
-     * @return The resource owner's AWS account ID.
+     * @return The resource owner&#39;s AWS account ID.
      * 
      */
     public Output<String> resourceOwner() {

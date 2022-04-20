@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The theme configuration. This configuration contains all of the display properties for
- *             a theme.</p>
+ * &lt;p&gt;The theme configuration. This configuration contains all of the display properties for
+ *             a theme.&lt;/p&gt;
  * 
  */
 public final class ThemeConfiguration extends com.pulumi.resources.InvokeArgs {

@@ -54,7 +54,7 @@ public final class DynamicsSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * FetchXML is a proprietary query language that is used in Microsoft Dynamics (online & on-premises). Type: string (or Expression with resultType string).
+     * FetchXML is a proprietary query language that is used in Microsoft Dynamics (online &amp; on-premises). Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="query")
@@ -88,7 +88,7 @@ public final class DynamicsSourceArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Copy source type.
-     * Expected value is 'DynamicsSource'.
+     * Expected value is &#39;DynamicsSource&#39;.
      * 
      */
     @Import(name="type", required=true)

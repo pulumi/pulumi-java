@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+     * The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
      * 
      */
     @EnumType
@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         External("EXTERNAL"),
         /**
-         * IPv6 access type not set. Means this subnet hasn't been turned on IPv6 yet.
+         * IPv6 access type not set. Means this subnet hasn&#39;t been turned on IPv6 yet.
          * 
          */
         UnspecifiedIpv6AccessType("UNSPECIFIED_IPV6_ACCESS_TYPE");

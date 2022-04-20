@@ -12,23 +12,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceRule {
     /**
-     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.  "*" means all.
+     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.  &#34;*&#34; means all.
      * 
      */
     private final @Nullable List<String> apiGroups;
     /**
-     * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.  "*" means all.
+     * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.  &#34;*&#34; means all.
      * 
      */
     private final @Nullable List<String> resourceNames;
     /**
-     * Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
-     *  "*{@literal /}foo" represents the subresource 'foo' for all resources in the specified apiGroups.
+     * Resources is a list of resources this rule applies to.  &#34;*&#34; means all in the specified apiGroups.
+     *  &#34;*{@literal /}foo&#34; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
      * 
      */
     private final @Nullable List<String> resources;
     /**
-     * Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.
+     * Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
      * 
      */
     private final List<String> verbs;
@@ -46,29 +46,29 @@ public final class ResourceRule {
     }
 
     /**
-     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.  "*" means all.
+     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.  &#34;*&#34; means all.
      * 
     */
     public List<String> apiGroups() {
         return this.apiGroups == null ? List.of() : this.apiGroups;
     }
     /**
-     * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.  "*" means all.
+     * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.  &#34;*&#34; means all.
      * 
     */
     public List<String> resourceNames() {
         return this.resourceNames == null ? List.of() : this.resourceNames;
     }
     /**
-     * Resources is a list of resources this rule applies to.  "*" means all in the specified apiGroups.
-     *  "*{@literal /}foo" represents the subresource 'foo' for all resources in the specified apiGroups.
+     * Resources is a list of resources this rule applies to.  &#34;*&#34; means all in the specified apiGroups.
+     *  &#34;*{@literal /}foo&#34; represents the subresource &#39;foo&#39; for all resources in the specified apiGroups.
      * 
     */
     public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
-     * Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.
+     * Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
      * 
     */
     public List<String> verbs() {

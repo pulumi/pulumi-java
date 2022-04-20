@@ -55,7 +55,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
 
     /**
      * Gets the class type. Overridden in derived classes.
-     * Expected value is 'HyperVReplicaAzure'.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
      * 
      */
     @Import(name="instanceType", required=true)

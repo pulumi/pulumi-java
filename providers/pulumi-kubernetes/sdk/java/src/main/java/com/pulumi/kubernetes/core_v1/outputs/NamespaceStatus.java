@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NamespaceStatus {
     /**
-     * Represents the latest available observations of a namespace's current state.
+     * Represents the latest available observations of a namespace&#39;s current state.
      * 
      */
     private final @Nullable List<NamespaceCondition> conditions;
@@ -22,8 +22,8 @@ public final class NamespaceStatus {
      * Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
      * Possible enum values:
-     *  - `"Active"` means the namespace is available for use in the system
-     *  - `"Terminating"` means the namespace is undergoing graceful termination
+     *  - `&#34;Active&#34;` means the namespace is available for use in the system
+     *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
      * 
      */
     private final @Nullable String phase;
@@ -37,7 +37,7 @@ public final class NamespaceStatus {
     }
 
     /**
-     * Represents the latest available observations of a namespace's current state.
+     * Represents the latest available observations of a namespace&#39;s current state.
      * 
     */
     public List<NamespaceCondition> conditions() {
@@ -47,8 +47,8 @@ public final class NamespaceStatus {
      * Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
      * Possible enum values:
-     *  - `"Active"` means the namespace is available for use in the system
-     *  - `"Terminating"` means the namespace is undergoing graceful termination
+     *  - `&#34;Active&#34;` means the namespace is available for use in the system
+     *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
      * 
     */
     public Optional<String> phase() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FlowDistinguisherMethod {
     /**
-     * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
+     * `type` is the type of flow distinguisher method The supported types are &#34;ByUser&#34; and &#34;ByNamespace&#34;. Required.
      * 
      */
     private final String type;
@@ -21,7 +21,7 @@ public final class FlowDistinguisherMethod {
     }
 
     /**
-     * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
+     * `type` is the type of flow distinguisher method The supported types are &#34;ByUser&#34; and &#34;ByNamespace&#34;. Required.
      * 
     */
     public String type() {

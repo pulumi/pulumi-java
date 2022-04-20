@@ -42,7 +42,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends com.pulumi.resour
 
     /**
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
-     * Expected value is 'gcpCredentials'.
+     * Expected value is &#39;gcpCredentials&#39;.
      * 
      */
     @Import(name="authenticationType", required=true)

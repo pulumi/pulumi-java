@@ -36,7 +36,7 @@ public final class DataBoxDiskJobSecretsResponse {
     private final Boolean isPasskeyUserDefined;
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     private final String jobSecretsType;
@@ -92,7 +92,7 @@ public final class DataBoxDiskJobSecretsResponse {
     }
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
     */
     public String jobSecretsType() {

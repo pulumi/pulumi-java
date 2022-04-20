@@ -20,7 +20,7 @@ public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
     public static final CapacityArgs Empty = new CapacityArgs();
 
     /**
-     * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
      */
     @Import(name="publishMibPerSec")
@@ -31,7 +31,7 @@ public final class CapacityArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.
+     * Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 32.
      * 
      */
     @Import(name="subscribeMibPerSec")

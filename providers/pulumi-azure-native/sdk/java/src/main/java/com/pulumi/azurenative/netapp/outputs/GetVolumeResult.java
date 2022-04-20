@@ -39,7 +39,7 @@ public final class GetVolumeResult {
      */
     private final @Nullable VolumePropertiesResponseDataProtection dataProtection;
     /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;
      * 
      */
     private final @Nullable String encryptionKeySource;
@@ -119,7 +119,7 @@ public final class GetVolumeResult {
      */
     private final @Nullable Boolean smbEncryption;
     /**
-     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume&#39;s snapshots (default to true).
      * 
      */
     private final @Nullable Boolean snapshotDirectoryVisible;
@@ -244,7 +244,7 @@ public final class GetVolumeResult {
         return Optional.ofNullable(this.dataProtection);
     }
     /**
-     * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
+     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;
      * 
     */
     public Optional<String> encryptionKeySource() {
@@ -356,7 +356,7 @@ public final class GetVolumeResult {
         return Optional.ofNullable(this.smbEncryption);
     }
     /**
-     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
+     * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume&#39;s snapshots (default to true).
      * 
     */
     public Optional<Boolean> snapshotDirectoryVisible() {

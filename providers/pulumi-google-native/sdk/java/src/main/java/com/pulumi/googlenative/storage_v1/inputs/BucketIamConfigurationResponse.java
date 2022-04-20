@@ -11,7 +11,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's IAM configuration.
+ * The bucket&#39;s IAM configuration.
  * 
  */
 public final class BucketIamConfigurationResponse extends com.pulumi.resources.InvokeArgs {
@@ -19,7 +19,7 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
     public static final BucketIamConfigurationResponse Empty = new BucketIamConfigurationResponse();
 
     /**
-     * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+     * The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
      * 
      */
     @Import(name="bucketPolicyOnly", required=true)
@@ -30,7 +30,7 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are supported.
+     * The bucket&#39;s Public Access Prevention configuration. Currently, &#39;inherited&#39; and &#39;enforced&#39; are supported.
      * 
      */
     @Import(name="publicAccessPrevention", required=true)
@@ -41,7 +41,7 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
     }
 
     /**
-     * The bucket's uniform bucket-level access configuration.
+     * The bucket&#39;s uniform bucket-level access configuration.
      * 
      */
     @Import(name="uniformBucketLevelAccess", required=true)

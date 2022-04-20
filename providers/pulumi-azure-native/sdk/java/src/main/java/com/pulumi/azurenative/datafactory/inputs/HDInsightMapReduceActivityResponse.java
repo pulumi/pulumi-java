@@ -171,7 +171,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
 
     /**
      * Type of activity.
-     * Expected value is 'HDInsightMapReduce'.
+     * Expected value is &#39;HDInsightMapReduce&#39;.
      * 
      */
     @Import(name="type", required=true)

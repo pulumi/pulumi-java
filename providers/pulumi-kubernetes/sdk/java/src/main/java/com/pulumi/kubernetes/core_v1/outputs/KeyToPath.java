@@ -23,7 +23,7 @@ public final class KeyToPath {
      */
     private final @Nullable Integer mode;
     /**
-     * The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
+     * The relative path of the file to map the key to. May not be an absolute path. May not contain the path element &#39;..&#39;. May not start with the string &#39;..&#39;.
      * 
      */
     private final String path;
@@ -53,7 +53,7 @@ public final class KeyToPath {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
+     * The relative path of the file to map the key to. May not be an absolute path. May not contain the path element &#39;..&#39;. May not start with the string &#39;..&#39;.
      * 
     */
     public String path() {

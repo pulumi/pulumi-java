@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricTriggerResponse {
     /**
-     * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
+     * List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
      * 
      */
     private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
@@ -105,7 +105,7 @@ public final class MetricTriggerResponse {
     }
 
     /**
-     * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
+     * List of dimension conditions. For example: [{&#34;DimensionName&#34;:&#34;AppName&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;App1&#34;]},{&#34;DimensionName&#34;:&#34;Deployment&#34;,&#34;Operator&#34;:&#34;Equals&#34;,&#34;Values&#34;:[&#34;default&#34;]}].
      * 
     */
     public List<ScaleRuleMetricDimensionResponse> dimensions() {

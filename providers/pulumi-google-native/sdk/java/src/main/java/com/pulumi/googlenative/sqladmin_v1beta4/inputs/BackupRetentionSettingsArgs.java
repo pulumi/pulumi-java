@@ -21,7 +21,7 @@ public final class BackupRetentionSettingsArgs extends com.pulumi.resources.Reso
     public static final BackupRetentionSettingsArgs Empty = new BackupRetentionSettingsArgs();
 
     /**
-     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
+     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is &#39;COUNT&#39;, we will retain this many backups.
      * 
      */
     @Import(name="retainedBackups")
@@ -32,7 +32,7 @@ public final class BackupRetentionSettingsArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The unit that 'retained_backups' represents.
+     * The unit that &#39;retained_backups&#39; represents.
      * 
      */
     @Import(name="retentionUnit")

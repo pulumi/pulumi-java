@@ -20,7 +20,7 @@ public final class NodeConfigSourceArgs extends com.pulumi.resources.ResourceArg
     public static final NodeConfigSourceArgs Empty = new NodeConfigSourceArgs();
 
     /**
-     * ConfigMap is a reference to a Node's ConfigMap
+     * ConfigMap is a reference to a Node&#39;s ConfigMap
      * 
      */
     @Import(name="configMap")

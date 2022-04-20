@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum PhraseMatcherRoleMatch {
         /**
-         * Participant's role is not set.
+         * Participant&#39;s role is not set.
          * 
          */
         RoleUnspecified("ROLE_UNSPECIFIED"),

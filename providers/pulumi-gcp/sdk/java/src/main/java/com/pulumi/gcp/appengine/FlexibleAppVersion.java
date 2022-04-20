@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  * Learn about the differences between the standard environment and the flexible environment
  * at https://cloud.google.com/appengine/docs/the-appengine-environments.
  * 
- * > **Note:** The App Engine flexible environment service account uses the member ID `service-[YOUR_PROJECT_NUMBER]@gae-api-prod.google.com.iam.gserviceaccount.com`
+ * &gt; **Note:** The App Engine flexible environment service account uses the member ID `service-[YOUR_PROJECT_NUMBER]@gae-api-prod.google.com.iam.gserviceaccount.com`
  * It should have the App Engine Flexible Environment Service Agent role, which will be applied when the `appengineflex.googleapis.com` service is enabled.
  * 
  * To get more information about FlexibleAppVersion, see:
@@ -410,8 +410,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
     }
     /**
      * The version of the API in the given runtime environment.
-     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/<language>/config/appref`\
-     * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+     * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
     @Export(name="runtimeApiVersion", type=String.class, parameters={})
@@ -419,8 +419,8 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The version of the API in the given runtime environment.
-     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/<language>/config/appref`\
-     * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
+     * Please see the app.yaml reference for valid values at `https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref`\
+     * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
     public Output<String> runtimeApiVersion() {
@@ -441,14 +441,14 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
         return this.runtimeChannel;
     }
     /**
-     * The path or name of the app's main executable.
+     * The path or name of the app&#39;s main executable.
      * 
      */
     @Export(name="runtimeMainExecutablePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeMainExecutablePath;
 
     /**
-     * @return The path or name of the app's main executable.
+     * @return The path or name of the app&#39;s main executable.
      * 
      */
     public Output</* @Nullable */ String> runtimeMainExecutablePath() {
@@ -488,7 +488,7 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
     }
     /**
      * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
-     * Reserved names,"default", "latest", and any name with the prefix "ah-".
+     * Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
     @Export(name="versionId", type=String.class, parameters={})
@@ -496,7 +496,7 @@ public class FlexibleAppVersion extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
-     * Reserved names,"default", "latest", and any name with the prefix "ah-".
+     * Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
     public Output</* @Nullable */ String> versionId() {

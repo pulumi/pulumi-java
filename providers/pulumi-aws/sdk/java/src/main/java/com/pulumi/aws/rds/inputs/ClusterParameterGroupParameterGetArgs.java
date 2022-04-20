@@ -16,9 +16,9 @@ public final class ClusterParameterGroupParameterGetArgs extends com.pulumi.reso
     public static final ClusterParameterGroupParameterGetArgs Empty = new ClusterParameterGroupParameterGetArgs();
 
     /**
-     * "immediate" (default), or "pending-reboot". Some
-     * engines can't apply some parameters without a reboot, and you will need to
-     * specify "pending-reboot" here.
+     * &#34;immediate&#34; (default), or &#34;pending-reboot&#34;. Some
+     * engines can&#39;t apply some parameters without a reboot, and you will need to
+     * specify &#34;pending-reboot&#34; here.
      * 
      */
     @Import(name="applyMethod")

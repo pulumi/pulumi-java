@@ -90,14 +90,14 @@ public class Repository extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+     * The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+     * @return The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;.
      * 
      */
     public Output<String> name() {

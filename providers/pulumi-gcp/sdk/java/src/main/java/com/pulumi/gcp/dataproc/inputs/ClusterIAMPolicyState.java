@@ -27,7 +27,7 @@ public final class ClusterIAMPolicyState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * (Computed) The etag of the clusters's IAM policy.
+     * (Computed) The etag of the clusters&#39;s IAM policy.
      * 
      */
     @Import(name="etag")

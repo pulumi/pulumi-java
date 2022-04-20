@@ -14,7 +14,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
     public static final InstanceGroupManagerStatusAllInstancesConfigResponse Empty = new InstanceGroupManagerStatusAllInstancesConfigResponse();
 
     /**
-     * Current instances' config revision. This value is in RFC3339 text format.
+     * Current instances&#39; config revision. This value is in RFC3339 text format.
      * 
      */
     @Import(name="currentRevision", required=true)
@@ -25,7 +25,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
     }
 
     /**
-     * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
+     * A bit indicating whether instances&#39; config has been applied to all managed instances in managed instance group.
      * 
      */
     @Import(name="effective", required=true)

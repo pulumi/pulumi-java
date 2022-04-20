@@ -33,7 +33,7 @@ public class GlobalReplicationGroup extends com.pulumi.resources.CustomResource 
     /**
      * (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
      * 
-     * @Deprecated
+     * @deprecated
      * Use engine_version_actual instead
      * 
      */

@@ -33,12 +33,12 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      */
     private final Map<String,String> launchOptions;
     /**
-     * The parameters for the Flex Template. Example: `{"num_workers":"5"}`
+     * The parameters for the Flex Template. Example: `{&#34;num_workers&#34;:&#34;5&#34;}`
      * 
      */
     private final Map<String,String> parameters;
     /**
-     * Use this to pass transform name mappings for streaming update jobs. Example: `{"oldTransformName":"newTransformName",...}`
+     * Use this to pass transform name mappings for streaming update jobs. Example: `{&#34;oldTransformName&#34;:&#34;newTransformName&#34;,...}`
      * 
      */
     private final Map<String,String> transformNameMappings;
@@ -95,14 +95,14 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
         return this.launchOptions;
     }
     /**
-     * The parameters for the Flex Template. Example: `{"num_workers":"5"}`
+     * The parameters for the Flex Template. Example: `{&#34;num_workers&#34;:&#34;5&#34;}`
      * 
     */
     public Map<String,String> parameters() {
         return this.parameters;
     }
     /**
-     * Use this to pass transform name mappings for streaming update jobs. Example: `{"oldTransformName":"newTransformName",...}`
+     * Use this to pass transform name mappings for streaming update jobs. Example: `{&#34;oldTransformName&#34;:&#34;newTransformName&#34;,...}`
      * 
     */
     public Map<String,String> transformNameMappings() {

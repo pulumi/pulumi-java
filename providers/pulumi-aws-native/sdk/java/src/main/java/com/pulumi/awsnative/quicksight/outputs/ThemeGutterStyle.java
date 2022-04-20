@@ -12,8 +12,8 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThemeGutterStyle {
     /**
-     * <p>This Boolean value controls whether to display a gutter space between sheet tiles.
-     *         </p>
+     * &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
+     *         &lt;/p&gt;
      * 
      */
     private final @Nullable Boolean show;
@@ -24,8 +24,8 @@ public final class ThemeGutterStyle {
     }
 
     /**
-     * <p>This Boolean value controls whether to display a gutter space between sheet tiles.
-     *         </p>
+     * &lt;p&gt;This Boolean value controls whether to display a gutter space between sheet tiles.
+     *         &lt;/p&gt;
      * 
     */
     public Optional<Boolean> show() {

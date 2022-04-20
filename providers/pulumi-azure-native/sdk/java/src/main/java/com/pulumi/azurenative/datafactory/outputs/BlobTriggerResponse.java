@@ -53,7 +53,7 @@ public final class BlobTriggerResponse {
     private final String runtimeState;
     /**
      * Trigger type.
-     * Expected value is 'BlobTrigger'.
+     * Expected value is &#39;BlobTrigger&#39;.
      * 
      */
     private final String type;
@@ -129,7 +129,7 @@ public final class BlobTriggerResponse {
     }
     /**
      * Trigger type.
-     * Expected value is 'BlobTrigger'.
+     * Expected value is &#39;BlobTrigger&#39;.
      * 
     */
     public String type() {

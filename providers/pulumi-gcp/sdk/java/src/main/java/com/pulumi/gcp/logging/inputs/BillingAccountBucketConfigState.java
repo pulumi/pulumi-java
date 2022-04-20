@@ -50,7 +50,7 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     }
 
     /**
-     * The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+     * The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
      * 
      */
     @Import(name="lifecycleState")
@@ -72,7 +72,7 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
     }
 
     /**
-     * The resource name of the bucket. For example: "projects/my-project-id/locations/my-location/buckets/my-bucket-id"
+     * The resource name of the bucket. For example: &#34;projects/my-project-id/locations/my-location/buckets/my-bucket-id&#34;
      * 
      */
     @Import(name="name")

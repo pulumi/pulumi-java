@@ -66,7 +66,7 @@ public final class CassandraLinkedServiceResponse {
     private final @Nullable Object port;
     /**
      * Type of linked service.
-     * Expected value is 'Cassandra'.
+     * Expected value is &#39;Cassandra&#39;.
      * 
      */
     private final String type;
@@ -167,7 +167,7 @@ public final class CassandraLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Cassandra'.
+     * Expected value is &#39;Cassandra&#39;.
      * 
     */
     public String type() {

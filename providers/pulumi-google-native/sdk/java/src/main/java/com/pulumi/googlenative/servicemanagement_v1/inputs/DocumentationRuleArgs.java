@@ -31,7 +31,7 @@ public final class DocumentationRuleArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Description of the selected proto element (e.g. a message, a method, a 'service' definition, or a field). Defaults to leading & trailing comments taken from the proto source definition of the proto element.
+     * Description of the selected proto element (e.g. a message, a method, a &#39;service&#39; definition, or a field). Defaults to leading &amp; trailing comments taken from the proto source definition of the proto element.
      * 
      */
     @Import(name="description")
@@ -42,7 +42,7 @@ public final class DocumentationRuleArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.
+     * The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in &#34;*&#34;, indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. &#34;foo.*&#34; is ok, but not &#34;foo.b*&#34; or &#34;foo.*.bar&#34;. A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern &#34;*&#34; is used.
      * 
      */
     @Import(name="selector")

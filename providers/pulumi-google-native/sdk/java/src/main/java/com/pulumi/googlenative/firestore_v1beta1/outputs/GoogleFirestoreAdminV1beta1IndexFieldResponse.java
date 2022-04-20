@@ -15,7 +15,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
      */
     private final String fieldPath;
     /**
-     * The field's mode.
+     * The field&#39;s mode.
      * 
      */
     private final String mode;
@@ -36,7 +36,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
         return this.fieldPath;
     }
     /**
-     * The field's mode.
+     * The field&#39;s mode.
      * 
     */
     public String mode() {

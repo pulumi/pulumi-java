@@ -59,7 +59,7 @@ public final class SharePointOnlineListResourceDatasetResponse {
     private final @Nullable Object structure;
     /**
      * Type of dataset.
-     * Expected value is 'SharePointOnlineListResource'.
+     * Expected value is &#39;SharePointOnlineListResource&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class SharePointOnlineListResourceDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'SharePointOnlineListResource'.
+     * Expected value is &#39;SharePointOnlineListResource&#39;.
      * 
     */
     public String type() {

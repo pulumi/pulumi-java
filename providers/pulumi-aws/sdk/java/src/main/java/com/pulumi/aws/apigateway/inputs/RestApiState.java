@@ -109,7 +109,7 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The execution ARN part to be used in `lambda_permission`'s `source_arn`
+     * The execution ARN part to be used in `lambda_permission`&#39;s `source_arn`
      * when allowing API Gateway to invoke a Lambda function,
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
      * 
@@ -166,7 +166,7 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource ID of the REST API's root
+     * The resource ID of the REST API&#39;s root
      * 
      */
     @Import(name="rootResourceId")

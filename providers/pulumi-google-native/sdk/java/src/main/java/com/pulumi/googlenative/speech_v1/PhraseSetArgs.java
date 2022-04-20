@@ -48,7 +48,7 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID to use for the phrase set, which will become the final component of the phrase set's resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     * The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
      * 
      */
     @Import(name="phraseSetId", required=true)

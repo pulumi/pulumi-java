@@ -26,7 +26,7 @@ public final class CertificateAttributesResponse {
      */
     private final String issuer;
     /**
-     * Serial number of the certificate, Example: "123456789".
+     * Serial number of the certificate, Example: &#34;123456789&#34;.
      * 
      */
     private final String serialNumber;
@@ -100,7 +100,7 @@ public final class CertificateAttributesResponse {
         return this.issuer;
     }
     /**
-     * Serial number of the certificate, Example: "123456789".
+     * Serial number of the certificate, Example: &#34;123456789&#34;.
      * 
     */
     public String serialNumber() {

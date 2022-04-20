@@ -128,7 +128,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Specifies whether outbound calls are enabled.
-     * <!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` -->
+     * &lt;!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` --&gt;
      * 
      */
     @Import(name="outboundCallsEnabled")

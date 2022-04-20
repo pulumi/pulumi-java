@@ -40,7 +40,7 @@ public final class PackageInfoOccurrenceResponse extends com.pulumi.resources.In
     }
 
     /**
-     * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
+     * Provide a place for the SPDX file creator to record a web site that serves as the package&#39;s home page
      * 
      */
     @Import(name="homePage", required=true)

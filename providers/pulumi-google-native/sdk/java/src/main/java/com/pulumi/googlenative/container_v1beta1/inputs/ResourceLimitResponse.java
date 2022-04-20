@@ -39,7 +39,7 @@ public final class ResourceLimitResponse extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * Resource name "cpu", "memory" or gpu-specific string.
+     * Resource name &#34;cpu&#34;, &#34;memory&#34; or gpu-specific string.
      * 
      */
     @Import(name="resourceType", required=true)

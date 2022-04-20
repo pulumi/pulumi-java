@@ -23,7 +23,7 @@ public final class DataPathAssetReferenceResponse {
     private final @Nullable String path;
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'DataPath'.
+     * Expected value is &#39;DataPath&#39;.
      * 
      */
     private final String referenceType;
@@ -54,7 +54,7 @@ public final class DataPathAssetReferenceResponse {
     }
     /**
      * Enum to determine which reference method to use for an asset.
-     * Expected value is 'DataPath'.
+     * Expected value is &#39;DataPath&#39;.
      * 
     */
     public String referenceType() {

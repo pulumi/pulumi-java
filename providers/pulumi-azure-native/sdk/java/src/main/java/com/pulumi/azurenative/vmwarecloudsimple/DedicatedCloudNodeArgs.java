@@ -19,7 +19,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     public static final DedicatedCloudNodeArgs Empty = new DedicatedCloudNodeArgs();
 
     /**
-     * Availability Zone id, e.g. "az1"
+     * Availability Zone id, e.g. &#34;az1&#34;
      * 
      */
     @Import(name="availabilityZoneId", required=true)
@@ -41,7 +41,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * SKU's id
+     * SKU&#39;s id
      * 
      */
     @Import(name="id", required=true)
@@ -63,7 +63,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * SKU's name
+     * SKU&#39;s name
      * 
      */
     @Import(name="name", required=true)
@@ -85,7 +85,7 @@ public final class DedicatedCloudNodeArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Placement Group id, e.g. "n1"
+     * Placement Group id, e.g. &#34;n1&#34;
      * 
      */
     @Import(name="placementGroupId", required=true)

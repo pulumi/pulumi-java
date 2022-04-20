@@ -74,14 +74,14 @@ public class EmailChannel extends com.pulumi.resources.CustomResource {
         return this.enabled;
     }
     /**
-     * The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
+     * The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User &lt;user@example.com&gt;`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
      * 
      */
     @Export(name="fromAddress", type=String.class, parameters={})
     private Output<String> fromAddress;
 
     /**
-     * @return The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
+     * @return The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User &lt;user@example.com&gt;`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
      * 
      */
     public Output<String> fromAddress() {
@@ -116,14 +116,14 @@ public class EmailChannel extends com.pulumi.resources.CustomResource {
         return this.messagesPerSecond;
     }
     /**
-     * The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
+     * The ARN of an IAM Role used to submit events to Mobile Analytics&#39; event ingestion service.
      * 
      */
     @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**
-     * @return The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
+     * @return The ARN of an IAM Role used to submit events to Mobile Analytics&#39; event ingestion service.
      * 
      */
     public Output</* @Nullable */ String> roleArn() {

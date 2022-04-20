@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GitRepoSourceResponse {
     /**
-     * The branch or tag to use. Must start with "refs/" (required).
+     * The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
      */
     private final String ref;
@@ -36,7 +36,7 @@ public final class GitRepoSourceResponse {
     }
 
     /**
-     * The branch or tag to use. Must start with "refs/" (required).
+     * The branch or tag to use. Must start with &#34;refs/&#34; (required).
      * 
     */
     public String ref() {

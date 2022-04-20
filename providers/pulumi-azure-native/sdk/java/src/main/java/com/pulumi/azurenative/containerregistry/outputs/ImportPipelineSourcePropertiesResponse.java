@@ -23,8 +23,8 @@ public final class ImportPipelineSourcePropertiesResponse {
     private final @Nullable String type;
     /**
      * The source uri of the import pipeline.
-     * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-     * When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
+     * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
+     * When &#39;AzureStorageBlobContainer&#39;: &#34;https://accountName.blob.core.windows.net/containerName&#34;
      * 
      */
     private final @Nullable String uri;
@@ -55,8 +55,8 @@ public final class ImportPipelineSourcePropertiesResponse {
     }
     /**
      * The source uri of the import pipeline.
-     * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-     * When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
+     * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
+     * When &#39;AzureStorageBlobContainer&#39;: &#34;https://accountName.blob.core.windows.net/containerName&#34;
      * 
     */
     public Optional<String> uri() {

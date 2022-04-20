@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
     }
 
     /**
-     * Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".
+     * Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of &#34;contact.nums[0].type&#34;, use &#34;contact.nums.type&#34;.
      * 
      */
     @Import(name="fields", required=true)

@@ -22,7 +22,7 @@ public final class PackagingConfigurationCmafPackage {
      */
     private final List<PackagingConfigurationHlsManifest> hlsManifests;
     /**
-     * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+     * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder&#39;s Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
      */
     private final @Nullable Boolean includeEncoderConfigurationInSegments;
@@ -51,7 +51,7 @@ public final class PackagingConfigurationCmafPackage {
         return this.hlsManifests;
     }
     /**
-     * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
+     * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder&#39;s Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
     */
     public Optional<Boolean> includeEncoderConfigurationInSegments() {

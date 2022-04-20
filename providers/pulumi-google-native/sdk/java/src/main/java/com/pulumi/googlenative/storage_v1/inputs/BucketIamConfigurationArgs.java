@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * The bucket's IAM configuration.
+ * The bucket&#39;s IAM configuration.
  * 
  */
 public final class BucketIamConfigurationArgs extends com.pulumi.resources.ResourceArgs {
@@ -22,7 +22,7 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
     public static final BucketIamConfigurationArgs Empty = new BucketIamConfigurationArgs();
 
     /**
-     * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
+     * The bucket&#39;s uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
      * 
      */
     @Import(name="bucketPolicyOnly")
@@ -33,7 +33,7 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are supported.
+     * The bucket&#39;s Public Access Prevention configuration. Currently, &#39;inherited&#39; and &#39;enforced&#39; are supported.
      * 
      */
     @Import(name="publicAccessPrevention")
@@ -44,7 +44,7 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The bucket's uniform bucket-level access configuration.
+     * The bucket&#39;s uniform bucket-level access configuration.
      * 
      */
     @Import(name="uniformBucketLevelAccess")

@@ -47,14 +47,14 @@ public class BucketIntelligentTieringConfiguration extends com.pulumi.resources.
         return this.bucket;
     }
     /**
-     * A bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).
+     * A bucket filter. The configuration only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
     @Export(name="filter", type=BucketIntelligentTieringConfigurationFilter.class, parameters={})
     private Output</* @Nullable */ BucketIntelligentTieringConfigurationFilter> filter;
 
     /**
-     * @return A bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).
+     * @return A bucket filter. The configuration only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
     public Output</* @Nullable */ BucketIntelligentTieringConfigurationFilter> filter() {

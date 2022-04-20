@@ -43,7 +43,7 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * Defines values for a ResourceIdentity's type.
+     * Defines values for a ResourceIdentity&#39;s type.
      * 
      */
     @Import(name="type")

@@ -18,7 +18,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
      */
     private final @Nullable InstanceViewStatusResponse status;
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
      */
     private final @Nullable String type;
@@ -46,7 +46,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Specifies the type of the extension; an example is "CustomScriptExtension".
+     * Specifies the type of the extension; an example is &#34;CustomScriptExtension&#34;.
      * 
     */
     public Optional<String> type() {

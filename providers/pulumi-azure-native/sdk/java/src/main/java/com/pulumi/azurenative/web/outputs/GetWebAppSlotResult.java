@@ -26,12 +26,12 @@ public final class GetWebAppSlotResult {
      */
     private final String availabilityState;
     /**
-     * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean clientAffinityEnabled;
     /**
-     * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean clientCertEnabled;
@@ -69,7 +69,7 @@ public final class GetWebAppSlotResult {
      */
     private final String defaultHostName;
     /**
-     * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
+     * &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
      */
     private final @Nullable Boolean enabled;
@@ -80,7 +80,7 @@ public final class GetWebAppSlotResult {
      */
     private final List<String> enabledHostNames;
     /**
-     * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
+     * Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
      */
     private final @Nullable List<HostNameSslStateResponse> hostNameSslStates;
@@ -90,8 +90,8 @@ public final class GetWebAppSlotResult {
      */
     private final List<String> hostNames;
     /**
-     * <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
-     *  If <code>true</code>, the app is only accessible via API management process.
+     * &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
      */
     private final @Nullable Boolean hostNamesDisabled;
@@ -127,7 +127,7 @@ public final class GetWebAppSlotResult {
      */
     private final String inProgressOperationId;
     /**
-     * <code>true</code> if the app is a default container; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final Boolean isDefaultContainer;
@@ -188,7 +188,7 @@ public final class GetWebAppSlotResult {
      */
     private final String repositorySiteName;
     /**
-     * <code>true</code> if reserved; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean reserved;
@@ -198,12 +198,12 @@ public final class GetWebAppSlotResult {
      */
     private final String resourceGroup;
     /**
-     * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     private final @Nullable Boolean scmSiteAlsoStopped;
     /**
-     * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
      */
     private final @Nullable String serverFarmId;
@@ -370,14 +370,14 @@ public final class GetWebAppSlotResult {
         return this.availabilityState;
     }
     /**
-     * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client affinity; &lt;code&gt;false&lt;/code&gt; to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is &lt;code&gt;true&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> clientAffinityEnabled() {
         return Optional.ofNullable(this.clientAffinityEnabled);
     }
     /**
-     * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to enable client certificate authentication (TLS mutual authentication); otherwise, &lt;code&gt;false&lt;/code&gt;. Default is &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> clientCertEnabled() {
@@ -429,7 +429,7 @@ public final class GetWebAppSlotResult {
         return this.defaultHostName;
     }
     /**
-     * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
+     * &lt;code&gt;true&lt;/code&gt; if the app is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;. Setting this value to false disables the app (takes the app offline).
      * 
     */
     public Optional<Boolean> enabled() {
@@ -444,7 +444,7 @@ public final class GetWebAppSlotResult {
         return this.enabledHostNames;
     }
     /**
-     * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
+     * Hostname SSL states are used to manage the SSL bindings for app&#39;s hostnames.
      * 
     */
     public List<HostNameSslStateResponse> hostNameSslStates() {
@@ -458,8 +458,8 @@ public final class GetWebAppSlotResult {
         return this.hostNames;
     }
     /**
-     * <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
-     *  If <code>true</code>, the app is only accessible via API management process.
+     * &lt;code&gt;true&lt;/code&gt; to disable the public hostnames of the app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  If &lt;code&gt;true&lt;/code&gt;, the app is only accessible via API management process.
      * 
     */
     public Optional<Boolean> hostNamesDisabled() {
@@ -509,7 +509,7 @@ public final class GetWebAppSlotResult {
         return this.inProgressOperationId;
     }
     /**
-     * <code>true</code> if the app is a default container; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the app is a default container; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Boolean isDefaultContainer() {
@@ -594,7 +594,7 @@ public final class GetWebAppSlotResult {
         return this.repositorySiteName;
     }
     /**
-     * <code>true</code> if reserved; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if reserved; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> reserved() {
@@ -608,14 +608,14 @@ public final class GetWebAppSlotResult {
         return this.resourceGroup;
     }
     /**
-     * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; to stop SCM (KUDU) site when the app is stopped; otherwise, &lt;code&gt;false&lt;/code&gt;. The default is &lt;code&gt;false&lt;/code&gt;.
      * 
     */
     public Optional<Boolean> scmSiteAlsoStopped() {
         return Optional.ofNullable(this.scmSiteAlsoStopped);
     }
     /**
-     * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
     */
     public Optional<String> serverFarmId() {

@@ -17,7 +17,7 @@ public final class VersionResponse {
      */
     private final Integer epoch;
     /**
-     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
+     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
      * 
      */
     private final Boolean inclusive;
@@ -59,7 +59,7 @@ public final class VersionResponse {
         return this.epoch;
     }
     /**
-     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
+     * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it&#39;s not
      * 
     */
     public Boolean inclusive() {

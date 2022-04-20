@@ -17,7 +17,7 @@ public final class CapacityResponse extends com.pulumi.resources.InvokeArgs {
     public static final CapacityResponse Empty = new CapacityResponse();
 
     /**
-     * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
+     * Publish throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.
      * 
      */
     @Import(name="publishMibPerSec", required=true)
@@ -28,7 +28,7 @@ public final class CapacityResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.
+     * Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 32.
      * 
      */
     @Import(name="subscribeMibPerSec", required=true)

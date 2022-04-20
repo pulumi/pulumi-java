@@ -73,14 +73,14 @@ public class AutoscalingPolicy extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * The "resource name" of the autoscaling policy.
+     * The &#34;resource name&#34; of the autoscaling policy.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The "resource name" of the autoscaling policy.
+     * @return The &#34;resource name&#34; of the autoscaling policy.
      * 
      */
     public Output<String> name() {

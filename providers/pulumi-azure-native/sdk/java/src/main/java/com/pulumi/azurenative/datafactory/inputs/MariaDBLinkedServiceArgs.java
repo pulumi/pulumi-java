@@ -104,7 +104,7 @@ public final class MariaDBLinkedServiceArgs extends com.pulumi.resources.Resourc
 
     /**
      * Type of linked service.
-     * Expected value is 'MariaDB'.
+     * Expected value is &#39;MariaDB&#39;.
      * 
      */
     @Import(name="type", required=true)

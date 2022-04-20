@@ -104,7 +104,7 @@ public class FusionAlertRule extends com.pulumi.resources.CustomResource {
     }
     /**
      * The kind of the alert rule
-     * Expected value is 'Fusion'.
+     * Expected value is &#39;Fusion&#39;.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
@@ -112,7 +112,7 @@ public class FusionAlertRule extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The kind of the alert rule
-     * Expected value is 'Fusion'.
+     * Expected value is &#39;Fusion&#39;.
      * 
      */
     public Output<String> kind() {

@@ -18,7 +18,7 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServerKeyArgs Empty = new ServerKeyArgs();
 
     /**
-     * The name of the server key to be operated on (updated or created). The key name is required to be in the format of 'vault_key_version'. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion
+     * The name of the server key to be operated on (updated or created). The key name is required to be in the format of &#39;vault_key_version&#39;. For example, if the keyId is https://YourVaultName.vault.azure.net/keys/YourKeyName/YourKeyVersion, then the server key name should be formatted as: YourVaultName_YourKeyName_YourKeyVersion
      * 
      */
     @Import(name="keyName")
@@ -40,7 +40,7 @@ public final class ServerKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The server key type like 'ServiceManaged', 'AzureKeyVault'.
+     * The server key type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.
      * 
      */
     @Import(name="serverKeyType", required=true)

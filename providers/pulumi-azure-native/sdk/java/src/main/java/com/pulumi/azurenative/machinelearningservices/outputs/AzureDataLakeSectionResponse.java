@@ -53,7 +53,7 @@ public final class AzureDataLakeSectionResponse {
      */
     private final @Nullable String resourceUri;
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
      */
     private final @Nullable String serviceDataAccessAuthIdentity;
@@ -165,7 +165,7 @@ public final class AzureDataLakeSectionResponse {
         return Optional.ofNullable(this.resourceUri);
     }
     /**
-     * Indicates which identity to use to authenticate service data access to customer's storage.
+     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
     */
     public Optional<String> serviceDataAccessAuthIdentity() {

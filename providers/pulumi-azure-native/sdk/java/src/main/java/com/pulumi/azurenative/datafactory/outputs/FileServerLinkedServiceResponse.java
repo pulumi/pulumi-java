@@ -56,7 +56,7 @@ public final class FileServerLinkedServiceResponse {
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
      * Type of linked service.
-     * Expected value is 'FileServer'.
+     * Expected value is &#39;FileServer&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class FileServerLinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'FileServer'.
+     * Expected value is &#39;FileServer&#39;.
      * 
     */
     public String type() {

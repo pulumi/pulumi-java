@@ -33,7 +33,7 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
 
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is 'SimpleRetentionPolicy'.
+     * Expected value is &#39;SimpleRetentionPolicy&#39;.
      * 
      */
     @Import(name="retentionPolicyType", required=true)

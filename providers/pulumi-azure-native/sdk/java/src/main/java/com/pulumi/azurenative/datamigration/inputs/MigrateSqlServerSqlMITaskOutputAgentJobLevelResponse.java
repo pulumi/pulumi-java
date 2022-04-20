@@ -84,7 +84,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
 
     /**
      * Result type
-     * Expected value is 'AgentJobLevelOutput'.
+     * Expected value is &#39;AgentJobLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a resource to manage AWS Device Farm Uploads.
  * 
- * > **NOTE:** AWS currently has limited regional support for Device Farm (e.g., `us-west-2`). See [AWS Device Farm endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/devicefarm.html) for information on supported regions.
+ * &gt; **NOTE:** AWS currently has limited regional support for Device Farm (e.g., `us-west-2`). See [AWS Device Farm endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/devicefarm.html) for information on supported regions.
  * 
  * ## Example Usage
  * 
@@ -46,56 +46,56 @@ public class Upload extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The upload's category.
+     * The upload&#39;s category.
      * 
      */
     @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
-     * @return The upload's category.
+     * @return The upload&#39;s category.
      * 
      */
     public Output<String> category() {
         return this.category;
     }
     /**
-     * The upload's content type (for example, application/octet-stream).
+     * The upload&#39;s content type (for example, application/octet-stream).
      * 
      */
     @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
-     * @return The upload's content type (for example, application/octet-stream).
+     * @return The upload&#39;s content type (for example, application/octet-stream).
      * 
      */
     public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
-     * The upload's metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
+     * The upload&#39;s metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
      * 
      */
     @Export(name="metadata", type=String.class, parameters={})
     private Output<String> metadata;
 
     /**
-     * @return The upload's metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
+     * @return The upload&#39;s metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
      * 
      */
     public Output<String> metadata() {
         return this.metadata;
     }
     /**
-     * The upload's file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
+     * The upload&#39;s file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The upload's file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
+     * @return The upload&#39;s file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
      * 
      */
     public Output<String> name() {
@@ -116,14 +116,14 @@ public class Upload extends com.pulumi.resources.CustomResource {
         return this.projectArn;
     }
     /**
-     * The upload's upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
+     * The upload&#39;s upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The upload's upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
+     * @return The upload&#39;s upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
      * 
      */
     public Output<String> type() {

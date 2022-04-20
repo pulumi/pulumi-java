@@ -66,7 +66,7 @@ public final class CosmosDbSqlApiSinkArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Copy sink type.
-     * Expected value is 'CosmosDbSqlApiSink'.
+     * Expected value is &#39;CosmosDbSqlApiSink&#39;.
      * 
      */
     @Import(name="type", required=true)

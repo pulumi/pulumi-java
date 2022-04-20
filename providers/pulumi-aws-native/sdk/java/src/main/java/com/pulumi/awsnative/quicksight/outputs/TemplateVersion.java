@@ -18,46 +18,46 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TemplateVersion {
     /**
-     * <p>The time that this template version was created.</p>
+     * &lt;p&gt;The time that this template version was created.&lt;/p&gt;
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * <p>Schema of the dataset identified by the placeholder. Any dashboard created from this
+     * &lt;p&gt;Schema of the dataset identified by the placeholder. Any dashboard created from this
      *             template should be bound to new datasets matching the same schema described through this
-     *             API operation.</p>
+     *             API operation.&lt;/p&gt;
      * 
      */
     private final @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations;
     /**
-     * <p>The description of the template.</p>
+     * &lt;p&gt;The description of the template.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     /**
-     * <p>Errors associated with this template version.</p>
+     * &lt;p&gt;Errors associated with this template version.&lt;/p&gt;
      * 
      */
     private final @Nullable List<TemplateError> errors;
     /**
-     * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
      * 
      */
     private final @Nullable List<TemplateSheet> sheets;
     /**
-     * <p>The Amazon Resource Name (ARN) of an analysis or template that was used to create this
-     *             template.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of an analysis or template that was used to create this
+     *             template.&lt;/p&gt;
      * 
      */
     private final @Nullable String sourceEntityArn;
     private final @Nullable TemplateResourceStatus status;
     /**
-     * <p>The ARN of the theme associated with this version of the template.</p>
+     * &lt;p&gt;The ARN of the theme associated with this version of the template.&lt;/p&gt;
      * 
      */
     private final @Nullable String themeArn;
     /**
-     * <p>The version number of the template version.</p>
+     * &lt;p&gt;The version number of the template version.&lt;/p&gt;
      * 
      */
     private final @Nullable Double versionNumber;
@@ -85,45 +85,45 @@ public final class TemplateVersion {
     }
 
     /**
-     * <p>The time that this template version was created.</p>
+     * &lt;p&gt;The time that this template version was created.&lt;/p&gt;
      * 
     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * <p>Schema of the dataset identified by the placeholder. Any dashboard created from this
+     * &lt;p&gt;Schema of the dataset identified by the placeholder. Any dashboard created from this
      *             template should be bound to new datasets matching the same schema described through this
-     *             API operation.</p>
+     *             API operation.&lt;/p&gt;
      * 
     */
     public List<TemplateDataSetConfiguration> dataSetConfigurations() {
         return this.dataSetConfigurations == null ? List.of() : this.dataSetConfigurations;
     }
     /**
-     * <p>The description of the template.</p>
+     * &lt;p&gt;The description of the template.&lt;/p&gt;
      * 
     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * <p>Errors associated with this template version.</p>
+     * &lt;p&gt;Errors associated with this template version.&lt;/p&gt;
      * 
     */
     public List<TemplateError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
+     * &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
      * 
     */
     public List<TemplateSheet> sheets() {
         return this.sheets == null ? List.of() : this.sheets;
     }
     /**
-     * <p>The Amazon Resource Name (ARN) of an analysis or template that was used to create this
-     *             template.</p>
+     * &lt;p&gt;The Amazon Resource Name (ARN) of an analysis or template that was used to create this
+     *             template.&lt;/p&gt;
      * 
     */
     public Optional<String> sourceEntityArn() {
@@ -133,14 +133,14 @@ public final class TemplateVersion {
         return Optional.ofNullable(this.status);
     }
     /**
-     * <p>The ARN of the theme associated with this version of the template.</p>
+     * &lt;p&gt;The ARN of the theme associated with this version of the template.&lt;/p&gt;
      * 
     */
     public Optional<String> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }
     /**
-     * <p>The version number of the template version.</p>
+     * &lt;p&gt;The version number of the template version.&lt;/p&gt;
      * 
     */
     public Optional<Double> versionNumber() {

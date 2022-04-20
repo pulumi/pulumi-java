@@ -19,7 +19,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
      */
     private final List<String> additionalExperiments;
     /**
-     * Additional user labels to be specified for the job. Keys and values must follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions). An object containing a list of key/value pairs. Example: `{ "name": "wrench", "mass": "1kg", "count": "3" }`.
+     * Additional user labels to be specified for the job. Keys and values must follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions). An object containing a list of key/value pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
      */
     private final Map<String,String> additionalUserLabels;
@@ -54,7 +54,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
      */
     private final Integer maxWorkers;
     /**
-     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
+     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
      * 
      */
     private final String network;
@@ -69,7 +69,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
      */
     private final String serviceAccountEmail;
     /**
-     * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
+     * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form &#34;https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK&#34; or &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the subnetwork is located in a Shared VPC network, you must use the complete URL.
      * 
      */
     private final String subnetwork;
@@ -79,12 +79,12 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
      */
     private final String tempLocation;
     /**
-     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, defaults to the control plane region.
+     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1&#34;. Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, defaults to the control plane region.
      * 
      */
     private final String workerRegion;
     /**
-     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
+     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1-a&#34;. Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
      * 
      */
     private final String workerZone;
@@ -138,7 +138,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
         return this.additionalExperiments;
     }
     /**
-     * Additional user labels to be specified for the job. Keys and values must follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions). An object containing a list of key/value pairs. Example: `{ "name": "wrench", "mass": "1kg", "count": "3" }`.
+     * Additional user labels to be specified for the job. Keys and values must follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions). An object containing a list of key/value pairs. Example: `{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1kg&#34;, &#34;count&#34;: &#34;3&#34; }`.
      * 
     */
     public Map<String,String> additionalUserLabels() {
@@ -187,7 +187,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
         return this.maxWorkers;
     }
     /**
-     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
+     * Network to which VMs will be assigned. If empty or unspecified, the service will use the network &#34;default&#34;.
      * 
     */
     public String network() {
@@ -208,7 +208,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
         return this.serviceAccountEmail;
     }
     /**
-     * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
+     * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form &#34;https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK&#34; or &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the subnetwork is located in a Shared VPC network, you must use the complete URL.
      * 
     */
     public String subnetwork() {
@@ -222,14 +222,14 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
         return this.tempLocation;
     }
     /**
-     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, defaults to the control plane region.
+     * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1&#34;. Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, defaults to the control plane region.
      * 
     */
     public String workerRegion() {
         return this.workerRegion;
     }
     /**
-     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
+     * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. &#34;us-west1-a&#34;. Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
      * 
     */
     public String workerZone() {

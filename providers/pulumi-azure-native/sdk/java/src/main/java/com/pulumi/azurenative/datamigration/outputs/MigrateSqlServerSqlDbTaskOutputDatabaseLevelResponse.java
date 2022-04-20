@@ -71,7 +71,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
     private final String resultPrefix;
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
      */
     private final String resultType;
@@ -211,7 +211,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
     }
     /**
      * Result type
-     * Expected value is 'DatabaseLevelOutput'.
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
      * 
     */
     public String resultType() {

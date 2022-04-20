@@ -16,7 +16,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      */
     private final String analyzedConversationsCount;
     /**
-     * Statistics on each issue. Key is the issue's resource name.
+     * Statistics on each issue. Key is the issue&#39;s resource name.
      * 
      */
     private final Map<String,String> issueStats;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
         return this.analyzedConversationsCount;
     }
     /**
-     * Statistics on each issue. Key is the issue's resource name.
+     * Statistics on each issue. Key is the issue&#39;s resource name.
      * 
     */
     public Map<String,String> issueStats() {

@@ -58,14 +58,14 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Denotes the user's authentication properties. Detailed below.
+     * Denotes the user&#39;s authentication properties. Detailed below.
      * 
      */
     @Export(name="authenticationMode", type=UserAuthenticationMode.class, parameters={})
     private Output<UserAuthenticationMode> authenticationMode;
 
     /**
-     * @return Denotes the user's authentication properties. Detailed below.
+     * @return Denotes the user&#39;s authentication properties. Detailed below.
      * 
      */
     public Output<UserAuthenticationMode> authenticationMode() {

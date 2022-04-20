@@ -22,7 +22,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     public static final SecurityProfileArgs Empty = new SecurityProfileArgs();
 
     /**
-     * The resource ID of the user's Azure Active Directory Domain Service.
+     * The resource ID of the user&#39;s Azure Active Directory Domain Service.
      * 
      */
     @Import(name="aaddsResourceId")
@@ -55,7 +55,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The organization's active directory domain.
+     * The organization&#39;s active directory domain.
      * 
      */
     @Import(name="domain")
@@ -99,7 +99,7 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
+     * User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
      * 
      */
     @Import(name="msiResourceId")

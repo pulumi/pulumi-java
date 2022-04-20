@@ -30,7 +30,7 @@ public final class SasAuthenticationResponse extends com.pulumi.resources.Invoke
 
     /**
      * The authentication type
-     * Expected value is 'Sas'.
+     * Expected value is &#39;Sas&#39;.
      * 
      */
     @Import(name="type", required=true)

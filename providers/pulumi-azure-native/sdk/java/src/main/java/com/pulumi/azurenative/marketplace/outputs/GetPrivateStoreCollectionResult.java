@@ -21,7 +21,7 @@ public final class GetPrivateStoreCollectionResult {
      */
     private final @Nullable Boolean allSubscriptions;
     /**
-     * Gets or sets the association with Commercial's Billing Account.
+     * Gets or sets the association with Commercial&#39;s Billing Account.
      * 
      */
     private final @Nullable String claim;
@@ -105,7 +105,7 @@ public final class GetPrivateStoreCollectionResult {
         return Optional.ofNullable(this.allSubscriptions);
     }
     /**
-     * Gets or sets the association with Commercial's Billing Account.
+     * Gets or sets the association with Commercial&#39;s Billing Account.
      * 
     */
     public Optional<String> claim() {

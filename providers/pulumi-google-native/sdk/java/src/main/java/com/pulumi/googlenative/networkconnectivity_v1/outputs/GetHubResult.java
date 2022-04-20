@@ -33,7 +33,7 @@ public final class GetHubResult {
      */
     private final String name;
     /**
-     * The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+     * The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
     private final List<RoutingVPCResponse> routingVpcs;
@@ -102,7 +102,7 @@ public final class GetHubResult {
         return this.name;
     }
     /**
-     * The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+     * The VPC networks associated with this hub&#39;s spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
     */
     public List<RoutingVPCResponse> routingVpcs() {

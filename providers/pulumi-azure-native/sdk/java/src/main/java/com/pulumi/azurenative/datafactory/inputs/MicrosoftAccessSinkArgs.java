@@ -77,7 +77,7 @@ public final class MicrosoftAccessSinkArgs extends com.pulumi.resources.Resource
 
     /**
      * Copy sink type.
-     * Expected value is 'MicrosoftAccessSink'.
+     * Expected value is &#39;MicrosoftAccessSink&#39;.
      * 
      */
     @Import(name="type", required=true)

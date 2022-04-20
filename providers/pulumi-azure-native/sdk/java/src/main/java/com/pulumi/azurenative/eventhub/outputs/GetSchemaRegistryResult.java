@@ -51,7 +51,7 @@ public final class GetSchemaRegistryResult {
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+     * The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
      * 
      */
     private final String type;
@@ -143,7 +143,7 @@ public final class GetSchemaRegistryResult {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+     * The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
      * 
     */
     public String type() {

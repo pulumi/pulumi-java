@@ -110,7 +110,7 @@ public final class BucketReplicationConfigRuleGetArgs extends com.pulumi.resourc
     }
 
     /**
-     * The status of the rule. Either `"Enabled"` or `"Disabled"`. The rule is ignored if status is not "Enabled".
+     * The status of the rule. Either `&#34;Enabled&#34;` or `&#34;Disabled&#34;`. The rule is ignored if status is not &#34;Enabled&#34;.
      * 
      */
     @Import(name="status", required=true)

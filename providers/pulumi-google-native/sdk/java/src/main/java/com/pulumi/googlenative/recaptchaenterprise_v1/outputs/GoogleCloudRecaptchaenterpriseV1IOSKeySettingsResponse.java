@@ -17,7 +17,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
      */
     private final Boolean allowAllBundleIds;
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
      */
     private final List<String> allowedBundleIds;
@@ -38,7 +38,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
         return this.allowAllBundleIds;
     }
     /**
-     * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+     * iOS bundle ids of apps allowed to use the key. Example: &#39;com.companyname.productname.appname&#39;
      * 
     */
     public List<String> allowedBundleIds() {

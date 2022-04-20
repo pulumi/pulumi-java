@@ -36,8 +36,8 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Optional. Indicates whether OSS Redis AUTH is enabled for the
-     * instance. If set to "true" AUTH is enabled on the instance.
-     * Default value is "false" meaning AUTH is disabled.
+     * instance. If set to &#34;true&#34; AUTH is enabled on the instance.
+     * Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
      */
     @Import(name="authEnabled")
@@ -173,7 +173,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * backend will default to READ_REPLICAS_DISABLED. - READ_REPLICAS_DISABLED: If disabled, read endpoint will not be
      * provided and the instance cannot scale up or down the number of replicas. - READ_REPLICAS_ENABLED: If enabled, read
      * endpoint will be provided and the instance can scale up and down the number of replicas. Default value:
-     * "READ_REPLICAS_DISABLED" Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
+     * &#34;READ_REPLICAS_DISABLED&#34; Possible values: [&#34;READ_REPLICAS_DISABLED&#34;, &#34;READ_REPLICAS_ENABLED&#34;]
      * 
      */
     @Import(name="readReplicasMode")

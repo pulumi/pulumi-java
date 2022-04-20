@@ -25,7 +25,7 @@ public final class SecurityRuleResponse {
      */
     private final @Nullable String description;
     /**
-     * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+     * The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
      */
     private final @Nullable String destinationAddressPrefix;
@@ -40,7 +40,7 @@ public final class SecurityRuleResponse {
      */
     private final @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
     /**
-     * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     private final @Nullable String destinationPortRange;
@@ -85,7 +85,7 @@ public final class SecurityRuleResponse {
      */
     private final String provisioningState;
     /**
-     * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
     private final @Nullable String sourceAddressPrefix;
@@ -100,7 +100,7 @@ public final class SecurityRuleResponse {
      */
     private final @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
     /**
-     * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     private final @Nullable String sourcePortRange;
@@ -174,7 +174,7 @@ public final class SecurityRuleResponse {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+     * The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
     */
     public Optional<String> destinationAddressPrefix() {
@@ -195,7 +195,7 @@ public final class SecurityRuleResponse {
         return this.destinationApplicationSecurityGroups == null ? List.of() : this.destinationApplicationSecurityGroups;
     }
     /**
-     * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
     */
     public Optional<String> destinationPortRange() {
@@ -258,7 +258,7 @@ public final class SecurityRuleResponse {
         return this.provisioningState;
     }
     /**
-     * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
     */
     public Optional<String> sourceAddressPrefix() {
@@ -279,7 +279,7 @@ public final class SecurityRuleResponse {
         return this.sourceApplicationSecurityGroups == null ? List.of() : this.sourceApplicationSecurityGroups;
     }
     /**
-     * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
     */
     public Optional<String> sourcePortRange() {

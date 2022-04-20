@@ -80,14 +80,14 @@ public class Queue extends com.pulumi.resources.CustomResource {
         return this.delaySeconds;
     }
     /**
-     * If set to true, creates a FIFO queue. If you don't specify this property, Amazon SQS creates a standard queue.
+     * If set to true, creates a FIFO queue. If you don&#39;t specify this property, Amazon SQS creates a standard queue.
      * 
      */
     @Export(name="fifoQueue", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> fifoQueue;
 
     /**
-     * @return If set to true, creates a FIFO queue. If you don't specify this property, Amazon SQS creates a standard queue.
+     * @return If set to true, creates a FIFO queue. If you don&#39;t specify this property, Amazon SQS creates a standard queue.
      * 
      */
     public Output</* @Nullable */ Boolean> fifoQueue() {
@@ -192,14 +192,14 @@ public class Queue extends com.pulumi.resources.CustomResource {
         return this.queueUrl;
     }
     /**
-     * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
+     * Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn&#39;t yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
      * 
      */
     @Export(name="receiveMessageWaitTimeSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> receiveMessageWaitTimeSeconds;
 
     /**
-     * @return Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
+     * @return Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn&#39;t yet available. You can specify an integer from 1 to 20. Short polling is used as the default or when you specify 0 for this property.
      * 
      */
     public Output</* @Nullable */ Integer> receiveMessageWaitTimeSeconds() {
@@ -248,14 +248,14 @@ public class Queue extends com.pulumi.resources.CustomResource {
         return this.tags;
     }
     /**
-     * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
+     * The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don&#39;t specify a value, AWS CloudFormation uses the default value of 30 seconds.
      * 
      */
     @Export(name="visibilityTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> visibilityTimeout;
 
     /**
-     * @return The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds.
+     * @return The length of time during which a message will be unavailable after a message is delivered from the queue. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue. Values must be from 0 to 43,200 seconds (12 hours). If you don&#39;t specify a value, AWS CloudFormation uses the default value of 30 seconds.
      * 
      */
     public Output</* @Nullable */ Integer> visibilityTimeout() {

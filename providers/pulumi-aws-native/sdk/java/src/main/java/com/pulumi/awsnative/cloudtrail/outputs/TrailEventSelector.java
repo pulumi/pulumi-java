@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 public final class TrailEventSelector {
     private final @Nullable List<TrailDataResource> dataResources;
     /**
-     * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing "kms.amazonaws.com". By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+     * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
      * 
      */
     private final @Nullable List<String> excludeManagementEventSources;
@@ -48,7 +48,7 @@ public final class TrailEventSelector {
         return this.dataResources == null ? List.of() : this.dataResources;
     }
     /**
-     * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing "kms.amazonaws.com". By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
+     * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing &#34;kms.amazonaws.com&#34;. By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
      * 
     */
     public List<String> excludeManagementEventSources() {

@@ -19,7 +19,7 @@ public final class TlsValidationOptionsResponse extends com.pulumi.resources.Inv
     public static final TlsValidationOptionsResponse Empty = new TlsValidationOptionsResponse();
 
     /**
-     * When set to 'true' causes the certificate subject name validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate subject name validation to be skipped. Default is &#39;false&#39;.
      * 
      */
     @Import(name="ignoreHostname")
@@ -30,7 +30,7 @@ public final class TlsValidationOptionsResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * When set to 'true' causes the certificate chain trust validation to be skipped. Default is 'false'.
+     * When set to &#39;true&#39; causes the certificate chain trust validation to be skipped. Default is &#39;false&#39;.
      * 
      */
     @Import(name="ignoreSignature")

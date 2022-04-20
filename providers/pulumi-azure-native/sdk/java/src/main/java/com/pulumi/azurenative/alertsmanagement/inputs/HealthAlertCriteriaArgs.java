@@ -21,7 +21,7 @@ public final class HealthAlertCriteriaArgs extends com.pulumi.resources.Resource
     public static final HealthAlertCriteriaArgs Empty = new HealthAlertCriteriaArgs();
 
     /**
-     * The list of metric criteria for this 'all of' operation.
+     * The list of metric criteria for this &#39;all of&#39; operation.
      * 
      */
     @Import(name="allOf")

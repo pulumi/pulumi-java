@@ -72,7 +72,7 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
+     * Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
      * 
      */
     @Import(name="mode", required=true)

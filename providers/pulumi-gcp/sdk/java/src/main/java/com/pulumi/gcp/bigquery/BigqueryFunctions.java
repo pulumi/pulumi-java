@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public final class BigqueryFunctions {
     /**
-     * Get the email address of a project's unique BigQuery service account.
+     * Get the email address of a project&#39;s unique BigQuery service account.
      * 
      * Each Google Cloud project has a unique service account used by BigQuery. When using
      * BigQuery with [customer-managed encryption keys](https://cloud.google.com/bigquery/docs/customer-managed-encryption),

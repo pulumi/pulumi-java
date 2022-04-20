@@ -19,7 +19,7 @@ public final class CloudtrailFunctions {
      * 
      * ## Example Usage
      * 
-     * @Deprecated
+     * @deprecated
      * aws.cloudtrail.getFunction has been deprecated in favor of aws.cloudfront.getFunction
      * 
      */

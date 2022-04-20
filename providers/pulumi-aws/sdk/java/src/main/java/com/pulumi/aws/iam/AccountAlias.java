@@ -14,7 +14,7 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * > **Note:** There is only a single account alias per AWS account.
+ * &gt; **Note:** There is only a single account alias per AWS account.
  * 
  * Manages the account alias for the AWS Account.
  * 

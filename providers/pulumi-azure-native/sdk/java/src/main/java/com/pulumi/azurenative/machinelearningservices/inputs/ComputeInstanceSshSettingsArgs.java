@@ -22,7 +22,7 @@ public final class ComputeInstanceSshSettingsArgs extends com.pulumi.resources.R
     public static final ComputeInstanceSshSettingsArgs Empty = new ComputeInstanceSshSettingsArgs();
 
     /**
-     * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
+     * Specifies the SSH rsa public key file as a string. Use &#34;ssh-keygen -t rsa -b 2048&#34; to generate your SSH key pairs.
      * 
      */
     @Import(name="adminPublicKey")

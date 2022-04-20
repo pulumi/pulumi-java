@@ -172,7 +172,7 @@ public final class ImpalaLinkedServiceResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of linked service.
-     * Expected value is 'Impala'.
+     * Expected value is &#39;Impala&#39;.
      * 
      */
     @Import(name="type", required=true)

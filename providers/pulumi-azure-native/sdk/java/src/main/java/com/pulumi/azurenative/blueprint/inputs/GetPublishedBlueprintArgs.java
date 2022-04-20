@@ -24,7 +24,7 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
     }
 
     /**
-     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
+     * The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
      * 
      */
     @Import(name="resourceScope", required=true)

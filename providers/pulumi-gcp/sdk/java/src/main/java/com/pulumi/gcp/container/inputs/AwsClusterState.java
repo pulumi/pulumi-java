@@ -90,7 +90,7 @@ public final class AwsClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Output only. The endpoint of the cluster's API server.
+     * Output only. The endpoint of the cluster&#39;s API server.
      * 
      */
     @Import(name="endpoint")

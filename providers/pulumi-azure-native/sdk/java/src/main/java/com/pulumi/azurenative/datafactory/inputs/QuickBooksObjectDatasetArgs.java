@@ -115,7 +115,7 @@ public final class QuickBooksObjectDatasetArgs extends com.pulumi.resources.Reso
 
     /**
      * Type of dataset.
-     * Expected value is 'QuickBooksObject'.
+     * Expected value is &#39;QuickBooksObject&#39;.
      * 
      */
     @Import(name="type", required=true)

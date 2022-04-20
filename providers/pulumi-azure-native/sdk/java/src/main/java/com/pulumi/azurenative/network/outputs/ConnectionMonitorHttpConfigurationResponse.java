@@ -21,7 +21,7 @@ public final class ConnectionMonitorHttpConfigurationResponse {
      */
     private final @Nullable String method;
     /**
-     * The path component of the URI. For instance, "/dir1/dir2".
+     * The path component of the URI. For instance, &#34;/dir1/dir2&#34;.
      * 
      */
     private final @Nullable String path;
@@ -41,7 +41,7 @@ public final class ConnectionMonitorHttpConfigurationResponse {
      */
     private final @Nullable List<HTTPHeaderResponse> requestHeaders;
     /**
-     * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
+     * HTTP status codes to consider successful. For instance, &#34;2xx,301-304,418&#34;.
      * 
      */
     private final @Nullable List<String> validStatusCodeRanges;
@@ -70,7 +70,7 @@ public final class ConnectionMonitorHttpConfigurationResponse {
         return Optional.ofNullable(this.method);
     }
     /**
-     * The path component of the URI. For instance, "/dir1/dir2".
+     * The path component of the URI. For instance, &#34;/dir1/dir2&#34;.
      * 
     */
     public Optional<String> path() {
@@ -98,7 +98,7 @@ public final class ConnectionMonitorHttpConfigurationResponse {
         return this.requestHeaders == null ? List.of() : this.requestHeaders;
     }
     /**
-     * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
+     * HTTP status codes to consider successful. For instance, &#34;2xx,301-304,418&#34;.
      * 
     */
     public List<String> validStatusCodeRanges() {

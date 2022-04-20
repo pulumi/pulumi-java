@@ -33,7 +33,7 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * Expected value is 'BackupPolicy'.
+     * Expected value is &#39;BackupPolicy&#39;.
      * 
      */
     @Import(name="objectType", required=true)

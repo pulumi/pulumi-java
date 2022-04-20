@@ -33,7 +33,7 @@ public final class SecretPropertiesResponse {
      */
     private final String secretUriWithVersion;
     /**
-     * The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+     * The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
      * 
      */
     private final @Nullable String value;
@@ -81,7 +81,7 @@ public final class SecretPropertiesResponse {
         return this.secretUriWithVersion;
     }
     /**
-     * The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+     * The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
      * 
     */
     public Optional<String> value() {

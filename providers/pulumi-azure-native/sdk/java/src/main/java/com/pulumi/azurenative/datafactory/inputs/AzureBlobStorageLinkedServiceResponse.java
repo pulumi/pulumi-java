@@ -206,7 +206,7 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureBlobStorage'.
+     * Expected value is &#39;AzureBlobStorage&#39;.
      * 
      */
     @Import(name="type", required=true)

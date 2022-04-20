@@ -17,7 +17,7 @@ public final class PemCertificateListResponse {
     private final List<String> certificates;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
      * 
      */
     private final String type;
@@ -39,7 +39,7 @@ public final class PemCertificateListResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.VideoAnalyzer.PemCertificateList'.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.PemCertificateList&#39;.
      * 
     */
     public String type() {

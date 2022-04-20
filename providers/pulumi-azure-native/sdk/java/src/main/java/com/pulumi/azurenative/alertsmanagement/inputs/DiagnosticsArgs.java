@@ -69,7 +69,7 @@ public final class DiagnosticsArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Indicates type of action rule
-     * Expected value is 'Diagnostics'.
+     * Expected value is &#39;Diagnostics&#39;.
      * 
      */
     @Import(name="type", required=true)

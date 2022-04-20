@@ -20,7 +20,7 @@ public final class DashboardPartsResponse extends com.pulumi.resources.InvokeArg
     public static final DashboardPartsResponse Empty = new DashboardPartsResponse();
 
     /**
-     * The dashboard part's metadata.
+     * The dashboard part&#39;s metadata.
      * 
      */
     @Import(name="metadata")
@@ -31,7 +31,7 @@ public final class DashboardPartsResponse extends com.pulumi.resources.InvokeArg
     }
 
     /**
-     * The dashboard's part position.
+     * The dashboard&#39;s part position.
      * 
      */
     @Import(name="position", required=true)

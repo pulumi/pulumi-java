@@ -43,7 +43,7 @@ public final class DefaultNetworkAclIngress {
      */
     private final @Nullable String ipv6CidrBlock;
     /**
-     * The protocol to match. If using the -1 'all' protocol, you must specify a from and to port of 0.
+     * The protocol to match. If using the -1 &#39;all&#39; protocol, you must specify a from and to port of 0.
      * 
      */
     private final String protocol;
@@ -123,7 +123,7 @@ public final class DefaultNetworkAclIngress {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
     /**
-     * The protocol to match. If using the -1 'all' protocol, you must specify a from and to port of 0.
+     * The protocol to match. If using the -1 &#39;all&#39; protocol, you must specify a from and to port of 0.
      * 
     */
     public String protocol() {

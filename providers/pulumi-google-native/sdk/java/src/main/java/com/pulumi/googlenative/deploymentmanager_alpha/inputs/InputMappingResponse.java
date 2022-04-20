@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * InputMapping creates a 'virtual' property that will be injected into the properties before sending the request to the underlying API.
+ * InputMapping creates a &#39;virtual&#39; property that will be injected into the properties before sending the request to the underlying API.
  * 
  */
 public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs {

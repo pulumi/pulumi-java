@@ -15,7 +15,7 @@ public final class GetVirtualNetworkArgs extends com.pulumi.resources.InvokeArgs
     public static final GetVirtualNetworkArgs Empty = new GetVirtualNetworkArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($expand=externalSubnets)'
+     * Specify the $expand query. Example: &#39;properties($expand=externalSubnets)&#39;
      * 
      */
     @Import(name="expand")

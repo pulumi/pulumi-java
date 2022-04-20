@@ -110,7 +110,7 @@ public final class AzureTableSinkResponse extends com.pulumi.resources.InvokeArg
 
     /**
      * Copy sink type.
-     * Expected value is 'AzureTableSink'.
+     * Expected value is &#39;AzureTableSink&#39;.
      * 
      */
     @Import(name="type", required=true)

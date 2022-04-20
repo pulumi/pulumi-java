@@ -19,7 +19,7 @@ public final class MultiBitrateFormatResponse {
     private final String filenamePattern;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MultiBitrateFormat'.
+     * Expected value is &#39;#Microsoft.Media.MultiBitrateFormat&#39;.
      * 
      */
     private final String odataType;
@@ -48,7 +48,7 @@ public final class MultiBitrateFormatResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.MultiBitrateFormat'.
+     * Expected value is &#39;#Microsoft.Media.MultiBitrateFormat&#39;.
      * 
     */
     public String odataType() {

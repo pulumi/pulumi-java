@@ -78,7 +78,7 @@ public final class BlobReferenceInputDataSourceArgs extends com.pulumi.resources
 
     /**
      * Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.Storage/Blob'.
+     * Expected value is &#39;Microsoft.Storage/Blob&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -63,7 +63,7 @@ public final class XmlSourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'XmlSource'.
+     * Expected value is &#39;XmlSource&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class XmlSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'XmlSource'.
+     * Expected value is &#39;XmlSource&#39;.
      * 
     */
     public String type() {

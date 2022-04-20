@@ -15,7 +15,7 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEnvironmentArgs Empty = new GetEnvironmentArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=deploymentProperties)'
+     * Specify the $expand query. Example: &#39;properties($select=deploymentProperties)&#39;
      * 
      */
     @Import(name="expand")

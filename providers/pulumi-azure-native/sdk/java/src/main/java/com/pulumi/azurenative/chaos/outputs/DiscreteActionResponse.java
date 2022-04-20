@@ -28,7 +28,7 @@ public final class DiscreteActionResponse {
     private final String selectorId;
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'discrete'.
+     * Expected value is &#39;discrete&#39;.
      * 
      */
     private final String type;
@@ -68,7 +68,7 @@ public final class DiscreteActionResponse {
     }
     /**
      * Enum that discriminates between action models.
-     * Expected value is 'discrete'.
+     * Expected value is &#39;discrete&#39;.
      * 
     */
     public String type() {

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MachineResponseIdentity {
     /**
-     * The identity's principal id.
+     * The identity&#39;s principal id.
      * 
      */
     private final String principalId;
     /**
-     * The identity's tenant id.
+     * The identity&#39;s tenant id.
      * 
      */
     private final String tenantId;
@@ -38,14 +38,14 @@ public final class MachineResponseIdentity {
     }
 
     /**
-     * The identity's principal id.
+     * The identity&#39;s principal id.
      * 
     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The identity's tenant id.
+     * The identity&#39;s tenant id.
      * 
     */
     public String tenantId() {

@@ -19,7 +19,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs exten
     public static final URLMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs Empty = new URLMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs();
 
     /**
-     * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+     * Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.
      * 
      */
     @Import(name="numRetries", required=true)

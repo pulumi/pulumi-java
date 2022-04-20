@@ -16,7 +16,7 @@ public final class LocationHdfsNameNodeGetArgs extends com.pulumi.resources.Reso
     public static final LocationHdfsNameNodeGetArgs Empty = new LocationHdfsNameNodeGetArgs();
 
     /**
-     * The hostname of the NameNode in the HDFS cluster. This value is the IP address or Domain Name Service (DNS) name of the NameNode. An agent that's installed on-premises uses this hostname to communicate with the NameNode in the network.
+     * The hostname of the NameNode in the HDFS cluster. This value is the IP address or Domain Name Service (DNS) name of the NameNode. An agent that&#39;s installed on-premises uses this hostname to communicate with the NameNode in the network.
      * 
      */
     @Import(name="hostname", required=true)

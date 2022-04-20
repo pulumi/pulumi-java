@@ -18,7 +18,7 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
     public static final MetadataResponse Empty = new MetadataResponse();
 
     /**
-     * Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.
+     * Services that this ruleset has declarations for (e.g., &#34;cloud.firestore&#34;). There may be 0+ of these.
      * 
      */
     @Import(name="services", required=true)

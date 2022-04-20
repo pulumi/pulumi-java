@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class HybridConnectionEventSubscriptionDestinationResponse {
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'HybridConnection'.
+     * Expected value is &#39;HybridConnection&#39;.
      * 
      */
     private final String endpointType;
@@ -33,7 +33,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
 
     /**
      * Type of the endpoint for the event subscription destination.
-     * Expected value is 'HybridConnection'.
+     * Expected value is &#39;HybridConnection&#39;.
      * 
     */
     public String endpointType() {

@@ -137,7 +137,7 @@ public final class SapOpenHubTableDatasetResponse extends com.pulumi.resources.I
 
     /**
      * Type of dataset.
-     * Expected value is 'SapOpenHubTable'.
+     * Expected value is &#39;SapOpenHubTable&#39;.
      * 
      */
     @Import(name="type", required=true)

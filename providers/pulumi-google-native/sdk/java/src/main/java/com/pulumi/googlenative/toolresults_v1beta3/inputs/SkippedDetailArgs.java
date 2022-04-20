@@ -20,7 +20,7 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
     public static final SkippedDetailArgs Empty = new SkippedDetailArgs();
 
     /**
-     * If the App doesn't support the specific API level.
+     * If the App doesn&#39;t support the specific API level.
      * 
      */
     @Import(name="incompatibleAppVersion")
@@ -31,7 +31,7 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the App doesn't run on the specific architecture, for example, x86.
+     * If the App doesn&#39;t run on the specific architecture, for example, x86.
      * 
      */
     @Import(name="incompatibleArchitecture")
@@ -42,7 +42,7 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If the requested OS version doesn't run on the specific device model.
+     * If the requested OS version doesn&#39;t run on the specific device model.
      * 
      */
     @Import(name="incompatibleDevice")

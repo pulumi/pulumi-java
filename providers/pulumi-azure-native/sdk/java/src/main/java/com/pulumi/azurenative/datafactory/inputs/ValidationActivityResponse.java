@@ -114,7 +114,7 @@ public final class ValidationActivityResponse extends com.pulumi.resources.Invok
 
     /**
      * Type of activity.
-     * Expected value is 'Validation'.
+     * Expected value is &#39;Validation&#39;.
      * 
      */
     @Import(name="type", required=true)

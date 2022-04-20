@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityProfileResponse {
     /**
-     * The resource ID of the user's Azure Active Directory Domain Service.
+     * The resource ID of the user&#39;s Azure Active Directory Domain Service.
      * 
      */
     private final @Nullable String aaddsResourceId;
@@ -28,7 +28,7 @@ public final class SecurityProfileResponse {
      */
     private final @Nullable String directoryType;
     /**
-     * The organization's active directory domain.
+     * The organization&#39;s active directory domain.
      * 
      */
     private final @Nullable String domain;
@@ -48,7 +48,7 @@ public final class SecurityProfileResponse {
      */
     private final @Nullable List<String> ldapsUrls;
     /**
-     * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
+     * User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
      * 
      */
     private final @Nullable String msiResourceId;
@@ -81,7 +81,7 @@ public final class SecurityProfileResponse {
     }
 
     /**
-     * The resource ID of the user's Azure Active Directory Domain Service.
+     * The resource ID of the user&#39;s Azure Active Directory Domain Service.
      * 
     */
     public Optional<String> aaddsResourceId() {
@@ -102,7 +102,7 @@ public final class SecurityProfileResponse {
         return Optional.ofNullable(this.directoryType);
     }
     /**
-     * The organization's active directory domain.
+     * The organization&#39;s active directory domain.
      * 
     */
     public Optional<String> domain() {
@@ -130,7 +130,7 @@ public final class SecurityProfileResponse {
         return this.ldapsUrls == null ? List.of() : this.ldapsUrls;
     }
     /**
-     * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
+     * User assigned identity that has permissions to read and create cluster-related artifacts in the user&#39;s AADDS.
      * 
     */
     public Optional<String> msiResourceId() {

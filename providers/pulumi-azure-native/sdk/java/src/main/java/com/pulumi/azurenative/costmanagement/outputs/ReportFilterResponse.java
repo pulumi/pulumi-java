@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReportFilterResponse {
     /**
-     * The logical "AND" expression. Must have at least 2 items.
+     * The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
      */
     private final @Nullable List<ReportFilterResponse> and;
@@ -23,12 +23,12 @@ public final class ReportFilterResponse {
      */
     private final @Nullable ReportComparisonExpressionResponse dimension;
     /**
-     * The logical "NOT" expression.
+     * The logical &#34;NOT&#34; expression.
      * 
      */
     private final @Nullable ReportFilterResponse not;
     /**
-     * The logical "OR" expression. Must have at least 2 items.
+     * The logical &#34;OR&#34; expression. Must have at least 2 items.
      * 
      */
     private final @Nullable List<ReportFilterResponse> or;
@@ -53,7 +53,7 @@ public final class ReportFilterResponse {
     }
 
     /**
-     * The logical "AND" expression. Must have at least 2 items.
+     * The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
     */
     public List<ReportFilterResponse> and() {
@@ -67,14 +67,14 @@ public final class ReportFilterResponse {
         return Optional.ofNullable(this.dimension);
     }
     /**
-     * The logical "NOT" expression.
+     * The logical &#34;NOT&#34; expression.
      * 
     */
     public Optional<ReportFilterResponse> not() {
         return Optional.ofNullable(this.not);
     }
     /**
-     * The logical "OR" expression. Must have at least 2 items.
+     * The logical &#34;OR&#34; expression. Must have at least 2 items.
      * 
     */
     public List<ReportFilterResponse> or() {

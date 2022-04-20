@@ -55,7 +55,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The command to use to start the container. For example, to run `/usr/bin/myprogram -f baz.conf` set the command to be
-     * `["/usr/bin/myprogram","-","baz.con"]`.
+     * `[&#34;/usr/bin/myprogram&#34;,&#34;-&#34;,&#34;baz.con&#34;]`.
      * 
      */
     @Import(name="command")
@@ -157,7 +157,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The command to use as the Entrypoint for the container. The Entrypoint allows you to configure a container to run as an
      * executable. For example, to run `/usr/bin/myprogram` when starting a container, set the entrypoint to be
-     * `"/usr/bin/myprogra"]`.
+     * `&#34;/usr/bin/myprogra&#34;]`.
      * 
      */
     @Import(name="entrypoints")
@@ -247,7 +247,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:<name|id>` or
+     * IPC sharing mode for the container. Possible values are: `none`, `private`, `shareable`, `container:&lt;name|id&gt;` or
      * `host`.
      * 
      */
@@ -272,7 +272,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Set of links for link based connectivity between containers that are running on the same host.
      * 
-     * @Deprecated
+     * @deprecated
      * The --link flag is a legacy feature of Docker. It may eventually be removed.
      * 
      */
@@ -319,7 +319,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
+     * The maximum amount of times to an attempt a restart when `restart` is set to &#39;on-failure&#39;.
      * 
      */
     @Import(name="maxRetryCount")
@@ -342,7 +342,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The total memory limit (memory + swap) for the container in MBs. This setting may compute to `-1` after `terraform
-     * apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
+     * apply` if the target host doesn&#39;t support memory swap, when that is the case docker will use a soft limitation.
      * 
      */
     @Import(name="memorySwap")
@@ -389,7 +389,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Set an alias for the container in all specified networks
      * 
-     * @Deprecated
+     * @deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -416,7 +416,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * ID of the networks in which the container is.
      * 
-     * @Deprecated
+     * @deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -441,7 +441,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
+     * he PID (Process) Namespace mode for the container. Either `container:&lt;name|id&gt;` or `host`.
      * 
      */
     @Import(name="pidMode")
@@ -452,7 +452,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Publish a container's port(s) to the host.
+     * Publish a container&#39;s port(s) to the host.
      * 
      */
     @Import(name="ports")
@@ -507,7 +507,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
+     * The restart policy for the container. Must be one of &#39;no&#39;, &#39;on-failure&#39;, &#39;always&#39;, &#39;unless-stopped&#39;. Defaults to `no`.
      * 
      */
     @Import(name="restart")
@@ -518,7 +518,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If `true`, then the container will be automatically removed after his execution. Terraform won't check this container
+     * If `true`, then the container will be automatically removed after his execution. Terraform won&#39;t check this container
      * after creation. Defaults to `false`.
      * 
      */

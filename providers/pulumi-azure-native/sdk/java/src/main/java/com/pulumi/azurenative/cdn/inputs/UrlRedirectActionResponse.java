@@ -20,7 +20,7 @@ public final class UrlRedirectActionResponse extends com.pulumi.resources.Invoke
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'UrlRedirect'.
+     * Expected value is &#39;UrlRedirect&#39;.
      * 
      */
     @Import(name="name", required=true)

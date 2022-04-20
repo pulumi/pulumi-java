@@ -43,7 +43,7 @@ public final class TimeseriesinsightsFunctions {
      * An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
      * API Version: 2020-05-15.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: Gen1Environment, Gen2Environment.
      * 
      */
@@ -69,7 +69,7 @@ public final class TimeseriesinsightsFunctions {
      * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
      * API Version: 2020-05-15.
      * 
-     * @Deprecated
+     * @deprecated
      * Please use one of the variants: EventHubEventSource, IoTHubEventSource.
      * 
      */

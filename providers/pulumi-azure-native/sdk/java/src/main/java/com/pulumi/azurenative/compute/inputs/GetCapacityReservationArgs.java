@@ -37,7 +37,7 @@ public final class GetCapacityReservationArgs extends com.pulumi.resources.Invok
     }
 
     /**
-     * The expand expression to apply on the operation. 'InstanceView' retrieves a snapshot of the runtime properties of the capacity reservation that is managed by the platform and can change outside of control plane operations.
+     * The expand expression to apply on the operation. &#39;InstanceView&#39; retrieves a snapshot of the runtime properties of the capacity reservation that is managed by the platform and can change outside of control plane operations.
      * 
      */
     @Import(name="expand")

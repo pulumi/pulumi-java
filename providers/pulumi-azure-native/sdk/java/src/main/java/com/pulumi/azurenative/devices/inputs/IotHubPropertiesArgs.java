@@ -123,7 +123,7 @@ public final class IotHubPropertiesArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.
+     * Specifies the minimum TLS version to support for this hub. Can be set to &#34;1.2&#34; to have clients that use a TLS version below 1.2 to be rejected.
      * 
      */
     @Import(name="minTlsVersion")

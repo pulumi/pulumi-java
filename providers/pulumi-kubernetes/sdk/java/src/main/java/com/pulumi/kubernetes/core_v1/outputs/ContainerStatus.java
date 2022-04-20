@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerStatus {
     /**
-     * Container's ID in the format 'docker://<container_id>'.
+     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
      * 
      */
     private final @Nullable String containerID;
@@ -25,12 +25,12 @@ public final class ContainerStatus {
      */
     private final String image;
     /**
-     * ImageID of the container's image.
+     * ImageID of the container&#39;s image.
      * 
      */
     private final String imageID;
     /**
-     * Details about the container's last termination condition.
+     * Details about the container&#39;s last termination condition.
      * 
      */
     private final @Nullable ContainerState lastState;
@@ -55,7 +55,7 @@ public final class ContainerStatus {
      */
     private final @Nullable Boolean started;
     /**
-     * Details about the container's current condition.
+     * Details about the container&#39;s current condition.
      * 
      */
     private final @Nullable ContainerState state;
@@ -83,7 +83,7 @@ public final class ContainerStatus {
     }
 
     /**
-     * Container's ID in the format 'docker://<container_id>'.
+     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;.
      * 
     */
     public Optional<String> containerID() {
@@ -97,14 +97,14 @@ public final class ContainerStatus {
         return this.image;
     }
     /**
-     * ImageID of the container's image.
+     * ImageID of the container&#39;s image.
      * 
     */
     public String imageID() {
         return this.imageID;
     }
     /**
-     * Details about the container's last termination condition.
+     * Details about the container&#39;s last termination condition.
      * 
     */
     public Optional<ContainerState> lastState() {
@@ -139,7 +139,7 @@ public final class ContainerStatus {
         return Optional.ofNullable(this.started);
     }
     /**
-     * Details about the container's current condition.
+     * Details about the container&#39;s current condition.
      * 
     */
     public Optional<ContainerState> state() {

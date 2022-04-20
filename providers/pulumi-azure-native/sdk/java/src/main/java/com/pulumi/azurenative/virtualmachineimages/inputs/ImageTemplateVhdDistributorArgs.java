@@ -44,7 +44,7 @@ public final class ImageTemplateVhdDistributorArgs extends com.pulumi.resources.
 
     /**
      * Type of distribution.
-     * Expected value is 'VHD'.
+     * Expected value is &#39;VHD&#39;.
      * 
      */
     @Import(name="type", required=true)

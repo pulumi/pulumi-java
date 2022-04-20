@@ -13,7 +13,7 @@ import java.util.Objects;
 
 
 /**
- * <p>An integer parameter.</p>
+ * &lt;p&gt;An integer parameter.&lt;/p&gt;
  * 
  */
 public final class DashboardIntegerParameterArgs extends com.pulumi.resources.ResourceArgs {
@@ -21,7 +21,7 @@ public final class DashboardIntegerParameterArgs extends com.pulumi.resources.Re
     public static final DashboardIntegerParameterArgs Empty = new DashboardIntegerParameterArgs();
 
     /**
-     * <p>The name of the integer parameter.</p>
+     * &lt;p&gt;The name of the integer parameter.&lt;/p&gt;
      * 
      */
     @Import(name="name", required=true)
@@ -32,7 +32,7 @@ public final class DashboardIntegerParameterArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * <p>The values for the integer parameter.</p>
+     * &lt;p&gt;The values for the integer parameter.&lt;/p&gt;
      * 
      */
     @Import(name="values", required=true)

@@ -11,7 +11,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum MonitoringComponentConfigEnableComponentsItem {
         /**
-         * Default value. This shouldn't be used.
+         * Default value. This shouldn&#39;t be used.
          * 
          */
         ComponentUnspecified("COMPONENT_UNSPECIFIED"),

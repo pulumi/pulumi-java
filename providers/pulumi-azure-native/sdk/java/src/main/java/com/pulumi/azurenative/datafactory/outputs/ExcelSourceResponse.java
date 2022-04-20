@@ -57,7 +57,7 @@ public final class ExcelSourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'ExcelSource'.
+     * Expected value is &#39;ExcelSource&#39;.
      * 
      */
     private final String type;
@@ -124,7 +124,7 @@ public final class ExcelSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'ExcelSource'.
+     * Expected value is &#39;ExcelSource&#39;.
      * 
     */
     public String type() {

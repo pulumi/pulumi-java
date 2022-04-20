@@ -27,10 +27,10 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>The ID of the theme that a custom theme will inherit from. All themes inherit from one of
+     * &lt;p&gt;The ID of the theme that a custom theme will inherit from. All themes inherit from one of
      * 			the starting themes defined by Amazon QuickSight. For a list of the starting themes, use
-     * 				<code>ListThemes</code> or choose <b>Themes</b> from
-     * 			within a QuickSight analysis. </p>
+     * 				&lt;code&gt;ListThemes&lt;/code&gt; or choose &lt;b&gt;Themes&lt;/b&gt; from
+     * 			within a QuickSight analysis. &lt;/p&gt;
      * 
      */
     @Import(name="baseThemeId")
@@ -48,7 +48,7 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A display name for the theme.</p>
+     * &lt;p&gt;A display name for the theme.&lt;/p&gt;
      * 
      */
     @Import(name="name")
@@ -59,8 +59,8 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A valid grouping of resource permissions to apply to the new theme.
-     * 			</p>
+     * &lt;p&gt;A valid grouping of resource permissions to apply to the new theme.
+     * 			&lt;/p&gt;
      * 
      */
     @Import(name="permissions")
@@ -71,8 +71,8 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
-     * 			resource.</p>
+     * &lt;p&gt;A map of the key-value pairs for the resource tag or tags that you want to add to the
+     * 			resource.&lt;/p&gt;
      * 
      */
     @Import(name="tags")
@@ -90,10 +90,10 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <p>A description of the first version of the theme that you're creating. Every time
-     * 				<code>UpdateTheme</code> is called, a new version is created. Each version of the
-     * 			theme has a description of the version in the <code>VersionDescription</code>
-     * 			field.</p>
+     * &lt;p&gt;A description of the first version of the theme that you&#39;re creating. Every time
+     * 				&lt;code&gt;UpdateTheme&lt;/code&gt; is called, a new version is created. Each version of the
+     * 			theme has a description of the version in the &lt;code&gt;VersionDescription&lt;/code&gt;
+     * 			field.&lt;/p&gt;
      * 
      */
     @Import(name="versionDescription")

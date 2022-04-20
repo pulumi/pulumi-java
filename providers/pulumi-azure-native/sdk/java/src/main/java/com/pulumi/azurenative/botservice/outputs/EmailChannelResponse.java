@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 public final class EmailChannelResponse {
     /**
      * The channel name
-     * Expected value is 'EmailChannel'.
+     * Expected value is &#39;EmailChannel&#39;.
      * 
      */
     private final String channelName;
@@ -55,7 +55,7 @@ public final class EmailChannelResponse {
 
     /**
      * The channel name
-     * Expected value is 'EmailChannel'.
+     * Expected value is &#39;EmailChannel&#39;.
      * 
     */
     public String channelName() {

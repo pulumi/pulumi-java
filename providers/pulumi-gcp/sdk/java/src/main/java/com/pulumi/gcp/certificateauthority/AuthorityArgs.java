@@ -85,8 +85,8 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Labels with user-defined metadata.
-     * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
-     * "1.3kg", "count": "3" }.
+     * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
+     * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
     @Import(name="labels")
@@ -97,9 +97,9 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
-     * "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
-     * fractional digits, terminated by 's'. Example: "3.5s".
+     * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
+     * &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
+     * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
     @Import(name="lifetime")
@@ -146,7 +146,7 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The Type of this CertificateAuthority.
-     * > **Note:** For `SUBORDINATE` Certificate Authorities, they need to
+     * &gt; **Note:** For `SUBORDINATE` Certificate Authorities, they need to
      * be manually activated (via Cloud Console of `gcloud`) before they can
      * issue certificates.
      * Default value is `SELF_SIGNED`.

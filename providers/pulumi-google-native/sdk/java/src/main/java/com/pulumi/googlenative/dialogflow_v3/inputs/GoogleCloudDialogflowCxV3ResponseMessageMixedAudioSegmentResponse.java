@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
     public static final GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse Empty = new GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse();
 
     /**
-     * Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.
+     * Whether the playback of this segment can be interrupted by the end user&#39;s speech and the client should then start the next Dialogflow request.
      * 
      */
     @Import(name="allowPlaybackInterruption", required=true)
@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
     }
 
     /**
-     * Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.
+     * Raw audio synthesized from the Dialogflow agent&#39;s response using the output config specified in the request.
      * 
      */
     @Import(name="audio", required=true)

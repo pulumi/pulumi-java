@@ -89,7 +89,7 @@ public final class GetMyWorkbookResult {
      */
     private final String userId;
     /**
-     * This instance's version of the data model. This can change as new features are added that can be marked private workbook.
+     * This instance&#39;s version of the data model. This can change as new features are added that can be marked private workbook.
      * 
      */
     private final @Nullable String version;
@@ -236,7 +236,7 @@ public final class GetMyWorkbookResult {
         return this.userId;
     }
     /**
-     * This instance's version of the data model. This can change as new features are added that can be marked private workbook.
+     * This instance&#39;s version of the data model. This can change as new features are added that can be marked private workbook.
      * 
     */
     public Optional<String> version() {

@@ -66,28 +66,28 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
         return this.bucket;
     }
     /**
-     * The name you want to assign to this Access Point. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+     * The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The name you want to assign to this Access Point. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+     * @return The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * Indicates whether this Access Point allows access from the public Internet. If VpcConfiguration is specified for this Access Point, then NetworkOrigin is VPC, and the Access Point doesn't allow access from the public Internet. Otherwise, NetworkOrigin is Internet, and the Access Point allows access from the public Internet, subject to the Access Point and bucket access policies.
+     * Indicates whether this Access Point allows access from the public Internet. If VpcConfiguration is specified for this Access Point, then NetworkOrigin is VPC, and the Access Point doesn&#39;t allow access from the public Internet. Otherwise, NetworkOrigin is Internet, and the Access Point allows access from the public Internet, subject to the Access Point and bucket access policies.
      * 
      */
     @Export(name="networkOrigin", type=AccessPointNetworkOrigin.class, parameters={})
     private Output<AccessPointNetworkOrigin> networkOrigin;
 
     /**
-     * @return Indicates whether this Access Point allows access from the public Internet. If VpcConfiguration is specified for this Access Point, then NetworkOrigin is VPC, and the Access Point doesn't allow access from the public Internet. Otherwise, NetworkOrigin is Internet, and the Access Point allows access from the public Internet, subject to the Access Point and bucket access policies.
+     * @return Indicates whether this Access Point allows access from the public Internet. If VpcConfiguration is specified for this Access Point, then NetworkOrigin is VPC, and the Access Point doesn&#39;t allow access from the public Internet. Otherwise, NetworkOrigin is Internet, and the Access Point allows access from the public Internet, subject to the Access Point and bucket access policies.
      * 
      */
     public Output<AccessPointNetworkOrigin> networkOrigin() {
@@ -114,14 +114,14 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
         return this.policyStatus;
     }
     /**
-     * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
+     * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
      * 
      */
     @Export(name="publicAccessBlockConfiguration", type=AccessPointPublicAccessBlockConfiguration.class, parameters={})
     private Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
     /**
-     * @return The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
+     * @return The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status &#39;The Meaning of Public&#39; in the Amazon Simple Storage Service Developer Guide.
      * 
      */
     public Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {

@@ -44,7 +44,7 @@ public final class MicrosoftAccessSourceResponse {
     private final @Nullable Object sourceRetryWait;
     /**
      * Copy source type.
-     * Expected value is 'MicrosoftAccessSource'.
+     * Expected value is &#39;MicrosoftAccessSource&#39;.
      * 
      */
     private final String type;
@@ -111,7 +111,7 @@ public final class MicrosoftAccessSourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'MicrosoftAccessSource'.
+     * Expected value is &#39;MicrosoftAccessSource&#39;.
      * 
     */
     public String type() {

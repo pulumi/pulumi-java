@@ -177,7 +177,7 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The runtime in which the function is going to run.
-     * Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
+     * Eg. `&#34;nodejs10&#34;`, `&#34;nodejs12&#34;`, `&#34;nodejs14&#34;`, `&#34;python37&#34;`, `&#34;python38&#34;`, `&#34;python39&#34;`, `&#34;dotnet3&#34;`, `&#34;go113&#34;`, `&#34;java11&#34;`, `&#34;ruby27&#34;`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
      * 
      */
     @Import(name="runtime")

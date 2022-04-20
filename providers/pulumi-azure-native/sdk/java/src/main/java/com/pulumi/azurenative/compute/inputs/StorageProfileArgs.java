@@ -23,7 +23,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 
     /**
-     * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     @Import(name="dataDisks")
@@ -45,7 +45,7 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
     @Import(name="osDisk")

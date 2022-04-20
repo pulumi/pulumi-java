@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * The bucket's Autoclass configuration.
+ * The bucket&#39;s Autoclass configuration.
  * 
  */
 public final class BucketAutoclassResponse extends com.pulumi.resources.InvokeArgs {
@@ -29,7 +29,7 @@ public final class BucketAutoclassResponse extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * A date and time in RFC 3339 format representing the instant at which "enabled" was last toggled.
+     * A date and time in RFC 3339 format representing the instant at which &#34;enabled&#34; was last toggled.
      * 
      */
     @Import(name="toggleTime", required=true)

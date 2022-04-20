@@ -64,14 +64,14 @@ public class SmartDetectorAlertRule extends com.pulumi.resources.CustomResource 
         return this.description;
     }
     /**
-     * The alert rule's detector.
+     * The alert rule&#39;s detector.
      * 
      */
     @Export(name="detector", type=DetectorResponse.class, parameters={})
     private Output<DetectorResponse> detector;
 
     /**
-     * @return The alert rule's detector.
+     * @return The alert rule&#39;s detector.
      * 
      */
     public Output<DetectorResponse> detector() {

@@ -30,7 +30,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
+     * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `&#34;AmazonWorkLink-&#34;`.
      * 
      */
     @Import(name="auditStreamArn")

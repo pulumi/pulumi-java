@@ -30,7 +30,7 @@ public final class ClusterTagArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The tag's value. May be null.
+     * The tag&#39;s value. May be null.
      * 
      */
     @Import(name="value", required=true)

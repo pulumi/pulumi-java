@@ -31,7 +31,7 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * The overall result of the test's configuration analysis.
+     * The overall result of the test&#39;s configuration analysis.
      * 
      */
     @Import(name="result", required=true)

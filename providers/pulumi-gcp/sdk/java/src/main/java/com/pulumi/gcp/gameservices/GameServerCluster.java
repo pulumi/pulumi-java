@@ -123,8 +123,8 @@ public class GameServerCluster extends com.pulumi.resources.CustomResource {
     }
     /**
      * The resource id of the game server cluster, eg:
-     * 'projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}'. For example,
-     * 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
+     * &#39;projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster&#39;.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
@@ -132,8 +132,8 @@ public class GameServerCluster extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The resource id of the game server cluster, eg:
-     * 'projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}'. For example,
-     * 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
+     * &#39;projects/{project_id}/locations/{location}/realms/{realm_id}/gameServerClusters/{cluster_id}&#39;. For example,
+     * &#39;projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster&#39;.
      * 
      */
     public Output<String> name() {

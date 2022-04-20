@@ -16,7 +16,7 @@ public final class AlternativeContactState extends com.pulumi.resources.Resource
     public static final AlternativeContactState Empty = new AlternativeContactState();
 
     /**
-     * The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
+     * The ID of the target account when managing member accounts. Will manage current user&#39;s account by default if omitted.
      * 
      */
     @Import(name="accountId")

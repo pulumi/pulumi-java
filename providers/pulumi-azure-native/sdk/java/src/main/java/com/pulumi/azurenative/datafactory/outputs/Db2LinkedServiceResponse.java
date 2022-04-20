@@ -81,7 +81,7 @@ public final class Db2LinkedServiceResponse {
     private final @Nullable Object server;
     /**
      * Type of linked service.
-     * Expected value is 'Db2'.
+     * Expected value is &#39;Db2&#39;.
      * 
      */
     private final String type;
@@ -209,7 +209,7 @@ public final class Db2LinkedServiceResponse {
     }
     /**
      * Type of linked service.
-     * Expected value is 'Db2'.
+     * Expected value is &#39;Db2&#39;.
      * 
     */
     public String type() {

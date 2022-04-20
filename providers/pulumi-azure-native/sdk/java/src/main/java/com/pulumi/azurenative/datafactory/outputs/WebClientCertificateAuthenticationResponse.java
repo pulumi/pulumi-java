@@ -15,7 +15,7 @@ import java.util.Objects;
 public final class WebClientCertificateAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'ClientCertificate'.
+     * Expected value is &#39;ClientCertificate&#39;.
      * 
      */
     private final String authenticationType;
@@ -49,7 +49,7 @@ public final class WebClientCertificateAuthenticationResponse {
 
     /**
      * Type of authentication used to connect to the web table source.
-     * Expected value is 'ClientCertificate'.
+     * Expected value is &#39;ClientCertificate&#39;.
      * 
     */
     public String authenticationType() {

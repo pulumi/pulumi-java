@@ -59,7 +59,7 @@ public final class AzureMLUpdateResourceActivityResponse {
     private final Object trainedModelName;
     /**
      * Type of activity.
-     * Expected value is 'AzureMLUpdateResource'.
+     * Expected value is &#39;AzureMLUpdateResource&#39;.
      * 
      */
     private final String type;
@@ -151,7 +151,7 @@ public final class AzureMLUpdateResourceActivityResponse {
     }
     /**
      * Type of activity.
-     * Expected value is 'AzureMLUpdateResource'.
+     * Expected value is &#39;AzureMLUpdateResource&#39;.
      * 
     */
     public String type() {

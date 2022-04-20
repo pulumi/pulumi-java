@@ -25,7 +25,7 @@ import java.util.StringJoiner;
          */
         Resource("RESOURCE"),
         /**
-         * Specify this category when this attribute describes the properties of requests. For example, requester's role or requester's organization.
+         * Specify this category when this attribute describes the properties of requests. For example, requester&#39;s role or requester&#39;s organization.
          * 
          */
         Request("REQUEST");

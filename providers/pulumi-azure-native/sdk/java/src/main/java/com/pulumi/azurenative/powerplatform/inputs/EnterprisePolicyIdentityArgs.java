@@ -20,7 +20,7 @@ public final class EnterprisePolicyIdentityArgs extends com.pulumi.resources.Res
     public static final EnterprisePolicyIdentityArgs Empty = new EnterprisePolicyIdentityArgs();
 
     /**
-     * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+     * The type of identity used for the EnterprisePolicy. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
      * 
      */
     @Import(name="type")

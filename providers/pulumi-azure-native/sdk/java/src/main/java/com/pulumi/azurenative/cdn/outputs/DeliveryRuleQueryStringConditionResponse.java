@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class DeliveryRuleQueryStringConditionResponse {
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'QueryString'.
+     * Expected value is &#39;QueryString&#39;.
      * 
      */
     private final String name;
@@ -32,7 +32,7 @@ public final class DeliveryRuleQueryStringConditionResponse {
 
     /**
      * The name of the condition for the delivery rule.
-     * Expected value is 'QueryString'.
+     * Expected value is &#39;QueryString&#39;.
      * 
     */
     public String name() {

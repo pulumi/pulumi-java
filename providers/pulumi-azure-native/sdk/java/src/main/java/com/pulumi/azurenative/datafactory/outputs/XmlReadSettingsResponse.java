@@ -26,7 +26,7 @@ public final class XmlReadSettingsResponse {
      */
     private final @Nullable Object detectDataType;
     /**
-     * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
+     * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
      * 
      */
     private final @Nullable Object namespacePrefixes;
@@ -37,12 +37,12 @@ public final class XmlReadSettingsResponse {
     private final @Nullable Object namespaces;
     /**
      * The read setting type.
-     * Expected value is 'XmlReadSettings'.
+     * Expected value is &#39;XmlReadSettings&#39;.
      * 
      */
     private final String type;
     /**
-     * Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
+     * Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object validationMode;
@@ -78,7 +78,7 @@ public final class XmlReadSettingsResponse {
         return Optional.ofNullable(this.detectDataType);
     }
     /**
-     * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
+     * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
      * 
     */
     public Optional<Object> namespacePrefixes() {
@@ -93,14 +93,14 @@ public final class XmlReadSettingsResponse {
     }
     /**
      * The read setting type.
-     * Expected value is 'XmlReadSettings'.
+     * Expected value is &#39;XmlReadSettings&#39;.
      * 
     */
     public String type() {
         return this.type;
     }
     /**
-     * Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
+     * Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
      * 
     */
     public Optional<Object> validationMode() {

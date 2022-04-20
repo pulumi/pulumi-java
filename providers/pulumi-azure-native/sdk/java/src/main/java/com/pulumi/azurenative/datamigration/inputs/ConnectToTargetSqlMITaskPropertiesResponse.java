@@ -83,7 +83,7 @@ public final class ConnectToTargetSqlMITaskPropertiesResponse extends com.pulumi
 
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureSqlDbMI'.
+     * Expected value is &#39;ConnectToTarget.AzureSqlDbMI&#39;.
      * 
      */
     @Import(name="taskType", required=true)

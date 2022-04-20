@@ -66,7 +66,7 @@ public final class HyperVReplicaPolicyInputArgs extends com.pulumi.resources.Res
 
     /**
      * The class type.
-     * Expected value is 'HyperVReplica2012'.
+     * Expected value is &#39;HyperVReplica2012&#39;.
      * 
      */
     @Import(name="instanceType")

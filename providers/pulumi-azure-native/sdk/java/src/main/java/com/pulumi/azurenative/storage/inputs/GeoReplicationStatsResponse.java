@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Statistics related to replication for storage account's Blob, Table, Queue and File services. It is only available when geo-redundant replication is enabled for the storage account.
+ * Statistics related to replication for storage account&#39;s Blob, Table, Queue and File services. It is only available when geo-redundant replication is enabled for the storage account.
  * 
  */
 public final class GeoReplicationStatsResponse extends com.pulumi.resources.InvokeArgs {

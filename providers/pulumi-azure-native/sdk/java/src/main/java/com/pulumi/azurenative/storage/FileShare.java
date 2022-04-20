@@ -232,28 +232,28 @@ public class FileShare extends com.pulumi.resources.CustomResource {
         return this.shareUsageBytes;
     }
     /**
-     * Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
+     * Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
      * 
      */
     @Export(name="snapshotTime", type=String.class, parameters={})
     private Output<String> snapshotTime;
 
     /**
-     * @return Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
+     * @return Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
      * 
      */
     public Output<String> snapshotTime() {
         return this.snapshotTime;
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     public Output<String> type() {

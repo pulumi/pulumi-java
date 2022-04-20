@@ -20,7 +20,7 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 
     /**
-     * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
+     * Optional. Customer-managed Encryption Key available through Google&#39;s Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
      * 
      */
     @Import(name="kmsKeyName")

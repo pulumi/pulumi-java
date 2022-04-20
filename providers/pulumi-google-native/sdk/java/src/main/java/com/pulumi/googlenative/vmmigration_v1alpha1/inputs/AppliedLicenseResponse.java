@@ -17,7 +17,7 @@ public final class AppliedLicenseResponse extends com.pulumi.resources.InvokeArg
     public static final AppliedLicenseResponse Empty = new AppliedLicenseResponse();
 
     /**
-     * The OS license returned from the adaptation module's report.
+     * The OS license returned from the adaptation module&#39;s report.
      * 
      */
     @Import(name="osLicense", required=true)

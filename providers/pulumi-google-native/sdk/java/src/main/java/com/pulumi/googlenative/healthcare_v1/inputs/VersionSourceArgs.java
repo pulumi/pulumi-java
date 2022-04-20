@@ -20,7 +20,7 @@ public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final VersionSourceArgs Empty = new VersionSourceArgs();
 
     /**
-     * The field to extract from the MSH segment. For example, "3.1" or "18[1].1".
+     * The field to extract from the MSH segment. For example, &#34;3.1&#34; or &#34;18[1].1&#34;.
      * 
      */
     @Import(name="mshField")
@@ -31,7 +31,7 @@ public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The value to match with the field. For example, "My Application Name" or "2.3".
+     * The value to match with the field. For example, &#34;My Application Name&#34; or &#34;2.3&#34;.
      * 
      */
     @Import(name="value")

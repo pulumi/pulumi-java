@@ -94,7 +94,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     * This must match the first portion of the certificate name. Currently required to be &#39;SHA1&#39;.
      * 
      */
     @Import(name="thumbprintAlgorithm")

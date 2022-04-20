@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum SecuritySettingRedactionScope {
         /**
-         * Don't redact any kind of data.
+         * Don&#39;t redact any kind of data.
          * 
          */
         RedactionScopeUnspecified("REDACTION_SCOPE_UNSPECIFIED"),

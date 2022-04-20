@@ -95,7 +95,7 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
     }
 
     /**
-     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="domain", required=true)
@@ -205,7 +205,7 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
     }
 
     /**
-     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like '1' means numOfWorker is 1 or '1:10' means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as '2'. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
      * 
      */
     @Import(name="newClusterNumOfWorker")
@@ -272,7 +272,7 @@ public final class AzureDatabricksLinkedServiceResponse extends com.pulumi.resou
 
     /**
      * Type of linked service.
-     * Expected value is 'AzureDatabricks'.
+     * Expected value is &#39;AzureDatabricks&#39;.
      * 
      */
     @Import(name="type", required=true)

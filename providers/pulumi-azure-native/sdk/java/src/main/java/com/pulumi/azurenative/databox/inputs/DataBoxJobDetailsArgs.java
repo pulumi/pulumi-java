@@ -84,7 +84,7 @@ public final class DataBoxJobDetailsArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Indicates the type of job details.
-     * Expected value is 'DataBox'.
+     * Expected value is &#39;DataBox&#39;.
      * 
      */
     @Import(name="jobDetailsType", required=true)

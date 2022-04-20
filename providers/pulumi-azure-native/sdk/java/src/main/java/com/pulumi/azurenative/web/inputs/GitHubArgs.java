@@ -22,7 +22,7 @@ public final class GitHubArgs extends com.pulumi.resources.ResourceArgs {
     public static final GitHubArgs Empty = new GitHubArgs();
 
     /**
-     * <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the GitHub provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

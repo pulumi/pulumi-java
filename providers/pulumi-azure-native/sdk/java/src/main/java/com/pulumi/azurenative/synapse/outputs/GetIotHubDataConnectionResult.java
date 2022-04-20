@@ -40,7 +40,7 @@ public final class GetIotHubDataConnectionResult {
     private final String iotHubResourceId;
     /**
      * Kind of the endpoint for the data connection
-     * Expected value is 'IotHub'.
+     * Expected value is &#39;IotHub&#39;.
      * 
      */
     private final String kind;
@@ -80,7 +80,7 @@ public final class GetIotHubDataConnectionResult {
      */
     private final @Nullable String tableName;
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -154,7 +154,7 @@ public final class GetIotHubDataConnectionResult {
     }
     /**
      * Kind of the endpoint for the data connection
-     * Expected value is 'IotHub'.
+     * Expected value is &#39;IotHub&#39;.
      * 
     */
     public String kind() {
@@ -210,7 +210,7 @@ public final class GetIotHubDataConnectionResult {
         return Optional.ofNullable(this.tableName);
     }
     /**
-     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
     */
     public String type() {

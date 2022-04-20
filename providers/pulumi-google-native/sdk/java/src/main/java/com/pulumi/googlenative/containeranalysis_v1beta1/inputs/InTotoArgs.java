@@ -74,7 +74,7 @@ public final class InTotoArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
+     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step&#39;s in-toto link.
      * 
      */
     @Import(name="threshold")

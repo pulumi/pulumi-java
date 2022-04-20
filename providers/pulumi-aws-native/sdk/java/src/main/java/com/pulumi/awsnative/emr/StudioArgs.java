@@ -63,7 +63,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
+     * Your identity provider&#39;s authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint for authentication when logging in to a Studio with the Studio URL.
      * 
      */
     @Import(name="idpAuthUrl")

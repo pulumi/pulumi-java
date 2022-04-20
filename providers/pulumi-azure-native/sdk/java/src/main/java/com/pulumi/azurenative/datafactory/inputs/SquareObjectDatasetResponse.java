@@ -115,7 +115,7 @@ public final class SquareObjectDatasetResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of dataset.
-     * Expected value is 'SquareObject'.
+     * Expected value is &#39;SquareObject&#39;.
      * 
      */
     @Import(name="type", required=true)

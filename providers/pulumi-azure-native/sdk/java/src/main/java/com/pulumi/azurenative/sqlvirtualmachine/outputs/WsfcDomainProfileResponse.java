@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WsfcDomainProfileResponse {
     /**
-     * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
+     * Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
      * 
      */
     private final @Nullable String clusterBootstrapAccount;
@@ -66,7 +66,7 @@ public final class WsfcDomainProfileResponse {
     }
 
     /**
-     * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
+     * Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
      * 
     */
     public Optional<String> clusterBootstrapAccount() {

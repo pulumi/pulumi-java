@@ -54,7 +54,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentResponse extends com
 
     /**
      * backup protectionIntent type.
-     * Expected value is 'RecoveryServiceVaultItem'.
+     * Expected value is &#39;RecoveryServiceVaultItem&#39;.
      * 
      */
     @Import(name="protectionIntentItemType", required=true)

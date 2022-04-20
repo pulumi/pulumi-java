@@ -63,7 +63,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
      */
     @Import(name="certificates")
@@ -107,7 +107,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
+     * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
      * 
      */
     @Import(name="interNodeCommunication")
@@ -173,7 +173,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+     * Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
      * 
      */
     @Import(name="scaleSettings")

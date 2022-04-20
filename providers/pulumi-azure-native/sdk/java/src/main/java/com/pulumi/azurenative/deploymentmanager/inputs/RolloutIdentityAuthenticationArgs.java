@@ -20,7 +20,7 @@ public final class RolloutIdentityAuthenticationArgs extends com.pulumi.resource
 
     /**
      * The authentication type.
-     * Expected value is 'RolloutIdentity'.
+     * Expected value is &#39;RolloutIdentity&#39;.
      * 
      */
     @Import(name="type", required=true)

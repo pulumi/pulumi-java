@@ -115,7 +115,7 @@ public final class AzureMariaDBTableDatasetResponse extends com.pulumi.resources
 
     /**
      * Type of dataset.
-     * Expected value is 'AzureMariaDBTable'.
+     * Expected value is &#39;AzureMariaDBTable&#39;.
      * 
      */
     @Import(name="type", required=true)

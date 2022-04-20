@@ -30,7 +30,7 @@ import java.util.StringJoiner;
          */
         UnitLogScale("UNIT_LOG_SCALE"),
         /**
-         * Scales the feasible space "reverse" logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.
+         * Scales the feasible space &#34;reverse&#34; logarithmically to (0, 1). The result is that values close to the top of the feasible space are spread out more than points near the bottom. The entire feasible space must be strictly positive.
          * 
          */
         UnitReverseLogScale("UNIT_REVERSE_LOG_SCALE");

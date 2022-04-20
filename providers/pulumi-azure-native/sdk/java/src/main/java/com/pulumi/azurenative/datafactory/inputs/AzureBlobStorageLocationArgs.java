@@ -55,7 +55,7 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
 
     /**
      * Type of dataset storage location.
-     * Expected value is 'AzureBlobStorageLocation'.
+     * Expected value is &#39;AzureBlobStorageLocation&#39;.
      * 
      */
     @Import(name="type", required=true)

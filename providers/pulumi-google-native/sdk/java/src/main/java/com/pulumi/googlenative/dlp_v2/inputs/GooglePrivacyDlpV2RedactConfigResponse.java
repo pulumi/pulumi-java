@@ -7,7 +7,7 @@ import java.util.Objects;
 
 
 /**
- * Redact a given value. For example, if used with an `InfoTypeTransformation` transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the output would be 'My phone number is '.
+ * Redact a given value. For example, if used with an `InfoTypeTransformation` transforming PHONE_NUMBER, and input &#39;My phone number is 206-555-0123&#39;, the output would be &#39;My phone number is &#39;.
  * 
  */
 public final class GooglePrivacyDlpV2RedactConfigResponse extends com.pulumi.resources.InvokeArgs {

@@ -86,7 +86,7 @@ public final class DatabaseInstanceState extends com.pulumi.resources.ResourceAr
      * to use this feature, a special kind of service account must be created and
      * granted permission on this key.  This step can currently only be done
      * manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
-     * That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
+     * That service account needs the `Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter` role on your
      * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
      * 
      */

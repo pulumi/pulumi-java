@@ -19,7 +19,7 @@ public final class AlertsSuppressionRuleArgs extends com.pulumi.resources.Resour
     public static final AlertsSuppressionRuleArgs Empty = new AlertsSuppressionRuleArgs();
 
     /**
-     * Type of the alert to automatically suppress. For all alert types, use '*'
+     * Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
      * 
      */
     @Import(name="alertType", required=true)

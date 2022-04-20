@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse {
      */
     private final List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
     /**
-     * Optional. What type of media is the content (ie "audio").
+     * Optional. What type of media is the content (ie &#34;audio&#34;).
      * 
      */
     private final String mediaType;
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse {
         return this.mediaObjects;
     }
     /**
-     * Optional. What type of media is the content (ie "audio").
+     * Optional. What type of media is the content (ie &#34;audio&#34;).
      * 
     */
     public String mediaType() {

@@ -22,7 +22,7 @@ public final class CustomOpenIdConnectProviderArgs extends com.pulumi.resources.
     public static final CustomOpenIdConnectProviderArgs Empty = new CustomOpenIdConnectProviderArgs();
 
     /**
-     * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="enabled")

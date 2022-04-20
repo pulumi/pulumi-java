@@ -30,7 +30,7 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
 
     /**
      * Kind of synchronization setting.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     @Import(name="kind", required=true)

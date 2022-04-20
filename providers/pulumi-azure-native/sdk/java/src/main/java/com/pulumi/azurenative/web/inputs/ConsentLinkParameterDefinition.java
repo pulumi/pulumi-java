@@ -30,7 +30,7 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
     }
 
     /**
-     * Name of the parameter in the connection provider's OAuth settings
+     * Name of the parameter in the connection provider&#39;s OAuth settings
      * 
      */
     @Import(name="parameterName")
@@ -41,7 +41,7 @@ public final class ConsentLinkParameterDefinition extends com.pulumi.resources.I
     }
 
     /**
-     * Name of the parameter in the connection provider's OAuth settings
+     * Name of the parameter in the connection provider&#39;s OAuth settings
      * 
      */
     @Import(name="redirectUrl")

@@ -57,7 +57,7 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The alert rule's detector.
+     * The alert rule&#39;s detector.
      * 
      */
     @Import(name="detector", required=true)

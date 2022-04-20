@@ -99,7 +99,7 @@ public final class AzureMySqlSourceArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Copy source type.
-     * Expected value is 'AzureMySqlSource'.
+     * Expected value is &#39;AzureMySqlSource&#39;.
      * 
      */
     @Import(name="type", required=true)

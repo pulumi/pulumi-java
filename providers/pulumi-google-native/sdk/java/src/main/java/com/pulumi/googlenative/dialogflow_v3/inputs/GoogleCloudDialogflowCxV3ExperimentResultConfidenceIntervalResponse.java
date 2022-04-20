@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
     }
 
     /**
-     * The percent change between an experiment metric's value and the value for its control.
+     * The percent change between an experiment metric&#39;s value and the value for its control.
      * 
      */
     @Import(name="ratio", required=true)

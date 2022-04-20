@@ -31,7 +31,7 @@ public final class EdgeCacheServiceRoutingHostRuleGetArgs extends com.pulumi.res
      * The list of host patterns to match.
      * Host patterns must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*).
      * The only accepted ports are :80 and :443.
-     * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
+     * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the &#34;:authority&#34; header, from the incoming request.
      * 
      */
     @Import(name="hosts", required=true)

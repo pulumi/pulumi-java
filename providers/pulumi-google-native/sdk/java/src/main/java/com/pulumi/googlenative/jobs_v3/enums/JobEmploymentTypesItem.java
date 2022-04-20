@@ -31,7 +31,7 @@ import java.util.StringJoiner;
          */
         Contractor("CONTRACTOR"),
         /**
-         * The job is offered as a contracted position with the understanding that it's converted into a full-time position at the end of the contract. Jobs of this type are also returned by a search for EmploymentType.CONTRACTOR jobs.
+         * The job is offered as a contracted position with the understanding that it&#39;s converted into a full-time position at the end of the contract. Jobs of this type are also returned by a search for EmploymentType.CONTRACTOR jobs.
          * 
          */
         ContractToHire("CONTRACT_TO_HIRE"),
@@ -46,7 +46,7 @@ import java.util.StringJoiner;
          */
         Intern("INTERN"),
         /**
-         * The is an opportunity for an individual to volunteer, where there's no expectation of compensation for the provided services.
+         * The is an opportunity for an individual to volunteer, where there&#39;s no expectation of compensation for the provided services.
          * 
          */
         Volunteer("VOLUNTEER"),

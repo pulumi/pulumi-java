@@ -28,7 +28,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if the domain should be automatically renewed; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="autoRenew")
@@ -149,7 +149,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
+     * &lt;code&gt;true&lt;/code&gt; if domain privacy is enabled for this domain; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
      */
     @Import(name="privacy")

@@ -22,7 +22,7 @@ public final class CustomDnsArgs extends com.pulumi.resources.ResourceArgs {
     public static final CustomDnsArgs Empty = new CustomDnsArgs();
 
     /**
-     * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
+     * The list of DS records for this domain, which are used to enable DNSSEC. The domain&#39;s DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
      * 
      */
     @Import(name="dsRecords")

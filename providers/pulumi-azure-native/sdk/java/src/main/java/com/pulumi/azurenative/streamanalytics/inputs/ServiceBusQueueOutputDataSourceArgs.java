@@ -77,7 +77,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends com.pulumi.resour
 
     /**
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is 'Microsoft.ServiceBus/Queue'.
+     * Expected value is &#39;Microsoft.ServiceBus/Queue&#39;.
      * 
      */
     @Import(name="type", required=true)

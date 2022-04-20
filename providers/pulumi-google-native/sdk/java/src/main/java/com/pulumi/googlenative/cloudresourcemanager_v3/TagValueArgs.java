@@ -49,7 +49,7 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
+     * Immutable. The resource name of the new TagValue&#39;s parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
      */
     @Import(name="parent")

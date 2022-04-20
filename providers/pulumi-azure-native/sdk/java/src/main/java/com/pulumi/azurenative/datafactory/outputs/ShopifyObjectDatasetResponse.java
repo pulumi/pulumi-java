@@ -59,7 +59,7 @@ public final class ShopifyObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'ShopifyObject'.
+     * Expected value is &#39;ShopifyObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class ShopifyObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'ShopifyObject'.
+     * Expected value is &#39;ShopifyObject&#39;.
      * 
     */
     public String type() {

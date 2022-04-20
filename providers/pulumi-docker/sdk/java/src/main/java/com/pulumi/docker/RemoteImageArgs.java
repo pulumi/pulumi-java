@@ -42,7 +42,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from
+     * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
      * the docker local storage on destroy operation.
      * 
      */
@@ -67,7 +67,7 @@ public final class RemoteImageArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * A value which cause an image pull when changed
      * 
-     * @Deprecated
+     * @deprecated
      * Use field pull_triggers instead
      * 
      */

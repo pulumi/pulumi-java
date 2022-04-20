@@ -76,7 +76,7 @@ public final class SecurityAlertTimelineItemResponse extends com.pulumi.resource
 
     /**
      * The entity query kind
-     * Expected value is 'SecurityAlert'.
+     * Expected value is &#39;SecurityAlert&#39;.
      * 
      */
     @Import(name="kind", required=true)

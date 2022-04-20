@@ -32,7 +32,7 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional. The name of the GKE cluster's secondary range used to allocate IP addresses to pods. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the GKE cluster&#39;s secondary range used to allocate IP addresses to pods. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
     @Import(name="clusterSecondaryRangeName")
@@ -54,7 +54,7 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional. The name of the services' secondary range used to allocate IP addresses to the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     * Optional. The name of the services&#39; secondary range used to allocate IP addresses to the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
     @Import(name="servicesSecondaryRangeName")

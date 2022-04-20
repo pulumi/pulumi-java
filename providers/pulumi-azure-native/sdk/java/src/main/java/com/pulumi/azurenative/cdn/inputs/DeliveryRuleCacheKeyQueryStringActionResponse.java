@@ -20,7 +20,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse extends com.pul
 
     /**
      * The name of the action for the delivery rule.
-     * Expected value is 'CacheKeyQueryString'.
+     * Expected value is &#39;CacheKeyQueryString&#39;.
      * 
      */
     @Import(name="name", required=true)

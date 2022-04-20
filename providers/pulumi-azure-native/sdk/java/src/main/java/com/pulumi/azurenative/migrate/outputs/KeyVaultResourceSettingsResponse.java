@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class KeyVaultResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.KeyVault/vaults'.
+     * Expected value is &#39;Microsoft.KeyVault/vaults&#39;.
      * 
      */
     private final String resourceType;
@@ -31,7 +31,7 @@ public final class KeyVaultResourceSettingsResponse {
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.KeyVault/vaults'.
+     * Expected value is &#39;Microsoft.KeyVault/vaults&#39;.
      * 
     */
     public String resourceType() {

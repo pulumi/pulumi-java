@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GraphEdgeResponse {
     /**
-     * The source graph node's identifier.
+     * The source graph node&#39;s identifier.
      * 
      */
     private final @Nullable String sourceNodeId;
     /**
-     * The identifier of the source node's port that the edge connects from.
+     * The identifier of the source node&#39;s port that the edge connects from.
      * 
      */
     private final @Nullable String sourcePortId;
     /**
-     * The destination graph node's identifier.
+     * The destination graph node&#39;s identifier.
      * 
      */
     private final @Nullable String targetNodeId;
     /**
-     * The identifier of the destination node's port that the edge connects into.
+     * The identifier of the destination node&#39;s port that the edge connects into.
      * 
      */
     private final @Nullable String targetPortId;
@@ -45,28 +45,28 @@ public final class GraphEdgeResponse {
     }
 
     /**
-     * The source graph node's identifier.
+     * The source graph node&#39;s identifier.
      * 
     */
     public Optional<String> sourceNodeId() {
         return Optional.ofNullable(this.sourceNodeId);
     }
     /**
-     * The identifier of the source node's port that the edge connects from.
+     * The identifier of the source node&#39;s port that the edge connects from.
      * 
     */
     public Optional<String> sourcePortId() {
         return Optional.ofNullable(this.sourcePortId);
     }
     /**
-     * The destination graph node's identifier.
+     * The destination graph node&#39;s identifier.
      * 
     */
     public Optional<String> targetNodeId() {
         return Optional.ofNullable(this.targetNodeId);
     }
     /**
-     * The identifier of the destination node's port that the edge connects into.
+     * The identifier of the destination node&#39;s port that the edge connects into.
      * 
     */
     public Optional<String> targetPortId() {

@@ -59,7 +59,7 @@ public final class MagentoObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'MagentoObject'.
+     * Expected value is &#39;MagentoObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class MagentoObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'MagentoObject'.
+     * Expected value is &#39;MagentoObject&#39;.
      * 
     */
     public String type() {

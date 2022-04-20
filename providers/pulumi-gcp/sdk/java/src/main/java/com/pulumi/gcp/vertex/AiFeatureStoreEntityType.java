@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType")
 public class AiFeatureStoreEntityType extends com.pulumi.resources.CustomResource {
     /**
-     * The timestamp of when the featurestore was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * The timestamp of when the featurestore was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
      * nine fractional digits.
      * 
      */
@@ -36,7 +36,7 @@ public class AiFeatureStoreEntityType extends com.pulumi.resources.CustomResourc
     private Output<String> createTime;
 
     /**
-     * @return The timestamp of when the featurestore was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
+     * @return The timestamp of when the featurestore was created in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to
      * nine fractional digits.
      * 
      */
@@ -118,7 +118,7 @@ public class AiFeatureStoreEntityType extends com.pulumi.resources.CustomResourc
         return this.name;
     }
     /**
-     * The timestamp of when the featurestore was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up
+     * The timestamp of when the featurestore was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up
      * to nine fractional digits.
      * 
      */
@@ -126,7 +126,7 @@ public class AiFeatureStoreEntityType extends com.pulumi.resources.CustomResourc
     private Output<String> updateTime;
 
     /**
-     * @return The timestamp of when the featurestore was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up
+     * @return The timestamp of when the featurestore was last updated in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up
      * to nine fractional digits.
      * 
      */

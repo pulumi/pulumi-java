@@ -24,8 +24,8 @@ import javax.annotation.Nullable;
  * There are three roles that can be assigned to an entity:
  * 
  * READERs can get the bucket, though no acl property will be returned, and
- * list the bucket's objects.  WRITERs are READERs, and they can insert
- * objects into the bucket and delete the bucket's objects.  OWNERs are
+ * list the bucket&#39;s objects.  WRITERs are READERs, and they can insert
+ * objects into the bucket and delete the bucket&#39;s objects.  OWNERs are
  * WRITERs, and they can get the acl property of a bucket, update a bucket,
  * and call all BucketAccessControls methods on the bucket.  For more
  * information, see Access Control, with the caveat that this API uses

@@ -28,7 +28,7 @@ public final class ShopifyLinkedServiceResponse extends com.pulumi.resources.Inv
     public static final ShopifyLinkedServiceResponse Empty = new ShopifyLinkedServiceResponse();
 
     /**
-     * The API access token that can be used to access Shopify’s data. The token won't expire if it is offline mode.
+     * The API access token that can be used to access Shopify’s data. The token won&#39;t expire if it is offline mode.
      * 
      */
     @Import(name="accessToken")
@@ -106,7 +106,7 @@ public final class ShopifyLinkedServiceResponse extends com.pulumi.resources.Inv
 
     /**
      * Type of linked service.
-     * Expected value is 'Shopify'.
+     * Expected value is &#39;Shopify&#39;.
      * 
      */
     @Import(name="type", required=true)
@@ -128,7 +128,7 @@ public final class ShopifyLinkedServiceResponse extends com.pulumi.resources.Inv
     }
 
     /**
-     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
     @Import(name="useHostVerification")

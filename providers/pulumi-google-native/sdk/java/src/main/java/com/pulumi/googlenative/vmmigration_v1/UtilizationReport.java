@@ -66,14 +66,14 @@ public class UtilizationReport extends com.pulumi.resources.CustomResource {
         return this.error;
     }
     /**
-     * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
+     * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the &#34;frame_end_time&#34; value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
      */
     @Export(name="frameEndTime", type=String.class, parameters={})
     private Output<String> frameEndTime;
 
     /**
-     * @return The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
+     * @return The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the &#34;frame_end_time&#34; value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
      */
     public Output<String> frameEndTime() {
@@ -150,14 +150,14 @@ public class UtilizationReport extends com.pulumi.resources.CustomResource {
         return this.vmCount;
     }
     /**
-     * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+     * List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
     @Export(name="vms", type=List.class, parameters={VmUtilizationInfoResponse.class})
     private Output<List<VmUtilizationInfoResponse>> vms;
 
     /**
-     * @return List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
+     * @return List of utilization information per VM. When sent as part of the request, the &#34;vm_id&#34; field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
     public Output<List<VmUtilizationInfoResponse>> vms() {

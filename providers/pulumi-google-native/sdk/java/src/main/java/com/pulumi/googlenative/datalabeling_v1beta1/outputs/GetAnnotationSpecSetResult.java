@@ -32,7 +32,7 @@ public final class GetAnnotationSpecSetResult {
      */
     private final String displayName;
     /**
-     * The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
+     * The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
      */
     private final String name;
@@ -80,7 +80,7 @@ public final class GetAnnotationSpecSetResult {
         return this.displayName;
     }
     /**
-     * The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
+     * The AnnotationSpecSet resource name in the following format: &#34;projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}&#34;
      * 
     */
     public String name() {

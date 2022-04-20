@@ -20,7 +20,7 @@ public final class WsdlServiceResponse extends com.pulumi.resources.InvokeArgs {
     public static final WsdlServiceResponse Empty = new WsdlServiceResponse();
 
     /**
-     * The list of endpoints' qualified names.
+     * The list of endpoints&#39; qualified names.
      * 
      */
     @Import(name="endpointQualifiedNames")

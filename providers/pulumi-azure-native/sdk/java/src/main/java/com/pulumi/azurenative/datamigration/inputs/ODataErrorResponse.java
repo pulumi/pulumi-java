@@ -18,7 +18,7 @@ public final class ODataErrorResponse extends com.pulumi.resources.InvokeArgs {
     public static final ODataErrorResponse Empty = new ODataErrorResponse();
 
     /**
-     * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
+     * The machine-readable description of the error, such as &#39;InvalidRequest&#39; or &#39;InternalServerError&#39;
      * 
      */
     @Import(name="code", required=true)

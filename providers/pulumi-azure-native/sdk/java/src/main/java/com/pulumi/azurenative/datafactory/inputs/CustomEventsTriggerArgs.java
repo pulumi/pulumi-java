@@ -101,7 +101,7 @@ public final class CustomEventsTriggerArgs extends com.pulumi.resources.Resource
 
     /**
      * Trigger type.
-     * Expected value is 'CustomEventsTrigger'.
+     * Expected value is &#39;CustomEventsTrigger&#39;.
      * 
      */
     @Import(name="type", required=true)

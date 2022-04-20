@@ -58,7 +58,7 @@ public final class SetVariableActivityArgs extends com.pulumi.resources.Resource
 
     /**
      * Type of activity.
-     * Expected value is 'SetVariable'.
+     * Expected value is &#39;SetVariable&#39;.
      * 
      */
     @Import(name="type", required=true)

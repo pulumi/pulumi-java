@@ -46,7 +46,7 @@ public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The status of the export's schedule. If 'Inactive', the export's schedule is paused.
+     * The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
      * 
      */
     @Import(name="status")

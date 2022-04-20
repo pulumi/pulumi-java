@@ -50,7 +50,7 @@ public final class ExternalRefResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
+     * Type of category (e.g. &#39;npm&#39; for the PACKAGE_MANAGER category)
      * 
      */
     @Import(name="type", required=true)

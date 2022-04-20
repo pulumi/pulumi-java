@@ -21,7 +21,7 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
     public static final ContainerStateTerminatedArgs Empty = new ContainerStateTerminatedArgs();
 
     /**
-     * Container's ID in the format 'docker://<container_id>'
+     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
      * 
      */
     @Import(name="containerID")

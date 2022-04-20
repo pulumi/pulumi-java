@@ -43,7 +43,7 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the field. For example, "PID-1" or just "1".
+     * The name of the field. For example, &#34;PID-1&#34; or just &#34;1&#34;.
      * 
      */
     @Import(name="name")
@@ -54,7 +54,7 @@ public final class FieldArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".
+     * The HL7v2 table this field refers to. For example, PID-15 (Patient&#39;s Primary Language) usually refers to table &#34;0296&#34;.
      * 
      */
     @Import(name="table")

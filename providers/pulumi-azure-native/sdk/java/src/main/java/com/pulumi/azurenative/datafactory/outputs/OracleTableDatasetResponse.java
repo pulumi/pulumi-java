@@ -64,7 +64,7 @@ public final class OracleTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'OracleTable'.
+     * Expected value is &#39;OracleTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class OracleTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'OracleTable'.
+     * Expected value is &#39;OracleTable&#39;.
      * 
     */
     public String type() {

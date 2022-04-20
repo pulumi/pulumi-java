@@ -46,14 +46,14 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The ARN of the authorizer's Lambda function.
+     * The ARN of the authorizer&#39;s Lambda function.
      * 
      */
     @Export(name="authorizerFunctionArn", type=String.class, parameters={})
     private Output<String> authorizerFunctionArn;
 
     /**
-     * @return The ARN of the authorizer's Lambda function.
+     * @return The ARN of the authorizer&#39;s Lambda function.
      * 
      */
     public Output<String> authorizerFunctionArn() {

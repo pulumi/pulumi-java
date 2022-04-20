@@ -100,7 +100,7 @@ public final class JobTriggerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
+     * A list of triggers which will be OR&#39;ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
      */
     @Import(name="triggers")

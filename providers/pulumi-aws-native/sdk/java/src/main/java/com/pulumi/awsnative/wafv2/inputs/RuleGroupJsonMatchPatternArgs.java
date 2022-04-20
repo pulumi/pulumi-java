@@ -22,7 +22,7 @@ public final class RuleGroupJsonMatchPatternArgs extends com.pulumi.resources.Re
     public static final RuleGroupJsonMatchPatternArgs Empty = new RuleGroupJsonMatchPatternArgs();
 
     /**
-     * Inspect all parts of the web request's JSON body.
+     * Inspect all parts of the web request&#39;s JSON body.
      * 
      */
     @Import(name="all")

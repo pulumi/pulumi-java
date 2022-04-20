@@ -32,7 +32,7 @@ public final class DiskConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
+     * Optional. Type of the boot disk (default is &#34;pd-standard&#34;). Valid values: &#34;pd-balanced&#34; (Persistent Disk Balanced Solid State Drive), &#34;pd-ssd&#34; (Persistent Disk Solid State Drive), or &#34;pd-standard&#34; (Persistent Disk Hard Disk Drive). See Disk types (https://cloud.google.com/compute/docs/disks#disk-types).
      * 
      */
     @Import(name="bootDiskType")

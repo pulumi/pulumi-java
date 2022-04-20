@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
     /**
-     * Specifies the allowed number retries. This number must be > 0.
+     * Specifies the allowed number retries. This number must be &gt; 0.
      * 
      */
     private final Integer numRetries;
@@ -62,7 +62,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
     }
 
     /**
-     * Specifies the allowed number retries. This number must be > 0.
+     * Specifies the allowed number retries. This number must be &gt; 0.
      * 
     */
     public Integer numRetries() {

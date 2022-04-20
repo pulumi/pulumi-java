@@ -18,7 +18,7 @@ public final class LogToMetricActionResponse {
     private final List<CriteriaResponse> criteria;
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
-     * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'.
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
      * 
      */
     private final String odataType;
@@ -40,7 +40,7 @@ public final class LogToMetricActionResponse {
     }
     /**
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
-     * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'.
+     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
      * 
     */
     public String odataType() {

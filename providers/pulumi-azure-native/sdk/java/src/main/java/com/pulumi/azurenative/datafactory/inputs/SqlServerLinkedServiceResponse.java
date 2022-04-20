@@ -118,7 +118,7 @@ public final class SqlServerLinkedServiceResponse extends com.pulumi.resources.I
 
     /**
      * Type of linked service.
-     * Expected value is 'SqlServer'.
+     * Expected value is &#39;SqlServer&#39;.
      * 
      */
     @Import(name="type", required=true)

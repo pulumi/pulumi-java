@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a Single Sign-On (SSO) Permission Set resource
  * 
- * > **NOTE:** Updating this resource will automatically [Provision the Permission Set](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ProvisionPermissionSet.html) to apply the corresponding updates to all assigned accounts.
+ * &gt; **NOTE:** Updating this resource will automatically [Provision the Permission Set](https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ProvisionPermissionSet.html) to apply the corresponding updates to all assigned accounts.
  * 
  * ## Import
  * 

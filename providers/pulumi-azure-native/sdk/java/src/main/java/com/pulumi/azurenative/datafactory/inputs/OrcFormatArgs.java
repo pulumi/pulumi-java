@@ -44,7 +44,7 @@ public final class OrcFormatArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Type of dataset storage format.
-     * Expected value is 'OrcFormat'.
+     * Expected value is &#39;OrcFormat&#39;.
      * 
      */
     @Import(name="type", required=true)

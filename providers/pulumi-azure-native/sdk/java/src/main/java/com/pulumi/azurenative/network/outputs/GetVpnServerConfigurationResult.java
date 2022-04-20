@@ -52,7 +52,7 @@ public final class GetVpnServerConfigurationResult {
      */
     private final List<P2SVpnGatewayResponse> p2SVpnGateways;
     /**
-     * The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     * The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
      * 
      */
     private final String provisioningState;
@@ -202,7 +202,7 @@ public final class GetVpnServerConfigurationResult {
         return this.p2SVpnGateways;
     }
     /**
-     * The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     * The provisioning state of the VpnServerConfiguration resource. Possible values are: &#39;Updating&#39;, &#39;Deleting&#39;, and &#39;Failed&#39;.
      * 
     */
     public String provisioningState() {

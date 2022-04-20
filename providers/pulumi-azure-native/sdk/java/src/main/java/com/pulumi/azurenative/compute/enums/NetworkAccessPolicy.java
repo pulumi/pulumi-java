@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         AllowAll("AllowAll"),
         /**
-         * The disk can be exported or uploaded to using a DiskAccess resource's private endpoints.
+         * The disk can be exported or uploaded to using a DiskAccess resource&#39;s private endpoints.
          * 
          */
         AllowPrivate("AllowPrivate"),

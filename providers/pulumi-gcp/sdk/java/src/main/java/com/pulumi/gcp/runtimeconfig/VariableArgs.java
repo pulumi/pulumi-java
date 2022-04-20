@@ -17,7 +17,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The name of the variable to manage. Note that variable
-     * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
+     * names can be hierarchical using slashes (e.g. &#34;prod-variables/hostname&#34;).
      * 
      */
     @Import(name="name")

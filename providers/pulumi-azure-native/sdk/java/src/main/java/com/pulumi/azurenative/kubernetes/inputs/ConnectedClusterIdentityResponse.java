@@ -40,7 +40,7 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
     }
 
     /**
-     * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
+     * The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
      * 
      */
     @Import(name="type", required=true)

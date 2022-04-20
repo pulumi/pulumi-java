@@ -26,7 +26,7 @@ public final class ReadinessCheckResponse {
      */
     private final Integer failureThreshold;
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
      */
     private final String host;
@@ -86,7 +86,7 @@ public final class ReadinessCheckResponse {
         return this.failureThreshold;
     }
     /**
-     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     * Host header to send when performing a HTTP Readiness check. Example: &#34;myapp.appspot.com&#34;
      * 
     */
     public String host() {

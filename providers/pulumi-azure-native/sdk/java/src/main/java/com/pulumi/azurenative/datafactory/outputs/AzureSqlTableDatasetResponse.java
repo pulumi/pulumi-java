@@ -64,7 +64,7 @@ public final class AzureSqlTableDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'AzureSqlTable'.
+     * Expected value is &#39;AzureSqlTable&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class AzureSqlTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureSqlTable'.
+     * Expected value is &#39;AzureSqlTable&#39;.
      * 
     */
     public String type() {

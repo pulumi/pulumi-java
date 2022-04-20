@@ -65,7 +65,7 @@ public final class ListenerRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
+     * The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can&#39;t have multiple rules with the same priority.
      * 
      */
     @Import(name="priority")

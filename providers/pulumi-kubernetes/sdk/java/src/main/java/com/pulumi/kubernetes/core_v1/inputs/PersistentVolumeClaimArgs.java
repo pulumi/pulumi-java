@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * PersistentVolumeClaim is a user's request for and claim to a persistent volume
+ * PersistentVolumeClaim is a user&#39;s request for and claim to a persistent volume
  * 
  */
 public final class PersistentVolumeClaimArgs extends com.pulumi.resources.ResourceArgs {
@@ -45,7 +45,7 @@ public final class PersistentVolumeClaimArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

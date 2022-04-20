@@ -45,7 +45,7 @@ public final class SnowflakeSinkResponse {
     private final @Nullable Object sinkRetryWait;
     /**
      * Copy sink type.
-     * Expected value is 'SnowflakeSink'.
+     * Expected value is &#39;SnowflakeSink&#39;.
      * 
      */
     private final String type;
@@ -126,7 +126,7 @@ public final class SnowflakeSinkResponse {
     }
     /**
      * Copy sink type.
-     * Expected value is 'SnowflakeSink'.
+     * Expected value is &#39;SnowflakeSink&#39;.
      * 
     */
     public String type() {

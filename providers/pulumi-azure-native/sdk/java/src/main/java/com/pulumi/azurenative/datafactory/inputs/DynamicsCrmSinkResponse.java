@@ -88,7 +88,7 @@ public final class DynamicsCrmSinkResponse extends com.pulumi.resources.InvokeAr
 
     /**
      * Copy sink type.
-     * Expected value is 'DynamicsCrmSink'.
+     * Expected value is &#39;DynamicsCrmSink&#39;.
      * 
      */
     @Import(name="type", required=true)

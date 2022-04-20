@@ -17,7 +17,7 @@ public final class VpcIpamScopeArgs extends com.pulumi.resources.ResourceArgs {
     public static final VpcIpamScopeArgs Empty = new VpcIpamScopeArgs();
 
     /**
-     * A description for the scope you're creating.
+     * A description for the scope you&#39;re creating.
      * 
      */
     @Import(name="description")
@@ -28,7 +28,7 @@ public final class VpcIpamScopeArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the IPAM for which you're creating this scope.
+     * The ID of the IPAM for which you&#39;re creating this scope.
      * 
      */
     @Import(name="ipamId", required=true)

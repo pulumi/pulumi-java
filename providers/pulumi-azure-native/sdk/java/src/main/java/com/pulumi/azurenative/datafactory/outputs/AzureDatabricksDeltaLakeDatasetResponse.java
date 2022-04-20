@@ -64,7 +64,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse {
     private final @Nullable Object table;
     /**
      * Type of dataset.
-     * Expected value is 'AzureDatabricksDeltaLakeDataset'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeDataset&#39;.
      * 
      */
     private final String type;
@@ -158,7 +158,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureDatabricksDeltaLakeDataset'.
+     * Expected value is &#39;AzureDatabricksDeltaLakeDataset&#39;.
      * 
     */
     public String type() {

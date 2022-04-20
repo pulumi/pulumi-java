@@ -21,7 +21,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends com.pul
 
     /**
      * Kind of synchronization setting on share.
-     * Expected value is 'ScheduleBased'.
+     * Expected value is &#39;ScheduleBased&#39;.
      * 
      */
     @Import(name="kind", required=true)

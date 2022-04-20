@@ -83,7 +83,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
+     * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and &#39;-&#39;, &#39;_&#39;, &#39;(&#39;, &#39;)&#39; and&#39;.&#39;. Note that the name cannot end with &#39;.&#39;
      * 
      */
     @Import(name="managedResourceGroupName")
@@ -94,7 +94,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
+     * Setting this to &#39;default&#39; will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
      */
     @Import(name="managedVirtualNetwork")

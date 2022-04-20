@@ -24,7 +24,7 @@ public final class BackendServiceBackend {
      */
     private final @Nullable String balancingMode;
     /**
-     * A multiplier applied to the group's maximum servicing capacity
+     * A multiplier applied to the group&#39;s maximum servicing capacity
      * (based on UTILIZATION, RATE or CONNECTION).
      * Default value is 1, which means the group will serve up to 100%
      * of its configured capacity (depending on balancingMode). A
@@ -154,7 +154,7 @@ public final class BackendServiceBackend {
         return Optional.ofNullable(this.balancingMode);
     }
     /**
-     * A multiplier applied to the group's maximum servicing capacity
+     * A multiplier applied to the group&#39;s maximum servicing capacity
      * (based on UTILIZATION, RATE or CONNECTION).
      * Default value is 1, which means the group will serve up to 100%
      * of its configured capacity (depending on balancingMode). A

@@ -27,7 +27,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends co
     }
 
     /**
-     * Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * Main user&#39;s username, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
     @Import(name="masterUserName")
@@ -38,7 +38,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends co
     }
 
     /**
-     * Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
+     * Main user&#39;s password, which is stored in the Amazon Elasticsearch Service domain&#39;s internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
     @Import(name="masterUserPassword")

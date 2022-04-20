@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DataSourceAmazonElasticsearchParameters {
     /**
-     * <p>The Amazon Elasticsearch Service domain.</p>
+     * &lt;p&gt;The Amazon Elasticsearch Service domain.&lt;/p&gt;
      * 
      */
     private final String domain;
@@ -21,7 +21,7 @@ public final class DataSourceAmazonElasticsearchParameters {
     }
 
     /**
-     * <p>The Amazon Elasticsearch Service domain.</p>
+     * &lt;p&gt;The Amazon Elasticsearch Service domain.&lt;/p&gt;
      * 
     */
     public String domain() {

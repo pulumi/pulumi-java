@@ -55,7 +55,7 @@ public final class TimeWindowCustomAlertRuleArgs extends com.pulumi.resources.Re
 
     /**
      * The type of the custom alert rule.
-     * Expected value is 'TimeWindowCustomAlertRule'.
+     * Expected value is &#39;TimeWindowCustomAlertRule&#39;.
      * 
      */
     @Import(name="ruleType", required=true)

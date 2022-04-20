@@ -56,7 +56,7 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
     }
 
     /**
-     * Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
+     * Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to &#39;ResizeStarted&#39;.
      * 
      */
     @Import(name="conditions")
@@ -70,9 +70,9 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
      * Phase represents the current phase of PersistentVolumeClaim.
      * 
      * Possible enum values:
-     *  - `"Bound"` used for PersistentVolumeClaims that are bound
-     *  - `"Lost"` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
-     *  - `"Pending"` used for PersistentVolumeClaims that are not yet bound
+     *  - `&#34;Bound&#34;` used for PersistentVolumeClaims that are bound
+     *  - `&#34;Lost&#34;` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
+     *  - `&#34;Pending&#34;` used for PersistentVolumeClaims that are not yet bound
      * 
      */
     @Import(name="phase")

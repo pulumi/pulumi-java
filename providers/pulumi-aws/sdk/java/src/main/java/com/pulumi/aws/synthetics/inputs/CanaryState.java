@@ -58,7 +58,7 @@ public final class CanaryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ARN of the Lambda function that is used as your canary's engine.
+     * ARN of the Lambda function that is used as your canary&#39;s engine.
      * 
      */
     @Import(name="engineArn")

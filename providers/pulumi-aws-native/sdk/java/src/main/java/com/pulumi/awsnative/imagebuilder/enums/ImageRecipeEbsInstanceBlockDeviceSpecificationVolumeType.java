@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Use to override the device's volume type.
+     * Use to override the device&#39;s volume type.
      * 
      */
     @EnumType

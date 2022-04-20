@@ -56,14 +56,14 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.authenticationMode;
     }
     /**
-     * Indicates the user status. Can be "active", "modifying" or "deleting".
+     * Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
      * 
      */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return Indicates the user status. Can be "active", "modifying" or "deleting".
+     * @return Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.
      * 
      */
     public Output<String> status() {

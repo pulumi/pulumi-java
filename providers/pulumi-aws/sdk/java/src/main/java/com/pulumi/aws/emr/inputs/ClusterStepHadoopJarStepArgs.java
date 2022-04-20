@@ -18,7 +18,7 @@ public final class ClusterStepHadoopJarStepArgs extends com.pulumi.resources.Res
     public static final ClusterStepHadoopJarStepArgs Empty = new ClusterStepHadoopJarStepArgs();
 
     /**
-     * List of command line arguments passed to the JAR file's main function when executed.
+     * List of command line arguments passed to the JAR file&#39;s main function when executed.
      * 
      */
     @Import(name="args")

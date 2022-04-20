@@ -13,7 +13,7 @@ public final class GetMigrationConfigArgs extends com.pulumi.resources.InvokeArg
     public static final GetMigrationConfigArgs Empty = new GetMigrationConfigArgs();
 
     /**
-     * The configuration name. Should always be "$default".
+     * The configuration name. Should always be &#34;$default&#34;.
      * 
      */
     @Import(name="configName", required=true)

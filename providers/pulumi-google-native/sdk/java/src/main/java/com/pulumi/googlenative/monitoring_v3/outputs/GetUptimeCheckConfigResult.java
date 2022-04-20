@@ -43,7 +43,7 @@ public final class GetUptimeCheckConfigResult {
      */
     private final List<InternalCheckerResponse> internalCheckers;
     /**
-     * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions' when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
+     * If this is true, then checks are made only from the &#39;internal_checkers&#39;. If it is false, then checks are made only from the &#39;selected_regions&#39;. It is an error to provide &#39;selected_regions&#39; when is_internal is true, or to provide &#39;internal_checkers&#39; when is_internal is false.
      * 
      */
     private final Boolean isInternal;
@@ -149,7 +149,7 @@ public final class GetUptimeCheckConfigResult {
         return this.internalCheckers;
     }
     /**
-     * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions' when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
+     * If this is true, then checks are made only from the &#39;internal_checkers&#39;. If it is false, then checks are made only from the &#39;selected_regions&#39;. It is an error to provide &#39;selected_regions&#39; when is_internal is true, or to provide &#39;internal_checkers&#39; when is_internal is false.
      * 
     */
     public Boolean isInternal() {

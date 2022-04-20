@@ -213,14 +213,14 @@ public class WebAppSiteExtension extends com.pulumi.resources.CustomResource {
         return this.licenseUrl;
     }
     /**
-     * <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
+     * &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     @Export(name="localIsLatestVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> localIsLatestVersion;
 
     /**
-     * @return <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
+     * @return &lt;code&gt;true&lt;/code&gt; if the local version is the latest version; &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
      */
     public Output</* @Nullable */ Boolean> localIsLatestVersion() {

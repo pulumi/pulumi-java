@@ -18,14 +18,14 @@ public final class HTTPIngressPath {
      */
     private final IngressBackend backend;
     /**
-     * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.
+     * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &#34;path&#34; part of a URL as defined by RFC 3986. Paths must begin with a &#39;/&#39;. If unspecified, the path defaults to a catch all sending traffic to the backend.
      * 
      */
     private final @Nullable String path;
     /**
-     * PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by '/'. Matching is
+     * PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by &#39;/&#39;. Matching is
      *   done on a path element by element basis. A path element refers is the
-     *   list of labels in the path split by the '/' separator. A request is a
+     *   list of labels in the path split by the &#39;/&#39; separator. A request is a
      *   match for path p if every p is an element-wise prefix of p of the
      *   request path. Note that if the last element of the path is a substring
      *   of the last element in request path, it is not a match (e.g. /foo/bar
@@ -56,16 +56,16 @@ public final class HTTPIngressPath {
         return this.backend;
     }
     /**
-     * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.
+     * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &#34;path&#34; part of a URL as defined by RFC 3986. Paths must begin with a &#39;/&#39;. If unspecified, the path defaults to a catch all sending traffic to the backend.
      * 
     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by '/'. Matching is
+     * PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by &#39;/&#39;. Matching is
      *   done on a path element by element basis. A path element refers is the
-     *   list of labels in the path split by the '/' separator. A request is a
+     *   list of labels in the path split by the &#39;/&#39; separator. A request is a
      *   match for path p if every p is an element-wise prefix of p of the
      *   request path. Note that if the last element of the path is a substring
      *   of the last element in request path, it is not a match (e.g. /foo/bar

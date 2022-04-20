@@ -57,14 +57,14 @@ public class StackSet extends com.pulumi.resources.CustomResource {
         return this.autoDeployment;
     }
     /**
-     * Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization's management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+     * Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization&#39;s management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
      * 
      */
     @Export(name="callAs", type=StackSetCallAs.class, parameters={})
     private Output</* @Nullable */ StackSetCallAs> callAs;
 
     /**
-     * @return Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization's management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
+     * @return Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization&#39;s management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
      * 
      */
     public Output</* @Nullable */ StackSetCallAs> callAs() {
@@ -85,14 +85,14 @@ public class StackSet extends com.pulumi.resources.CustomResource {
         return this.capabilities;
     }
     /**
-     * A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
+     * A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
+     * @return A description of the stack set. You can use the description to identify the stack set&#39;s purpose or other important information.
      * 
      */
     public Output</* @Nullable */ String> description() {
@@ -175,14 +175,14 @@ public class StackSet extends com.pulumi.resources.CustomResource {
         return this.stackInstancesGroup;
     }
     /**
-     * The ID of the stack set that you're creating.
+     * The ID of the stack set that you&#39;re creating.
      * 
      */
     @Export(name="stackSetId", type=String.class, parameters={})
     private Output<String> stackSetId;
 
     /**
-     * @return The ID of the stack set that you're creating.
+     * @return The ID of the stack set that you&#39;re creating.
      * 
      */
     public Output<String> stackSetId() {

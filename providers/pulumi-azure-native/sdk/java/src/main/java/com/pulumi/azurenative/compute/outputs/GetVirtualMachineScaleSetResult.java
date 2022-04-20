@@ -46,7 +46,7 @@ public final class GetVirtualMachineScaleSetResult {
      */
     private final @Nullable ExtendedLocationResponse extendedLocation;
     /**
-     * Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
+     * Specifies information about the dedicated host group that the virtual machine scale set resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
      */
     private final @Nullable SubResourceResponse hostGroup;
@@ -81,7 +81,7 @@ public final class GetVirtualMachineScaleSetResult {
      */
     private final @Nullable Boolean overprovision;
     /**
-     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
      * 
      */
     private final @Nullable PlanResponse plan;
@@ -96,7 +96,7 @@ public final class GetVirtualMachineScaleSetResult {
      */
     private final String provisioningState;
     /**
-     * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
     private final @Nullable SubResourceResponse proximityPlacementGroup;
@@ -234,7 +234,7 @@ public final class GetVirtualMachineScaleSetResult {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
+     * Specifies information about the dedicated host group that the virtual machine scale set resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
     */
     public Optional<SubResourceResponse> hostGroup() {
@@ -283,7 +283,7 @@ public final class GetVirtualMachineScaleSetResult {
         return Optional.ofNullable(this.overprovision);
     }
     /**
-     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
      * 
     */
     public Optional<PlanResponse> plan() {
@@ -304,7 +304,7 @@ public final class GetVirtualMachineScaleSetResult {
         return this.provisioningState;
     }
     /**
-     * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
     */
     public Optional<SubResourceResponse> proximityPlacementGroup() {

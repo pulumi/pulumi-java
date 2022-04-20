@@ -33,7 +33,7 @@ public final class GetControlResult {
      */
     private final String name;
     /**
-     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
+     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
      * 
      */
     private final GoogleCloudRetailV2alphaRuleResponse rule;
@@ -88,7 +88,7 @@ public final class GetControlResult {
         return this.name;
     }
     /**
-     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
+     * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost &#34;gShoe&#34; when query full matches &#34;Running Shoes&#34;.
      * 
     */
     public GoogleCloudRetailV2alphaRuleResponse rule() {

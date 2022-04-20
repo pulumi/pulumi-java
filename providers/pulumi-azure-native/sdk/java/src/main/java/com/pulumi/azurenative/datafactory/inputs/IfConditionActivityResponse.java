@@ -129,7 +129,7 @@ public final class IfConditionActivityResponse extends com.pulumi.resources.Invo
 
     /**
      * Type of activity.
-     * Expected value is 'IfCondition'.
+     * Expected value is &#39;IfCondition&#39;.
      * 
      */
     @Import(name="type", required=true)

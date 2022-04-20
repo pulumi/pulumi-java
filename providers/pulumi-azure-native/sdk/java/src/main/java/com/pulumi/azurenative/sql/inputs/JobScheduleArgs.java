@@ -44,7 +44,7 @@ public final class JobScheduleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+     * Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
      * 
      */
     @Import(name="interval")

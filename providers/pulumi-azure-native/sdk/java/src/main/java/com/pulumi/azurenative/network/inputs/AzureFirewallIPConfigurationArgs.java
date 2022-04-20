@@ -54,7 +54,7 @@ public final class AzureFirewallIPConfigurationArgs extends com.pulumi.resources
     }
 
     /**
-     * Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.
+     * Reference to the subnet resource. This resource must be named &#39;AzureFirewallSubnet&#39; or &#39;AzureFirewallManagementSubnet&#39;.
      * 
      */
     @Import(name="subnet")

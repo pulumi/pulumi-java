@@ -40,7 +40,7 @@ public final class GetJobResult {
      */
     private final String jobId;
     /**
-     * It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
+     * It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
      * 
      */
     private final String jobPosition;
@@ -146,7 +146,7 @@ public final class GetJobResult {
         return this.jobId;
     }
     /**
-     * It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
+     * It&#39;s only effect when the job is in QUEUED state. If it&#39;s positive, it indicates the job&#39;s position in the job scheduler. It&#39;s 0 when the job is already scheduled.
      * 
     */
     public String jobPosition() {

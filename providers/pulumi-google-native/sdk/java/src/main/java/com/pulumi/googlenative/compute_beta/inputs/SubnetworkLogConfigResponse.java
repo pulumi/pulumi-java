@@ -75,7 +75,7 @@ public final class SubnetworkLogConfigResponse extends com.pulumi.resources.Invo
     }
 
     /**
-     * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.
+     * Can only be specified if VPC flow logs for this subnetwork is enabled and &#34;metadata&#34; was set to CUSTOM_METADATA.
      * 
      */
     @Import(name="metadataFields", required=true)

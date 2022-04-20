@@ -45,7 +45,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureDbForMySql'.
+     * Expected value is &#39;ConnectToTarget.AzureDbForMySql&#39;.
      * 
      */
     private final String taskType;
@@ -103,7 +103,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'ConnectToTarget.AzureDbForMySql'.
+     * Expected value is &#39;ConnectToTarget.AzureDbForMySql&#39;.
      * 
     */
     public String taskType() {

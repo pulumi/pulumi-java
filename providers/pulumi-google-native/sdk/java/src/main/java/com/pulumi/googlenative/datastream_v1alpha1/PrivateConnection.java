@@ -79,14 +79,14 @@ public class PrivateConnection extends com.pulumi.resources.CustomResource {
         return this.labels;
     }
     /**
-     * The resource's name.
+     * The resource&#39;s name.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource's name.
+     * @return The resource&#39;s name.
      * 
      */
     public Output<String> name() {

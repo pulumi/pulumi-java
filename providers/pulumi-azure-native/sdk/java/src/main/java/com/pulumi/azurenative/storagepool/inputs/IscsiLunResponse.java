@@ -28,7 +28,7 @@ public final class IscsiLunResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * User defined name for iSCSI LUN; example: "lun0"
+     * User defined name for iSCSI LUN; example: &#34;lun0&#34;
      * 
      */
     @Import(name="name", required=true)

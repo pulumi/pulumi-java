@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIPAMPoolResult {
     /**
-     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn&#39;t specified.
      * 
      */
     private final @Nullable Integer allocationDefaultNetmaskLength;
@@ -44,7 +44,7 @@ public final class GetIPAMPoolResult {
      */
     private final @Nullable String arn;
     /**
-     * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * Determines what to do if IPAM discovers resources that haven&#39;t been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
      */
     private final @Nullable Boolean autoImport;
@@ -80,7 +80,7 @@ public final class GetIPAMPoolResult {
      */
     private final @Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs;
     /**
-     * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
+     * The state of this pool. This can be one of the following values: &#34;create-in-progress&#34;, &#34;create-complete&#34;, &#34;modify-in-progress&#34;, &#34;modify-complete&#34;, &#34;delete-in-progress&#34;, or &#34;delete-complete&#34;
      * 
      */
     private final @Nullable IPAMPoolState state;
@@ -132,7 +132,7 @@ public final class GetIPAMPoolResult {
     }
 
     /**
-     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
+     * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn&#39;t specified.
      * 
     */
     public Optional<Integer> allocationDefaultNetmaskLength() {
@@ -167,7 +167,7 @@ public final class GetIPAMPoolResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
+     * Determines what to do if IPAM discovers resources that haven&#39;t been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
     */
     public Optional<Boolean> autoImport() {
@@ -219,7 +219,7 @@ public final class GetIPAMPoolResult {
         return this.provisionedCidrs == null ? List.of() : this.provisionedCidrs;
     }
     /**
-     * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
+     * The state of this pool. This can be one of the following values: &#34;create-in-progress&#34;, &#34;create-complete&#34;, &#34;modify-in-progress&#34;, &#34;modify-complete&#34;, &#34;delete-in-progress&#34;, or &#34;delete-complete&#34;
      * 
     */
     public Optional<IPAMPoolState> state() {

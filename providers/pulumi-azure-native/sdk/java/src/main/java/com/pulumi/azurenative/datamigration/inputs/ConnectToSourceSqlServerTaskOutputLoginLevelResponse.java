@@ -87,7 +87,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
 
     /**
      * Type of result - database level or task level
-     * Expected value is 'LoginLevelOutput'.
+     * Expected value is &#39;LoginLevelOutput&#39;.
      * 
      */
     @Import(name="resultType", required=true)

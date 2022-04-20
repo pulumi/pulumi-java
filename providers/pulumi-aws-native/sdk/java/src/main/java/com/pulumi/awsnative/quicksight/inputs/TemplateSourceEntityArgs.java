@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The source entity of the template.</p>
+ * &lt;p&gt;The source entity of the template.&lt;/p&gt;
  * 
  */
 public final class TemplateSourceEntityArgs extends com.pulumi.resources.ResourceArgs {

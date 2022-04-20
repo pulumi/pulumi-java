@@ -20,7 +20,7 @@ public final class BudgetActionState extends com.pulumi.resources.ResourceArgs {
     public static final BudgetActionState Empty = new BudgetActionState();
 
     /**
-     * The ID of the target account for budget. Will use current user's account_id by default if omitted.
+     * The ID of the target account for budget. Will use current user&#39;s account_id by default if omitted.
      * 
      */
     @Import(name="accountId")

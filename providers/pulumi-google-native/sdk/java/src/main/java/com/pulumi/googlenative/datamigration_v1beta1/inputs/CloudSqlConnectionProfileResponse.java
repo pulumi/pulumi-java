@@ -29,7 +29,7 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
     }
 
     /**
-     * The Cloud SQL database instance's private IP.
+     * The Cloud SQL database instance&#39;s private IP.
      * 
      */
     @Import(name="privateIp", required=true)
@@ -40,7 +40,7 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
     }
 
     /**
-     * The Cloud SQL database instance's public IP.
+     * The Cloud SQL database instance&#39;s public IP.
      * 
      */
     @Import(name="publicIp", required=true)

@@ -28,7 +28,7 @@ public final class VpnConnectionVgwTelemetry {
      */
     private final @Nullable String lastStatusChange;
     /**
-     * The Internet-routable IP address of the virtual private gateway's outside interface.
+     * The Internet-routable IP address of the virtual private gateway&#39;s outside interface.
      * 
      */
     private final @Nullable String outsideIpAddress;
@@ -81,7 +81,7 @@ public final class VpnConnectionVgwTelemetry {
         return Optional.ofNullable(this.lastStatusChange);
     }
     /**
-     * The Internet-routable IP address of the virtual private gateway's outside interface.
+     * The Internet-routable IP address of the virtual private gateway&#39;s outside interface.
      * 
     */
     public Optional<String> outsideIpAddress() {

@@ -41,7 +41,7 @@ public final class ApplicationRuleResponse {
     private final @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols;
     /**
      * Rule Type.
-     * Expected value is 'ApplicationRule'.
+     * Expected value is &#39;ApplicationRule&#39;.
      * 
      */
     private final String ruleType;
@@ -141,7 +141,7 @@ public final class ApplicationRuleResponse {
     }
     /**
      * Rule Type.
-     * Expected value is 'ApplicationRule'.
+     * Expected value is &#39;ApplicationRule&#39;.
      * 
     */
     public String ruleType() {

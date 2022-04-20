@@ -20,7 +20,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     public static final SmbSettingResponse Empty = new SmbSettingResponse();
 
     /**
-     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
+     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter &#39;;&#39;.
      * 
      */
     @Import(name="authenticationMethods")
@@ -31,7 +31,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
+     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter &#39;;&#39;.
      * 
      */
     @Import(name="channelEncryption")
@@ -42,7 +42,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
+     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter &#39;;&#39;
      * 
      */
     @Import(name="kerberosTicketEncryption")
@@ -64,7 +64,7 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
+     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter &#39;;&#39;.
      * 
      */
     @Import(name="versions")

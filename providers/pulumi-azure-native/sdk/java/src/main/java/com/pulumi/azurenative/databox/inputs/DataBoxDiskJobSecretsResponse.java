@@ -68,7 +68,7 @@ public final class DataBoxDiskJobSecretsResponse extends com.pulumi.resources.In
 
     /**
      * Used to indicate what type of job secrets object.
-     * Expected value is 'DataBoxDisk'.
+     * Expected value is &#39;DataBoxDisk&#39;.
      * 
      */
     @Import(name="jobSecretsType", required=true)

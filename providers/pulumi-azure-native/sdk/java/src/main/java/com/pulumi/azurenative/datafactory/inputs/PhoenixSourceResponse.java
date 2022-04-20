@@ -99,7 +99,7 @@ public final class PhoenixSourceResponse extends com.pulumi.resources.InvokeArgs
 
     /**
      * Copy source type.
-     * Expected value is 'PhoenixSource'.
+     * Expected value is &#39;PhoenixSource&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -24,7 +24,7 @@ public final class CspmMonitorAwsOfferingResponse {
     private final @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
     /**
      * The type of the security offering.
-     * Expected value is 'CspmMonitorAws'.
+     * Expected value is &#39;CspmMonitorAws&#39;.
      * 
      */
     private final String offeringType;
@@ -55,7 +55,7 @@ public final class CspmMonitorAwsOfferingResponse {
     }
     /**
      * The type of the security offering.
-     * Expected value is 'CspmMonitorAws'.
+     * Expected value is &#39;CspmMonitorAws&#39;.
      * 
     */
     public String offeringType() {

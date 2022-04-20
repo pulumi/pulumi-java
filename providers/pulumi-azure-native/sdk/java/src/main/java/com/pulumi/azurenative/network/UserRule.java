@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:network:UserRule SampleUserRule /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/securityUserConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection/rules/SampleUserRule 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: DefaultUserRule, UserRule.
  * 
  */

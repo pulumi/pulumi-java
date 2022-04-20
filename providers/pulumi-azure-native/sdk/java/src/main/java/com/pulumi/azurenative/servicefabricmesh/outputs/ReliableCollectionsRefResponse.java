@@ -18,7 +18,7 @@ public final class ReliableCollectionsRefResponse {
      */
     private final @Nullable Boolean doNotPersistState;
     /**
-     * Name of ReliableCollection resource. Right now it's not used and you can use any string.
+     * Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
      * 
      */
     private final String name;
@@ -39,7 +39,7 @@ public final class ReliableCollectionsRefResponse {
         return Optional.ofNullable(this.doNotPersistState);
     }
     /**
-     * Name of ReliableCollection resource. Right now it's not used and you can use any string.
+     * Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
      * 
     */
     public String name() {

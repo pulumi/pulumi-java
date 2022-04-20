@@ -85,7 +85,7 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
+     * A machine-readable description of why this operation is in the &#34;Failure&#34; status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
      * 
      */
     @Import(name="reason")

@@ -35,7 +35,7 @@ import java.util.StringJoiner;
          */
         AlphaLowerCase("ALPHA_LOWER_CASE"),
         /**
-         * US Punctuation, one of !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+         * US Punctuation, one of !&#34;#$%&amp;&#39;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~
          * 
          */
         Punctuation("PUNCTUATION"),

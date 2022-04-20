@@ -113,14 +113,14 @@ public class AFDOriginGroup extends com.pulumi.resources.CustomResource {
         return this.responseBasedAfdOriginErrorDetectionSettings;
     }
     /**
-     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     @Export(name="sessionAffinityState", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionAffinityState;
 
     /**
-     * @return Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
     public Output</* @Nullable */ String> sessionAffinityState() {

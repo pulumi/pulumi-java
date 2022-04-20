@@ -27,7 +27,7 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends com.pulumi.re
     }
 
     /**
-     * A name for the ephemeral device, of the form "ephemeralN" where
+     * A name for the ephemeral device, of the form &#34;ephemeralN&#34; where
      * *N* is a volume number starting from zero.
      * 
      */

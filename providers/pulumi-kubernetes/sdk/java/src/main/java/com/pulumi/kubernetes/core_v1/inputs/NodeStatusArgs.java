@@ -120,9 +120,9 @@ public final class NodeStatusArgs extends com.pulumi.resources.ResourceArgs {
      * NodePhase is the recently observed lifecycle phase of the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#phase The field is never populated, and now is deprecated.
      * 
      * Possible enum values:
-     *  - `"Pending"` means the node has been created/added by the system, but not configured.
-     *  - `"Running"` means the node has been configured and has Kubernetes components running.
-     *  - `"Terminated"` means the node has been removed from the cluster.
+     *  - `&#34;Pending&#34;` means the node has been created/added by the system, but not configured.
+     *  - `&#34;Running&#34;` means the node has been configured and has Kubernetes components running.
+     *  - `&#34;Terminated&#34;` means the node has been removed from the cluster.
      * 
      */
     @Import(name="phase")

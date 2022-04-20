@@ -12,7 +12,7 @@ import java.util.Objects;
 
 
 /**
- * <p>A string parameter.</p>
+ * &lt;p&gt;A string parameter.&lt;/p&gt;
  * 
  */
 public final class AnalysisStringParameterArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,7 +20,7 @@ public final class AnalysisStringParameterArgs extends com.pulumi.resources.Reso
     public static final AnalysisStringParameterArgs Empty = new AnalysisStringParameterArgs();
 
     /**
-     * <p>A display name for a string parameter.</p>
+     * &lt;p&gt;A display name for a string parameter.&lt;/p&gt;
      * 
      */
     @Import(name="name", required=true)
@@ -31,7 +31,7 @@ public final class AnalysisStringParameterArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * <p>The values of a string parameter.</p>
+     * &lt;p&gt;The values of a string parameter.&lt;/p&gt;
      * 
      */
     @Import(name="values", required=true)

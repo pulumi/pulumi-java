@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 /**
  * Provides a Load Balancer resource.
  * 
- * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
+ * &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
  * 
  * ## Example Usage
  * 

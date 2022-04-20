@@ -69,7 +69,7 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
+     * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn&#39;t specified, the LATEST platform version is used by default.
      * 
      */
     @Import(name="platformVersion")

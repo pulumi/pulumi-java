@@ -136,7 +136,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
+     * Broker&#39;s instance type. For example, `mq.t3.micro`, `mq.m5.large`.
      * 
      */
     @Import(name="hostInstanceType")
@@ -147,10 +147,10 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of information about allocated brokers (both active & standby).
-     * * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+     * List of information about allocated brokers (both active &amp; standby).
+     * * `instances.0.console_url` - The URL of the broker&#39;s [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
      * * `instances.0.ip_address` - IP Address of the broker.
-     * * `instances.0.endpoints` - Broker's wire-level protocol endpoints in the following order & format referenceable e.g., as `instances.0.endpoints.0` (SSL):
+     * * `instances.0.endpoints` - Broker&#39;s wire-level protocol endpoints in the following order &amp; format referenceable e.g., as `instances.0.endpoints.0` (SSL):
      * * For `ActiveMQ`:
      * * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
      * * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -202,7 +202,7 @@ public final class BrokerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
+     * Whether to enable connections from applications outside of the VPC that hosts the broker&#39;s subnets.
      * 
      */
     @Import(name="publiclyAccessible")

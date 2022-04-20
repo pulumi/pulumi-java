@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * <p>Spark parameters.</p>
+ * &lt;p&gt;Spark parameters.&lt;/p&gt;
  * 
  */
 public final class DataSourceSparkParameters extends com.pulumi.resources.InvokeArgs {
@@ -18,7 +18,7 @@ public final class DataSourceSparkParameters extends com.pulumi.resources.Invoke
     public static final DataSourceSparkParameters Empty = new DataSourceSparkParameters();
 
     /**
-     * <p>Host.</p>
+     * &lt;p&gt;Host.&lt;/p&gt;
      * 
      */
     @Import(name="host", required=true)
@@ -29,7 +29,7 @@ public final class DataSourceSparkParameters extends com.pulumi.resources.Invoke
     }
 
     /**
-     * <p>Port.</p>
+     * &lt;p&gt;Port.&lt;/p&gt;
      * 
      */
     @Import(name="port", required=true)

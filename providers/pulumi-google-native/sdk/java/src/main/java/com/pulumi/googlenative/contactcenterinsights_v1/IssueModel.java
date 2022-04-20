@@ -91,14 +91,14 @@ public class IssueModel extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * Immutable. The issue model's label statistics on its training data.
+     * Immutable. The issue model&#39;s label statistics on its training data.
      * 
      */
     @Export(name="trainingStats", type=GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse> trainingStats;
 
     /**
-     * @return Immutable. The issue model's label statistics on its training data.
+     * @return Immutable. The issue model&#39;s label statistics on its training data.
      * 
      */
     public Output<GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse> trainingStats() {

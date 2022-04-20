@@ -68,7 +68,7 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
 
     /**
      * Customize Ephemeral (also known as
-     * "Instance Store") volumes on the instance. See Block Devices below for details.
+     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
     @Import(name="ephemeralBlockDevices")
@@ -160,7 +160,7 @@ public final class LaunchConfigurationArgs extends com.pulumi.resources.Resource
 
     /**
      * The tenancy of the instance. Valid values are
-     * `"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+     * `&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
      * for more details
      * 
      */

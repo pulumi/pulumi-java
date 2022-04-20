@@ -76,7 +76,7 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
+     * Length of time data records are accessible after they are added to the stream. The maximum value of a stream&#39;s retention period is 8760 hours. Minimum value is 24. Default is 24.
      * 
      */
     @Import(name="retentionPeriod")

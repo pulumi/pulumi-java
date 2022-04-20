@@ -23,7 +23,7 @@ public final class VideoResponse {
     private final @Nullable String label;
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Video'.
+     * Expected value is &#39;#Microsoft.Media.Video&#39;.
      * 
      */
     private final String odataType;
@@ -68,7 +68,7 @@ public final class VideoResponse {
     }
     /**
      * The discriminator for derived types.
-     * Expected value is '#Microsoft.Media.Video'.
+     * Expected value is &#39;#Microsoft.Media.Video&#39;.
      * 
     */
     public String odataType() {

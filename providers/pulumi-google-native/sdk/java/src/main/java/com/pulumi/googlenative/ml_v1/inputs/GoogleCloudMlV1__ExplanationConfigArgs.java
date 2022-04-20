@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends com.pulumi.res
     public static final GoogleCloudMlV1__ExplanationConfigArgs Empty = new GoogleCloudMlV1__ExplanationConfigArgs();
 
     /**
-     * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
+     * Attributes credit by computing the Aumann-Shapley value taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
      * 
      */
     @Import(name="integratedGradientsAttribution")
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends com.pulumi.res
     }
 
     /**
-     * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
+     * Attributes credit by computing the XRAI taking advantage of the model&#39;s fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
      * 
      */
     @Import(name="xraiAttribution")

@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse {
     private final String state;
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDb.Sync'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDb.Sync&#39;.
      * 
      */
     private final String taskType;
@@ -108,7 +108,7 @@ public final class MigrateSqlServerSqlDbSyncTaskPropertiesResponse {
     }
     /**
      * Task type.
-     * Expected value is 'Migrate.SqlServer.AzureSqlDb.Sync'.
+     * Expected value is &#39;Migrate.SqlServer.AzureSqlDb.Sync&#39;.
      * 
     */
     public String taskType() {

@@ -88,7 +88,7 @@ public final class DynamicsSinkResponse extends com.pulumi.resources.InvokeArgs 
 
     /**
      * Copy sink type.
-     * Expected value is 'DynamicsSink'.
+     * Expected value is &#39;DynamicsSink&#39;.
      * 
      */
     @Import(name="type", required=true)

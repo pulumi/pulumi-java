@@ -45,7 +45,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
      * interface.
      * A reachability analysis proceeds even if the destination location
      * is ambiguous. However, the result can include endpoints that you
-     * don't intend to test.
+     * don&#39;t intend to test.
      * Structure is documented below.
      * 
      */
@@ -91,7 +91,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * IP Protocol of the test. When not provided, "TCP" is assumed.
+     * IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed.
      * 
      */
     @Import(name="protocol")
@@ -132,7 +132,7 @@ public final class ConnectivityTestState extends com.pulumi.resources.ResourceAr
      * address or VPC network.
      * A reachability analysis proceeds even if the source location is
      * ambiguous. However, the test result may include endpoints that
-     * you don't intend to test.
+     * you don&#39;t intend to test.
      * Structure is documented below.
      * 
      */

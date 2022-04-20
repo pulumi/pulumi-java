@@ -32,7 +32,7 @@ public final class NonceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
+     * &lt;code&gt;false&lt;/code&gt; if the nonce should not be validated while completing the login flow; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
      */
     @Import(name="validateNonce")

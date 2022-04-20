@@ -27,7 +27,7 @@ public final class TopicRuleDynamodbArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The hash key type. Valid values are "STRING" or "NUMBER".
+     * The hash key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
      */
     @Import(name="hashKeyType")
@@ -49,7 +49,7 @@ public final class TopicRuleDynamodbArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
+     * The operation. Valid values are &#34;INSERT&#34;, &#34;UPDATE&#34;, or &#34;DELETE&#34;.
      * 
      */
     @Import(name="operation")
@@ -82,7 +82,7 @@ public final class TopicRuleDynamodbArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The range key type. Valid values are "STRING" or "NUMBER".
+     * The range key type. Valid values are &#34;STRING&#34; or &#34;NUMBER&#34;.
      * 
      */
     @Import(name="rangeKeyType")

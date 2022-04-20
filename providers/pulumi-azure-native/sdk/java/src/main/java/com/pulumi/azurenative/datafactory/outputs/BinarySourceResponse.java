@@ -58,7 +58,7 @@ public final class BinarySourceResponse {
     private final @Nullable Object storeSettings;
     /**
      * Copy source type.
-     * Expected value is 'BinarySource'.
+     * Expected value is &#39;BinarySource&#39;.
      * 
      */
     private final String type;
@@ -125,7 +125,7 @@ public final class BinarySourceResponse {
     }
     /**
      * Copy source type.
-     * Expected value is 'BinarySource'.
+     * Expected value is &#39;BinarySource&#39;.
      * 
     */
     public String type() {

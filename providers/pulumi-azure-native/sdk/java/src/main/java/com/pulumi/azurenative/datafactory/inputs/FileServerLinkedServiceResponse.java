@@ -106,7 +106,7 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
 
     /**
      * Type of linked service.
-     * Expected value is 'FileServer'.
+     * Expected value is &#39;FileServer&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * APIService represents a server for a particular GroupVersion. Name must be "version.group".
+ * APIService represents a server for a particular GroupVersion. Name must be &#34;version.group&#34;.
  * 
  */
 public final class APIServiceArgs extends com.pulumi.resources.ResourceArgs {
@@ -45,7 +45,7 @@ public final class APIServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
     @Import(name="metadata")

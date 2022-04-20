@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PushConfigResponse {
     /**
-     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
+     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
      * 
      */
     private final String pushEndpoint;
@@ -21,7 +21,7 @@ public final class PushConfigResponse {
     }
 
     /**
-     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
+     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use &#34;https://example.com/push&#34;.
      * 
     */
     public String pushEndpoint() {

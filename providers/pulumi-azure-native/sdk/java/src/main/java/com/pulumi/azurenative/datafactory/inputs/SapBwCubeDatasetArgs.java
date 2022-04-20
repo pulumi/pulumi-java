@@ -104,7 +104,7 @@ public final class SapBwCubeDatasetArgs extends com.pulumi.resources.ResourceArg
 
     /**
      * Type of dataset.
-     * Expected value is 'SapBwCube'.
+     * Expected value is &#39;SapBwCube&#39;.
      * 
      */
     @Import(name="type", required=true)

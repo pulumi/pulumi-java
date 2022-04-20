@@ -70,7 +70,7 @@ import java.util.StringJoiner;
          */
         Spdx("SPDX"),
         /**
-         * The file doesn't fit into the above categories (generated artifacts, data files, etc.)
+         * The file doesn&#39;t fit into the above categories (generated artifacts, data files, etc.)
          * 
          */
         Other("OTHER");

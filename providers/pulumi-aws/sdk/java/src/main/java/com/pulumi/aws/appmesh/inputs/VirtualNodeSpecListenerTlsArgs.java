@@ -18,7 +18,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends com.pulumi.resources.R
     public static final VirtualNodeSpecListenerTlsArgs Empty = new VirtualNodeSpecListenerTlsArgs();
 
     /**
-     * The listener's TLS certificate.
+     * The listener&#39;s TLS certificate.
      * 
      */
     @Import(name="certificate", required=true)
@@ -29,7 +29,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
+     * The listener&#39;s TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
      * 
      */
     @Import(name="mode", required=true)
@@ -40,7 +40,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The listener's Transport Layer Security (TLS) validation context.
+     * The listener&#39;s Transport Layer Security (TLS) validation context.
      * 
      */
     @Import(name="validation")

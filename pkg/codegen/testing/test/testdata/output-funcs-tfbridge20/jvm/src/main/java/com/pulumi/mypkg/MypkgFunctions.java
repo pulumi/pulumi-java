@@ -17,7 +17,7 @@ public final class MypkgFunctions {
     /**
      * Taken from pulumi-AWS to regress an issue
      * 
-     * @Deprecated
+     * @deprecated
      * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
      * 
      */

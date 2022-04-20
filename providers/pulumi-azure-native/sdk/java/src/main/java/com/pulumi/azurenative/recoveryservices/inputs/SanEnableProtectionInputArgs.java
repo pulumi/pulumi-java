@@ -21,7 +21,7 @@ public final class SanEnableProtectionInputArgs extends com.pulumi.resources.Res
 
     /**
      * The class type.
-     * Expected value is 'San'.
+     * Expected value is &#39;San&#39;.
      * 
      */
     @Import(name="instanceType")

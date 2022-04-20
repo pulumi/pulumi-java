@@ -9,7 +9,7 @@ import java.util.Objects;
 
 
 /**
- * The median automated stopping rule stops a pending trial if the trial's best objective_value is strictly below the median 'performance' of all completed trials reported up to the trial's last measurement. Currently, 'performance' refers to the running average of the objective values reported by the trial in each measurement.
+ * The median automated stopping rule stops a pending trial if the trial&#39;s best objective_value is strictly below the median &#39;performance&#39; of all completed trials reported up to the trial&#39;s last measurement. Currently, &#39;performance&#39; refers to the running average of the objective values reported by the trial in each measurement.
  * 
  */
 public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse extends com.pulumi.resources.InvokeArgs {
@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
     public static final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse Empty = new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse();
 
     /**
-     * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.
+     * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial&#39;s latest measurement is used to compute the median objective value for each completed trial.
      * 
      */
     @Import(name="useElapsedTime", required=true)

@@ -15,7 +15,7 @@ public final class AwsNodePoolAutoscalingGetArgs extends com.pulumi.resources.Re
     public static final AwsNodePoolAutoscalingGetArgs Empty = new AwsNodePoolAutoscalingGetArgs();
 
     /**
-     * Required. Maximum number of nodes in the NodePool. Must be >= min_node_count.
+     * Required. Maximum number of nodes in the NodePool. Must be &gt;= min_node_count.
      * 
      */
     @Import(name="maxNodeCount", required=true)
@@ -26,7 +26,7 @@ public final class AwsNodePoolAutoscalingGetArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Required. Minimum number of nodes in the NodePool. Must be >= 1 and <= max_node_count.
+     * Required. Minimum number of nodes in the NodePool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     @Import(name="minNodeCount", required=true)

@@ -24,7 +24,7 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     public static final AzureCliScriptArgs Empty = new AzureCliScriptArgs();
 
     /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
+     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
      */
     @Import(name="arguments")
@@ -46,7 +46,7 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
+     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
      */
     @Import(name="cleanupPreference")
@@ -102,7 +102,7 @@ public final class AzureCliScriptArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Type of the script.
-     * Expected value is 'AzureCLI'.
+     * Expected value is &#39;AzureCLI&#39;.
      * 
      */
     @Import(name="kind", required=true)

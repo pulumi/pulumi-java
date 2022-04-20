@@ -28,7 +28,7 @@ public final class GetContactChannelResult {
      */
     private final @Nullable String channelName;
     /**
-     * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
+     * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
      * 
      */
     private final @Nullable Boolean deferActivation;
@@ -67,7 +67,7 @@ public final class GetContactChannelResult {
         return Optional.ofNullable(this.channelName);
     }
     /**
-     * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
+     * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can&#39;t engage your contact channel until it has been activated.
      * 
     */
     public Optional<Boolean> deferActivation() {

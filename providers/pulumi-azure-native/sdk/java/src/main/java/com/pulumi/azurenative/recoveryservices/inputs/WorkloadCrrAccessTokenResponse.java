@@ -152,7 +152,7 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
 
     /**
      * Type of the specific object - used for deserializing
-     * Expected value is 'WorkloadCrrAccessToken'.
+     * Expected value is &#39;WorkloadCrrAccessToken&#39;.
      * 
      */
     @Import(name="objectType", required=true)

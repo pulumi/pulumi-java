@@ -16,7 +16,7 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     public static final CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs Empty = new CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs();
 
     /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
+     * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as &#34;TLS WWW client authentication&#34;, though regularly used for non-WWW TLS.
      * 
      */
     @Import(name="clientAuth")
@@ -27,7 +27,7 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     }
 
     /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
+     * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as &#34;Signing of downloadable executable code client authentication&#34;.
      * 
      */
     @Import(name="codeSigning")
@@ -38,7 +38,7 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     }
 
     /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
+     * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as &#34;Email protection&#34;.
      * 
      */
     @Import(name="emailProtection")
@@ -49,7 +49,7 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     }
 
     /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
+     * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as &#34;Signing OCSP responses&#34;.
      * 
      */
     @Import(name="ocspSigning")
@@ -60,7 +60,7 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     }
 
     /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
+     * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as &#34;TLS WWW server authentication&#34;, though regularly used for non-WWW TLS.
      * 
      */
     @Import(name="serverAuth")
@@ -71,7 +71,7 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsageArgs exten
     }
 
     /**
-     * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
+     * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as &#34;Binding the hash of an object to a time&#34;.
      * 
      */
     @Import(name="timeStamping")

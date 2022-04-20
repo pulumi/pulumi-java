@@ -22,7 +22,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
     public static final CustomLayerArgs Empty = new CustomLayerArgs();
 
     /**
-     * Whether to automatically assign an elastic IP address to the layer's instances.
+     * Whether to automatically assign an elastic IP address to the layer&#39;s instances.
      * 
      */
     @Import(name="autoAssignElasticIps")
@@ -33,7 +33,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
+     * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer&#39;s instances.
      * 
      */
     @Import(name="autoAssignPublicIps")
@@ -55,7 +55,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Will create an EBS volume and connect it to the layer's instances. See Cloudwatch Configuration.
+     * Will create an EBS volume and connect it to the layer&#39;s instances. See Cloudwatch Configuration.
      * 
      */
     @Import(name="cloudwatchConfiguration")
@@ -80,7 +80,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ARN of an IAM profile that will be used for the layer's instances.
+     * The ARN of an IAM profile that will be used for the layer&#39;s instances.
      * 
      */
     @Import(name="customInstanceProfileArn")
@@ -102,7 +102,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Ids for a set of security groups to apply to the layer's instances.
+     * Ids for a set of security groups to apply to the layer&#39;s instances.
      * 
      */
     @Import(name="customSecurityGroupIds")
@@ -145,7 +145,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Will create an EBS volume and connect it to the layer's instances. See EBS Volume.
+     * Will create an EBS volume and connect it to the layer&#39;s instances. See EBS Volume.
      * 
      */
     @Import(name="ebsVolumes")
@@ -222,7 +222,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Names of a set of system packages to install on the layer's instances.
+     * Names of a set of system packages to install on the layer&#39;s instances.
      * 
      */
     @Import(name="systemPackages")

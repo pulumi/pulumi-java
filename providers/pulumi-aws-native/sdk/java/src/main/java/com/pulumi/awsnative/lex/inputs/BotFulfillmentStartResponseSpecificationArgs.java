@@ -34,7 +34,7 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends com.pulu
     }
 
     /**
-     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn't played.
+     * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn&#39;t played.
      * 
      */
     @Import(name="delayInSeconds", required=true)

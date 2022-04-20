@@ -44,7 +44,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends com.pulumi.resources
     }
 
     /**
-     * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
+     * The flags to use when installing the MSI defaults to [&#34;/i&#34;] (i.e. the install flag).
      * 
      */
     @Import(name="flags")

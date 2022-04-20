@@ -20,7 +20,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     public static final VirtualDiskResponse Empty = new VirtualDiskResponse();
 
     /**
-     * Disk's Controller id
+     * Disk&#39;s Controller id
      * 
      */
     @Import(name="controllerId", required=true)
@@ -31,7 +31,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Disk's independence mode type
+     * Disk&#39;s independence mode type
      * 
      */
     @Import(name="independenceMode", required=true)
@@ -42,7 +42,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Disk's total size
+     * Disk&#39;s total size
      * 
      */
     @Import(name="totalSize", required=true)
@@ -53,7 +53,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Disk's id
+     * Disk&#39;s id
      * 
      */
     @Import(name="virtualDiskId")
@@ -64,7 +64,7 @@ public final class VirtualDiskResponse extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * Disk's display name
+     * Disk&#39;s display name
      * 
      */
     @Import(name="virtualDiskName", required=true)

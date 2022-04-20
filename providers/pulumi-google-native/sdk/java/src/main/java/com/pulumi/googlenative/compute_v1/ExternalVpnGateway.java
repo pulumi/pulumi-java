@@ -50,14 +50,14 @@ public class ExternalVpnGateway extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers' gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+     * A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
      * 
      */
     @Export(name="interfaces", type=List.class, parameters={ExternalVpnGatewayInterfaceResponse.class})
     private Output<List<ExternalVpnGatewayInterfaceResponse>> interfaces;
 
     /**
-     * @return A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers' gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
+     * @return A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers&#39; gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
      * 
      */
     public Output<List<ExternalVpnGatewayInterfaceResponse>> interfaces() {

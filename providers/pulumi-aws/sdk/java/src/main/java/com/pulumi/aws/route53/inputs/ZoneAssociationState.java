@@ -38,7 +38,7 @@ public final class ZoneAssociationState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The VPC's region. Defaults to the region of the AWS provider.
+     * The VPC&#39;s region. Defaults to the region of the AWS provider.
      * 
      */
     @Import(name="vpcRegion")

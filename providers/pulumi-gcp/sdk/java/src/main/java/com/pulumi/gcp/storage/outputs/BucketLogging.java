@@ -17,8 +17,8 @@ public final class BucketLogging {
      */
     private final String logBucket;
     /**
-     * The object prefix for log objects. If it's not provided,
-     * by default GCS sets this to this bucket's name.
+     * The object prefix for log objects. If it&#39;s not provided,
+     * by default GCS sets this to this bucket&#39;s name.
      * 
      */
     private final @Nullable String logObjectPrefix;
@@ -39,8 +39,8 @@ public final class BucketLogging {
         return this.logBucket;
     }
     /**
-     * The object prefix for log objects. If it's not provided,
-     * by default GCS sets this to this bucket's name.
+     * The object prefix for log objects. If it&#39;s not provided,
+     * by default GCS sets this to this bucket&#39;s name.
      * 
     */
     public Optional<String> logObjectPrefix() {

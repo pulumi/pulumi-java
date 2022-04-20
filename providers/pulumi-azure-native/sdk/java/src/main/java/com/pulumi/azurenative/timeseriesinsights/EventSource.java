@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:timeseriesinsights:EventSource es1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/eventSources/es1 
  * ```
  * 
- * @Deprecated
+ * @deprecated
  * Please use one of the variants: EventHubEventSource, IoTHubEventSource.
  * 
  */

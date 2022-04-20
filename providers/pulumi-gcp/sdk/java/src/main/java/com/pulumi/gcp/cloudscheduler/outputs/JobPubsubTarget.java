@@ -27,8 +27,8 @@ public final class JobPubsubTarget {
     private final @Nullable String data;
     /**
      * The full resource name for the Cloud Pub/Sub topic to which
-     * messages will be published when a job is delivered. ~>**NOTE:**
-     * The topic name must be in the same format as required by PubSub's
+     * messages will be published when a job is delivered. ~&gt;**NOTE:**
+     * The topic name must be in the same format as required by PubSub&#39;s
      * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
      * 
      */
@@ -63,8 +63,8 @@ public final class JobPubsubTarget {
     }
     /**
      * The full resource name for the Cloud Pub/Sub topic to which
-     * messages will be published when a job is delivered. ~>**NOTE:**
-     * The topic name must be in the same format as required by PubSub's
+     * messages will be published when a job is delivered. ~&gt;**NOTE:**
+     * The topic name must be in the same format as required by PubSub&#39;s
      * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
      * 
     */

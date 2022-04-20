@@ -15,7 +15,7 @@ public final class GetGlobalScheduleArgs extends com.pulumi.resources.InvokeArgs
     public static final GetGlobalScheduleArgs Empty = new GetGlobalScheduleArgs();
 
     /**
-     * Specify the $expand query. Example: 'properties($select=status)'
+     * Specify the $expand query. Example: &#39;properties($select=status)&#39;
      * 
      */
     @Import(name="expand")

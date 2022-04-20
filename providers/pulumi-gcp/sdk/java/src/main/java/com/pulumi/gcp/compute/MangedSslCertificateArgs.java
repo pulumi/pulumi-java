@@ -41,7 +41,7 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
 
     /**
      * Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-     * of 'MANAGED' in 'type').
+     * of &#39;MANAGED&#39; in &#39;type&#39;).
      * 
      */
     @Import(name="managed")
@@ -54,7 +54,7 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
      * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-     * '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
+     * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
      * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
      * namespace as the managed SSL certificates.
      * 
@@ -74,8 +74,8 @@ public final class MangedSslCertificateArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. Default value: "MANAGED"
-     * Possible values: ["MANAGED"]
+     * Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
+     * Possible values: [&#34;MANAGED&#34;]
      * 
      */
     @Import(name="type")

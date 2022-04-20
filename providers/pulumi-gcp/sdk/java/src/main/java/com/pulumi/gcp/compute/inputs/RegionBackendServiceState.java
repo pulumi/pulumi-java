@@ -309,7 +309,7 @@ public final class RegionBackendServiceState extends com.pulumi.resources.Resour
      * loadBalancingScheme is EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED, or INTERNAL_SELF_MANAGED
      * and the backends are instance groups. The named port must be defined on each
      * backend instance group. This parameter has no meaning if the backends are NEGs. API sets a
-     * default of "http" if not given.
+     * default of &#34;http&#34; if not given.
      * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
      * 
      */

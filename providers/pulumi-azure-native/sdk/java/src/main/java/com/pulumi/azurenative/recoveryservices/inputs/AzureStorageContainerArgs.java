@@ -38,7 +38,7 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
-     * Expected value is 'StorageContainer'.
+     * Expected value is &#39;StorageContainer&#39;.
      * 
      */
     @Import(name="containerType", required=true)

@@ -24,13 +24,13 @@ public final class RestHealthCheckStepAttributesResponse {
      */
     private final String healthyStateDuration;
     /**
-     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
      * 
      */
     private final @Nullable String maxElasticDuration;
     /**
      * The type of health check.
-     * Expected value is 'REST'.
+     * Expected value is &#39;REST&#39;.
      * 
      */
     private final String type;
@@ -69,7 +69,7 @@ public final class RestHealthCheckStepAttributesResponse {
         return this.healthyStateDuration;
     }
     /**
-     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
      * 
     */
     public Optional<String> maxElasticDuration() {
@@ -77,7 +77,7 @@ public final class RestHealthCheckStepAttributesResponse {
     }
     /**
      * The type of health check.
-     * Expected value is 'REST'.
+     * Expected value is &#39;REST&#39;.
      * 
     */
     public String type() {

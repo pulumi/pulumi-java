@@ -54,7 +54,7 @@ public final class FactoryGitHubConfigurationResponse {
     private final String rootFolder;
     /**
      * Type of repo configuration.
-     * Expected value is 'FactoryGitHubConfiguration'.
+     * Expected value is &#39;FactoryGitHubConfiguration&#39;.
      * 
      */
     private final String type;
@@ -139,7 +139,7 @@ public final class FactoryGitHubConfigurationResponse {
     }
     /**
      * Type of repo configuration.
-     * Expected value is 'FactoryGitHubConfiguration'.
+     * Expected value is &#39;FactoryGitHubConfiguration&#39;.
      * 
     */
     public String type() {

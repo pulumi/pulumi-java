@@ -59,7 +59,7 @@ public final class AzureTableDatasetResponse {
     private final Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'AzureTable'.
+     * Expected value is &#39;AzureTable&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class AzureTableDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'AzureTable'.
+     * Expected value is &#39;AzureTable&#39;.
      * 
     */
     public String type() {

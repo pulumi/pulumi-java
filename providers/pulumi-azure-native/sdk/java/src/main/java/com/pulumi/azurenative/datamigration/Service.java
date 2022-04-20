@@ -48,14 +48,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.etag;
     }
     /**
-     * The resource kind. Only 'vm' (the default) is supported.
+     * The resource kind. Only &#39;vm&#39; (the default) is supported.
      * 
      */
     @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
-     * @return The resource kind. Only 'vm' (the default) is supported.
+     * @return The resource kind. Only &#39;vm&#39; (the default) is supported.
      * 
      */
     public Output</* @Nullable */ String> kind() {
@@ -90,14 +90,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * The resource's provisioning state
+     * The resource&#39;s provisioning state
      * 
      */
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
-     * @return The resource's provisioning state
+     * @return The resource&#39;s provisioning state
      * 
      */
     public Output<String> provisioningState() {

@@ -29,7 +29,7 @@ public final class RouterNatSubnetworkToNatResponse extends com.pulumi.resources
     }
 
     /**
-     * A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of the values in source_ip_ranges_to_nat.
+     * A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if &#34;LIST_OF_SECONDARY_IP_RANGES&#34; is one of the values in source_ip_ranges_to_nat.
      * 
      */
     @Import(name="secondaryIpRangeNames", required=true)
@@ -40,7 +40,7 @@ public final class RouterNatSubnetworkToNatResponse extends com.pulumi.resources
     }
 
     /**
-     * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
+     * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: [&#34;PRIMARY_IP_RANGE&#34;, &#34;LIST_OF_SECONDARY_IP_RANGES&#34;] Default: [ALL_IP_RANGES]
      * 
      */
     @Import(name="sourceIpRangesToNat", required=true)

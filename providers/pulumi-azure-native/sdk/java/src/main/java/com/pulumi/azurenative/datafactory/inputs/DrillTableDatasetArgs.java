@@ -126,7 +126,7 @@ public final class DrillTableDatasetArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * Type of dataset.
-     * Expected value is 'DrillTable'.
+     * Expected value is &#39;DrillTable&#39;.
      * 
      */
     @Import(name="type", required=true)

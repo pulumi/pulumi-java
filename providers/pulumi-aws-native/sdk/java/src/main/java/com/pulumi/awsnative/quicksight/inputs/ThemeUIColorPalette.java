@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 
 
 /**
- * <p>The theme colors that apply to UI and to charts, excluding data colors. The colors
+ * &lt;p&gt;The theme colors that apply to UI and to charts, excluding data colors. The colors
  *             description is a hexadecimal color code that consists of six alphanumerical characters,
- *             prefixed with <code>#</code>, for example #37BFF5. For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html">Using Themes in Amazon QuickSight</a> in the <i>Amazon QuickSight User
- *                 Guide.</i>
- *         </p>
+ *             prefixed with &lt;code&gt;#&lt;/code&gt;, for example #37BFF5. For more information, see &lt;a href=&#34;https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html&#34;&gt;Using Themes in Amazon QuickSight&lt;/a&gt; in the &lt;i&gt;Amazon QuickSight User
+ *                 Guide.&lt;/i&gt;
+ *         &lt;/p&gt;
  * 
  */
 public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
@@ -23,7 +23,7 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     public static final ThemeUIColorPalette Empty = new ThemeUIColorPalette();
 
     /**
-     * <p>This color is that applies to selected states and buttons.</p>
+     * &lt;p&gt;This color is that applies to selected states and buttons.&lt;/p&gt;
      * 
      */
     @Import(name="accent")
@@ -34,8 +34,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The foreground color that applies to any text or other elements that appear over the
-     *             accent color.</p>
+     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             accent color.&lt;/p&gt;
      * 
      */
     @Import(name="accentForeground")
@@ -46,7 +46,7 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The color that applies to error messages.</p>
+     * &lt;p&gt;The color that applies to error messages.&lt;/p&gt;
      * 
      */
     @Import(name="danger")
@@ -57,8 +57,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The foreground color that applies to any text or other elements that appear over the
-     *             error color.</p>
+     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             error color.&lt;/p&gt;
      * 
      */
     @Import(name="dangerForeground")
@@ -69,8 +69,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The color that applies to the names of fields that are identified as
-     *             dimensions.</p>
+     * &lt;p&gt;The color that applies to the names of fields that are identified as
+     *             dimensions.&lt;/p&gt;
      * 
      */
     @Import(name="dimension")
@@ -81,8 +81,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The foreground color that applies to any text or other elements that appear over the
-     *             dimension color.</p>
+     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             dimension color.&lt;/p&gt;
      * 
      */
     @Import(name="dimensionForeground")
@@ -93,7 +93,7 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The color that applies to the names of fields that are identified as measures.</p>
+     * &lt;p&gt;The color that applies to the names of fields that are identified as measures.&lt;/p&gt;
      * 
      */
     @Import(name="measure")
@@ -104,8 +104,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The foreground color that applies to any text or other elements that appear over the
-     *             measure color.</p>
+     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             measure color.&lt;/p&gt;
      * 
      */
     @Import(name="measureForeground")
@@ -116,7 +116,7 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The background color that applies to visuals and other high emphasis UI.</p>
+     * &lt;p&gt;The background color that applies to visuals and other high emphasis UI.&lt;/p&gt;
      * 
      */
     @Import(name="primaryBackground")
@@ -127,8 +127,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The color of text and other foreground elements that appear over the primary
-     *             background regions, such as grid lines, borders, table banding, icons, and so on.</p>
+     * &lt;p&gt;The color of text and other foreground elements that appear over the primary
+     *             background regions, such as grid lines, borders, table banding, icons, and so on.&lt;/p&gt;
      * 
      */
     @Import(name="primaryForeground")
@@ -139,7 +139,7 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The background color that applies to the sheet background and sheet controls.</p>
+     * &lt;p&gt;The background color that applies to the sheet background and sheet controls.&lt;/p&gt;
      * 
      */
     @Import(name="secondaryBackground")
@@ -150,8 +150,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The foreground color that applies to any sheet title, sheet control text, or UI that
-     *             appears over the secondary background.</p>
+     * &lt;p&gt;The foreground color that applies to any sheet title, sheet control text, or UI that
+     *             appears over the secondary background.&lt;/p&gt;
      * 
      */
     @Import(name="secondaryForeground")
@@ -162,8 +162,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The color that applies to success messages, for example the check mark for a
-     *             successful download.</p>
+     * &lt;p&gt;The color that applies to success messages, for example the check mark for a
+     *             successful download.&lt;/p&gt;
      * 
      */
     @Import(name="success")
@@ -174,8 +174,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The foreground color that applies to any text or other elements that appear over the
-     *             success color.</p>
+     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             success color.&lt;/p&gt;
      * 
      */
     @Import(name="successForeground")
@@ -186,7 +186,7 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>This color that applies to warning and informational messages.</p>
+     * &lt;p&gt;This color that applies to warning and informational messages.&lt;/p&gt;
      * 
      */
     @Import(name="warning")
@@ -197,8 +197,8 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * <p>The foreground color that applies to any text or other elements that appear over the
-     *             warning color.</p>
+     * &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             warning color.&lt;/p&gt;
      * 
      */
     @Import(name="warningForeground")

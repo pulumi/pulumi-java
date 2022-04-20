@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * The scale up/out capacity, representing server's compute units.
+     * The scale up/out capacity, representing server&#39;s compute units.
      * 
      */
     private final @Nullable Integer capacity;
@@ -53,7 +53,7 @@ public final class SkuResponse {
     }
 
     /**
-     * The scale up/out capacity, representing server's compute units.
+     * The scale up/out capacity, representing server&#39;s compute units.
      * 
     */
     public Optional<Integer> capacity() {

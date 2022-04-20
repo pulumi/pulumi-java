@@ -61,7 +61,7 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
 
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2File'.
+     * Expected value is &#39;AdlsGen2File&#39;.
      * 
      */
     @Import(name="kind", required=true)

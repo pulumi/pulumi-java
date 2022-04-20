@@ -209,7 +209,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * Desired status of the instance. Either
-     * `"RUNNING"` or `"TERMINATED"`.
+     * `&#34;RUNNING&#34;` or `&#34;TERMINATED&#34;`.
      * 
      */
     @Export(name="desiredStatus", type=String.class, parameters={})
@@ -217,7 +217,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Desired status of the instance. Either
-     * `"RUNNING"` or `"TERMINATED"`.
+     * `&#34;RUNNING&#34;` or `&#34;TERMINATED&#34;`.
      * 
      */
     public Output</* @Nullable */ String> desiredStatus() {

@@ -20,7 +20,7 @@ public final class ResourceLimitResponse {
      */
     private final String minimum;
     /**
-     * Resource name "cpu", "memory" or gpu-specific string.
+     * Resource name &#34;cpu&#34;, &#34;memory&#34; or gpu-specific string.
      * 
      */
     private final String resourceType;
@@ -50,7 +50,7 @@ public final class ResourceLimitResponse {
         return this.minimum;
     }
     /**
-     * Resource name "cpu", "memory" or gpu-specific string.
+     * Resource name &#34;cpu&#34;, &#34;memory&#34; or gpu-specific string.
      * 
     */
     public String resourceType() {

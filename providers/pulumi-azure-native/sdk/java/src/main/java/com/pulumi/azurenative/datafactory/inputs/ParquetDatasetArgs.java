@@ -139,7 +139,7 @@ public final class ParquetDatasetArgs extends com.pulumi.resources.ResourceArgs 
 
     /**
      * Type of dataset.
-     * Expected value is 'Parquet'.
+     * Expected value is &#39;Parquet&#39;.
      * 
      */
     @Import(name="type", required=true)

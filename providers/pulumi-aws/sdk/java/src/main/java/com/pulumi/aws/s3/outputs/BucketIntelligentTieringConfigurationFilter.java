@@ -18,7 +18,7 @@ public final class BucketIntelligentTieringConfigurationFilter {
      */
     private final @Nullable String prefix;
     /**
-     * All of these tags must exist in the object's tag set in order for the configuration to apply.
+     * All of these tags must exist in the object&#39;s tag set in order for the configuration to apply.
      * 
      */
     private final @Nullable Map<String,String> tags;
@@ -39,7 +39,7 @@ public final class BucketIntelligentTieringConfigurationFilter {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * All of these tags must exist in the object's tag set in order for the configuration to apply.
+     * All of these tags must exist in the object&#39;s tag set in order for the configuration to apply.
      * 
     */
     public Map<String,String> tags() {

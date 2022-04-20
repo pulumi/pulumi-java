@@ -89,14 +89,14 @@ public class CustomDataIdentifier extends com.pulumi.resources.CustomResource {
         return this.ignoreWords;
     }
     /**
-     * An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren't case sensitive.
+     * An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren&#39;t case sensitive.
      * 
      */
     @Export(name="keywords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keywords;
 
     /**
-     * @return An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren't case sensitive.
+     * @return An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren&#39;t case sensitive.
      * 
      */
     public Output</* @Nullable */ List<String>> keywords() {

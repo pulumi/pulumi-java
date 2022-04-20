@@ -50,7 +50,7 @@ public final class ADLSGen2FileSystemDataSetArgs extends com.pulumi.resources.Re
 
     /**
      * Kind of data set.
-     * Expected value is 'AdlsGen2FileSystem'.
+     * Expected value is &#39;AdlsGen2FileSystem&#39;.
      * 
      */
     @Import(name="kind", required=true)

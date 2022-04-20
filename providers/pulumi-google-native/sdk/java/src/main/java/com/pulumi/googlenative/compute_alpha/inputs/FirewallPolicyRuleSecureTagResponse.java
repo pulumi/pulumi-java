@@ -13,7 +13,7 @@ public final class FirewallPolicyRuleSecureTagResponse extends com.pulumi.resour
     public static final FirewallPolicyRuleSecureTagResponse Empty = new FirewallPolicyRuleSecureTagResponse();
 
     /**
-     * Name of the secure tag, created with TagManager's TagValue API.
+     * Name of the secure tag, created with TagManager&#39;s TagValue API.
      * 
      */
     @Import(name="name", required=true)

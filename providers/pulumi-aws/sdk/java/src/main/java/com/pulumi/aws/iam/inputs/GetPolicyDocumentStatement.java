@@ -19,7 +19,7 @@ public final class GetPolicyDocumentStatement extends com.pulumi.resources.Invok
     public static final GetPolicyDocumentStatement Empty = new GetPolicyDocumentStatement();
 
     /**
-     * List of actions that this statement either allows or denies. For example, `["ec2:RunInstances", "s3:*"]`.
+     * List of actions that this statement either allows or denies. For example, `[&#34;ec2:RunInstances&#34;, &#34;s3:*&#34;]`.
      * 
      */
     @Import(name="actions")

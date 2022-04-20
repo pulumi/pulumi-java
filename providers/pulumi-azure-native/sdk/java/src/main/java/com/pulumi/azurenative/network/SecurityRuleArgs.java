@@ -45,7 +45,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+     * The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
      */
     @Import(name="destinationAddressPrefix")
@@ -78,7 +78,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     @Import(name="destinationPortRange")
@@ -188,7 +188,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
     @Import(name="sourceAddressPrefix")
@@ -221,7 +221,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     * The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     @Import(name="sourcePortRange")

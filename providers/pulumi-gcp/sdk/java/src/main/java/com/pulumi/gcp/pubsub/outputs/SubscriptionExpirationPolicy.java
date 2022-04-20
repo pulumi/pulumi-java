@@ -10,11 +10,11 @@ import java.util.Objects;
 @CustomType
 public final class SubscriptionExpirationPolicy {
     /**
-     * Specifies the "time-to-live" duration for an associated resource. The
+     * Specifies the &#34;time-to-live&#34; duration for an associated resource. The
      * resource expires if it is not active for a period of ttl.
      * If ttl is not set, the associated resource never expires.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'.
-     * Example - "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
+     * Example - &#34;3.5s&#34;.
      * 
      */
     private final String ttl;
@@ -25,11 +25,11 @@ public final class SubscriptionExpirationPolicy {
     }
 
     /**
-     * Specifies the "time-to-live" duration for an associated resource. The
+     * Specifies the &#34;time-to-live&#34; duration for an associated resource. The
      * resource expires if it is not active for a period of ttl.
      * If ttl is not set, the associated resource never expires.
-     * A duration in seconds with up to nine fractional digits, terminated by 's'.
-     * Example - "3.5s".
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.
+     * Example - &#34;3.5s&#34;.
      * 
     */
     public String ttl() {

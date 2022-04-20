@@ -49,7 +49,7 @@ public final class PrincipalPortfolioAssociationState extends com.pulumi.resourc
     }
 
     /**
-     * Principal type. Setting this argument empty (e.g., `principal_type = ""`) will result in an error. Valid value is `IAM`. Default is `IAM`.
+     * Principal type. Setting this argument empty (e.g., `principal_type = &#34;&#34;`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
     @Import(name="principalType")

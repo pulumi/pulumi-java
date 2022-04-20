@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationApplicationConfigurationFlinkApplicationConfiguration {
     /**
-     * Describes an application's checkpointing configuration.
+     * Describes an application&#39;s checkpointing configuration.
      * 
      */
     private final @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration checkpointConfiguration;
@@ -40,7 +40,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     /**
-     * Describes an application's checkpointing configuration.
+     * Describes an application&#39;s checkpointing configuration.
      * 
     */
     public Optional<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration> checkpointConfiguration() {

@@ -34,7 +34,7 @@ public final class JobConfigurationExtractResponse {
      */
     private final List<String> destinationUris;
     /**
-     * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable when extracting models.
+     * [Optional] Delimiter to use between fields in the exported data. Default is &#39;,&#39;. Not applicable when extracting models.
      * 
      */
     private final String fieldDelimiter;
@@ -54,7 +54,7 @@ public final class JobConfigurationExtractResponse {
      */
     private final TableReferenceResponse sourceTable;
     /**
-     * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
+     * [Optional] If destinationFormat is set to &#34;AVRO&#34;, this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
      * 
      */
     private final Boolean useAvroLogicalTypes;
@@ -110,7 +110,7 @@ public final class JobConfigurationExtractResponse {
         return this.destinationUris;
     }
     /**
-     * [Optional] Delimiter to use between fields in the exported data. Default is ','. Not applicable when extracting models.
+     * [Optional] Delimiter to use between fields in the exported data. Default is &#39;,&#39;. Not applicable when extracting models.
      * 
     */
     public String fieldDelimiter() {
@@ -138,7 +138,7 @@ public final class JobConfigurationExtractResponse {
         return this.sourceTable;
     }
     /**
-     * [Optional] If destinationFormat is set to "AVRO", this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
+     * [Optional] If destinationFormat is set to &#34;AVRO&#34;, this flag indicates whether to enable extracting applicable column types (such as TIMESTAMP) to their corresponding AVRO logical types (timestamp-micros), instead of only using their raw types (avro-long). Not applicable when extracting models.
      * 
     */
     public Boolean useAvroLogicalTypes() {

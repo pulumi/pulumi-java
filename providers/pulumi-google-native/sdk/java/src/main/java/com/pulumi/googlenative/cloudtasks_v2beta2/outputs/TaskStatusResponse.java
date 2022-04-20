@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class TaskStatusResponse {
     /**
-     * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
+     * The number of attempts dispatched. This count includes attempts which have been dispatched but haven&#39;t received a response.
      * 
      */
     private final Integer attemptDispatchCount;
@@ -21,12 +21,12 @@ public final class TaskStatusResponse {
      */
     private final Integer attemptResponseCount;
     /**
-     * The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
+     * The status of the task&#39;s first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
      * 
      */
     private final AttemptStatusResponse firstAttemptStatus;
     /**
-     * The status of the task's last attempt. This field is not calculated for pull tasks.
+     * The status of the task&#39;s last attempt. This field is not calculated for pull tasks.
      * 
      */
     private final AttemptStatusResponse lastAttemptStatus;
@@ -44,7 +44,7 @@ public final class TaskStatusResponse {
     }
 
     /**
-     * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
+     * The number of attempts dispatched. This count includes attempts which have been dispatched but haven&#39;t received a response.
      * 
     */
     public Integer attemptDispatchCount() {
@@ -58,14 +58,14 @@ public final class TaskStatusResponse {
         return this.attemptResponseCount;
     }
     /**
-     * The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
+     * The status of the task&#39;s first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
      * 
     */
     public AttemptStatusResponse firstAttemptStatus() {
         return this.firstAttemptStatus;
     }
     /**
-     * The status of the task's last attempt. This field is not calculated for pull tasks.
+     * The status of the task&#39;s last attempt. This field is not calculated for pull tasks.
      * 
     */
     public AttemptStatusResponse lastAttemptStatus() {

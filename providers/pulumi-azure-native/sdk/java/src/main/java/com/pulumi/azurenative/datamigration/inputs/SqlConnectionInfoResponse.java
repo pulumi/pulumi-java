@@ -99,7 +99,7 @@ public final class SqlConnectionInfoResponse extends com.pulumi.resources.Invoke
 
     /**
      * Type of connection info
-     * Expected value is 'SqlConnectionInfo'.
+     * Expected value is &#39;SqlConnectionInfo&#39;.
      * 
      */
     @Import(name="type", required=true)

@@ -20,7 +20,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends com.
 
     /**
      * The authorization type for integration runtime sharing.
-     * Expected value is 'Key'.
+     * Expected value is &#39;Key&#39;.
      * 
      */
     @Import(name="authorizationType", required=true)

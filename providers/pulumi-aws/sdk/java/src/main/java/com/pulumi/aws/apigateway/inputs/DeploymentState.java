@@ -39,7 +39,7 @@ public final class DeploymentState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The execution ARN to be used in `lambda_permission` resource's `source_arn`
+     * The execution ARN to be used in `lambda_permission` resource&#39;s `source_arn`
      * when allowing API Gateway to invoke a Lambda function,
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
      * 

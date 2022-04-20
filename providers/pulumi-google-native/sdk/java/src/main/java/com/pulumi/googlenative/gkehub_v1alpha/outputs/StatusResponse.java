@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class StatusResponse {
     /**
-     * Code specifies AppDevExperienceFeature's subcomponent ready state.
+     * Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
      * 
      */
     private final String code;
@@ -29,7 +29,7 @@ public final class StatusResponse {
     }
 
     /**
-     * Code specifies AppDevExperienceFeature's subcomponent ready state.
+     * Code specifies AppDevExperienceFeature&#39;s subcomponent ready state.
      * 
     */
     public String code() {

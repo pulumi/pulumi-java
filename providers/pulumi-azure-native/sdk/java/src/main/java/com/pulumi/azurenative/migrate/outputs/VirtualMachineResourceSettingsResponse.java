@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class VirtualMachineResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
      */
     private final String resourceType;
@@ -54,7 +54,7 @@ public final class VirtualMachineResourceSettingsResponse {
 
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is 'Microsoft.Compute/virtualMachines'.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
     */
     public String resourceType() {

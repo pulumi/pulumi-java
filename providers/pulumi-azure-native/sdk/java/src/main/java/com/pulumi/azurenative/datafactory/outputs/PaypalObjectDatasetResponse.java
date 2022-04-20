@@ -59,7 +59,7 @@ public final class PaypalObjectDatasetResponse {
     private final @Nullable Object tableName;
     /**
      * Type of dataset.
-     * Expected value is 'PaypalObject'.
+     * Expected value is &#39;PaypalObject&#39;.
      * 
      */
     private final String type;
@@ -144,7 +144,7 @@ public final class PaypalObjectDatasetResponse {
     }
     /**
      * Type of dataset.
-     * Expected value is 'PaypalObject'.
+     * Expected value is &#39;PaypalObject&#39;.
      * 
     */
     public String type() {

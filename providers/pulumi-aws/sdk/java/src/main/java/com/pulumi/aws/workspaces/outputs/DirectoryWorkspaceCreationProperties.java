@@ -18,7 +18,7 @@ public final class DirectoryWorkspaceCreationProperties {
      */
     private final @Nullable String customSecurityGroupId;
     /**
-     * The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
+     * The default organizational unit (OU) for your WorkSpace directories. Should conform `&#34;OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;&#34;` pattern.
      * 
      */
     private final @Nullable String defaultOu;
@@ -60,7 +60,7 @@ public final class DirectoryWorkspaceCreationProperties {
         return Optional.ofNullable(this.customSecurityGroupId);
     }
     /**
-     * The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
+     * The default organizational unit (OU) for your WorkSpace directories. Should conform `&#34;OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;&#34;` pattern.
      * 
     */
     public Optional<String> defaultOu() {

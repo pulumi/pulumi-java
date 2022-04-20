@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Client secret information for factory's bring your own app repository configuration.
+ * Client secret information for factory&#39;s bring your own app repository configuration.
  * 
  */
 public final class GitHubClientSecretResponse extends com.pulumi.resources.InvokeArgs {

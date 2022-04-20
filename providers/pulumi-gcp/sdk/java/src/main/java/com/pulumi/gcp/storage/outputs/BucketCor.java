@@ -19,12 +19,12 @@ public final class BucketCor {
      */
     private final @Nullable Integer maxAgeSeconds;
     /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
+     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
      * 
      */
     private final @Nullable List<String> methods;
     /**
-     * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
+     * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
      * 
      */
     private final @Nullable List<String> origins;
@@ -54,14 +54,14 @@ public final class BucketCor {
         return Optional.ofNullable(this.maxAgeSeconds);
     }
     /**
-     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
+     * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: &#34;*&#34; is permitted in the list of methods, and means &#34;any method&#34;.
      * 
     */
     public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
-     * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
+     * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: &#34;*&#34; is permitted in the list of origins, and means &#34;any Origin&#34;.
      * 
     */
     public List<String> origins() {

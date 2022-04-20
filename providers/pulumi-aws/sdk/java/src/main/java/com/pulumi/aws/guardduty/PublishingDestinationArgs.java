@@ -27,7 +27,7 @@ public final class PublishingDestinationArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Currently there is only "S3" available as destination type which is also the default value
+     * Currently there is only &#34;S3&#34; available as destination type which is also the default value
      * 
      */
     @Import(name="destinationType")

@@ -19,9 +19,9 @@ import javax.annotation.Nullable;
 /**
  * Manages a Service Catalog Product.
  * 
- * > **NOTE:** The user or role that uses this resources must have the `cloudformation:GetTemplate` IAM policy permission. This policy permission is required when using the `template_physical_id` argument.
+ * &gt; **NOTE:** The user or role that uses this resources must have the `cloudformation:GetTemplate` IAM policy permission. This policy permission is required when using the `template_physical_id` argument.
  * 
- * > A "provisioning artifact" is also referred to as a "version." A "distributor" is also referred to as a "vendor."
+ * &gt; A &#34;provisioning artifact&#34; is also referred to as a &#34;version.&#34; A &#34;distributor&#34; is also referred to as a &#34;vendor.&#34;
  * 
  * ## Example Usage
  * 
