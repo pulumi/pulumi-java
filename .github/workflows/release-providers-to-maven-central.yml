@@ -21,6 +21,8 @@ on:
       - 'CHANGELOG_PENDING.md'
 
 env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   OSSRH_REPO_URL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
   OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
