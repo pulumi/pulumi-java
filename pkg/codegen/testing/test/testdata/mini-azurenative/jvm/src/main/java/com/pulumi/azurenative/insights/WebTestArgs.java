@@ -154,7 +154,7 @@ public final class WebTestArgs extends com.pulumi.resources.ResourceArgs {
 
     private WebTestArgs() {}
 
-    protected WebTestArgs(WebTestArgs $) {
+    private WebTestArgs(WebTestArgs $) {
         this.description = $.description;
         this.enabled = $.enabled;
         this.frequency = $.frequency;

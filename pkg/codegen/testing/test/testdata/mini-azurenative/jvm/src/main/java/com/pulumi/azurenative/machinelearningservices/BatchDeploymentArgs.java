@@ -106,7 +106,7 @@ public final class BatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
 
     private BatchDeploymentArgs() {}
 
-    protected BatchDeploymentArgs(BatchDeploymentArgs $) {
+    private BatchDeploymentArgs(BatchDeploymentArgs $) {
         this.deploymentName = $.deploymentName;
         this.endpointName = $.endpointName;
         this.kind = $.kind;

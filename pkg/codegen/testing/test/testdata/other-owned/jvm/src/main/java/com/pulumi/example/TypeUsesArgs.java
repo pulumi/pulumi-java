@@ -40,7 +40,7 @@ public final class TypeUsesArgs extends com.pulumi.resources.ResourceArgs {
 
     private TypeUsesArgs() {}
 
-    protected TypeUsesArgs(TypeUsesArgs $) {
+    private TypeUsesArgs(TypeUsesArgs $) {
         this.bar = $.bar;
         this.baz = $.baz;
         this.foo = $.foo;

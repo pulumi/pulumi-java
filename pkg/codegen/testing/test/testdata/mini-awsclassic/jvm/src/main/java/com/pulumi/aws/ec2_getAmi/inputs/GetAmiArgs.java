@@ -40,7 +40,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
 
     private GetAmiArgs() {}
 
-    protected GetAmiArgs(GetAmiArgs $) {
+    private GetAmiArgs(GetAmiArgs $) {
         this.executableUsers = $.executableUsers;
         this.owners = $.owners;
     }

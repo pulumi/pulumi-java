@@ -59,7 +59,7 @@ public final class RubberTreeArgs extends com.pulumi.resources.ResourceArgs {
 
     private RubberTreeArgs() {}
 
-    protected RubberTreeArgs(RubberTreeArgs $) {
+    private RubberTreeArgs(RubberTreeArgs $) {
         this.container = $.container;
         this.diameter = $.diameter;
         this.farm = $.farm;

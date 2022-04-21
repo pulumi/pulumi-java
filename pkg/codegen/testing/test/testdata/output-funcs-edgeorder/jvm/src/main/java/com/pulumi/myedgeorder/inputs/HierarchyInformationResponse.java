@@ -64,7 +64,7 @@ public final class HierarchyInformationResponse extends com.pulumi.resources.Inv
 
     private HierarchyInformationResponse() {}
 
-    protected HierarchyInformationResponse(HierarchyInformationResponse $) {
+    private HierarchyInformationResponse(HierarchyInformationResponse $) {
         this.configurationName = $.configurationName;
         this.productFamilyName = $.productFamilyName;
         this.productLineName = $.productLineName;

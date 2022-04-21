@@ -44,7 +44,7 @@ public final class ConfigurationFilters extends com.pulumi.resources.InvokeArgs 
 
     private ConfigurationFilters() {}
 
-    protected ConfigurationFilters(ConfigurationFilters $) {
+    private ConfigurationFilters(ConfigurationFilters $) {
         this.filterableProperty = $.filterableProperty;
         this.hierarchyInformation = $.hierarchyInformation;
     }

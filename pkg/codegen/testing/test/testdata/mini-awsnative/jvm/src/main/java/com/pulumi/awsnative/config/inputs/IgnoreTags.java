@@ -43,7 +43,7 @@ public final class IgnoreTags extends com.pulumi.resources.InvokeArgs {
 
     private IgnoreTags() {}
 
-    protected IgnoreTags(IgnoreTags $) {
+    private IgnoreTags(IgnoreTags $) {
         this.keyPrefixes = $.keyPrefixes;
         this.keys = $.keys;
     }

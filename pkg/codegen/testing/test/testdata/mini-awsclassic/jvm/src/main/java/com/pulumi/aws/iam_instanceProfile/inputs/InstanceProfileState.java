@@ -28,7 +28,7 @@ public final class InstanceProfileState extends com.pulumi.resources.ResourceArg
 
     private InstanceProfileState() {}
 
-    protected InstanceProfileState(InstanceProfileState $) {
+    private InstanceProfileState(InstanceProfileState $) {
         this.role = $.role;
     }
 

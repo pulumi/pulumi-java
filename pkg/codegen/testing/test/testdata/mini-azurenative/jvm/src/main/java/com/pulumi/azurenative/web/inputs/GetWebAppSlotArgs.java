@@ -25,7 +25,7 @@ public final class GetWebAppSlotArgs extends com.pulumi.resources.InvokeArgs {
 
     private GetWebAppSlotArgs() {}
 
-    protected GetWebAppSlotArgs(GetWebAppSlotArgs $) {
+    private GetWebAppSlotArgs(GetWebAppSlotArgs $) {
         this.slot = $.slot;
     }
 

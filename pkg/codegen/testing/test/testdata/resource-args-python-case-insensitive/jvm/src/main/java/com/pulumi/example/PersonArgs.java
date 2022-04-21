@@ -33,7 +33,7 @@ public final class PersonArgs extends com.pulumi.resources.ResourceArgs {
 
     private PersonArgs() {}
 
-    protected PersonArgs(PersonArgs $) {
+    private PersonArgs(PersonArgs $) {
         this.name = $.name;
         this.pets = $.pets;
     }

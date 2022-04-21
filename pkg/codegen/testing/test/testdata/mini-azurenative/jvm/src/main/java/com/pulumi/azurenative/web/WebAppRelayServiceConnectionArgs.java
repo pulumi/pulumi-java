@@ -24,7 +24,7 @@ public final class WebAppRelayServiceConnectionArgs extends com.pulumi.resources
 
     private WebAppRelayServiceConnectionArgs() {}
 
-    protected WebAppRelayServiceConnectionArgs(WebAppRelayServiceConnectionArgs $) {
+    private WebAppRelayServiceConnectionArgs(WebAppRelayServiceConnectionArgs $) {
         this.resourceType = $.resourceType;
     }
 

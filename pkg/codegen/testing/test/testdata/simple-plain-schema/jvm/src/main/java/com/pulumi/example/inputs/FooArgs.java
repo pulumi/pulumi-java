@@ -60,7 +60,7 @@ public final class FooArgs extends com.pulumi.resources.ResourceArgs {
 
     private FooArgs() {}
 
-    protected FooArgs(FooArgs $) {
+    private FooArgs(FooArgs $) {
         this.a = $.a;
         this.b = $.b;
         this.c = $.c;

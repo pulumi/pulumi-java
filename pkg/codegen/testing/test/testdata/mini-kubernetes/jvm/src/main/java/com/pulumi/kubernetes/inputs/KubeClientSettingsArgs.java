@@ -45,7 +45,7 @@ public final class KubeClientSettingsArgs extends com.pulumi.resources.ResourceA
 
     private KubeClientSettingsArgs() {}
 
-    protected KubeClientSettingsArgs(KubeClientSettingsArgs $) {
+    private KubeClientSettingsArgs(KubeClientSettingsArgs $) {
         this.burst = $.burst;
         this.qps = $.qps;
     }

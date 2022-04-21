@@ -24,7 +24,7 @@ public final class PetArgs extends com.pulumi.resources.ResourceArgs {
 
     private PetArgs() {}
 
-    protected PetArgs(PetArgs $) {
+    private PetArgs(PetArgs $) {
         this.name = $.name;
     }
 

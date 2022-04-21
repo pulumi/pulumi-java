@@ -28,7 +28,7 @@ public final class InstanceProfileArgs extends com.pulumi.resources.ResourceArgs
 
     private InstanceProfileArgs() {}
 
-    protected InstanceProfileArgs(InstanceProfileArgs $) {
+    private InstanceProfileArgs(InstanceProfileArgs $) {
         this.role = $.role;
     }
 

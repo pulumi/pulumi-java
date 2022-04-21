@@ -62,7 +62,7 @@ public final class StorageAccountKeyResponse extends com.pulumi.resources.Invoke
 
     private StorageAccountKeyResponse() {}
 
-    protected StorageAccountKeyResponse(StorageAccountKeyResponse $) {
+    private StorageAccountKeyResponse(StorageAccountKeyResponse $) {
         this.creationTime = $.creationTime;
         this.keyName = $.keyName;
         this.permissions = $.permissions;

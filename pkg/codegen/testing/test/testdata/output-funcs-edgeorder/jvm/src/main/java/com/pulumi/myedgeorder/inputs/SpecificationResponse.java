@@ -40,7 +40,7 @@ public final class SpecificationResponse extends com.pulumi.resources.InvokeArgs
 
     private SpecificationResponse() {}
 
-    protected SpecificationResponse(SpecificationResponse $) {
+    private SpecificationResponse(SpecificationResponse $) {
         this.name = $.name;
         this.value = $.value;
     }

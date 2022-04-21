@@ -23,7 +23,7 @@ public final class ArgFunctionArgs extends com.pulumi.resources.InvokeArgs {
 
     private ArgFunctionArgs() {}
 
-    protected ArgFunctionArgs(ArgFunctionArgs $) {
+    private ArgFunctionArgs(ArgFunctionArgs $) {
         this.arg1 = $.arg1;
     }
 

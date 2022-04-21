@@ -65,7 +65,7 @@ public final class ObjectArgs extends com.pulumi.resources.ResourceArgs {
 
     private ObjectArgs() {}
 
-    protected ObjectArgs(ObjectArgs $) {
+    private ObjectArgs(ObjectArgs $) {
         this.bar = $.bar;
         this.configs = $.configs;
         this.foo = $.foo;

@@ -61,7 +61,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
 
     private ListIntegrationAccountKeyVaultKeysArgs() {}
 
-    protected ListIntegrationAccountKeyVaultKeysArgs(ListIntegrationAccountKeyVaultKeysArgs $) {
+    private ListIntegrationAccountKeyVaultKeysArgs(ListIntegrationAccountKeyVaultKeysArgs $) {
         this.integrationAccountName = $.integrationAccountName;
         this.keyVault = $.keyVault;
         this.resourceGroupName = $.resourceGroupName;

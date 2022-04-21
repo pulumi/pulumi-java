@@ -24,7 +24,7 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
 
     private ModuleResourceArgs() {}
 
-    protected ModuleResourceArgs(ModuleResourceArgs $) {
+    private ModuleResourceArgs(ModuleResourceArgs $) {
         this.thing = $.thing;
     }
 

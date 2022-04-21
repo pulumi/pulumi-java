@@ -29,7 +29,7 @@ public final class GetAmiIdsFilter extends com.pulumi.resources.InvokeArgs {
 
     private GetAmiIdsFilter() {}
 
-    protected GetAmiIdsFilter(GetAmiIdsFilter $) {
+    private GetAmiIdsFilter(GetAmiIdsFilter $) {
         this.name = $.name;
         this.values = $.values;
     }

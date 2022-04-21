@@ -50,7 +50,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
 
     private ContainerArgs() {}
 
-    protected ContainerArgs(ContainerArgs $) {
+    private ContainerArgs(ContainerArgs $) {
         this.brightness = $.brightness;
         this.color = $.color;
         this.material = $.material;

@@ -87,7 +87,7 @@ public final class PurchaseMeterDetailsResponse extends com.pulumi.resources.Inv
 
     private PurchaseMeterDetailsResponse() {}
 
-    protected PurchaseMeterDetailsResponse(PurchaseMeterDetailsResponse $) {
+    private PurchaseMeterDetailsResponse(PurchaseMeterDetailsResponse $) {
         this.billingType = $.billingType;
         this.chargingType = $.chargingType;
         this.multiplier = $.multiplier;

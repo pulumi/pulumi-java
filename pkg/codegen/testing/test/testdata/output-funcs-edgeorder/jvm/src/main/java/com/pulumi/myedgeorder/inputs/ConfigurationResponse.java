@@ -126,7 +126,7 @@ public final class ConfigurationResponse extends com.pulumi.resources.InvokeArgs
 
     private ConfigurationResponse() {}
 
-    protected ConfigurationResponse(ConfigurationResponse $) {
+    private ConfigurationResponse(ConfigurationResponse $) {
         this.availabilityInformation = $.availabilityInformation;
         this.costInformation = $.costInformation;
         this.description = $.description;

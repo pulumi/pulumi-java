@@ -24,7 +24,7 @@ public final class BarResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     private BarResourceArgs() {}
 
-    protected BarResourceArgs(BarResourceArgs $) {
+    private BarResourceArgs(BarResourceArgs $) {
         this.foo = $.foo;
     }
 

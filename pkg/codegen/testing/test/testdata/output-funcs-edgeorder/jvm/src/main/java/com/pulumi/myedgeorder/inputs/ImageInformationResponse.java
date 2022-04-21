@@ -40,7 +40,7 @@ public final class ImageInformationResponse extends com.pulumi.resources.InvokeA
 
     private ImageInformationResponse() {}
 
-    protected ImageInformationResponse(ImageInformationResponse $) {
+    private ImageInformationResponse(ImageInformationResponse $) {
         this.imageType = $.imageType;
         this.imageUrl = $.imageUrl;
     }

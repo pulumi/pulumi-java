@@ -96,7 +96,7 @@ public final class DimensionsResponse extends com.pulumi.resources.InvokeArgs {
 
     private DimensionsResponse() {}
 
-    protected DimensionsResponse(DimensionsResponse $) {
+    private DimensionsResponse(DimensionsResponse $) {
         this.depth = $.depth;
         this.height = $.height;
         this.length = $.length;

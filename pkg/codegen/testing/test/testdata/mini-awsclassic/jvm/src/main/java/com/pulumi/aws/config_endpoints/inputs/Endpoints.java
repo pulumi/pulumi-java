@@ -2123,7 +2123,7 @@ public final class Endpoints extends com.pulumi.resources.InvokeArgs {
 
     private Endpoints() {}
 
-    protected Endpoints(Endpoints $) {
+    private Endpoints(Endpoints $) {
         this.accessanalyzer = $.accessanalyzer;
         this.account = $.account;
         this.acm = $.acm;

@@ -24,7 +24,7 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
 
     private ConfigMapArgs() {}
 
-    protected ConfigMapArgs(ConfigMapArgs $) {
+    private ConfigMapArgs(ConfigMapArgs $) {
         this.config = $.config;
     }
 

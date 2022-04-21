@@ -32,7 +32,7 @@ public final class ObjectWithNodeOptionalInputsArgs extends com.pulumi.resources
 
     private ObjectWithNodeOptionalInputsArgs() {}
 
-    protected ObjectWithNodeOptionalInputsArgs(ObjectWithNodeOptionalInputsArgs $) {
+    private ObjectWithNodeOptionalInputsArgs(ObjectWithNodeOptionalInputsArgs $) {
         this.bar = $.bar;
         this.foo = $.foo;
     }

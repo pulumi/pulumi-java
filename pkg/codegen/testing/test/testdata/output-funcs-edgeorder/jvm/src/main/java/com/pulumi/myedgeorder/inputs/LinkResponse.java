@@ -40,7 +40,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
 
     private LinkResponse() {}
 
-    protected LinkResponse(LinkResponse $) {
+    private LinkResponse(LinkResponse $) {
         this.linkType = $.linkType;
         this.linkUrl = $.linkUrl;
     }

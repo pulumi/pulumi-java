@@ -27,7 +27,7 @@ public final class RubberTreeState extends com.pulumi.resources.ResourceArgs {
 
     private RubberTreeState() {}
 
-    protected RubberTreeState(RubberTreeState $) {
+    private RubberTreeState(RubberTreeState $) {
         this.farm = $.farm;
     }
 

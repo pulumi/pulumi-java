@@ -63,7 +63,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     private ProviderArgs() {}
 
-    protected ProviderArgs(ProviderArgs $) {
+    private ProviderArgs(ProviderArgs $) {
         this.cluster = $.cluster;
         this.context = $.context;
         this.kubeClientSettings = $.kubeClientSettings;

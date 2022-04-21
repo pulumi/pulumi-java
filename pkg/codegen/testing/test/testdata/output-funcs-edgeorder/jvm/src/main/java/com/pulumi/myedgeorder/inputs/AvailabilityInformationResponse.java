@@ -51,7 +51,7 @@ public final class AvailabilityInformationResponse extends com.pulumi.resources.
 
     private AvailabilityInformationResponse() {}
 
-    protected AvailabilityInformationResponse(AvailabilityInformationResponse $) {
+    private AvailabilityInformationResponse(AvailabilityInformationResponse $) {
         this.availabilityStage = $.availabilityStage;
         this.disabledReason = $.disabledReason;
         this.disabledReasonMessage = $.disabledReasonMessage;

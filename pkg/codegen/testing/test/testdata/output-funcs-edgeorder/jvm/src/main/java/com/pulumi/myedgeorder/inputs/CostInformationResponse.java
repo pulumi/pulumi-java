@@ -42,7 +42,7 @@ public final class CostInformationResponse extends com.pulumi.resources.InvokeAr
 
     private CostInformationResponse() {}
 
-    protected CostInformationResponse(CostInformationResponse $) {
+    private CostInformationResponse(CostInformationResponse $) {
         this.billingInfoUrl = $.billingInfoUrl;
         this.billingMeterDetails = $.billingMeterDetails;
     }

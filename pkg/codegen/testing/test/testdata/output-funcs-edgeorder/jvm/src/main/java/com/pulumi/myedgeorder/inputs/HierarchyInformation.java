@@ -64,7 +64,7 @@ public final class HierarchyInformation extends com.pulumi.resources.InvokeArgs 
 
     private HierarchyInformation() {}
 
-    protected HierarchyInformation(HierarchyInformation $) {
+    private HierarchyInformation(HierarchyInformation $) {
         this.configurationName = $.configurationName;
         this.productFamilyName = $.productFamilyName;
         this.productLineName = $.productLineName;

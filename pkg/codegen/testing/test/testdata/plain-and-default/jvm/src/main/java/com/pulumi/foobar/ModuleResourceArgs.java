@@ -140,7 +140,7 @@ public final class ModuleResourceArgs extends com.pulumi.resources.ResourceArgs 
 
     private ModuleResourceArgs() {}
 
-    protected ModuleResourceArgs(ModuleResourceArgs $) {
+    private ModuleResourceArgs(ModuleResourceArgs $) {
         this.optional_bool = $.optional_bool;
         this.optional_const = $.optional_const;
         this.optional_enum = $.optional_enum;

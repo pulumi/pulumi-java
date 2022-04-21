@@ -55,7 +55,7 @@ public final class CustomerSubscriptionDetails extends com.pulumi.resources.Invo
 
     private CustomerSubscriptionDetails() {}
 
-    protected CustomerSubscriptionDetails(CustomerSubscriptionDetails $) {
+    private CustomerSubscriptionDetails(CustomerSubscriptionDetails $) {
         this.locationPlacementId = $.locationPlacementId;
         this.quotaId = $.quotaId;
         this.registeredFeatures = $.registeredFeatures;

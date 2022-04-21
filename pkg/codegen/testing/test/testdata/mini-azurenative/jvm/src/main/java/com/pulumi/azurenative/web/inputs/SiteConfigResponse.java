@@ -32,7 +32,7 @@ public final class SiteConfigResponse extends com.pulumi.resources.InvokeArgs {
 
     private SiteConfigResponse() {}
 
-    protected SiteConfigResponse(SiteConfigResponse $) {
+    private SiteConfigResponse(SiteConfigResponse $) {
         this.netFrameworkVersion = $.netFrameworkVersion;
     }
 

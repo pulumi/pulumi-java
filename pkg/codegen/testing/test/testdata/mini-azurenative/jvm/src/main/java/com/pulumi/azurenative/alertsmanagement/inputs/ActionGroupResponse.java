@@ -110,7 +110,7 @@ public final class ActionGroupResponse extends com.pulumi.resources.InvokeArgs {
 
     private ActionGroupResponse() {}
 
-    protected ActionGroupResponse(ActionGroupResponse $) {
+    private ActionGroupResponse(ActionGroupResponse $) {
         this.actionGroupId = $.actionGroupId;
         this.createdAt = $.createdAt;
         this.createdBy = $.createdBy;

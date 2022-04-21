@@ -43,7 +43,7 @@ public final class NurseryArgs extends com.pulumi.resources.ResourceArgs {
 
     private NurseryArgs() {}
 
-    protected NurseryArgs(NurseryArgs $) {
+    private NurseryArgs(NurseryArgs $) {
         this.sizes = $.sizes;
         this.varieties = $.varieties;
     }

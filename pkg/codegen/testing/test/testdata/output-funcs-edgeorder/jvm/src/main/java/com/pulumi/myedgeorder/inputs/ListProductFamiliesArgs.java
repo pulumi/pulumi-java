@@ -64,7 +64,7 @@ public final class ListProductFamiliesArgs extends com.pulumi.resources.InvokeAr
 
     private ListProductFamiliesArgs() {}
 
-    protected ListProductFamiliesArgs(ListProductFamiliesArgs $) {
+    private ListProductFamiliesArgs(ListProductFamiliesArgs $) {
         this.customerSubscriptionDetails = $.customerSubscriptionDetails;
         this.expand = $.expand;
         this.filterableProperties = $.filterableProperties;

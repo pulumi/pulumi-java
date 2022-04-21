@@ -60,7 +60,7 @@ public final class Foo extends com.pulumi.resources.InvokeArgs {
 
     private Foo() {}
 
-    protected Foo(Foo $) {
+    private Foo(Foo $) {
         this.a = $.a;
         this.b = $.b;
         this.c = $.c;

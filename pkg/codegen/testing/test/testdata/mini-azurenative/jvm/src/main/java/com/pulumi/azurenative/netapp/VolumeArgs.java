@@ -36,7 +36,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
 
     private VolumeArgs() {}
 
-    protected VolumeArgs(VolumeArgs $) {
+    private VolumeArgs(VolumeArgs $) {
         this.throughputMibps = $.throughputMibps;
         this.usageThreshold = $.usageThreshold;
     }

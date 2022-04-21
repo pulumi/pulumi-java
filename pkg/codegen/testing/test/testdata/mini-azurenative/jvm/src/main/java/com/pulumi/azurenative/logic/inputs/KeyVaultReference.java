@@ -42,7 +42,7 @@ public final class KeyVaultReference extends com.pulumi.resources.InvokeArgs {
 
     private KeyVaultReference() {}
 
-    protected KeyVaultReference(KeyVaultReference $) {
+    private KeyVaultReference(KeyVaultReference $) {
         this.id = $.id;
         this.name = $.name;
     }

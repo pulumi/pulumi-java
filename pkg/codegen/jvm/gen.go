@@ -509,7 +509,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 		fprintf(w, "    private %s() {}\n\n", pt.name)
 
 		// Generate the copying constructor.
-		fprintf(w, "    protected %[1]s(%[1]s $) {\n", pt.name)
+		fprintf(w, "    private %[1]s(%[1]s $) {\n", pt.name)
 		for _, prop := range pt.properties {
 			fieldName := names.Ident(pt.mod.propertyName(prop)).AsProperty().Field()
 			fprintf(w, "        this.%[1]s = $.%[1]s;\n", fieldName)

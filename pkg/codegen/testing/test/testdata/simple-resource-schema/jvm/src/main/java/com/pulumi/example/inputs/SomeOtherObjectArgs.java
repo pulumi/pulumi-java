@@ -24,7 +24,7 @@ public final class SomeOtherObjectArgs extends com.pulumi.resources.ResourceArgs
 
     private SomeOtherObjectArgs() {}
 
-    protected SomeOtherObjectArgs(SomeOtherObjectArgs $) {
+    private SomeOtherObjectArgs(SomeOtherObjectArgs $) {
         this.baz = $.baz;
     }
 

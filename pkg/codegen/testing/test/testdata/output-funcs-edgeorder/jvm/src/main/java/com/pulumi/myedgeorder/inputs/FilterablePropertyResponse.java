@@ -41,7 +41,7 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
 
     private FilterablePropertyResponse() {}
 
-    protected FilterablePropertyResponse(FilterablePropertyResponse $) {
+    private FilterablePropertyResponse(FilterablePropertyResponse $) {
         this.supportedValues = $.supportedValues;
         this.type = $.type;
     }

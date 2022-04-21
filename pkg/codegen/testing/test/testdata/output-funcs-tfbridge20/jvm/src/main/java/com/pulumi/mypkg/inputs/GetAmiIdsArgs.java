@@ -81,7 +81,7 @@ public final class GetAmiIdsArgs extends com.pulumi.resources.InvokeArgs {
 
     private GetAmiIdsArgs() {}
 
-    protected GetAmiIdsArgs(GetAmiIdsArgs $) {
+    private GetAmiIdsArgs(GetAmiIdsArgs $) {
         this.executableUsers = $.executableUsers;
         this.filters = $.filters;
         this.nameRegex = $.nameRegex;

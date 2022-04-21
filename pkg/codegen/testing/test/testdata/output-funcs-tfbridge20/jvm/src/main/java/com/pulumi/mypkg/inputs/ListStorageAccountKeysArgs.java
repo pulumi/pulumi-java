@@ -49,7 +49,7 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
 
     private ListStorageAccountKeysArgs() {}
 
-    protected ListStorageAccountKeysArgs(ListStorageAccountKeysArgs $) {
+    private ListStorageAccountKeysArgs(ListStorageAccountKeysArgs $) {
         this.accountName = $.accountName;
         this.expand = $.expand;
         this.resourceGroupName = $.resourceGroupName;

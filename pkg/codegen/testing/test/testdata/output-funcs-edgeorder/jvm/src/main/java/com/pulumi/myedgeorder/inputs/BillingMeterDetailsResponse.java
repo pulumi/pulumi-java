@@ -65,7 +65,7 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
 
     private BillingMeterDetailsResponse() {}
 
-    protected BillingMeterDetailsResponse(BillingMeterDetailsResponse $) {
+    private BillingMeterDetailsResponse(BillingMeterDetailsResponse $) {
         this.frequency = $.frequency;
         this.meterDetails = $.meterDetails;
         this.meteringType = $.meteringType;

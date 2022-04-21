@@ -52,7 +52,7 @@ public final class ListConfigurationsArgs extends com.pulumi.resources.InvokeArg
 
     private ListConfigurationsArgs() {}
 
-    protected ListConfigurationsArgs(ListConfigurationsArgs $) {
+    private ListConfigurationsArgs(ListConfigurationsArgs $) {
         this.configurationFilters = $.configurationFilters;
         this.customerSubscriptionDetails = $.customerSubscriptionDetails;
         this.skipToken = $.skipToken;

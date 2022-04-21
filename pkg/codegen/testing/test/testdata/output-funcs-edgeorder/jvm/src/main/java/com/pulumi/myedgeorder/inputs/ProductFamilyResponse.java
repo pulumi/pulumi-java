@@ -114,7 +114,7 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
 
     private ProductFamilyResponse() {}
 
-    protected ProductFamilyResponse(ProductFamilyResponse $) {
+    private ProductFamilyResponse(ProductFamilyResponse $) {
         this.availabilityInformation = $.availabilityInformation;
         this.costInformation = $.costInformation;
         this.description = $.description;

@@ -65,7 +65,7 @@ public final class Pav2MeterDetailsResponse extends com.pulumi.resources.InvokeA
 
     private Pav2MeterDetailsResponse() {}
 
-    protected Pav2MeterDetailsResponse(Pav2MeterDetailsResponse $) {
+    private Pav2MeterDetailsResponse(Pav2MeterDetailsResponse $) {
         this.billingType = $.billingType;
         this.chargingType = $.chargingType;
         this.meterGuid = $.meterGuid;

@@ -42,7 +42,7 @@ public final class CustomerSubscriptionRegisteredFeatures extends com.pulumi.res
 
     private CustomerSubscriptionRegisteredFeatures() {}
 
-    protected CustomerSubscriptionRegisteredFeatures(CustomerSubscriptionRegisteredFeatures $) {
+    private CustomerSubscriptionRegisteredFeatures(CustomerSubscriptionRegisteredFeatures $) {
         this.name = $.name;
         this.state = $.state;
     }

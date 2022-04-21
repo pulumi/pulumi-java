@@ -43,7 +43,7 @@ public final class FilterableProperty extends com.pulumi.resources.InvokeArgs {
 
     private FilterableProperty() {}
 
-    protected FilterableProperty(FilterableProperty $) {
+    private FilterableProperty(FilterableProperty $) {
         this.supportedValues = $.supportedValues;
         this.type = $.type;
     }

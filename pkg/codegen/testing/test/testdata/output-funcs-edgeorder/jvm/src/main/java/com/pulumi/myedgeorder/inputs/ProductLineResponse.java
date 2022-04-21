@@ -114,7 +114,7 @@ public final class ProductLineResponse extends com.pulumi.resources.InvokeArgs {
 
     private ProductLineResponse() {}
 
-    protected ProductLineResponse(ProductLineResponse $) {
+    private ProductLineResponse(ProductLineResponse $) {
         this.availabilityInformation = $.availabilityInformation;
         this.costInformation = $.costInformation;
         this.description = $.description;

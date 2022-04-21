@@ -33,7 +33,7 @@ public final class OtherResourceArgs extends com.pulumi.resources.ResourceArgs {
 
     private OtherResourceArgs() {}
 
-    protected OtherResourceArgs(OtherResourceArgs $) {
+    private OtherResourceArgs(OtherResourceArgs $) {
         this.bar = $.bar;
         this.foo = $.foo;
     }

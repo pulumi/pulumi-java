@@ -93,7 +93,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
 
     private ComponentArgs() {}
 
-    protected ComponentArgs(ComponentArgs $) {
+    private ComponentArgs(ComponentArgs $) {
         this.a = $.a;
         this.b = $.b;
         this.bar = $.bar;

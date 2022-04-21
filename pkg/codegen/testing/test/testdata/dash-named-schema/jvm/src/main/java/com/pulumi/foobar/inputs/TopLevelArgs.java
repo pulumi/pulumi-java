@@ -24,7 +24,7 @@ public final class TopLevelArgs extends com.pulumi.resources.ResourceArgs {
 
     private TopLevelArgs() {}
 
-    protected TopLevelArgs(TopLevelArgs $) {
+    private TopLevelArgs(TopLevelArgs $) {
         this.buzz = $.buzz;
     }
 

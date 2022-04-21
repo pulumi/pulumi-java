@@ -86,7 +86,7 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
 
     private DescriptionResponse() {}
 
-    protected DescriptionResponse(DescriptionResponse $) {
+    private DescriptionResponse(DescriptionResponse $) {
         this.attributes = $.attributes;
         this.descriptionType = $.descriptionType;
         this.keywords = $.keywords;

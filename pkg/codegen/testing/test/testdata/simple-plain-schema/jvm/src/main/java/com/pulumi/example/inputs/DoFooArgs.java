@@ -21,7 +21,7 @@ public final class DoFooArgs extends com.pulumi.resources.InvokeArgs {
 
     private DoFooArgs() {}
 
-    protected DoFooArgs(DoFooArgs $) {
+    private DoFooArgs(DoFooArgs $) {
         this.foo = $.foo;
     }
 

@@ -36,7 +36,7 @@ public final class GetActionRuleByNameArgs extends com.pulumi.resources.InvokeAr
 
     private GetActionRuleByNameArgs() {}
 
-    protected GetActionRuleByNameArgs(GetActionRuleByNameArgs $) {
+    private GetActionRuleByNameArgs(GetActionRuleByNameArgs $) {
         this.actionRuleName = $.actionRuleName;
         this.resourceGroupName = $.resourceGroupName;
     }
