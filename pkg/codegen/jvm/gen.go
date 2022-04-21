@@ -188,7 +188,7 @@ func (mod *modContext) typeStringRecHelper(
 		return mod.typeStringForEnumType(t)
 
 	case *schema.ArrayType:
-		listType := names.List // TODO: decide weather or not to use ImmutableList
+		listType := names.List
 		if requireInitializers {
 			listType = names.List
 		}
@@ -203,7 +203,7 @@ func (mod *modContext) typeStringRecHelper(
 		}
 
 	case *schema.MapType:
-		mapType := names.Map // TODO: decide weather or not to use ImmutableMap
+		mapType := names.Map
 		if requireInitializers {
 			mapType = names.Map
 		}
@@ -343,7 +343,6 @@ func (mod *modContext) typeStringRecHelper(
 }
 
 func (mod *modContext) typeStringForEnumType(enumType *schema.EnumType) TypeShape {
-	// TODO: try to replace with 'qualifier'
 	pkg, err := parsePackageName(mod.tokenToPackage(enumType.Token, ""))
 	if err != nil {
 		panic(err)
