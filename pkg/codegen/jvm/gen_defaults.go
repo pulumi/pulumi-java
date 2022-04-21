@@ -65,7 +65,7 @@ func (dg *defaultsGen) builderExpr(
 
 	builderTransformCode := ""
 
-	isOutput, t0 := targetType.unOutput()
+	isOutput, t0 := targetType.UnOutput()
 
 	if isOutput {
 		if prop.Secret {
@@ -79,7 +79,7 @@ func (dg *defaultsGen) builderExpr(
 			prop.Name)
 	}
 
-	isOptional, t := t0.unOptional()
+	isOptional, t := t0.UnOptional()
 
 	var code string
 
