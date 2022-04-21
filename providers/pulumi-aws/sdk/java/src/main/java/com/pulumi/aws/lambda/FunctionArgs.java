@@ -554,6 +554,14 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
             return runtime(Output.of(runtime));
         }
 
+        public Builder runtime(String runtime) {
+            return runtime(Either.ofLeft(runtime));
+        }
+
+        public Builder runtime(Runtime runtime) {
+            return runtime(Either.ofRight(runtime));
+        }
+
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             $.s3Bucket = s3Bucket;
             return this;

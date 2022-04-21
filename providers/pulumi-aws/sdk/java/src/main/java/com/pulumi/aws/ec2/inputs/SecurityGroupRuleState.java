@@ -242,6 +242,14 @@ public final class SecurityGroupRuleState extends com.pulumi.resources.ResourceA
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ProtocolType protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
             $.securityGroupId = securityGroupId;
             return this;
