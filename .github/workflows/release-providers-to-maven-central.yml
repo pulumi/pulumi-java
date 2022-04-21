@@ -55,9 +55,6 @@ jobs:
         - kubernetes
         - docker
     steps:
-      - run: |
-          echo "matrix.provider: ${{ matrix.provider }}"
-          echo "github.ref: ${{ github.ref }}"
       - uses: actions/checkout@v2
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
       - run: make submodule_update
@@ -91,3 +88,4 @@ jobs:
         with:
           arguments: publish
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+          gradle-version: 7.4.1
