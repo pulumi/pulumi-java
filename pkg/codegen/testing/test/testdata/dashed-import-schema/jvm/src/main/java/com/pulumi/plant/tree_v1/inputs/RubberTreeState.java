@@ -58,6 +58,14 @@ public final class RubberTreeState extends com.pulumi.resources.ResourceArgs {
             return farm(Output.of(farm));
         }
 
+        public Builder farm(Farm farm) {
+            return farm(Either.ofLeft(farm));
+        }
+
+        public Builder farm(String farm) {
+            return farm(Either.ofRight(farm));
+        }
+
         public RubberTreeState build() {
             $.farm = Codegen.stringProp("farm").right(Farm.class).output().arg($.farm).def("(unknown)").getNullable();
             return $;

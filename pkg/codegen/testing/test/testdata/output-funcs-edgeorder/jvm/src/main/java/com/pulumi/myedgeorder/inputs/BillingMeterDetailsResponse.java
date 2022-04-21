@@ -100,6 +100,14 @@ public final class BillingMeterDetailsResponse extends com.pulumi.resources.Invo
             return this;
         }
 
+        public Builder meterDetails(Pav2MeterDetailsResponse meterDetails) {
+            return meterDetails(Either.ofLeft(meterDetails));
+        }
+
+        public Builder meterDetails(PurchaseMeterDetailsResponse meterDetails) {
+            return meterDetails(Either.ofRight(meterDetails));
+        }
+
         public Builder meteringType(String meteringType) {
             $.meteringType = meteringType;
             return this;

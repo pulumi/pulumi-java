@@ -112,6 +112,14 @@ public final class RubberTreeArgs extends com.pulumi.resources.ResourceArgs {
             return farm(Output.of(farm));
         }
 
+        public Builder farm(Farm farm) {
+            return farm(Either.ofLeft(farm));
+        }
+
+        public Builder farm(String farm) {
+            return farm(Either.ofRight(farm));
+        }
+
         public Builder size(@Nullable Output<TreeSize> size) {
             $.size = size;
             return this;
