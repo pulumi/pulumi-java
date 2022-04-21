@@ -23,7 +23,7 @@ env:
   SIGNING_KEY_ID: ${{ secrets.SIGNING_KEY_ID }}
 
   # Obtained by `gpg --armor --export-secret-key support@pulumi.com`.
-  SINGING_KEY: ${{ secrets.SIGNING_KEY }}
+  SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
 
   # Aka passphrase for the GPG key.
   SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
